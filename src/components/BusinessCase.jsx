@@ -1,157 +1,163 @@
-
 export default function BusinessCase() {
   const shifts = [
     {
-      title: "From experimentation to execution",
-      desc: "Move employees beyond ad-hoc prompting into reliable workflows, reusable prompt systems, automation and agents."
+      title: "From ad-hoc prompting to reliable execution",
+      desc: "Move employees past simple chat prompts into repeatable workflows, standardized prompt libraries, automation pipelines, and custom agents."
     },
     {
-      title: "From one tool to an AI stack",
-      desc: "Teach when to use assistants, research tools, coding copilots, creative AI, automation platforms and agents."
+      title: "From isolated tools to an integrated AI stack",
+      desc: "Teach teams when to deploy research assistants, coding copilots, creative AI, automation platforms, and internal knowledge search."
     },
     {
-      title: "From generic training to job relevance",
-      desc: "Every track connects GenAI to actual work: campaigns, reports, code, analysis, SOPs, customer communication and internal operations."
+      title: "From generic literacy to job-specific relevance",
+      desc: "Every track connects GenAI directly to actual daily deliverables: campaigns, reports, codebases, financial models, SOPs, and customer support."
     },
     {
       title: "From learning hours to business outcomes",
-      desc: "Use baseline assessments, practical projects and manager-visible adoption metrics to track progress."
+      desc: "Use baseline skill assessments, practical capstone projects, and manager-visible adoption metrics to measure real impact."
     }
   ];
 
   const outcomes = [
     {
+      tag: "Content & Copy",
       title: "Create faster",
-      desc: "Draft, summarize, repurpose and personalize high-quality business content.",
-      icon: "✍️"
+      desc: "Draft, summarize, repurpose, and localize high-quality corporate content without compromising brand guidelines."
     },
     {
+      tag: "Knowledge & Intelligence",
       title: "Research smarter",
-      desc: "Synthesize documents, markets and internal knowledge with traceable sources.",
-      icon: "🔍"
+      desc: "Synthesize dense reports, market analysis, and internal documentation with fully traceable, cited sources."
     },
     {
+      tag: "Analytics & Reporting",
       title: "Analyze better",
-      desc: "Use natural language to explore spreadsheets, reports, dashboards and business data.",
-      icon: "📊"
+      desc: "Use natural language to query complex spreadsheets, dashboards, financial databases, and operational data."
     },
     {
+      tag: "Engineering & Tech",
       title: "Build quicker",
-      desc: "Prototype software, automate repetitive tasks and accelerate technical delivery.",
-      icon: "⚡"
+      desc: "Accelerate software delivery, prototype applications, automate test suites, and streamline code reviews."
     },
     {
+      tag: "Integration & Tools",
       title: "Automate workflows",
-      desc: "Connect AI with email, CRM, forms, spreadsheets, databases and internal tools.",
-      icon: "🔄"
+      desc: "Connect LLMs with email systems, CRMs, spreadsheets, databases, forms, and internal business tools."
     },
     {
-      title: "Deploy agents",
-      desc: "Design agents that can reason, use tools, follow rules and execute multi-step work.",
-      icon: "🤖"
+      tag: "Custom Agents",
+      title: "Deploy AI agents",
+      desc: "Design autonomous agents that reason, query tools, follow strict business rules, and execute multi-step processes."
     }
   ];
 
   return (
-    <section id="programs" style={{ padding: "80px 0", background: "#FAFAFA", borderBottom: "1px solid #E2E8F0" }}>
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px" }}>
+    <section id="programs" style={{ padding: "120px 0", background: "#FAFAFA", borderBottom: "1px solid #E2E8F0" }}>
+      <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
-        {/* Section Label */}
-        <div style={{ fontSize: 12, fontWeight: 800, color: "#2563EB", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 10 }}>
-          SECTION 02 - THE BUSINESS CASE
+        {/* Section Header */}
+        <div style={{ fontSize: 13, fontWeight: 700, color: "#2563EB", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 12 }}>
+          Why Enterprise Upskilling
         </div>
-
-        {/* Title & Subhead */}
-        <h2 style={{ fontSize: "clamp(32px, 4vw, 48px)", fontWeight: 900, color: "#0F1F3D", letterSpacing: "-.02em", marginBottom: 16 }}>
-          AI adoption is easy. AI capability is the advantage.
+        <h2 style={{ fontSize: "clamp(34px, 4.5vw, 50px)", fontWeight: 900, color: "#0F172A", letterSpacing: "-.02em", marginBottom: 20 }}>
+          AI adoption is easy. Building true capability is the real advantage.
         </h2>
-        <p style={{ fontSize: 18, color: "#475569", maxWidth: 880, lineHeight: 1.6, marginBottom: 48 }}>
-          Buying AI licenses does not create an AI-ready organization. Employees need repeatable skills, safe usage standards and role-specific workflows that translate tools into business outcomes.
+        <p style={{ fontSize: 19, color: "#475569", maxWidth: 840, lineHeight: 1.65, marginBottom: 64, fontWeight: 400 }}>
+          Buying software licenses does not automatically create an AI-ready organization. Employees need repeatable skills, enterprise governance standards, and role-specific workflows that translate tools into tangible business outcomes.
         </p>
 
-        {/* 4 Organizational Shifts Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20, marginBottom: 64 }}>
+        {/* 4 Shifts Grid */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 28, marginBottom: 80 }}>
           {shifts.map((s, i) => (
             <div
               key={i}
               style={{
                 background: "#FFFFFF", border: "1px solid #E2E8F0",
-                borderRadius: 16, padding: "24px",
-                boxShadow: "0 2px 8px rgba(15,31,61,0.04)"
+                borderRadius: 18, padding: "36px 30px",
+                boxShadow: "0 4px 20px -2px rgba(15,23,42,0.03)"
               }}
             >
-              <h3 style={{ fontSize: 17, fontWeight: 800, color: "#0F1F3D", marginBottom: 10 }}>
+              <div style={{ fontSize: 12, fontWeight: 800, color: "#2563EB", textTransform: "uppercase", marginBottom: 12 }}>
+                Shift 0{i + 1}
+              </div>
+              <h3 style={{ fontSize: 18, fontWeight: 800, color: "#0F172A", marginBottom: 12, lineHeight: 1.35 }}>
                 {s.title}
               </h3>
-              <p style={{ fontSize: 14, color: "#64748B", lineHeight: 1.6 }}>
+              <p style={{ fontSize: 14, color: "#64748B", lineHeight: 1.65 }}>
                 {s.desc}
               </p>
             </div>
           ))}
         </div>
 
-        {/* Research Evidence & Benchmarks Callout */}
+        {/* Research Evidence Box */}
         <div style={{
-          background: "linear-gradient(135deg, #0F1F3D 0%, #1E3A8A 100%)",
-          borderRadius: 20, padding: "36px", color: "#FFFFFF",
-          marginBottom: 64, boxShadow: "0 12px 32px rgba(15,31,61,0.2)"
+          background: "linear-gradient(135deg, #0F172A 0%, #1E293B 100%)",
+          borderRadius: 24, padding: "48px 40px", color: "#FFFFFF",
+          marginBottom: 80, boxShadow: "0 16px 40px -10px rgba(15,23,42,0.25)"
         }}>
-          <div style={{ fontSize: 12, fontWeight: 800, color: "#93C5FD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 12 }}>
-            RESEARCH BENCHMARKS & EMPIRICAL EVIDENCE
+          <div style={{ fontSize: 12, fontWeight: 700, color: "#60A5FA", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 16 }}>
+            RESEARCH BENCHMARKS & EVIDENCE
           </div>
-          <h3 style={{ fontSize: 24, fontWeight: 800, marginBottom: 20, letterSpacing: "-.01em" }}>
-            Evidence that practical GenAI skills can change work
+          <h3 style={{ fontSize: 26, fontWeight: 800, marginBottom: 28, letterSpacing: "-.01em", lineHeight: 1.3 }}>
+            Empirical evidence on how practical GenAI skills transform work
           </h3>
 
-          <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 16, marginBottom: 24 }}>
-            <li style={{ display: "flex", gap: 12, fontSize: 15, lineHeight: 1.6, color: "#E2E8F0" }}>
-              <span style={{ color: "#60A5FA", fontWeight: 800 }}>•</span>
-              <span><strong>Microsoft Research / NBER (2025):</strong> A 2025 randomized field experiment across 66 firms found regular GenAI users spent about 2 fewer hours per week on email in the second half of the study.</span>
-            </li>
-            <li style={{ display: "flex", gap: 12, fontSize: 15, lineHeight: 1.6, color: "#E2E8F0" }}>
-              <span style={{ color: "#60A5FA", fontWeight: 800 }}>•</span>
-              <span><strong>Microsoft Research (2025):</strong> Randomized trials with 4,867 software developers at Microsoft, Accenture and a Fortune 100 company found a 26.08% increase in completed tasks for developers with an AI coding assistant.</span>
-            </li>
-            <li style={{ display: "flex", gap: 12, fontSize: 15, lineHeight: 1.6, color: "#E2E8F0" }}>
-              <span style={{ color: "#60A5FA", fontWeight: 800 }}>•</span>
-              <span>Enterprise learning programs increasingly use role-specific academies, practical experimentation and secure environments rather than one-size-fits-all AI literacy.</span>
-            </li>
-          </ul>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 28, marginBottom: 32 }}>
+            <div style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 16, padding: "28px" }}>
+              <div style={{ fontSize: 32, fontWeight: 900, color: "#60A5FA", marginBottom: 6 }}>~2 hrs/wk</div>
+              <div style={{ fontSize: 14, fontWeight: 700, color: "#FFFFFF", marginBottom: 8 }}>Saved on Email Workflows</div>
+              <div style={{ fontSize: 13, color: "#94A3B8", lineHeight: 1.6 }}>
+                A 2025 randomized field study across 66 firms found regular GenAI users reduced email processing by ~2 hours per week. <em>(Microsoft Research / NBER 2025)</em>
+              </div>
+            </div>
 
-          <p style={{ fontSize: 13, color: "#94A3B8", fontStyle: "italic" }}>
-            * Note: Use these benchmarks as evidence of potential, not a guaranteed result. AI Global Academy positions outcomes as measurable targets tied to each client's specific workflows.
+            <div style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 16, padding: "28px" }}>
+              <div style={{ fontSize: 32, fontWeight: 900, color: "#34D399", marginBottom: 6 }}>+26.08%</div>
+              <div style={{ fontSize: 14, fontWeight: 700, color: "#FFFFFF", marginBottom: 8 }}>Task Completion Increase</div>
+              <div style={{ fontSize: 13, color: "#94A3B8", lineHeight: 1.6 }}>
+                Randomized trials across 4,867 software developers at Microsoft, Accenture, and Fortune 100 firms reported a 26.08% boost in completed tasks using AI copilots. <em>(Microsoft Research 2025)</em>
+              </div>
+            </div>
+          </div>
+
+          <p style={{ fontSize: 13, color: "#94A3B8", fontStyle: "italic", margin: 0 }}>
+            * Note: Benchmark data illustrates potential impact. AI Global Academy structures training goals around each client's specific baseline workflows.
           </p>
         </div>
 
         {/* Employee Outcomes Section */}
         <div>
-          <h3 style={{ fontSize: 28, fontWeight: 800, color: "#0F1F3D", marginBottom: 24, letterSpacing: "-.01em" }}>
-            What companies should expect employees to do differently
+          <div style={{ fontSize: 13, fontWeight: 700, color: "#2563EB", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 12 }}>
+            Core Capabilities
+          </div>
+          <h3 style={{ fontSize: 30, fontWeight: 800, color: "#0F172A", marginBottom: 36, letterSpacing: "-.01em" }}>
+            What your teams will do differently after upskilling
           </h3>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 20 }}>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 24 }}>
             {outcomes.map((o, i) => (
               <div
                 key={i}
                 style={{
                   background: "#FFFFFF", border: "1px solid #E2E8F0",
-                  borderRadius: 16, padding: "24px", display: "flex", gap: 16
+                  borderRadius: 18, padding: "32px 28px",
+                  boxShadow: "0 4px 16px rgba(15,23,42,0.03)"
                 }}
               >
                 <div style={{
-                  fontSize: 28, width: 52, height: 52, borderRadius: 12,
-                  background: "#F1F5F9", display: "flex", alignItems: "center", justifyContent: "center",
-                  flexShrink: 0
+                  fontSize: 11, fontWeight: 700, color: "#2563EB",
+                  background: "#EFF6FF", padding: "4px 12px", borderRadius: 999,
+                  display: "inline-block", marginBottom: 14
                 }}>
-                  {o.icon}
+                  {o.tag}
                 </div>
-                <div>
-                  <h4 style={{ fontSize: 18, fontWeight: 800, color: "#0F1F3D", marginBottom: 6 }}>
-                    {o.title}
-                  </h4>
-                  <p style={{ fontSize: 14, color: "#64748B", lineHeight: 1.55 }}>
-                    {o.desc}
-                  </p>
-                </div>
+                <h4 style={{ fontSize: 19, fontWeight: 800, color: "#0F172A", marginBottom: 8 }}>
+                  {o.title}
+                </h4>
+                <p style={{ fontSize: 14, color: "#64748B", lineHeight: 1.6 }}>
+                  {o.desc}
+                </p>
               </div>
             ))}
           </div>

@@ -4,178 +4,204 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
   const [activeRole, setActiveRole] = useState("Engineering");
 
   const roleMap = {
-    Engineering: { tool: "GitHub Copilot & Cursor", output: "26% faster code delivery & test coverage", icon: "💻" },
-    Marketing: { tool: "Jasper & Midjourney", output: "Multi-channel campaign pack in minutes", icon: "📈" },
-    Sales: { tool: "ChatGPT & Outreach Copilots", output: "Deep account research & meeting prep", icon: "🤝" },
-    Finance: { tool: "Excel Copilot & Julius AI", output: "Automated variance narratives & models", icon: "📊" },
-    Operations: { tool: "n8n & Make Automation", output: "End-to-end SOP & ticket routing agents", icon: "⚡" }
+    Engineering: {
+      title: "Software & Engineering",
+      tool: "GitHub Copilot, Cursor & Claude Code",
+      output: "26% faster feature delivery, automated test suites & code reviews",
+      badge: "Technical Track"
+    },
+    Marketing: {
+      title: "Marketing & Content",
+      tool: "Jasper, Claude & Midjourney",
+      output: "Multi-channel campaign packs, SEO research & automated content repurposing",
+      badge: "Growth Track"
+    },
+    Sales: {
+      title: "Sales & RevOps",
+      tool: "ChatGPT, Gong AI & CRM Copilots",
+      output: "Automated account research briefs, hyper-personalized outreach & CRM updates",
+      badge: "Revenue Track"
+    },
+    Finance: {
+      title: "Finance & Operations",
+      tool: "Excel Copilot, Julius AI & n8n",
+      output: "Automated variance narratives, scenario modeling & invoice processing",
+      badge: "Operations Track"
+    }
   };
 
   const pillars = [
     {
-      title: "Role-Based Learning",
-      desc: "Separate pathways for leadership, marketing, sales, HR, finance, operations, product, design, data and engineering."
+      title: "Role-Based Pathways",
+      desc: "Distinct learning tracks tailored specifically for leadership, engineering, marketing, sales, finance, HR, product, and operations."
     },
     {
-      title: "Hands-On, Not Theory",
-      desc: "Live labs, tool practice, guided exercises, real company use cases and capstone workflows."
+      title: "Hands-On Execution",
+      desc: "No passive lectures. Learners build real workflows, custom prompts, and automated assistants directly in live tool labs."
     },
     {
-      title: "50+ AI Tools",
-      desc: "Employees learn the right tool for the job instead of becoming dependent on one model or vendor."
+      title: "Multi-Tool Stack",
+      desc: "Master 50+ industry-standard AI tools. Employees learn tool judgment rather than becoming reliant on a single vendor."
     },
     {
-      title: "Business Impact",
-      desc: "Focus on faster execution, reduced repetitive work, stronger output quality and reusable AI workflows."
+      title: "Measurable ROI",
+      desc: "Focus on reusable team assets, automated manual processes, and manager-tracked adoption metrics tied directly to business KPIs."
     }
   ];
 
   return (
-    <section style={{ paddingTop: 104, paddingBottom: 64, background: "#FAFAFA", borderBottom: "1px solid #E2E8F0" }}>
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px" }}>
+    <section style={{ paddingTop: 120, paddingBottom: 96, background: "#FAFAFA", borderBottom: "1px solid #E2E8F0" }}>
+      <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
-        {/* Top Kicker Label */}
-        <div style={{ textAlign: "center", marginBottom: 16 }}>
+        {/* Subtle Eyebrow Badge */}
+        <div style={{ textAlign: "center", marginBottom: 20 }}>
           <span style={{
-            background: "#EFF6FF", border: "1px solid #BFDBFE",
-            color: "#1E40AF", fontSize: 13, fontWeight: 700,
-            padding: "6px 16px", borderRadius: 999, letterSpacing: ".04em",
-            textTransform: "uppercase"
+            background: "#EFF6FF", border: "1px solid #DBEAFE",
+            color: "#1D4ED8", fontSize: 13, fontWeight: 700,
+            padding: "6px 18px", borderRadius: 999, letterSpacing: ".02em",
+            display: "inline-flex", alignItems: "center", gap: 8
           }}>
-            AI GLOBAL ACADEMY &nbsp;|&nbsp; Enterprise GenAI Upskilling
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#2563EB" }} />
+            Enterprise Generative AI Upskilling
           </span>
         </div>
 
         {/* Hero Title */}
         <h1 style={{
-          fontSize: "clamp(42px, 5.5vw, 68px)", fontWeight: 900,
-          color: "#0F1F3D", textAlign: "center", lineHeight: 1.08,
-          letterSpacing: "-.03em", maxWidth: 900, margin: "0 auto 16px"
+          fontSize: "clamp(44px, 5.5vw, 64px)", fontWeight: 900,
+          color: "#0F172A", textAlign: "center", lineHeight: 1.1,
+          letterSpacing: "-.03em", maxWidth: 920, margin: "0 auto 20px"
         }}>
           Build an AI-Ready Workforce.
         </h1>
 
-        {/* Subhead Gradient Line */}
+        {/* Subhead Line */}
         <p style={{
-          fontSize: "clamp(20px, 2.8vw, 28px)", fontWeight: 800,
-          textAlign: "center", maxWidth: 840, margin: "0 auto 24px",
-          background: "linear-gradient(90deg, #1E3A8A 0%, #2563EB 50%, #0D9488 100%)",
-          WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent"
+          fontSize: "clamp(20px, 2.5vw, 26px)", fontWeight: 700,
+          textAlign: "center", maxWidth: 840, margin: "0 auto 28px",
+          color: "#2563EB", lineHeight: 1.35
         }}>
-          Turn Generative AI into measurable productivity across every business function.
+          Turn Generative AI into measurable, everyday productivity across every business function.
         </p>
 
         {/* Main Body Paragraph */}
         <p style={{
           fontSize: 18, color: "#475569", textAlign: "center",
-          maxWidth: 820, margin: "0 auto 36px", lineHeight: 1.65, fontWeight: 400
+          maxWidth: 780, margin: "0 auto 44px", lineHeight: 1.7, fontWeight: 400
         }}>
-          Enterprise GenAI upskilling for modern teams - from AI fundamentals and prompt engineering to marketing, coding, data, content, research, AI agents and end-to-end workflow automation. Learn by building real use cases with 50+ of today's most useful AI tools.
+          Enterprise GenAI upskilling for modern teams — from AI fundamentals and prompt engineering to marketing, coding, data, research, AI agents, and workflow automation. Learn by building real use cases with 50+ of today's most useful AI tools.
         </p>
 
-        {/* Dual Primary CTAs */}
-        <div style={{ display: "flex", justifyContent: "center", gap: 16, marginBottom: 56, flexWrap: "wrap" }}>
+        {/* Primary CTAs */}
+        <div style={{ display: "flex", justifyContent: "center", gap: 16, marginBottom: 72, flexWrap: "wrap" }}>
           <button
             onClick={() => onOpenDemo()}
             style={{
-              background: "#0F1F3D", color: "#FFFFFF", border: "none",
+              background: "#0F172A", color: "#FFFFFF", border: "none",
               padding: "16px 36px", borderRadius: 12, fontWeight: 700,
-              fontSize: 16, cursor: "pointer", boxShadow: "0 6px 20px rgba(15,31,61,0.25)",
-              transition: "transform 0.15s ease, background 0.15s ease"
+              fontSize: 16, cursor: "pointer", boxShadow: "0 10px 25px -5px rgba(15,23,42,0.25)",
+              transition: "all 0.18s ease"
             }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = "#1E3A8A"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = "#0F1F3D"; e.currentTarget.style.transform = "none"; }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = "#1E293B"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = "#0F172A"; e.currentTarget.style.transform = "none"; }}
           >
-            Request an Enterprise Demo
+            Request Enterprise Demo
           </button>
           <button
             onClick={() => scrollToSection("curriculum")}
             style={{
-              background: "#0F1F3D", color: "#FFFFFF", border: "none",
+              background: "#FFFFFF", color: "#0F172A", border: "1.5px solid #CBD5E1",
               padding: "16px 36px", borderRadius: 12, fontWeight: 700,
-              fontSize: 16, cursor: "pointer", boxShadow: "0 4px 14px rgba(15,31,61,0.2)",
-              transition: "transform 0.15s ease, background 0.15s ease"
+              fontSize: 16, cursor: "pointer", boxShadow: "0 2px 8px rgba(15,23,42,0.04)",
+              transition: "all 0.18s ease"
             }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = "#1E3A8A"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = "#0F1F3D"; e.currentTarget.style.transform = "none"; }}
+            onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#0F172A"; e.currentTarget.style.background = "#F8FAFC"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#CBD5E1"; e.currentTarget.style.background = "#FFFFFF"; e.currentTarget.style.transform = "none"; }}
           >
-            Download Curriculum
+            Explore Curriculum ↓
           </button>
         </div>
 
-        {/* Dynamic Interactive AI Skills Dashboard Visual */}
+        {/* Interactive Capability Map Widget */}
         <div style={{
           background: "#FFFFFF", border: "1px solid #E2E8F0",
-          borderRadius: 20, padding: "28px", boxShadow: "0 12px 40px rgba(15,31,61,0.08)",
-          marginBottom: 56, maxWidth: 960, margin: "0 auto 56px"
+          borderRadius: 20, padding: "36px", boxShadow: "0 10px 30px -10px rgba(15,23,42,0.06)",
+          marginBottom: 72
         }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20, borderBottom: "1px solid #F1F5F9", paddingBottom: 16 }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 24, borderBottom: "1px solid #F1F5F9", paddingBottom: 20 }}>
             <div>
-              <span style={{ fontSize: 11, fontWeight: 800, color: "#2563EB", textTransform: "uppercase", letterSpacing: ".08em" }}>
-                INTERACTIVE PREVIEW
-              </span>
-              <h4 style={{ fontSize: 18, fontWeight: 800, color: "#0F1F3D" }}>Enterprise AI Skills & Workflow Capability Map</h4>
+              <div style={{ fontSize: 12, fontWeight: 700, color: "#2563EB", textTransform: "uppercase", letterSpacing: ".06em" }}>
+                INTERACTIVE CAPABILITY MAP
+              </div>
+              <h3 style={{ fontSize: 20, fontWeight: 800, color: "#0F172A", marginTop: 4 }}>
+                Role-Based Pathways & Outcome Drivers
+              </h3>
             </div>
-            <div style={{ display: "flex", gap: 6 }}>
-              <span style={{ width: 10, height: 10, borderRadius: "50%", background: "#EF4444" }}/>
-              <span style={{ width: 10, height: 10, borderRadius: "50%", background: "#F59E0B" }}/>
-              <span style={{ width: 10, height: 10, borderRadius: "50%", background: "#10B981" }}/>
-            </div>
+            <span style={{ fontSize: 13, fontWeight: 600, color: "#64748B", background: "#F1F5F9", padding: "6px 14px", borderRadius: 999 }}>
+              Select a team track below
+            </span>
           </div>
 
-          <div style={{ display: "flex", gap: 10, marginBottom: 20, flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: 10, marginBottom: 24, flexWrap: "wrap" }}>
             {Object.keys(roleMap).map((role) => (
               <button
                 key={role}
                 onClick={() => setActiveRole(role)}
                 style={{
-                  padding: "8px 16px", borderRadius: 999, border: "1.5px solid",
-                  borderColor: activeRole === role ? "#0F1F3D" : "#E2E8F0",
-                  background: activeRole === role ? "#0F1F3D" : "#F8FAFC",
+                  padding: "10px 20px", borderRadius: 10, border: "1.5px solid",
+                  borderColor: activeRole === role ? "#0F172A" : "#E2E8F0",
+                  background: activeRole === role ? "#0F172A" : "#F8FAFC",
                   color: activeRole === role ? "#FFFFFF" : "#475569",
-                  fontSize: 13, fontWeight: 700, cursor: "pointer",
-                  transition: "all 0.15s ease"
+                  fontSize: 14, fontWeight: 700, cursor: "pointer",
+                  transition: "all 0.18s ease"
                 }}
               >
-                {roleMap[role].icon} {role} Track
+                {role}
               </button>
             ))}
           </div>
 
           <div style={{
-            background: "#F8FAFC", border: "1px solid #CBD5E1",
-            borderRadius: 14, padding: "20px", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16
+            background: "#F8FAFC", border: "1px solid #E2E8F0",
+            borderRadius: 14, padding: "24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20
           }}>
             <div>
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#64748B", textTransform: "uppercase" }}>Selected Pathway</div>
-              <div style={{ fontSize: 16, fontWeight: 800, color: "#0F1F3D", marginTop: 4 }}>{activeRole} GenAI Academy</div>
+              <div style={{ fontSize: 12, fontWeight: 700, color: "#64748B", textTransform: "uppercase" }}>Department Track</div>
+              <div style={{ fontSize: 17, fontWeight: 800, color: "#0F172A", marginTop: 6 }}>{roleMap[activeRole].title}</div>
             </div>
             <div>
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#64748B", textTransform: "uppercase" }}>Primary Tool Stack</div>
-              <div style={{ fontSize: 15, fontWeight: 700, color: "#2563EB", marginTop: 4 }}>{roleMap[activeRole].tool}</div>
+              <div style={{ fontSize: 12, fontWeight: 700, color: "#64748B", textTransform: "uppercase" }}>Approved Tool Stack</div>
+              <div style={{ fontSize: 15, fontWeight: 700, color: "#2563EB", marginTop: 6 }}>{roleMap[activeRole].tool}</div>
             </div>
             <div>
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#64748B", textTransform: "uppercase" }}>Measurable Output</div>
-              <div style={{ fontSize: 14, fontWeight: 700, color: "#059669", marginTop: 4 }}>✓ {roleMap[activeRole].output}</div>
+              <div style={{ fontSize: 12, fontWeight: 700, color: "#64748B", textTransform: "uppercase" }}>Target Business Outcome</div>
+              <div style={{ fontSize: 14, fontWeight: 700, color: "#16A34A", marginTop: 6 }}>✓ {roleMap[activeRole].output}</div>
             </div>
           </div>
         </div>
 
-        {/* 4 Core Value Pillars Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20 }}>
+        {/* 4 Value Pillars Grid */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 24 }}>
           {pillars.map((p, i) => (
             <div
               key={i}
               style={{
                 background: "#FFFFFF", border: "1px solid #E2E8F0",
-                borderRadius: 16, padding: "24px",
-                boxShadow: "0 2px 8px rgba(15,31,61,0.04)"
+                borderRadius: 16, padding: "32px 28px",
+                boxShadow: "0 4px 16px rgba(15,23,42,0.03)"
               }}
             >
-              <h3 style={{ fontSize: 18, fontWeight: 800, color: "#0F1F3D", marginBottom: 8, letterSpacing: "-.01em" }}>
+              <div style={{
+                width: 36, height: 36, borderRadius: 8, background: "#EFF6FF",
+                color: "#2563EB", fontWeight: 800, fontSize: 14,
+                display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16
+              }}>
+                0{i + 1}
+              </div>
+              <h3 style={{ fontSize: 18, fontWeight: 800, color: "#0F172A", marginBottom: 10, letterSpacing: "-.01em" }}>
                 {p.title}
               </h3>
-              <p style={{ fontSize: 14, color: "#64748B", lineHeight: 1.6 }}>
+              <p style={{ fontSize: 14, color: "#64748B", lineHeight: 1.65 }}>
                 {p.desc}
               </p>
             </div>
