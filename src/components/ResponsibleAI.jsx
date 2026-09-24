@@ -1,79 +1,70 @@
-import React from 'react';
-
 export default function ResponsibleAI() {
   const pillars = [
     {
-      title: "Data & privacy",
-      desc: "Classify information before sharing it with external AI systems; understand enterprise vs consumer environments.",
-      icon: "🔒"
+      title: "Data Classification & Privacy",
+      desc: "Establish clear protocols for classifying sensitive corporate data before inputting into LLMs; differentiate enterprise security boundaries from consumer tools."
     },
     {
-      title: "Verification",
-      desc: "Teach source checking, confidence calibration, hallucination detection and review procedures.",
-      icon: "🔎"
+      title: "Fact Verification & Source Checking",
+      desc: "Train employees on rigorous source checking, confidence calibration, hallucination detection, and multi-step review procedures."
     },
     {
-      title: "Copyright & brand",
-      desc: "Understand content provenance, review generated assets and follow company brand and IP policies.",
-      icon: "⚖️"
+      title: "IP, Copyright & Brand Compliance",
+      desc: "Understand content provenance, review generated creative assets for copyright safety, and enforce strict adherence to corporate brand guidelines."
     },
     {
-      title: "Security",
-      desc: "Recognize prompt injection, unsafe code, secrets exposure, malicious links and risky integrations.",
-      icon: "🛡️"
+      title: "AI Security & Threat Awareness",
+      desc: "Recognize prompt injection vectors, unsafe code generation, credentials/secrets exposure risks, malicious links, and unauthorized API integrations."
     },
     {
-      title: "Human oversight",
-      desc: "Define where AI can assist, where humans must approve and where automation should be prohibited.",
-      icon: "👁️"
+      title: "Human Oversight Checkpoints",
+      desc: "Define explicit boundaries for where AI can assist, where mandatory human review is required, and where full automation is prohibited."
     },
     {
-      title: "Responsible deployment",
-      desc: "Evaluate agents and workflows before production use; log outcomes and maintain escalation paths.",
-      icon: "🚀"
+      title: "Responsible Agent Deployment",
+      desc: "Rigorously evaluate autonomous agents and workflows prior to production rollout; log process outcomes and establish clear escalation paths."
     }
   ];
 
   return (
-    <section style={{ padding: "80px 0", background: "#FAFAFA", borderBottom: "1px solid #E2E8F0" }}>
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px" }}>
+    <section style={{ padding: "120px 0", background: "#FAFAFA", borderBottom: "1px solid #E2E8F0" }}>
+      <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
-        <div style={{ fontSize: 12, fontWeight: 800, color: "#2563EB", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 10 }}>
-          SECTION 08 - RESPONSIBLE ENTERPRISE AI
+        <div style={{ fontSize: 13, fontWeight: 700, color: "#2563EB", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 12 }}>
+          Responsible Enterprise AI
         </div>
-        <h2 style={{ fontSize: "clamp(32px, 4vw, 48px)", fontWeight: 900, color: "#0F1F3D", letterSpacing: "-.02em", marginBottom: 16 }}>
-          Upskill people without creating a data governance problem
+        <h2 style={{ fontSize: "clamp(34px, 4.5vw, 50px)", fontWeight: 900, color: "#0F172A", letterSpacing: "-.02em", marginBottom: 20 }}>
+          Upskill teams without creating a data governance problem
         </h2>
-        <p style={{ fontSize: 18, color: "#475569", maxWidth: 880, lineHeight: 1.6, marginBottom: 48 }}>
-          Responsible AI is embedded across the curriculum rather than isolated into a compliance-only module.
+        <p style={{ fontSize: 19, color: "#475569", maxWidth: 840, lineHeight: 1.65, marginBottom: 64, fontWeight: 400 }}>
+          Responsible AI practices are woven throughout every single curriculum module rather than isolated into a compliance lecture.
         </p>
 
         {/* 6 Pillars Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: 20, marginBottom: 48 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 28, marginBottom: 56 }}>
           {pillars.map((p, i) => (
             <div
               key={i}
               style={{
                 background: "#FFFFFF", border: "1px solid #E2E8F0",
-                borderRadius: 16, padding: "24px", display: "flex", gap: 16
+                borderRadius: 18, padding: "32px 28px",
+                boxShadow: "0 4px 16px rgba(15,23,42,0.03)"
               }}
             >
               <div style={{
-                fontSize: 26, width: 48, height: 48, borderRadius: 10,
-                background: "#EFF6FF", display: "flex", alignItems: "center", justifyContent: "center",
-                flexShrink: 0
+                fontSize: 12, fontWeight: 700, color: "#2563EB",
+                background: "#EFF6FF", padding: "4px 12px", borderRadius: 999,
+                display: "inline-block", marginBottom: 16
               }}>
-                {p.icon}
+                Pillar 0{i + 1}
               </div>
-              <div>
-                <h3 style={{ fontSize: 17, fontWeight: 800, color: "#0F1F3D", marginBottom: 6 }}>
-                  {p.title}
-                </h3>
-                <p style={{ fontSize: 14, color: "#64748B", lineHeight: 1.55 }}>
-                  {p.desc}
-                </p>
-              </div>
+              <h3 style={{ fontSize: 18, fontWeight: 800, color: "#0F172A", marginBottom: 10 }}>
+                {p.title}
+              </h3>
+              <p style={{ fontSize: 14, color: "#64748B", lineHeight: 1.65, margin: 0 }}>
+                {p.desc}
+              </p>
             </div>
           ))}
         </div>
@@ -81,13 +72,13 @@ export default function ResponsibleAI() {
         {/* Optional Enterprise Customization Banner */}
         <div style={{
           background: "#F8FAFC", border: "1.5px solid #CBD5E1",
-          borderRadius: 16, padding: "28px 32px"
+          borderRadius: 20, padding: "36px 40px"
         }}>
-          <h4 style={{ fontSize: 18, fontWeight: 800, color: "#0F1F3D", marginBottom: 8 }}>
-            Optional enterprise customization
+          <h4 style={{ fontSize: 19, fontWeight: 800, color: "#0F172A", marginBottom: 10 }}>
+            Customized Enterprise Governance & Playbooks
           </h4>
-          <p style={{ fontSize: 15, color: "#475569", lineHeight: 1.6 }}>
-            We can adapt exercises and examples to your approved AI tools, security policies, brand guidelines, internal knowledge sources and business processes. The academy can also create a company-specific <strong>"AI Usage Playbook"</strong> as a deliverable.
+          <p style={{ fontSize: 15, color: "#475569", lineHeight: 1.65, margin: 0 }}>
+            We adapt exercises, prompts, and examples directly to your company's approved AI tools, data policies, security controls, and business processes. We can also deliver a customized <strong>"Enterprise AI Usage Playbook"</strong> tailored to your organization.
           </p>
         </div>
 
