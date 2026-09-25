@@ -117,7 +117,7 @@ export default function ROIAndPackages({ onOpenDemo }) {
 
           <div style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
             gap: 20
           }}>
             {metrics.map((m, i) => (

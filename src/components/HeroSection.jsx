@@ -11,7 +11,7 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
 
   return (
     <section style={{
-      minHeight: "92vh",
+      minHeight: "90vh",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
@@ -19,8 +19,8 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
       background: "radial-gradient(ellipse at 50% 20%, #0B162E 0%, #050B1A 70%)",
       borderBottom: "1px solid #1E293B",
       position: "relative",
-      paddingTop: 116,
-      paddingBottom: 72,
+      paddingTop: 110,
+      paddingBottom: 64,
       boxSizing: "border-box",
       overflow: "hidden"
     }} className="dev-grid-bg">
@@ -29,28 +29,28 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
       <div className="ambient-glow-up" />
 
       {/* Main Hero Content */}
-      <div style={{ maxWidth: 980, margin: "0 auto", padding: "0 24px", width: "100%", position: "relative", zIndex: 2, textAlign: "center" }}>
+      <div style={{ maxWidth: 980, margin: "0 auto", padding: "0 20px", width: "100%", position: "relative", zIndex: 2, textAlign: "center" }}>
 
         {/* Hero Title */}
         <h1 style={{
-          fontSize: "clamp(42px, 5.5vw, 68px)",
+          fontSize: "clamp(34px, 5.5vw, 64px)",
           fontWeight: 850,
           color: "#F8FAFC",
-          lineHeight: 1.08,
+          lineHeight: 1.1,
           letterSpacing: "-.035em",
           maxWidth: 900,
-          margin: "0 auto 20px"
+          margin: "0 auto 18px"
         }}>
           Build an AI-Ready Workforce.
         </h1>
 
         {/* Subhead Line */}
         <p style={{
-          fontSize: "clamp(19px, 2.2vw, 23px)",
+          fontSize: "clamp(17px, 2vw, 22px)",
           fontWeight: 600,
           textAlign: "center",
           maxWidth: 740,
-          margin: "0 auto 18px",
+          margin: "0 auto 16px",
           color: "#2F81F7",
           lineHeight: 1.35
         }}>
@@ -59,11 +59,11 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
 
         {/* Main Body Paragraph */}
         <p style={{
-          fontSize: 16.5,
+          fontSize: 15.5,
           color: "#94A3B8",
           textAlign: "center",
           maxWidth: 660,
-          margin: "0 auto 36px",
+          margin: "0 auto 32px",
           lineHeight: 1.6,
           fontWeight: 400
         }}>
@@ -71,33 +71,16 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
           Empower your teams to build production use cases with 50+ approved tools.
         </p>
 
-        {/* Integrated CTA Bar in One Clean Row */}
-        <div style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 12,
-          marginBottom: 48,
-          flexWrap: "wrap"
-        }}>
-          <form onSubmit={handleSubmit} style={{
-            display: "inline-flex",
-            alignItems: "center",
-            background: "#0F172A",
-            border: "1px solid #1E293B",
-            borderRadius: 8,
-            padding: "5px 6px 5px 16px",
-            boxShadow: "0 8px 24px rgba(0, 0, 0, 0.4)",
-            gap: 10,
-            maxWidth: "100%"
-          }}>
+        {/* Integrated Responsive CTA Bar */}
+        <div className="hero-cta-group">
+          <form onSubmit={handleSubmit} className="hero-cta-form">
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your work email"
               style={{
-                width: 230,
+                width: 220,
                 background: "transparent",
                 border: "none",
                 outline: "none",
@@ -164,10 +147,10 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
 
         {/* Subtle Horizon Line */}
         <div style={{
-          width: "80%",
+          width: "85%",
           maxWidth: 900,
           height: 1,
-          margin: "24px auto 32px auto",
+          margin: "20px auto 28px auto",
           background: "linear-gradient(90deg, transparent 0%, #1E293B 20%, #2F81F7 50%, #1E293B 80%, transparent 100%)",
           position: "relative",
           zIndex: 1
@@ -175,16 +158,16 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
 
         {/* Credible Enterprise Capability Horizon */}
         <div style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: 16,
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+          gap: 14,
           maxWidth: 1080,
           margin: "0 auto",
           padding: "0 20px",
-          flexWrap: "wrap",
           position: "relative",
-          zIndex: 2
+          zIndex: 2,
+          boxSizing: "border-box",
+          width: "100%"
         }}>
 
           {/* Pillar 1 */}
@@ -192,7 +175,7 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
             background: "#0B1220",
             border: "1px solid #1E293B",
             borderRadius: 8,
-            padding: "12px 20px",
+            padding: "12px 18px",
             display: "flex",
             alignItems: "center",
             gap: 12
@@ -203,7 +186,8 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
               border: "1px solid rgba(47, 129, 247, 0.25)",
               display: "flex", alignItems: "center", justifyContent: "center",
               color: "#2F81F7", fontSize: 13, fontWeight: 700,
-              fontFamily: "ui-monospace, monospace"
+              fontFamily: "ui-monospace, monospace",
+              flexShrink: 0
             }}>
               01
             </div>
@@ -212,7 +196,7 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
                 10 Department Pathways
               </div>
               <div style={{ fontSize: 11.5, color: "#94A3B8" }}>
-                Engineering • Sales • Ops • Marketing • Finance
+                Engineering • Sales • Ops • Marketing
               </div>
             </div>
           </div>
@@ -222,7 +206,7 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
             background: "#0B1220",
             border: "1px solid #1E293B",
             borderRadius: 8,
-            padding: "12px 20px",
+            padding: "12px 18px",
             display: "flex",
             alignItems: "center",
             gap: 12
@@ -233,7 +217,8 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
               border: "1px solid rgba(35, 134, 54, 0.25)",
               display: "flex", alignItems: "center", justifyContent: "center",
               color: "#2EA043", fontSize: 13, fontWeight: 700,
-              fontFamily: "ui-monospace, monospace"
+              fontFamily: "ui-monospace, monospace",
+              flexShrink: 0
             }}>
               02
             </div>
@@ -242,7 +227,7 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
                 Hands-On Tool Labs
               </div>
               <div style={{ fontSize: 11.5, color: "#94A3B8" }}>
-                Production workflows with 50+ approved tools
+                Production workflows with 50+ tools
               </div>
             </div>
           </div>
@@ -252,7 +237,7 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
             background: "#0B1220",
             border: "1px solid #1E293B",
             borderRadius: 8,
-            padding: "12px 20px",
+            padding: "12px 18px",
             display: "flex",
             alignItems: "center",
             gap: 12
@@ -263,7 +248,8 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
               border: "1px solid rgba(139, 124, 246, 0.25)",
               display: "flex", alignItems: "center", justifyContent: "center",
               color: "#8B7CF6", fontSize: 13, fontWeight: 700,
-              fontFamily: "ui-monospace, monospace"
+              fontFamily: "ui-monospace, monospace",
+              flexShrink: 0
             }}>
               03
             </div>
@@ -272,7 +258,7 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
                 Manager-Tracked ROI
               </div>
               <div style={{ fontSize: 11.5, color: "#94A3B8" }}>
-                Pre/post benchmarks & verified capstones
+                Pre/post benchmarks & capstones
               </div>
             </div>
           </div>

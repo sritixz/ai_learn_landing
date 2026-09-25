@@ -90,7 +90,7 @@ export default function AdvancedCapability({ onOpenDemo }) {
         {/* 2 Track Architecture Workstation */}
         <div style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(360px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
           gap: 20,
           marginBottom: 64
         }}>
@@ -190,7 +190,7 @@ export default function AdvancedCapability({ onOpenDemo }) {
 
           <div style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
             gap: 16
           }}>
             {capstones.map((c, i) => (

@@ -233,7 +233,7 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
 
                 {isOpen && (
                   <div style={{
-                    padding: "0 24px 24px 68px",
+                    padding: "0 24px 24px 24px",
                     background: "rgba(47, 129, 247, 0.02)",
                     borderTop: "1px dashed #1E293B"
                   }}>

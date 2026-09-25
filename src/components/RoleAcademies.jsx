@@ -139,7 +139,7 @@ export default function RoleAcademies({ onOpenDemo }) {
         {/* Interactive Master Workstation (Split View) */}
         <div style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(360px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
           gap: 24,
           alignItems: "stretch",
           marginBottom: 48

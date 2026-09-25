@@ -1,17 +1,26 @@
+import { useState } from 'react';
+
 export default function Navbar({ onOpenDemo, scrollToSection }) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const navItems = [
-    { label: "Programs", target: "programs" },
+    { label: "Programs", target: "solutions" },
     { label: "Solutions", target: "role-tracks" },
     { label: "Curriculum", target: "curriculum" },
     { label: "AI Tools", target: "ai-tools" },
-    { label: "Enterprise", target: "enterprise-delivery" },
+    { label: "Enterprise", target: "enterprise" },
     { label: "Resources", target: "resources" }
   ];
+
+  const handleNavClick = (target) => {
+    setMobileMenuOpen(false);
+    scrollToSection(target);
+  };
 
   return (
     <nav style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
-      background: "rgba(5, 11, 26, 0.85)",
+      background: "rgba(5, 11, 26, 0.9)",
       backdropFilter: "blur(16px)",
       WebkitBackdropFilter: "blur(16px)",
       borderBottom: "1px solid #1E293B"
@@ -22,7 +31,7 @@ export default function Navbar({ onOpenDemo, scrollToSection }) {
       }}>
         {/* Brand Logo */}
         <div 
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={() => { setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer" }}
         >
           <div style={{
@@ -45,12 +54,12 @@ export default function Navbar({ onOpenDemo, scrollToSection }) {
           </div>
         </div>
 
-        {/* Center Nav Links */}
-        <div style={{ display: "flex", alignItems: "center", gap: 2 }}>
+        {/* Desktop Center Nav Links */}
+        <div className="desktop-nav-links">
           {navItems.map((item) => (
             <button
               key={item.target}
-              onClick={() => scrollToSection(item.target)}
+              onClick={() => handleNavClick(item.target)}
               style={{
                 background: "none", border: "none", cursor: "pointer",
                 fontSize: 13, fontWeight: 500, color: "#94A3B8",
@@ -66,14 +75,14 @@ export default function Navbar({ onOpenDemo, scrollToSection }) {
           ))}
         </div>
 
-        {/* Action CTAs */}
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+        {/* Desktop Action CTAs */}
+        <div className="desktop-nav-actions">
           <button
             onClick={() => scrollToSection("curriculum")}
             style={{
               background: "rgba(15, 23, 42, 0.6)", border: "1px solid #1E293B", cursor: "pointer",
               fontSize: 13, fontWeight: 600, color: "#F8FAFC",
-              padding: "7px 14px", borderRadius: 8,
+              padding: "7px 14px", borderRadius: 7,
               transition: "all 0.15s ease"
             }}
             onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#334155"; e.currentTarget.style.background = "#1E293B"; }}
@@ -86,7 +95,7 @@ export default function Navbar({ onOpenDemo, scrollToSection }) {
             style={{
               background: "#238636", color: "#FFFFFF", border: "1px solid rgba(255, 255, 255, 0.1)",
               cursor: "pointer", fontSize: 13, fontWeight: 600,
-              padding: "7px 16px", borderRadius: 8,
+              padding: "7px 16px", borderRadius: 7,
               boxShadow: "0 1px 3px rgba(0, 0, 0, 0.3)",
               transition: "all 0.15s ease"
             }}
@@ -96,8 +105,83 @@ export default function Navbar({ onOpenDemo, scrollToSection }) {
             Book Enterprise Demo
           </button>
         </div>
+
+        {/* Mobile Menu Hamburger Button */}
+        <button
+          className="mobile-menu-btn"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle Navigation Menu"
+        >
+          {mobileMenuOpen ? "✕" : "☰"}
+        </button>
       </div>
+
+      {/* Mobile Drawer Menu */}
+      {mobileMenuOpen && (
+        <div style={{
+          background: "#0B1220",
+          borderBottom: "1px solid #1E293B",
+          padding: "16px 24px 24px 24px",
+          display: "flex",
+          flexDirection: "column",
+          gap: 10
+        }}>
+          {navItems.map((item) => (
+            <button
+              key={item.target}
+              onClick={() => handleNavClick(item.target)}
+              style={{
+                background: "transparent",
+                border: "none",
+                textAlign: "left",
+                padding: "10px 12px",
+                borderRadius: 6,
+                fontSize: 14.5,
+                fontWeight: 600,
+                color: "#F8FAFC",
+                cursor: "pointer"
+              }}
+            >
+              {item.label}
+            </button>
+          ))}
+
+          <div style={{ borderTop: "1px solid #1E293B", paddingTop: 14, display: "flex", flexDirection: "column", gap: 10 }}>
+            <button
+              onClick={() => { setMobileMenuOpen(false); scrollToSection("curriculum"); }}
+              style={{
+                width: "100%",
+                background: "#050B1A",
+                border: "1px solid #1E293B",
+                color: "#F8FAFC",
+                padding: "10px",
+                borderRadius: 7,
+                fontSize: 14,
+                fontWeight: 600,
+                cursor: "pointer"
+              }}
+            >
+              Explore 10-Module Syllabus ↓
+            </button>
+            <button
+              onClick={() => { setMobileMenuOpen(false); onOpenDemo(); }}
+              style={{
+                width: "100%",
+                background: "#238636",
+                border: "1px solid rgba(255, 255, 255, 0.15)",
+                color: "#FFFFFF",
+                padding: "11px",
+                borderRadius: 7,
+                fontSize: 14,
+                fontWeight: 600,
+                cursor: "pointer"
+              }}
+            >
+              Book Enterprise Demo
+            </button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
-

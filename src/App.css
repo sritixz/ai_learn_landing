@@ -35,6 +35,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 800px;
+  max-width: 100vw;
   height: 350px;
   background: radial-gradient(ellipse at bottom, rgba(47, 129, 247, 0.12) 0%, transparent 70%);
   pointer-events: none;
@@ -88,15 +89,104 @@
   letter-spacing: 0.02em;
 }
 
-/* Scroll Reveal Animation: Triggers smoothly once and then stays completely static (no floating) */
+/* Scroll Reveal Animation: Triggers smoothly once and then stays completely static */
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(20px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
 .reveal-on-scroll.revealed {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Navbar Responsive Classes */
+.desktop-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.desktop-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: #0F172A;
+  border: 1px solid var(--border-default);
+  color: var(--text-primary);
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.hero-cta-form {
+  display: inline-flex;
+  align-items: center;
+  background: #0F172A;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 5px 6px 5px 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  gap: 10px;
+  max-width: 100%;
+}
+
+@media (max-width: 860px) {
+  .desktop-nav-links {
+    display: none;
+  }
+  .desktop-nav-actions {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-cta-form {
+    flex-direction: column;
+    width: 100%;
+    padding: 12px;
+    gap: 12px;
+  }
+  .hero-cta-form input {
+    width: 100% !important;
+    text-align: center;
+    padding: 6px 0;
+  }
+  .hero-cta-form button {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-cta-group > button {
+    width: 100%;
+  }
+  .section-pad {
+    padding: 72px 0 !important;
+  }
 }

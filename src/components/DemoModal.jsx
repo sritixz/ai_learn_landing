@@ -110,7 +110,7 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
                 />
               </div>
 
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 12 }}>
                 <div>
                   <label style={{ display: "block", fontSize: 11.5, fontWeight: 600, color: "#94A3B8", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
                     COMPANY NAME

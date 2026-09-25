@@ -169,7 +169,7 @@ export default function ToolEcosystem() {
         {/* Categories & Tools Technical Catalog */}
         <div style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
           gap: 20,
           marginBottom: 64
         }}>
