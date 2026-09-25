@@ -6,27 +6,31 @@ const HeroSectionExtended = () => {
   const roleMap = {
     Engineering: {
       title: "Software & Engineering",
-      tool: "GitHub Copilot, Cursor & Claude Code",
-      output: "26% faster feature delivery, automated test suites & code reviews",
-      badge: "Technical Track"
+      tool: "GitHub Copilot • Cursor • Claude Code",
+      output: "26% faster feature delivery, automated test suites & PR reviews",
+      badge: "Technical Track",
+      codeSnippet: "git commit -m 'feat: ai-assisted automated test suite generation'"
     },
     Marketing: {
-      title: "Marketing & Content",
-      tool: "Jasper, Claude & Midjourney",
+      title: "Marketing & Growth",
+      tool: "Claude • Midjourney • Jasper",
       output: "Multi-channel campaign packs, SEO research & automated content repurposing",
-      badge: "Growth Track"
+      badge: "Growth Track",
+      codeSnippet: "campaign.generate({ audience: 'Enterprise CTOs', format: 'Omni-channel' })"
     },
     Sales: {
       title: "Sales & RevOps",
-      tool: "ChatGPT, Gong AI & CRM Copilots",
-      output: "Automated account research briefs, hyper-personalized outreach & CRM updates",
-      badge: "Revenue Track"
+      tool: "ChatGPT • Gong AI • CRM Copilots",
+      output: "Automated account research briefs, personalized outreach & CRM hygiene",
+      badge: "Revenue Track",
+      codeSnippet: "crm.enrichAccountBriefs({ intentScore: '>85', tier: 'Enterprise' })"
     },
     Finance: {
       title: "Finance & Operations",
-      tool: "Excel Copilot, Julius AI & n8n",
-      output: "Automated variance narratives, scenario modeling & invoice processing",
-      badge: "Operations Track"
+      tool: "Excel Copilot • Julius AI • n8n",
+      output: "Automated variance narratives, scenario modeling & invoice workflows",
+      badge: "Operations Track",
+      codeSnippet: "finance.reconcileLedgers({ month: 'Q3-Close', threshold: '0.001' })"
     }
   };
 
@@ -50,41 +54,42 @@ const HeroSectionExtended = () => {
   ];
 
   return (
-    <section style={{ padding: "80px 0 96px", background: "#FFFFFF", borderBottom: "1px solid #E2E8F0" }}>
+    <section style={{ padding: "80px 0 96px", background: "#040D21", borderBottom: "1px solid #30363D" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Interactive Capability Map Widget */}
         <div style={{
-          background: "#FFFFFF", border: "1px solid #E2E8F0",
-          borderRadius: 20, padding: "36px", boxShadow: "0 10px 30px -10px rgba(15,23,42,0.06)",
+          background: "#0D1117", border: "1px solid #30363D",
+          borderRadius: 16, padding: "36px", boxShadow: "0 12px 36px rgba(0,0,0,0.4)",
           marginBottom: 48
         }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28, borderBottom: "1px solid #F1F5F9", paddingBottom: 20 }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28, borderBottom: "1px solid #21262D", paddingBottom: 20, flexWrap: "wrap", gap: 12 }}>
             <div>
-              <div style={{ fontSize: 12, fontWeight: 700, color: "#2563EB", textTransform: "uppercase", letterSpacing: ".06em" }}>
-                INTERACTIVE CAPABILITY MAP
+              <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", fontFamily: "ui-monospace, monospace" }}>
+                INTERACTIVE CAPABILITY MATRIX
               </div>
-              <h3 style={{ fontSize: 20, fontWeight: 800, color: "#0F172A", marginTop: 4 }}>
-                Role-Based Pathways & Outcome Drivers
+              <h3 style={{ fontSize: 22, fontWeight: 800, color: "#F0F6FC", marginTop: 4, letterSpacing: "-.02em" }}>
+                Role-Based Pathways & Deliverables
               </h3>
             </div>
-            <span style={{ fontSize: 13, fontWeight: 600, color: "#64748B", background: "#F1F5F9", padding: "6px 14px", borderRadius: 999 }}>
+            <span style={{ fontSize: 12, fontWeight: 600, color: "#8B949E", background: "#161B22", border: "1px solid #30363D", padding: "6px 14px", borderRadius: 999, fontFamily: "ui-monospace, monospace" }}>
               Select a team track below
             </span>
           </div>
 
-          <div style={{ display: "flex", gap: 12, marginBottom: 24, flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: 10, marginBottom: 24, flexWrap: "wrap" }}>
             {Object.keys(roleMap).map((role) => (
               <button
                 key={role}
                 onClick={() => setActiveRole(role)}
                 style={{
-                  padding: "10px 20px", borderRadius: 10, border: "1.5px solid",
-                  borderColor: activeRole === role ? "#0F172A" : "#E2E8F0",
-                  background: activeRole === role ? "#0F172A" : "#F8FAFC",
-                  color: activeRole === role ? "#FFFFFF" : "#475569",
+                  padding: "10px 22px", borderRadius: 8, border: "1px solid",
+                  borderColor: activeRole === role ? "#388BFD" : "#30363D",
+                  background: activeRole === role ? "rgba(56, 139, 253, 0.15)" : "#161B22",
+                  color: activeRole === role ? "#F0F6FC" : "#8B949E",
                   fontSize: 14, fontWeight: 700, cursor: "pointer",
-                  transition: "all 0.18s ease"
+                  transition: "all 0.15s ease",
+                  boxShadow: activeRole === role ? "0 0 12px rgba(56, 139, 253, 0.25)" : "none"
                 }}
               >
                 {role}
@@ -93,20 +98,37 @@ const HeroSectionExtended = () => {
           </div>
 
           <div style={{
-            background: "#F8FAFC", border: "1px solid #E2E8F0",
-            borderRadius: 14, padding: "24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20
+            background: "#161B22", border: "1px solid #30363D",
+            borderRadius: 12, padding: "24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 24
           }}>
             <div>
-              <div style={{ fontSize: 12, fontWeight: 700, color: "#64748B", textTransform: "uppercase" }}>Department Track</div>
-              <div style={{ fontSize: 17, fontWeight: 800, color: "#0F172A", marginTop: 6 }}>{roleMap[activeRole].title}</div>
+              <div style={{ fontSize: 11, fontWeight: 700, color: "#8B949E", textTransform: "uppercase", letterSpacing: ".05em", fontFamily: "ui-monospace, monospace" }}>
+                Department Track
+              </div>
+              <div style={{ fontSize: 18, fontWeight: 800, color: "#F0F6FC", marginTop: 6 }}>
+                {roleMap[activeRole].title}
+              </div>
+              <div style={{ fontSize: 12, color: "#388BFD", marginTop: 4, fontFamily: "ui-monospace, monospace" }}>
+                {roleMap[activeRole].badge}
+              </div>
             </div>
+
             <div>
-              <div style={{ fontSize: 12, fontWeight: 700, color: "#64748B", textTransform: "uppercase" }}>Approved Tool Stack</div>
-              <div style={{ fontSize: 15, fontWeight: 700, color: "#2563EB", marginTop: 6 }}>{roleMap[activeRole].tool}</div>
+              <div style={{ fontSize: 11, fontWeight: 700, color: "#8B949E", textTransform: "uppercase", letterSpacing: ".05em", fontFamily: "ui-monospace, monospace" }}>
+                Approved Tool Stack
+              </div>
+              <div style={{ fontSize: 14, fontWeight: 700, color: "#F0F6FC", marginTop: 6, fontFamily: "ui-monospace, monospace" }}>
+                {roleMap[activeRole].tool}
+              </div>
             </div>
+
             <div>
-              <div style={{ fontSize: 12, fontWeight: 700, color: "#64748B", textTransform: "uppercase" }}>Target Business Outcome</div>
-              <div style={{ fontSize: 14, fontWeight: 700, color: "#16A34A", marginTop: 6 }}>✓ {roleMap[activeRole].output}</div>
+              <div style={{ fontSize: 11, fontWeight: 700, color: "#8B949E", textTransform: "uppercase", letterSpacing: ".05em", fontFamily: "ui-monospace, monospace" }}>
+                Target Business Outcome
+              </div>
+              <div style={{ fontSize: 14, fontWeight: 600, color: "#2EA043", marginTop: 6, lineHeight: 1.5 }}>
+                ✓ {roleMap[activeRole].output}
+              </div>
             </div>
           </div>
         </div>
@@ -116,24 +138,27 @@ const HeroSectionExtended = () => {
           {pillars.map((p, i) => (
             <div
               key={i}
+              className="dark-glass-card"
               style={{
-                background: "#FFFFFF", border: "1px solid #E2E8F0",
-                borderRadius: 16, padding: "32px 28px",
-                boxShadow: "0 4px 16px rgba(15,23,42,0.03)",
-                transition: "transform 0.2s ease, box-shadow 0.2s ease"
+                background: "#0D1117", border: "1px solid #30363D",
+                borderRadius: 14, padding: "32px 28px",
+                transition: "all 0.2s ease"
               }}
+              onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#388BFD"; e.currentTarget.style.transform = "translateY(-3px)"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#30363D"; e.currentTarget.style.transform = "none"; }}
             >
               <div style={{
-                width: 36, height: 36, borderRadius: 8, background: "#EFF6FF",
-                color: "#2563EB", fontWeight: 800, fontSize: 14,
-                display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16
+                width: 36, height: 36, borderRadius: 8, background: "#161B22", border: "1px solid #30363D",
+                color: "#388BFD", fontWeight: 800, fontSize: 13,
+                display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 18,
+                fontFamily: "ui-monospace, monospace"
               }}>
                 0{i + 1}
               </div>
-              <h3 style={{ fontSize: 18, fontWeight: 800, color: "#0F172A", marginBottom: 10, letterSpacing: "-.01em" }}>
+              <h3 style={{ fontSize: 18, fontWeight: 800, color: "#F0F6FC", marginBottom: 10, letterSpacing: "-.01em" }}>
                 {p.title}
               </h3>
-              <p style={{ fontSize: 14, color: "#64748B", lineHeight: 1.65 }}>
+              <p style={{ fontSize: 14, color: "#8B949E", lineHeight: 1.65 }}>
                 {p.desc}
               </p>
             </div>
