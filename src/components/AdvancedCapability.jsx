@@ -51,37 +51,37 @@ export default function AdvancedCapability({ onOpenDemo }) {
   ];
 
   return (
-    <section id="agents-automation" style={{ padding: "120px 0", background: "#FAFAFA", borderBottom: "1px solid #E2E8F0" }}>
+    <section id="agents-automation" style={{ padding: "100px 0", background: "#040D21", borderBottom: "1px solid #30363D" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
-        <div style={{ fontSize: 13, fontWeight: 700, color: "#2563EB", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 12 }}>
-          Advanced Technical Capabilities
+        <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 12, fontFamily: "ui-monospace, monospace" }}>
+          ADVANCED ENGINEERING CAPABILITY
         </div>
-        <h2 style={{ fontSize: "clamp(34px, 4.5vw, 50px)", fontWeight: 900, color: "#0F172A", letterSpacing: "-.02em", marginBottom: 20 }}>
+        <h2 style={{ fontSize: "clamp(32px, 4vw, 44px)", fontWeight: 900, color: "#F0F6FC", letterSpacing: "-.02em", marginBottom: 16 }}>
           Go beyond prompting. Build AI agents and workflow automations.
         </h2>
-        <p style={{ fontSize: 19, color: "#475569", maxWidth: 840, lineHeight: 1.65, marginBottom: 64, fontWeight: 400 }}>
+        <p style={{ fontSize: 17, color: "#8B949E", maxWidth: 840, lineHeight: 1.65, marginBottom: 56, fontWeight: 400 }}>
           Transition high-potential employees from manual AI usage into system designers who build repeatable, automated workflows with human oversight and enterprise governance.
         </p>
 
         {/* 2 Tracks Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))", gap: 32, marginBottom: 80 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))", gap: 24, marginBottom: 64 }}>
           {/* Agent Building Track */}
           <div style={{
-            background: "#FFFFFF", border: "1.5px solid #0F172A",
-            borderRadius: 20, padding: "40px", boxShadow: "0 4px 20px -2px rgba(15,23,42,0.04)"
+            background: "#0D1117", border: "1px solid #30363D",
+            borderRadius: 16, padding: "36px", boxShadow: "0 8px 24px rgba(0,0,0,0.3)"
           }}>
-            <span style={{ fontSize: 12, fontWeight: 800, color: "#2563EB", textTransform: "uppercase", letterSpacing: ".06em" }}>
+            <span style={{ fontSize: 11, fontWeight: 800, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", fontFamily: "ui-monospace, monospace" }}>
               TRACK 01
             </span>
-            <h3 style={{ fontSize: 22, fontWeight: 800, color: "#0F172A", marginTop: 6, marginBottom: 20 }}>
+            <h3 style={{ fontSize: 20, fontWeight: 800, color: "#F0F6FC", marginTop: 6, marginBottom: 18 }}>
               AI Agent Architecture Track
             </h3>
-            <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 14, padding: 0, margin: 0 }}>
+            <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 12, padding: 0, margin: 0 }}>
               {agentPoints.map((pt, i) => (
-                <li key={i} style={{ display: "flex", gap: 12, fontSize: 14, color: "#475569", lineHeight: 1.6 }}>
-                  <span style={{ color: "#2563EB", fontWeight: 800, flexShrink: 0 }}>✓</span>
+                <li key={i} style={{ display: "flex", gap: 10, fontSize: 13.5, color: "#8B949E", lineHeight: 1.6 }}>
+                  <span style={{ color: "#388BFD", fontWeight: 800, flexShrink: 0 }}>✓</span>
                   <span>{pt}</span>
                 </li>
               ))}
@@ -90,19 +90,19 @@ export default function AdvancedCapability({ onOpenDemo }) {
 
           {/* Automation Track */}
           <div style={{
-            background: "#FFFFFF", border: "1.5px solid #0F172A",
-            borderRadius: 20, padding: "40px", boxShadow: "0 4px 20px -2px rgba(15,23,42,0.04)"
+            background: "#0D1117", border: "1px solid #30363D",
+            borderRadius: 16, padding: "36px", boxShadow: "0 8px 24px rgba(0,0,0,0.3)"
           }}>
-            <span style={{ fontSize: 12, fontWeight: 800, color: "#0D9488", textTransform: "uppercase", letterSpacing: ".06em" }}>
+            <span style={{ fontSize: 11, fontWeight: 800, color: "#39C5CF", textTransform: "uppercase", letterSpacing: ".08em", fontFamily: "ui-monospace, monospace" }}>
               TRACK 02
             </span>
-            <h3 style={{ fontSize: 22, fontWeight: 800, color: "#0F172A", marginTop: 6, marginBottom: 20 }}>
+            <h3 style={{ fontSize: 20, fontWeight: 800, color: "#F0F6FC", marginTop: 6, marginBottom: 18 }}>
               AI Process Automation Track
             </h3>
-            <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 14, padding: 0, margin: 0 }}>
+            <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 12, padding: 0, margin: 0 }}>
               {automationPoints.map((pt, i) => (
-                <li key={i} style={{ display: "flex", gap: 12, fontSize: 14, color: "#475569", lineHeight: 1.6 }}>
-                  <span style={{ color: "#0D9488", fontWeight: 800, flexShrink: 0 }}>✓</span>
+                <li key={i} style={{ display: "flex", gap: 10, fontSize: 13.5, color: "#8B949E", lineHeight: 1.6 }}>
+                  <span style={{ color: "#39C5CF", fontWeight: 800, flexShrink: 0 }}>✓</span>
                   <span>{pt}</span>
                 </li>
               ))}
@@ -112,37 +112,39 @@ export default function AdvancedCapability({ onOpenDemo }) {
 
         {/* Example Capstone Builds */}
         <div>
-          <div style={{ fontSize: 13, fontWeight: 700, color: "#2563EB", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 12 }}>
-            Practical Deliverables
+          <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 8, fontFamily: "ui-monospace, monospace" }}>
+            CAPSTONE DELIVERABLES
           </div>
-          <h3 style={{ fontSize: 30, fontWeight: 800, color: "#0F172A", marginBottom: 36, letterSpacing: "-.01em" }}>
+          <h3 style={{ fontSize: 24, fontWeight: 800, color: "#F0F6FC", marginBottom: 28, letterSpacing: "-.01em" }}>
             Production Capstone Builds Shipped During Training
           </h3>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 24 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 20 }}>
             {capstones.map((c, i) => (
               <div
                 key={i}
                 onClick={() => onOpenDemo(`${c.title} Capstone Build`)}
                 style={{
-                  background: "#FFFFFF", border: "1px solid #E2E8F0",
-                  borderRadius: 18, padding: "32px 28px",
-                  cursor: "pointer", transition: "all 0.18s ease"
+                  background: "#0D1117", border: "1px solid #30363D",
+                  borderRadius: 14, padding: "28px 24px",
+                  cursor: "pointer", transition: "all 0.15s ease"
                 }}
-                onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 10px 30px -5px rgba(15,23,42,0.08)"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.transform = "none"; e.currentTarget.style.boxShadow = "none"; }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#388BFD"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#30363D"; e.currentTarget.style.transform = "none"; }}
               >
                 <div style={{
-                  fontSize: 11, fontWeight: 700, color: "#2563EB",
-                  background: "#EFF6FF", padding: "4px 12px", borderRadius: 999,
-                  display: "inline-block", marginBottom: 14
+                  fontSize: 11, fontWeight: 700, color: "#388BFD",
+                  background: "rgba(56, 139, 253, 0.15)", border: "1px solid rgba(56, 139, 253, 0.3)",
+                  padding: "3px 10px", borderRadius: 6,
+                  display: "inline-block", marginBottom: 12,
+                  fontFamily: "ui-monospace, monospace"
                 }}>
                   {c.category}
                 </div>
-                <h4 style={{ fontSize: 18, fontWeight: 800, color: "#0F172A", marginBottom: 8 }}>
+                <h4 style={{ fontSize: 17, fontWeight: 800, color: "#F0F6FC", marginBottom: 6 }}>
                   {c.title}
                 </h4>
-                <p style={{ fontSize: 14, color: "#64748B", lineHeight: 1.6, margin: 0 }}>
+                <p style={{ fontSize: 13.5, color: "#8B949E", lineHeight: 1.6, margin: 0 }}>
                   {c.desc}
                 </p>
               </div>

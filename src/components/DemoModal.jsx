@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
   const [submitted, setSubmitted] = useState(false);
@@ -20,28 +20,31 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
   return (
     <div style={{
       position: "fixed", inset: 0, zIndex: 1000,
-      background: "rgba(15, 31, 61, 0.75)",
-      backdropFilter: "blur(6px)",
+      background: "rgba(4, 13, 33, 0.8)",
+      backdropFilter: "blur(12px)",
+      WebkitBackdropFilter: "blur(12px)",
       display: "flex", alignItems: "center", justifyContent: "center",
       padding: 20
     }}>
       <div style={{
-        background: "#FFFFFF",
-        borderRadius: 20,
+        background: "#0D1117",
+        borderRadius: 16,
         maxWidth: 540,
         width: "100%",
         padding: "36px 32px",
-        boxShadow: "0 20px 50px rgba(15, 31, 61, 0.3)",
+        boxShadow: "0 24px 64px rgba(0, 0, 0, 0.6)",
         position: "relative",
-        border: "1px solid #E2E8F0"
+        border: "1px solid #30363D",
+        color: "#F0F6FC"
       }}>
         <button
           onClick={onClose}
           style={{
             position: "absolute", top: 18, right: 20,
-            background: "#F1F5F9", border: "none", borderRadius: "50%",
+            background: "#161B22", border: "1px solid #30363D", borderRadius: "50%",
             width: 32, height: 32, cursor: "pointer",
-            fontSize: 16, fontWeight: "bold", color: "#64748B"
+            fontSize: 14, fontWeight: "bold", color: "#8B949E",
+            display: "flex", alignItems: "center", justifyContent: "center"
           }}
         >
           ✕
@@ -49,19 +52,27 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
 
         {!submitted ? (
           <>
-            <div style={{ display: "inline-block", background: "#EFF6FF", color: "#2563EB", padding: "4px 12px", borderRadius: 999, fontSize: 12, fontWeight: 700, marginBottom: 12 }}>
-              Enterprise GenAI Consultation
+            <div style={{
+              display: "inline-block", background: "rgba(56, 139, 253, 0.15)",
+              border: "1px solid rgba(56, 139, 253, 0.3)",
+              color: "#388BFD", padding: "4px 12px", borderRadius: 6,
+              fontSize: 11, fontWeight: 700, marginBottom: 12,
+              fontFamily: "ui-monospace, monospace"
+            }}>
+              ENTERPRISE CONSULTATION
             </div>
-            <h3 style={{ fontSize: 24, fontWeight: 800, color: "#0F1F3D", marginBottom: 8, letterSpacing: "-.02em" }}>
+            <h3 style={{ fontSize: 22, fontWeight: 800, color: "#F0F6FC", marginBottom: 6, letterSpacing: "-.02em" }}>
               Request an Enterprise Demo
             </h3>
-            <p style={{ fontSize: 14, color: "#64748B", marginBottom: 24, lineHeight: 1.5 }}>
+            <p style={{ fontSize: 13.5, color: "#8B949E", marginBottom: 24, lineHeight: 1.5 }}>
               Tell us your teams, current AI maturity, and business goals. We will map a role-based learning plan for your organization.
             </p>
 
-            <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 14 }}>
               <div>
-                <label style={{ display: "block", fontSize: 13, fontWeight: 600, color: "#0F1F3D", marginBottom: 6 }}>Work Email</label>
+                <label style={{ display: "block", fontSize: 12, fontWeight: 600, color: "#8B949E", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
+                  WORK EMAIL
+                </label>
                 <input
                   type="email"
                   required
@@ -69,15 +80,18 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
                   value={formData.workEmail}
                   onChange={(e) => setFormData({ ...formData, workEmail: e.target.value })}
                   style={{
-                    width: "100%", padding: "12px 14px", borderRadius: 10,
-                    border: "1.5px solid #CBD5E1", fontSize: 14, outline: "none"
+                    width: "100%", padding: "10px 14px", borderRadius: 8,
+                    background: "#161B22", border: "1px solid #30363D",
+                    fontSize: 14, color: "#F0F6FC", outline: "none"
                   }}
                 />
               </div>
 
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
                 <div>
-                  <label style={{ display: "block", fontSize: 13, fontWeight: 600, color: "#0F1F3D", marginBottom: 6 }}>Company Name</label>
+                  <label style={{ display: "block", fontSize: 12, fontWeight: 600, color: "#8B949E", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
+                    COMPANY NAME
+                  </label>
                   <input
                     type="text"
                     required
@@ -85,19 +99,23 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     style={{
-                      width: "100%", padding: "12px 14px", borderRadius: 10,
-                      border: "1.5px solid #CBD5E1", fontSize: 14, outline: "none"
+                      width: "100%", padding: "10px 14px", borderRadius: 8,
+                      background: "#161B22", border: "1px solid #30363D",
+                      fontSize: 14, color: "#F0F6FC", outline: "none"
                     }}
                   />
                 </div>
                 <div>
-                  <label style={{ display: "block", fontSize: 13, fontWeight: 600, color: "#0F1F3D", marginBottom: 6 }}>Employee Count</label>
+                  <label style={{ display: "block", fontSize: 12, fontWeight: 600, color: "#8B949E", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
+                    EMPLOYEE COUNT
+                  </label>
                   <select
                     value={formData.employeeCount}
                     onChange={(e) => setFormData({ ...formData, employeeCount: e.target.value })}
                     style={{
-                      width: "100%", padding: "12px 14px", borderRadius: 10,
-                      border: "1.5px solid #CBD5E1", fontSize: 14, outline: "none", background: "#fff"
+                      width: "100%", padding: "10px 14px", borderRadius: 8,
+                      background: "#161B22", border: "1px solid #30363D",
+                      fontSize: 14, color: "#F0F6FC", outline: "none"
                     }}
                   >
                     <option value="1-50">1 - 50 employees</option>
@@ -109,28 +127,34 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
               </div>
 
               <div>
-                <label style={{ display: "block", fontSize: 13, fontWeight: 600, color: "#0F1F3D", marginBottom: 6 }}>Key Departments to Upskill</label>
+                <label style={{ display: "block", fontSize: 12, fontWeight: 600, color: "#8B949E", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
+                  KEY DEPARTMENTS TO UPSKILL
+                </label>
                 <input
                   type="text"
-                  placeholder="e.g. Marketing, Sales, Engineering, Finance"
+                  placeholder="e.g. Engineering, Sales, Marketing, Finance"
                   value={formData.departments}
                   onChange={(e) => setFormData({ ...formData, departments: e.target.value })}
                   style={{
-                    width: "100%", padding: "12px 14px", borderRadius: 10,
-                    border: "1.5px solid #CBD5E1", fontSize: 14, outline: "none"
+                    width: "100%", padding: "10px 14px", borderRadius: 8,
+                    background: "#161B22", border: "1px solid #30363D",
+                    fontSize: 14, color: "#F0F6FC", outline: "none"
                   }}
                 />
               </div>
 
               <div>
-                <label style={{ display: "block", fontSize: 13, fontWeight: 600, color: "#0F1F3D", marginBottom: 6 }}>Primary Training Goal</label>
+                <label style={{ display: "block", fontSize: 12, fontWeight: 600, color: "#8B949E", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
+                  PRIMARY TRAINING GOAL
+                </label>
                 <textarea
                   rows={3}
                   value={formData.goal}
                   onChange={(e) => setFormData({ ...formData, goal: e.target.value })}
                   style={{
-                    width: "100%", padding: "12px 14px", borderRadius: 10,
-                    border: "1.5px solid #CBD5E1", fontSize: 14, outline: "none", fontFamily: "inherit"
+                    width: "100%", padding: "10px 14px", borderRadius: 8,
+                    background: "#161B22", border: "1px solid #30363D",
+                    fontSize: 14, color: "#F0F6FC", outline: "none", fontFamily: "inherit"
                   }}
                 />
               </div>
@@ -138,11 +162,14 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
               <button
                 type="submit"
                 style={{
-                  background: "#0F1F3D", color: "#FFFFFF",
-                  padding: "14px 24px", borderRadius: 12, border: "none",
-                  fontWeight: 700, fontSize: 15, cursor: "pointer",
-                  marginTop: 6, boxShadow: "0 4px 14px rgba(15,31,61,0.2)"
+                  background: "#238636", color: "#FFFFFF",
+                  padding: "12px 24px", borderRadius: 8, border: "1px solid rgba(240, 246, 252, 0.1)",
+                  fontWeight: 700, fontSize: 14, cursor: "pointer",
+                  marginTop: 4, boxShadow: "0 2px 8px rgba(35, 134, 54, 0.35)",
+                  transition: "all 0.15s ease"
                 }}
+                onMouseEnter={(e) => { e.currentTarget.style.background = "#2EA043"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.background = "#238636"; }}
               >
                 Schedule Consultation & Get Curriculum
               </button>
@@ -150,19 +177,26 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
           </>
         ) : (
           <div style={{ textAlign: "center", padding: "20px 0" }}>
-            <div style={{ fontSize: 48, marginBottom: 12 }}>🎉</div>
-            <h3 style={{ fontSize: 24, fontWeight: 800, color: "#0F1F3D", marginBottom: 10 }}>
-              Consultation Request Received!
+            <div style={{
+              width: 44, height: 44, borderRadius: "50%",
+              background: "rgba(46, 160, 67, 0.15)", border: "1px solid #2EA043",
+              color: "#2EA043", fontSize: 20, display: "flex", alignItems: "center", justifyContent: "center",
+              margin: "0 auto 16px auto"
+            }}>
+              ✓
+            </div>
+            <h3 style={{ fontSize: 20, fontWeight: 800, color: "#F0F6FC", marginBottom: 8 }}>
+              Consultation Request Received
             </h3>
-            <p style={{ fontSize: 14, color: "#64748B", marginBottom: 24, lineHeight: 1.6 }}>
-              Thank you for reaching out. An AI Global Academy enterprise solution specialist will contact you at <strong>{formData.workEmail}</strong> within 24 hours to present a customized curriculum blueprint.
+            <p style={{ fontSize: 14, color: "#8B949E", marginBottom: 24, lineHeight: 1.6 }}>
+              Thank you for reaching out. An AI Global Academy enterprise solution specialist will contact you at <strong style={{ color: "#F0F6FC" }}>{formData.workEmail}</strong> within 24 hours to present a customized curriculum blueprint.
             </p>
             <button
               onClick={() => { setSubmitted(false); onClose(); }}
               style={{
-                background: "#0F1F3D", color: "#FFFFFF",
-                padding: "12px 28px", borderRadius: 10, border: "none",
-                fontWeight: 700, cursor: "pointer"
+                background: "#161B22", color: "#F0F6FC", border: "1px solid #30363D",
+                padding: "10px 24px", borderRadius: 8,
+                fontWeight: 600, fontSize: 14, cursor: "pointer"
               }}
             >
               Close Window

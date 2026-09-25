@@ -27,42 +27,46 @@ export default function ResponsibleAI() {
   ];
 
   return (
-    <section style={{ padding: "120px 0", background: "#FAFAFA", borderBottom: "1px solid #E2E8F0" }}>
+    <section style={{ padding: "100px 0", background: "#040D21", borderBottom: "1px solid #30363D" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
-        <div style={{ fontSize: 13, fontWeight: 700, color: "#2563EB", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 12 }}>
-          Responsible Enterprise AI
+        <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 12, fontFamily: "ui-monospace, monospace" }}>
+          RESPONSIBLE AI GOVERNANCE
         </div>
-        <h2 style={{ fontSize: "clamp(34px, 4.5vw, 50px)", fontWeight: 900, color: "#0F172A", letterSpacing: "-.02em", marginBottom: 20 }}>
+        <h2 style={{ fontSize: "clamp(32px, 4vw, 44px)", fontWeight: 900, color: "#F0F6FC", letterSpacing: "-.02em", marginBottom: 16 }}>
           Upskill teams without creating a data governance problem
         </h2>
-        <p style={{ fontSize: 19, color: "#475569", maxWidth: 840, lineHeight: 1.65, marginBottom: 64, fontWeight: 400 }}>
+        <p style={{ fontSize: 17, color: "#8B949E", maxWidth: 840, lineHeight: 1.65, marginBottom: 56, fontWeight: 400 }}>
           Responsible AI practices are woven throughout every single curriculum module rather than isolated into a compliance lecture.
         </p>
 
         {/* 6 Pillars Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 28, marginBottom: 56 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 20, marginBottom: 48 }}>
           {pillars.map((p, i) => (
             <div
               key={i}
               style={{
-                background: "#FFFFFF", border: "1px solid #E2E8F0",
-                borderRadius: 18, padding: "32px 28px",
-                boxShadow: "0 4px 16px rgba(15,23,42,0.03)"
+                background: "#0D1117", border: "1px solid #30363D",
+                borderRadius: 14, padding: "28px 24px",
+                transition: "all 0.15s ease"
               }}
+              onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#388BFD"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#30363D"; }}
             >
               <div style={{
-                fontSize: 12, fontWeight: 700, color: "#2563EB",
-                background: "#EFF6FF", padding: "4px 12px", borderRadius: 999,
-                display: "inline-block", marginBottom: 16
+                fontSize: 11, fontWeight: 700, color: "#388BFD",
+                background: "rgba(56, 139, 253, 0.15)", border: "1px solid rgba(56, 139, 253, 0.3)",
+                padding: "3px 10px", borderRadius: 6,
+                display: "inline-block", marginBottom: 14,
+                fontFamily: "ui-monospace, monospace"
               }}>
                 Pillar 0{i + 1}
               </div>
-              <h3 style={{ fontSize: 18, fontWeight: 800, color: "#0F172A", marginBottom: 10 }}>
+              <h3 style={{ fontSize: 17, fontWeight: 800, color: "#F0F6FC", marginBottom: 8 }}>
                 {p.title}
               </h3>
-              <p style={{ fontSize: 14, color: "#64748B", lineHeight: 1.65, margin: 0 }}>
+              <p style={{ fontSize: 13.5, color: "#8B949E", lineHeight: 1.6, margin: 0 }}>
                 {p.desc}
               </p>
             </div>
@@ -71,14 +75,14 @@ export default function ResponsibleAI() {
 
         {/* Optional Enterprise Customization Banner */}
         <div style={{
-          background: "#F8FAFC", border: "1.5px solid #CBD5E1",
-          borderRadius: 20, padding: "36px 40px"
+          background: "#0D1117", border: "1px solid #30363D",
+          borderRadius: 16, padding: "32px 36px"
         }}>
-          <h4 style={{ fontSize: 19, fontWeight: 800, color: "#0F172A", marginBottom: 10 }}>
+          <h4 style={{ fontSize: 18, fontWeight: 800, color: "#F0F6FC", marginBottom: 8 }}>
             Customized Enterprise Governance & Playbooks
           </h4>
-          <p style={{ fontSize: 15, color: "#475569", lineHeight: 1.65, margin: 0 }}>
-            We adapt exercises, prompts, and examples directly to your company's approved AI tools, data policies, security controls, and business processes. We can also deliver a customized <strong>"Enterprise AI Usage Playbook"</strong> tailored to your organization.
+          <p style={{ fontSize: 14, color: "#8B949E", lineHeight: 1.65, margin: 0 }}>
+            We adapt exercises, prompts, and examples directly to your company's approved AI tools, data policies, security controls, and business processes. We can also deliver a customized <strong style={{ color: "#F0F6FC" }}>"Enterprise AI Usage Playbook"</strong> tailored to your organization.
           </p>
         </div>
 

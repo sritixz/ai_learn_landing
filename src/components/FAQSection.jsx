@@ -39,50 +39,50 @@ export default function FAQSection() {
   ];
 
   return (
-    <section style={{ padding: "120px 0", background: "#FAFAFA", borderBottom: "1px solid #E2E8F0" }}>
+    <section style={{ padding: "100px 0", background: "#040D21", borderBottom: "1px solid #30363D" }}>
       <div style={{ maxWidth: 880, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
-        <div style={{ fontSize: 13, fontWeight: 700, color: "#2563EB", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 12 }}>
-          Frequently Asked Questions
+        <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 12, fontFamily: "ui-monospace, monospace" }}>
+          FREQUENTLY ASKED QUESTIONS
         </div>
-        <h2 style={{ fontSize: "clamp(34px, 4.5vw, 46px)", fontWeight: 900, color: "#0F172A", letterSpacing: "-.02em", marginBottom: 48 }}>
+        <h2 style={{ fontSize: "clamp(32px, 4vw, 42px)", fontWeight: 900, color: "#F0F6FC", letterSpacing: "-.02em", marginBottom: 44 }}>
           Questions enterprise buyers frequently ask
         </h2>
 
         {/* Accordion list */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
           {faqs.map((faq, i) => {
             const isOpen = openIndex === i;
             return (
               <div
                 key={i}
                 style={{
-                  background: "#FFFFFF", border: "1px solid #E2E8F0",
-                  borderRadius: 16, overflow: "hidden",
-                  boxShadow: isOpen ? "0 4px 20px -2px rgba(15,23,42,0.05)" : "none",
-                  transition: "all 0.18s ease"
+                  background: "#0D1117", border: "1px solid",
+                  borderColor: isOpen ? "#388BFD" : "#30363D",
+                  borderRadius: 12, overflow: "hidden",
+                  transition: "all 0.15s ease"
                 }}
               >
                 <div
                   onClick={() => setOpenIndex(isOpen ? null : i)}
                   style={{
-                    padding: "24px 32px", cursor: "pointer",
+                    padding: "20px 28px", cursor: "pointer",
                     display: "flex", alignItems: "center", justifyContent: "space-between",
-                    background: isOpen ? "#F8FAFC" : "#FFFFFF"
+                    background: isOpen ? "rgba(56, 139, 253, 0.08)" : "#0D1117"
                   }}
                 >
-                  <h3 style={{ fontSize: 18, fontWeight: 800, color: "#0F172A", paddingRight: 16, margin: 0 }}>
+                  <h3 style={{ fontSize: 16, fontWeight: 800, color: "#F0F6FC", paddingRight: 16, margin: 0 }}>
                     {faq.q}
                   </h3>
-                  <span style={{ fontSize: 22, fontWeight: 700, color: "#2563EB" }}>
+                  <span style={{ fontSize: 18, fontWeight: 700, color: "#388BFD", fontFamily: "ui-monospace, monospace" }}>
                     {isOpen ? "−" : "+"}
                   </span>
                 </div>
 
                 {isOpen && (
-                  <div style={{ padding: "0 32px 28px 32px", borderTop: "1px solid #F1F5F9" }}>
-                    <p style={{ fontSize: 15, color: "#475569", lineHeight: 1.7, paddingTop: 20, margin: 0 }}>
+                  <div style={{ padding: "0 28px 22px 28px", borderTop: "1px solid #21262D" }}>
+                    <p style={{ fontSize: 14, color: "#8B949E", lineHeight: 1.65, paddingTop: 16, margin: 0 }}>
                       {faq.a}
                     </p>
                   </div>
