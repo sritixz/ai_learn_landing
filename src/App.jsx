@@ -37,8 +37,10 @@ export default function App() {
 
   return (
     <div style={{
-      fontFamily: "'Inter', system-ui, -apple-system, sans-serif",
-      color: "#0F1F3D", background: "#FFFFFF", minHeight: "100vh",
+      fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+      color: "#F0F6FC",
+      background: "#040D21",
+      minHeight: "100vh",
       WebkitFontSmoothing: "antialiased"
     }}>
       {/* Navigation Header */}
