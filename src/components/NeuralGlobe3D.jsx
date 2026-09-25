@@ -1,238 +1,125 @@
 import React, { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Html } from '@react-three/drei';
 import * as THREE from 'three';
 
-// Orbiting AI/ML keywords, prompt snippets, and figures
-const ORBITING_ITEMS = [
-  {
-    type: 'badge',
-    label: '>_ prompt.py',
-    tagline: 'Zero-shot / Chain-of-Thought',
-    icon: '⚡',
-    color: '#56D364',
-    angle: 0,
-    radius: 2.35,
-    heightOffset: 0.42,
-    speed: 0.22
-  },
-  {
-    type: 'badge',
-    label: 'AI Agents & RAG',
-    tagline: 'Vector Knowledge Retrieval',
-    icon: '🤖',
-    color: '#388BFD',
-    angle: (Math.PI * 2) / 7,
-    radius: 2.5,
-    heightOffset: -0.32,
-    speed: 0.22
-  },
-  {
-    type: 'badge',
-    label: 'LLMs & Transformers',
-    tagline: 'DeepSeek • Claude • GPT-4o',
-    icon: '🧠',
-    color: '#39C5CF',
-    angle: (Math.PI * 4) / 7,
-    radius: 2.25,
-    heightOffset: 0.48,
-    speed: 0.22
-  },
-  {
-    type: 'badge',
-    label: 'Code Copilots',
-    tagline: 'Cursor • Copilot • Claude Code',
-    icon: '💻',
-    color: '#79C0FF',
-    angle: (Math.PI * 6) / 7,
-    radius: 2.45,
-    heightOffset: -0.45,
-    speed: 0.22
-  },
-  {
-    type: 'badge',
-    label: 'Workflow Automation',
-    tagline: 'n8n • Zapier • Custom Pipelines',
-    icon: '⚙️',
-    color: '#D2A8FF',
-    angle: (Math.PI * 8) / 7,
-    radius: 2.3,
-    heightOffset: 0.25,
-    speed: 0.22
-  },
-  {
-    type: 'badge',
-    label: 'Fine-Tuning & LoRA',
-    tagline: 'Custom Enterprise Adapters',
-    icon: '🎛️',
-    color: '#F0883E',
-    angle: (Math.PI * 10) / 7,
-    radius: 2.4,
-    heightOffset: -0.22,
-    speed: 0.22
-  },
-  {
-    type: 'badge',
-    label: 'Multimodal ML',
-    tagline: 'Vision • Audio • Realtime',
-    icon: '📊',
-    color: '#E3B341',
-    angle: (Math.PI * 12) / 7,
-    radius: 2.35,
-    heightOffset: 0.35,
-    speed: 0.22
-  }
+// 3D Geometric AI Figures & Nodes orbiting around the neural sphere
+const ORBITING_FIGURES = [
+  // TPU Neural Compute Chips (Cubes)
+  { type: 'cube', color: '#56D364', angle: 0, radius: 2.3, height: 0.45, size: 0.16, speed: 0.25, rotSpeed: 0.03 },
+  { type: 'cube', color: '#388BFD', angle: (Math.PI * 2) / 6, radius: 2.5, height: -0.35, size: 0.15, speed: 0.22, rotSpeed: -0.025 },
+  
+  // Vector Embedding Data Crystals (Octahedrons)
+  { type: 'octahedron', color: '#79C0FF', angle: (Math.PI * 4) / 6, radius: 2.2, height: 0.5, size: 0.18, speed: 0.28, rotSpeed: 0.035 },
+  { type: 'octahedron', color: '#39C5CF', angle: (Math.PI * 6) / 6, radius: 2.4, height: -0.45, size: 0.17, speed: 0.24, rotSpeed: -0.03 },
+
+  // Neural Synapse Pyramids (Tetrahedrons)
+  { type: 'tetrahedron', color: '#D2A8FF', angle: (Math.PI * 8) / 6, radius: 2.15, height: 0.3, size: 0.18, speed: 0.26, rotSpeed: 0.04 },
+  { type: 'tetrahedron', color: '#F0883E', angle: (Math.PI * 10) / 6, radius: 2.45, height: -0.2, size: 0.16, speed: 0.23, rotSpeed: -0.035 },
+
+  // Mini Quantum Torus Rings
+  { type: 'torus', color: '#56D364', angle: 1.1, radius: 2.05, height: -0.55, size: 0.12, speed: 0.3, rotSpeed: 0.05 },
+  { type: 'torus', color: '#38BDF8', angle: 4.2, radius: 2.1, height: 0.55, size: 0.12, speed: 0.27, rotSpeed: -0.04 },
+
+  // Luminous Neural Icosahedron Nodes
+  { type: 'icosahedron', color: '#FFFFFF', angle: 2.7, radius: 2.6, height: 0.15, size: 0.14, speed: 0.2, rotSpeed: 0.03 },
+  { type: 'icosahedron', color: '#E3B341', angle: 5.6, radius: 2.35, height: -0.15, size: 0.13, speed: 0.25, rotSpeed: -0.03 }
 ];
 
-// 3D Geometric Floating Figures (TPU Chips, Vector Crystals, Neural Pyramids)
-const GEOMETRIC_FIGURES = [
-  { type: 'cube', color: '#56D364', angle: 0.5, radius: 1.9, height: 0.6, size: 0.12 },
-  { type: 'octahedron', color: '#388BFD', angle: 2.1, radius: 2.05, height: -0.55, size: 0.14 },
-  { type: 'tetrahedron', color: '#D2A8FF', angle: 3.8, radius: 1.85, height: 0.5, size: 0.13 },
-  { type: 'cube', color: '#39C5CF', angle: 5.2, radius: 2.1, height: -0.4, size: 0.11 }
-];
-
-function OrbitingGeometricFigure({ figure, index }) {
+function Orbiting3DFigure({ figure, index }) {
+  const meshGroupRef = useRef();
   const meshRef = useRef();
 
   useFrame((state) => {
-    if (meshRef.current) {
-      const time = state.clock.elapsedTime * 0.28 + figure.angle;
+    if (meshGroupRef.current) {
+      // Smooth 3D revolution around sphere
+      const time = state.clock.elapsedTime * figure.speed + figure.angle;
       const x = Math.cos(time) * figure.radius;
       const z = Math.sin(time) * figure.radius;
-      const y = figure.height + Math.sin(state.clock.elapsedTime * 1.2 + index) * 0.08;
+      const y = figure.height + Math.sin(state.clock.elapsedTime * 0.9 + index) * 0.12;
 
-      meshRef.current.position.set(x, y, z);
-      meshRef.current.rotation.x += 0.02;
-      meshRef.current.rotation.y += 0.03;
+      meshGroupRef.current.position.set(x, y, z);
+    }
+    if (meshRef.current) {
+      meshRef.current.rotation.x += figure.rotSpeed;
+      meshRef.current.rotation.y += figure.rotSpeed * 1.3;
+      meshRef.current.rotation.z += figure.rotSpeed * 0.7;
     }
   });
 
   return (
-    <group ref={meshRef}>
-      {figure.type === 'cube' && (
-        <mesh>
-          <boxGeometry args={[figure.size, figure.size, figure.size]} />
-          <meshStandardMaterial
-            color={figure.color}
-            wireframe
-            emissive={figure.color}
-            emissiveIntensity={1.2}
-          />
-        </mesh>
-      )}
-      {figure.type === 'octahedron' && (
-        <mesh>
-          <octahedronGeometry args={[figure.size, 0]} />
-          <meshStandardMaterial
-            color={figure.color}
-            wireframe
-            emissive={figure.color}
-            emissiveIntensity={1.4}
-          />
-        </mesh>
-      )}
-      {figure.type === 'tetrahedron' && (
-        <mesh>
-          <tetrahedronGeometry args={[figure.size, 0]} />
-          <meshStandardMaterial
-            color={figure.color}
-            wireframe
-            emissive={figure.color}
-            emissiveIntensity={1.2}
-          />
-        </mesh>
-      )}
-    </group>
-  );
-}
-
-function OrbitingBadge({ data, index }) {
-  const groupRef = useRef();
-
-  useFrame((state) => {
-    if (groupRef.current) {
-      // Smooth orbital revolution around the central core
-      const time = state.clock.elapsedTime * data.speed + data.angle;
-      const x = Math.cos(time) * data.radius;
-      const z = Math.sin(time) * data.radius;
-      const y = data.heightOffset + Math.sin(state.clock.elapsedTime * 0.7 + index * 1.1) * 0.12;
-
-      groupRef.current.position.set(x, y, z);
-    }
-  });
-
-  return (
-    <group ref={groupRef}>
-      {/* 3D Anchor Light Point */}
+    <group ref={meshGroupRef}>
+      {/* Central Glowing Core Light Dot */}
       <mesh>
-        <sphereGeometry args={[0.045, 12, 12]} />
-        <meshBasicMaterial color={data.color} />
+        <sphereGeometry args={[0.035, 10, 10]} />
+        <meshBasicMaterial color={figure.color} />
       </mesh>
 
-      {/* Luminous HTML 3D Badge */}
-      <Html
-        center
-        distanceFactor={6}
-        style={{
-          pointerEvents: "none",
-          userSelect: "none",
-          whiteSpace: "nowrap",
-          transition: "opacity 0.2s ease"
-        }}
-      >
-        <div style={{
-          background: "rgba(8, 14, 26, 0.92)",
-          border: `1px solid ${data.color}99`,
-          borderRadius: 8,
-          padding: "5px 11px",
-          display: "flex",
-          alignItems: "center",
-          gap: 8,
-          boxShadow: `0 4px 18px rgba(0,0,0,0.7), 0 0 14px ${data.color}44`,
-          backdropFilter: "blur(10px)",
-          WebkitBackdropFilter: "blur(10px)"
-        }}>
-          {/* Glowing Icon Container */}
-          <span style={{
-            fontSize: 12,
-            display: "inline-flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: 20,
-            height: 20,
-            borderRadius: 5,
-            background: `${data.color}22`,
-            border: `1px solid ${data.color}55`
-          }}>
-            {data.icon}
-          </span>
+      <group ref={meshRef}>
+        {figure.type === 'cube' && (
+          <mesh>
+            <boxGeometry args={[figure.size, figure.size, figure.size]} />
+            <meshStandardMaterial
+              color={figure.color}
+              wireframe
+              emissive={figure.color}
+              emissiveIntensity={1.3}
+              roughness={0.1}
+            />
+          </mesh>
+        )}
 
-          {/* Label and Subtext */}
-          <div style={{ display: "flex", flexDirection: "column", textAlign: "left" }}>
-            <span style={{
-              fontSize: 11.5,
-              fontWeight: 700,
-              color: "#F0F6FC",
-              fontFamily: "ui-monospace, SFMono-Regular, monospace",
-              letterSpacing: "-.01em",
-              lineHeight: 1.2
-            }}>
-              {data.label}
-            </span>
-            <span style={{
-              fontSize: 9.5,
-              fontWeight: 500,
-              color: "#8B949E",
-              fontFamily: "system-ui, -apple-system, sans-serif",
-              lineHeight: 1.1,
-              marginTop: 1
-            }}>
-              {data.tagline}
-            </span>
-          </div>
-        </div>
-      </Html>
+        {figure.type === 'octahedron' && (
+          <mesh>
+            <octahedronGeometry args={[figure.size, 0]} />
+            <meshStandardMaterial
+              color={figure.color}
+              wireframe
+              emissive={figure.color}
+              emissiveIntensity={1.5}
+              roughness={0.1}
+            />
+          </mesh>
+        )}
+
+        {figure.type === 'tetrahedron' && (
+          <mesh>
+            <tetrahedronGeometry args={[figure.size, 0]} />
+            <meshStandardMaterial
+              color={figure.color}
+              wireframe
+              emissive={figure.color}
+              emissiveIntensity={1.4}
+              roughness={0.1}
+            />
+          </mesh>
+        )}
+
+        {figure.type === 'torus' && (
+          <mesh>
+            <torusGeometry args={[figure.size, 0.025, 12, 32]} />
+            <meshStandardMaterial
+              color={figure.color}
+              wireframe
+              emissive={figure.color}
+              emissiveIntensity={1.4}
+              roughness={0.1}
+            />
+          </mesh>
+        )}
+
+        {figure.type === 'icosahedron' && (
+          <mesh>
+            <icosahedronGeometry args={[figure.size, 0]} />
+            <meshStandardMaterial
+              color={figure.color}
+              wireframe
+              emissive={figure.color}
+              emissiveIntensity={1.4}
+              roughness={0.1}
+            />
+          </mesh>
+        )}
+      </group>
     </group>
   );
 }
@@ -275,10 +162,10 @@ function RotatingCore() {
 
   // Calculate 3D particle positions around the neural core
   const [particlePositions] = useMemo(() => {
-    const count = 180;
+    const count = 200;
     const positions = new Float32Array(count * 3);
     for (let i = 0; i < count; i++) {
-      const radius = 1.6 + Math.random() * 1.2;
+      const radius = 1.6 + Math.random() * 1.3;
       const theta = Math.random() * Math.PI * 2;
       const phi = Math.acos((Math.random() * 2) - 1);
       positions[i * 3] = radius * Math.sin(phi) * Math.cos(theta);
@@ -367,14 +254,9 @@ function RotatingCore() {
         />
       </points>
 
-      {/* 3D Orbiting Geometric Figures (Cubes, Crystals, Pyramids) */}
-      {GEOMETRIC_FIGURES.map((fig, idx) => (
-        <OrbitingGeometricFigure key={`fig-${idx}`} figure={fig} index={idx} />
-      ))}
-
-      {/* 3D Orbiting AI / ML Prompt Keyword Badges with Icons */}
-      {ORBITING_ITEMS.map((item, idx) => (
-        <OrbitingBadge key={item.label} data={item} index={idx} />
+      {/* 3D Orbiting Geometric Figures & AI Nodes (No Words) */}
+      {ORBITING_FIGURES.map((fig, idx) => (
+        <Orbiting3DFigure key={`orbit-fig-${idx}`} figure={fig} index={idx} />
       ))}
     </group>
   );
@@ -404,4 +286,5 @@ export default function NeuralGlobe3D() {
     </div>
   );
 }
+
 
