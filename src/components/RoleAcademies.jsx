@@ -57,22 +57,22 @@ export default function RoleAcademies({ onOpenDemo }) {
   ];
 
   return (
-    <section id="role-tracks" style={{ padding: "120px 0", background: "#FFFFFF", borderBottom: "1px solid #E2E8F0" }}>
+    <section id="role-tracks" style={{ padding: "100px 0", background: "#040D21", borderBottom: "1px solid #30363D" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
-        <div style={{ fontSize: 13, fontWeight: 700, color: "#2563EB", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 12 }}>
-          Role-Based Academies
+        <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 12, fontFamily: "ui-monospace, monospace" }}>
+          10 ROLE ACADEMIES
         </div>
-        <h2 style={{ fontSize: "clamp(34px, 4.5vw, 50px)", fontWeight: 900, color: "#0F172A", letterSpacing: "-.02em", marginBottom: 20 }}>
+        <h2 style={{ fontSize: "clamp(32px, 4vw, 44px)", fontWeight: 900, color: "#F0F6FC", letterSpacing: "-.02em", marginBottom: 16 }}>
           One GenAI Academy. Tailored pathways for every department.
         </h2>
-        <p style={{ fontSize: 19, color: "#475569", maxWidth: 840, lineHeight: 1.65, marginBottom: 64, fontWeight: 400 }}>
+        <p style={{ fontSize: 17, color: "#8B949E", maxWidth: 840, lineHeight: 1.65, marginBottom: 56, fontWeight: 400 }}>
           Start with a unified enterprise foundation, then transition each team into specialized tool tracks and use cases aligned directly with their KPIs.
         </p>
 
         {/* Role Academy Explorer Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 24, marginBottom: 56 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 20, marginBottom: 48 }}>
           {roles.map((r, i) => {
             const isSelected = selectedRole === i;
             return (
@@ -80,32 +80,34 @@ export default function RoleAcademies({ onOpenDemo }) {
                 key={i}
                 onClick={() => setSelectedRole(i)}
                 style={{
-                  background: isSelected ? "#F8FAFC" : "#FFFFFF",
-                  border: "1.5px solid",
-                  borderColor: isSelected ? "#0F172A" : "#E2E8F0",
-                  borderRadius: 18, padding: "32px 28px", cursor: "pointer",
-                  boxShadow: isSelected ? "0 10px 30px -5px rgba(15,23,42,0.08)" : "0 2px 8px rgba(15,23,42,0.02)",
-                  transition: "all 0.18s ease"
+                  background: isSelected ? "rgba(56, 139, 253, 0.08)" : "#0D1117",
+                  border: "1px solid",
+                  borderColor: isSelected ? "#388BFD" : "#30363D",
+                  borderRadius: 14, padding: "28px 24px", cursor: "pointer",
+                  boxShadow: isSelected ? "0 0 16px rgba(56, 139, 253, 0.15)" : "none",
+                  transition: "all 0.15s ease"
                 }}
               >
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 14 }}>
                   <span style={{
-                    fontSize: 12, fontWeight: 700,
-                    background: isSelected ? "#0F172A" : "#EFF6FF",
-                    color: isSelected ? "#FFFFFF" : "#2563EB",
-                    padding: "4px 12px", borderRadius: 999
+                    fontSize: 11, fontWeight: 700,
+                    background: isSelected ? "#388BFD" : "#161B22",
+                    color: isSelected ? "#FFFFFF" : "#388BFD",
+                    border: "1px solid", borderColor: isSelected ? "#388BFD" : "#30363D",
+                    padding: "3px 10px", borderRadius: 6,
+                    fontFamily: "ui-monospace, monospace"
                   }}>
                     {r.focus}
                   </span>
-                  <span style={{ fontSize: 12, fontWeight: 700, color: "#94A3B8" }}>
+                  <span style={{ fontSize: 11, fontWeight: 700, color: "#6E7681", fontFamily: "ui-monospace, monospace" }}>
                     Track 0{i + 1}
                   </span>
                 </div>
 
-                <h3 style={{ fontSize: 19, fontWeight: 800, color: "#0F172A", marginBottom: 10 }}>
+                <h3 style={{ fontSize: 18, fontWeight: 800, color: "#F0F6FC", marginBottom: 8 }}>
                   {r.name}
                 </h3>
-                <p style={{ fontSize: 14, color: "#64748B", lineHeight: 1.65 }}>
+                <p style={{ fontSize: 13.5, color: "#8B949E", lineHeight: 1.6, margin: 0 }}>
                   {r.useCases}
                 </p>
               </div>
@@ -115,28 +117,29 @@ export default function RoleAcademies({ onOpenDemo }) {
 
         {/* Selected Pathway Callout Banner */}
         <div style={{
-          background: "#0F172A", color: "#FFFFFF",
-          borderRadius: 20, padding: "36px 40px",
+          background: "#0D1117", border: "1px solid #30363D",
+          borderRadius: 16, padding: "32px 36px",
           display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24, flexWrap: "wrap"
         }}>
           <div>
-            <div style={{ fontSize: 12, fontWeight: 700, color: "#60A5FA", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 6 }}>
-              TAILORED DEPLOYMENT
+            <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
+              CUSTOM CURRICULUM SYLLABUS
             </div>
-            <h4 style={{ fontSize: 22, fontWeight: 800, margin: 0, lineHeight: 1.3 }}>
-              Request custom curriculum for {roles[selectedRole].name}
+            <h4 style={{ fontSize: 20, fontWeight: 800, margin: 0, color: "#F0F6FC", lineHeight: 1.3 }}>
+              Request customized enterprise syllabus for {roles[selectedRole].name}
             </h4>
           </div>
           <button
             onClick={() => onOpenDemo(`${roles[selectedRole].name} Pathway`)}
             style={{
-              background: "#2563EB", color: "#FFFFFF", border: "none",
-              padding: "14px 28px", borderRadius: 10, fontWeight: 700,
-              fontSize: 15, cursor: "pointer", transition: "all 0.15s ease",
-              boxShadow: "0 4px 14px rgba(37,99,235,0.3)"
+              background: "#238636", color: "#FFFFFF", border: "1px solid rgba(240, 246, 252, 0.1)",
+              padding: "12px 24px", borderRadius: 8, fontWeight: 700,
+              fontSize: 14, cursor: "pointer", transition: "all 0.15s ease",
+              boxShadow: "0 2px 8px rgba(35, 134, 54, 0.3)",
+              whiteSpace: "nowrap"
             }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = "#1D4ED8"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = "#2563EB"; }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = "#2EA043"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = "#238636"; }}
           >
             Get {roles[selectedRole].name} Syllabus →
           </button>

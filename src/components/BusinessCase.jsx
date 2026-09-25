@@ -52,38 +52,40 @@ export default function BusinessCase() {
   ];
 
   return (
-    <section id="programs" style={{ padding: "120px 0", background: "#FAFAFA", borderBottom: "1px solid #E2E8F0" }}>
+    <section id="programs" style={{ padding: "100px 0", background: "#040D21", borderBottom: "1px solid #30363D" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
-        <div style={{ fontSize: 13, fontWeight: 700, color: "#2563EB", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 12 }}>
-          Why Enterprise Upskilling
+        <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 12, fontFamily: "ui-monospace, monospace" }}>
+          ENTERPRISE ROI & OUTCOMES
         </div>
-        <h2 style={{ fontSize: "clamp(34px, 4.5vw, 50px)", fontWeight: 900, color: "#0F172A", letterSpacing: "-.02em", marginBottom: 20 }}>
+        <h2 style={{ fontSize: "clamp(32px, 4vw, 44px)", fontWeight: 900, color: "#F0F6FC", letterSpacing: "-.02em", marginBottom: 16 }}>
           AI adoption is easy. Building true capability is the real advantage.
         </h2>
-        <p style={{ fontSize: 19, color: "#475569", maxWidth: 840, lineHeight: 1.65, marginBottom: 64, fontWeight: 400 }}>
+        <p style={{ fontSize: 17, color: "#8B949E", maxWidth: 840, lineHeight: 1.65, marginBottom: 56, fontWeight: 400 }}>
           Buying software licenses does not automatically create an AI-ready organization. Employees need repeatable skills, enterprise governance standards, and role-specific workflows that translate tools into tangible business outcomes.
         </p>
 
         {/* 4 Shifts Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 28, marginBottom: 80 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 24, marginBottom: 72 }}>
           {shifts.map((s, i) => (
             <div
               key={i}
               style={{
-                background: "#FFFFFF", border: "1px solid #E2E8F0",
-                borderRadius: 18, padding: "36px 30px",
-                boxShadow: "0 4px 20px -2px rgba(15,23,42,0.03)"
+                background: "#0D1117", border: "1px solid #30363D",
+                borderRadius: 14, padding: "32px 26px",
+                transition: "all 0.2s ease"
               }}
+              onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#388BFD"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#30363D"; }}
             >
-              <div style={{ fontSize: 12, fontWeight: 800, color: "#2563EB", textTransform: "uppercase", marginBottom: 12 }}>
+              <div style={{ fontSize: 11, fontWeight: 800, color: "#388BFD", textTransform: "uppercase", marginBottom: 12, fontFamily: "ui-monospace, monospace" }}>
                 Shift 0{i + 1}
               </div>
-              <h3 style={{ fontSize: 18, fontWeight: 800, color: "#0F172A", marginBottom: 12, lineHeight: 1.35 }}>
+              <h3 style={{ fontSize: 17, fontWeight: 800, color: "#F0F6FC", marginBottom: 10, lineHeight: 1.35 }}>
                 {s.title}
               </h3>
-              <p style={{ fontSize: 14, color: "#64748B", lineHeight: 1.65 }}>
+              <p style={{ fontSize: 14, color: "#8B949E", lineHeight: 1.65 }}>
                 {s.desc}
               </p>
             </div>
@@ -92,70 +94,75 @@ export default function BusinessCase() {
 
         {/* Research Evidence Box */}
         <div style={{
-          background: "linear-gradient(135deg, #0F172A 0%, #1E293B 100%)",
-          borderRadius: 24, padding: "48px 40px", color: "#FFFFFF",
-          marginBottom: 80, boxShadow: "0 16px 40px -10px rgba(15,23,42,0.25)"
+          background: "linear-gradient(135deg, #0D1117 0%, #161B22 100%)",
+          border: "1px solid #30363D",
+          borderRadius: 18, padding: "40px 36px", color: "#F0F6FC",
+          marginBottom: 72, boxShadow: "0 16px 40px rgba(0,0,0,0.4)"
         }}>
-          <div style={{ fontSize: 12, fontWeight: 700, color: "#60A5FA", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 16 }}>
+          <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 12, fontFamily: "ui-monospace, monospace" }}>
             RESEARCH BENCHMARKS & EVIDENCE
           </div>
-          <h3 style={{ fontSize: 26, fontWeight: 800, marginBottom: 28, letterSpacing: "-.01em", lineHeight: 1.3 }}>
+          <h3 style={{ fontSize: 24, fontWeight: 800, marginBottom: 24, letterSpacing: "-.01em", lineHeight: 1.3 }}>
             Empirical evidence on how practical GenAI skills transform work
           </h3>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 28, marginBottom: 32 }}>
-            <div style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 16, padding: "28px" }}>
-              <div style={{ fontSize: 32, fontWeight: 900, color: "#60A5FA", marginBottom: 6 }}>~2 hrs/wk</div>
-              <div style={{ fontSize: 14, fontWeight: 700, color: "#FFFFFF", marginBottom: 8 }}>Saved on Email Workflows</div>
-              <div style={{ fontSize: 13, color: "#94A3B8", lineHeight: 1.6 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24, marginBottom: 24 }}>
+            <div style={{ background: "rgba(4, 13, 33, 0.7)", border: "1px solid #30363D", borderRadius: 12, padding: "24px" }}>
+              <div style={{ fontSize: 32, fontWeight: 900, color: "#388BFD", marginBottom: 4, fontFamily: "ui-monospace, monospace" }}>~2 hrs/wk</div>
+              <div style={{ fontSize: 14, fontWeight: 700, color: "#F0F6FC", marginBottom: 6 }}>Saved on Email Workflows</div>
+              <div style={{ fontSize: 13, color: "#8B949E", lineHeight: 1.6 }}>
                 A 2025 randomized field study across 66 firms found regular GenAI users reduced email processing by ~2 hours per week. <em>(Microsoft Research / NBER 2025)</em>
               </div>
             </div>
 
-            <div style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 16, padding: "28px" }}>
-              <div style={{ fontSize: 32, fontWeight: 900, color: "#34D399", marginBottom: 6 }}>+26.08%</div>
-              <div style={{ fontSize: 14, fontWeight: 700, color: "#FFFFFF", marginBottom: 8 }}>Task Completion Increase</div>
-              <div style={{ fontSize: 13, color: "#94A3B8", lineHeight: 1.6 }}>
+            <div style={{ background: "rgba(4, 13, 33, 0.7)", border: "1px solid #30363D", borderRadius: 12, padding: "24px" }}>
+              <div style={{ fontSize: 32, fontWeight: 900, color: "#2EA043", marginBottom: 4, fontFamily: "ui-monospace, monospace" }}>+26.08%</div>
+              <div style={{ fontSize: 14, fontWeight: 700, color: "#F0F6FC", marginBottom: 6 }}>Task Completion Increase</div>
+              <div style={{ fontSize: 13, color: "#8B949E", lineHeight: 1.6 }}>
                 Randomized trials across 4,867 software developers at Microsoft, Accenture, and Fortune 100 firms reported a 26.08% boost in completed tasks using AI copilots. <em>(Microsoft Research 2025)</em>
               </div>
             </div>
           </div>
 
-          <p style={{ fontSize: 13, color: "#94A3B8", fontStyle: "italic", margin: 0 }}>
+          <p style={{ fontSize: 12, color: "#6E7681", fontStyle: "italic", margin: 0 }}>
             * Note: Benchmark data illustrates potential impact. AI Global Academy structures training goals around each client's specific baseline workflows.
           </p>
         </div>
 
         {/* Employee Outcomes Section */}
         <div>
-          <div style={{ fontSize: 13, fontWeight: 700, color: "#2563EB", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 12 }}>
-            Core Capabilities
+          <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 8, fontFamily: "ui-monospace, monospace" }}>
+            CAPABILITY DELIVERABLES
           </div>
-          <h3 style={{ fontSize: 30, fontWeight: 800, color: "#0F172A", marginBottom: 36, letterSpacing: "-.01em" }}>
+          <h3 style={{ fontSize: 26, fontWeight: 800, color: "#F0F6FC", marginBottom: 32, letterSpacing: "-.01em" }}>
             What your teams will do differently after upskilling
           </h3>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 24 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 20 }}>
             {outcomes.map((o, i) => (
               <div
                 key={i}
                 style={{
-                  background: "#FFFFFF", border: "1px solid #E2E8F0",
-                  borderRadius: 18, padding: "32px 28px",
-                  boxShadow: "0 4px 16px rgba(15,23,42,0.03)"
+                  background: "#0D1117", border: "1px solid #30363D",
+                  borderRadius: 14, padding: "28px 24px",
+                  transition: "all 0.15s ease"
                 }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#388BFD"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#30363D"; }}
               >
                 <div style={{
-                  fontSize: 11, fontWeight: 700, color: "#2563EB",
-                  background: "#EFF6FF", padding: "4px 12px", borderRadius: 999,
-                  display: "inline-block", marginBottom: 14
+                  fontSize: 11, fontWeight: 700, color: "#388BFD",
+                  background: "rgba(56, 139, 253, 0.15)", border: "1px solid rgba(56, 139, 253, 0.3)",
+                  padding: "4px 10px", borderRadius: 6,
+                  display: "inline-block", marginBottom: 12,
+                  fontFamily: "ui-monospace, monospace"
                 }}>
                   {o.tag}
                 </div>
-                <h4 style={{ fontSize: 19, fontWeight: 800, color: "#0F172A", marginBottom: 8 }}>
+                <h4 style={{ fontSize: 17, fontWeight: 800, color: "#F0F6FC", marginBottom: 6 }}>
                   {o.title}
                 </h4>
-                <p style={{ fontSize: 14, color: "#64748B", lineHeight: 1.6 }}>
+                <p style={{ fontSize: 13.5, color: "#8B949E", lineHeight: 1.6, margin: 0 }}>
                   {o.desc}
                 </p>
               </div>

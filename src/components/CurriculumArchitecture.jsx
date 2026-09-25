@@ -57,61 +57,63 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
   ];
 
   return (
-    <section id="curriculum" style={{ padding: "120px 0", background: "#FAFAFA", borderBottom: "1px solid #E2E8F0" }}>
+    <section id="curriculum" style={{ padding: "100px 0", background: "#040D21", borderBottom: "1px solid #30363D" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
-        <div style={{ fontSize: 13, fontWeight: 700, color: "#2563EB", textTransform: "uppercase", letterSpacing: ".04em", marginBottom: 12 }}>
-          Curriculum Architecture
+        <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 12, fontFamily: "ui-monospace, monospace" }}>
+          CURRICULUM SYLLABUS
         </div>
-        <h2 style={{ fontSize: "clamp(34px, 4.5vw, 50px)", fontWeight: 900, color: "#0F172A", letterSpacing: "-.02em", marginBottom: 20 }}>
+        <h2 style={{ fontSize: "clamp(32px, 4vw, 44px)", fontWeight: 900, color: "#F0F6FC", letterSpacing: "-.02em", marginBottom: 16 }}>
           From AI literacy to agentic workflows
         </h2>
-        <p style={{ fontSize: 19, color: "#475569", maxWidth: 840, lineHeight: 1.65, marginBottom: 64, fontWeight: 400 }}>
+        <p style={{ fontSize: 17, color: "#8B949E", maxWidth: 840, lineHeight: 1.65, marginBottom: 56, fontWeight: 400 }}>
           A modular 10-phase curriculum that adapts seamlessly as a 1-day executive briefing, a 2-4 week intensive bootcamp, or a 6-12 week full enterprise academy.
         </p>
 
         {/* Accordion / Module List */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 56 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 48 }}>
           {modules.map((m, i) => {
             const isOpen = openModule === i;
             return (
               <div
                 key={i}
                 style={{
-                  background: "#FFFFFF", border: "1px solid #E2E8F0",
-                  borderRadius: 16, overflow: "hidden",
-                  boxShadow: isOpen ? "0 8px 24px -4px rgba(15,23,42,0.06)" : "0 2px 8px rgba(15,23,42,0.02)",
-                  transition: "all 0.18s ease"
+                  background: "#0D1117", border: "1px solid",
+                  borderColor: isOpen ? "#388BFD" : "#30363D",
+                  borderRadius: 12, overflow: "hidden",
+                  transition: "all 0.15s ease"
                 }}
               >
                 <div
                   onClick={() => setOpenModule(isOpen ? null : i)}
                   style={{
-                    padding: "24px 32px", cursor: "pointer",
+                    padding: "20px 28px", cursor: "pointer",
                     display: "flex", alignItems: "center", justifyContent: "space-between",
-                    background: isOpen ? "#F8FAFC" : "#FFFFFF"
+                    background: isOpen ? "rgba(56, 139, 253, 0.08)" : "#0D1117"
                   }}
                 >
-                  <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
                     <span style={{
-                      fontSize: 13, fontWeight: 800, color: "#2563EB",
-                      background: "#EFF6FF", padding: "6px 14px", borderRadius: 8
+                      fontSize: 12, fontWeight: 800, color: "#388BFD",
+                      background: "#161B22", border: "1px solid #30363D",
+                      padding: "4px 10px", borderRadius: 6,
+                      fontFamily: "ui-monospace, monospace"
                     }}>
                       Module {m.num}
                     </span>
-                    <h3 style={{ fontSize: 18, fontWeight: 800, color: "#0F172A", margin: 0 }}>
+                    <h3 style={{ fontSize: 17, fontWeight: 800, color: "#F0F6FC", margin: 0 }}>
                       {m.title}
                     </h3>
                   </div>
-                  <span style={{ fontSize: 20, fontWeight: 700, color: "#64748B" }}>
+                  <span style={{ fontSize: 18, fontWeight: 700, color: "#8B949E", fontFamily: "ui-monospace, monospace" }}>
                     {isOpen ? "−" : "+"}
                   </span>
                 </div>
 
                 {isOpen && (
-                  <div style={{ padding: "0 32px 28px 32px", borderTop: "1px solid #F1F5F9" }}>
-                    <p style={{ fontSize: 15, color: "#475569", lineHeight: 1.7, paddingTop: 20, margin: 0 }}>
+                  <div style={{ padding: "0 28px 24px 28px", borderTop: "1px solid #21262D" }}>
+                    <p style={{ fontSize: 14, color: "#8B949E", lineHeight: 1.65, paddingTop: 16, margin: 0 }}>
                       {m.summary}
                     </p>
                   </div>
@@ -126,13 +128,13 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
           <button
             onClick={() => onOpenDemo("Complete 10-Module Curriculum PDF")}
             style={{
-              background: "#0F172A", color: "#FFFFFF", border: "none",
-              padding: "16px 36px", borderRadius: 12, fontWeight: 700,
-              fontSize: 16, cursor: "pointer", boxShadow: "0 6px 20px rgba(15,23,42,0.2)",
-              transition: "all 0.18s ease"
+              background: "#238636", color: "#FFFFFF", border: "1px solid rgba(240, 246, 252, 0.1)",
+              padding: "14px 32px", borderRadius: 8, fontWeight: 700,
+              fontSize: 15, cursor: "pointer", boxShadow: "0 2px 8px rgba(35, 134, 54, 0.3)",
+              transition: "all 0.15s ease"
             }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = "#1E293B"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = "#0F172A"; e.currentTarget.style.transform = "none"; }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = "#2EA043"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = "#238636"; }}
           >
             Download Full Curriculum PDF ↓
           </button>

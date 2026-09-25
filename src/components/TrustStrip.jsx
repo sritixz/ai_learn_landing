@@ -9,50 +9,52 @@ export default function TrustStrip({ onOpenDemo }) {
   };
 
   return (
-    <section style={{ background: "#FFFFFF", padding: "56px 0", borderBottom: "1px solid #E2E8F0" }}>
+    <section style={{ background: "#040D21", padding: "48px 0", borderBottom: "1px solid #30363D" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         <div style={{
-          background: "#F8FAFC", border: "1px solid #E2E8F0",
-          borderRadius: 20, padding: "36px 40px",
-          display: "flex", flexDirection: "column", gap: 24
+          background: "#0D1117", border: "1px solid #30363D",
+          borderRadius: 16, padding: "32px 36px",
+          display: "flex", flexDirection: "column", gap: 20,
+          boxShadow: "0 8px 24px rgba(0,0,0,0.35)"
         }}>
           <div>
-            <div style={{ fontSize: 12, fontWeight: 700, color: "#2563EB", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 6 }}>
-              Flexible Enterprise Delivery Models
+            <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
+              ENTERPRISE DEPLOYMENT ARCHITECTURE
             </div>
-            <p style={{ fontSize: 17, fontWeight: 700, color: "#0F172A", lineHeight: 1.5, margin: 0 }}>
-              Built for enterprises, GCCs, high-growth startups, professional services, and agency teams. Delivery can be cohort-based, department-specific, or company-wide.
+            <p style={{ fontSize: 16, fontWeight: 600, color: "#F0F6FC", lineHeight: 1.5, margin: 0 }}>
+              Engineered for enterprises, GCCs, high-growth engineering teams, and global services. Deployable as department cohorts, executive briefing tracks, or company-wide academies.
             </p>
           </div>
 
           <form onSubmit={handleQuickSubmit} style={{
-            background: "#FFFFFF", border: "1.5px solid #CBD5E1",
-            borderRadius: 12, padding: "8px 8px 8px 20px",
-            display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap"
+            background: "#161B22", border: "1px solid #30363D",
+            borderRadius: 10, padding: "6px 6px 6px 18px",
+            display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap"
           }}>
             <input
               type="text"
-              placeholder="Tell us your teams, current AI maturity, or primary goals..."
+              placeholder="Specify your team, current AI maturity, or primary goals..."
               value={userGoal}
               onChange={(e) => setUserGoal(e.target.value)}
               style={{
-                flex: 1, minWidth: 280, border: "none", outline: "none",
-                fontSize: 15, color: "#0F172A", fontFamily: "inherit"
+                flex: 1, minWidth: 260, border: "none", outline: "none",
+                fontSize: 14, color: "#F0F6FC", background: "transparent",
+                fontFamily: "inherit"
               }}
             />
             <button
               type="submit"
               style={{
-                background: "#0F172A", color: "#FFFFFF", border: "none",
-                padding: "12px 24px", borderRadius: 8, fontWeight: 700,
-                fontSize: 14, cursor: "pointer", whiteSpace: "nowrap",
+                background: "#238636", color: "#FFFFFF", border: "1px solid rgba(240, 246, 252, 0.1)",
+                padding: "10px 20px", borderRadius: 8, fontWeight: 700,
+                fontSize: 13, cursor: "pointer", whiteSpace: "nowrap",
                 transition: "all 0.15s ease"
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = "#1E293B"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = "#0F172A"; }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "#2EA043"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = "#238636"; }}
             >
-              Map Your Learning Plan →
+              Map Learning Plan →
             </button>
           </form>
         </div>
