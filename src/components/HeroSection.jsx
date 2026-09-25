@@ -140,117 +140,147 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
 
       </div>
 
-      {/* Floating AI Neural Horizon (Partially visible in main viewport, leads into scroll) */}
+      {/* Radiant AI Neural Horizon with Star/Torch White Light Flare */}
       <div style={{
         width: "100%",
         position: "relative",
         zIndex: 2,
-        paddingBottom: 24,
+        paddingBottom: 28,
         marginTop: "auto"
       }}>
-        {/* Luminous Core Light Bar */}
+        {/* Luminous Torchlight / Star Halo Radiant Flare */}
         <div style={{
-          width: "80%",
-          maxWidth: 900,
-          height: 1,
-          margin: "0 auto 20px auto",
-          background: "linear-gradient(90deg, transparent 0%, rgba(56, 139, 253, 0.8) 50%, transparent 100%)",
-          boxShadow: "0 0 20px rgba(56, 139, 253, 0.6)"
+          position: "absolute",
+          bottom: 0,
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "90%",
+          maxWidth: 960,
+          height: 180,
+          background: "radial-gradient(ellipse at 50% 90%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.15) 25%, rgba(56, 189, 248, 0.25) 50%, transparent 75%)",
+          filter: "blur(24px)",
+          pointerEvents: "none",
+          zIndex: 0
         }} />
 
-        {/* Floating AI Nodes Container */}
+        {/* Luminous Core Horizon Line */}
+        <div style={{
+          width: "85%",
+          maxWidth: 960,
+          height: 1.5,
+          margin: "0 auto 24px auto",
+          background: "linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.4) 20%, rgba(255, 255, 255, 0.95) 50%, rgba(255, 255, 255, 0.4) 80%, transparent 100%)",
+          boxShadow: "0 0 25px 4px rgba(255, 255, 255, 0.8), 0 0 50px 8px rgba(56, 189, 248, 0.5)",
+          position: "relative",
+          zIndex: 1
+        }} />
+
+        {/* Static Radiant AI Nodes */}
         <div style={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          gap: 16,
+          gap: 20,
           maxWidth: 1140,
           margin: "0 auto",
           padding: "0 20px",
-          flexWrap: "wrap"
+          flexWrap: "wrap",
+          position: "relative",
+          zIndex: 2
         }}>
           
-          {/* Floating Node 1: Neural Processor */}
-          <div className="float-slow" style={{
-            background: "rgba(13, 17, 23, 0.85)",
-            border: "1px solid rgba(56, 189, 248, 0.4)",
-            borderRadius: 12,
-            padding: "12px 18px",
-            boxShadow: "0 8px 24px rgba(0,0,0,0.5), 0 0 16px rgba(56, 189, 248, 0.15)",
-            backdropFilter: "blur(12px)",
+          {/* Static Node 1: Neural Processor (Radiant Star Glow) */}
+          <div style={{
+            background: "rgba(10, 16, 28, 0.92)",
+            border: "1px solid rgba(255, 255, 255, 0.55)",
+            borderRadius: 14,
+            padding: "14px 20px",
+            boxShadow: "0 0 35px 3px rgba(255, 255, 255, 0.3), 0 0 70px 10px rgba(56, 189, 248, 0.35), 0 12px 32px rgba(0, 0, 0, 0.8)",
+            backdropFilter: "blur(16px)",
+            WebkitBackdropFilter: "blur(16px)",
             display: "flex",
             alignItems: "center",
-            gap: 10
+            gap: 12,
+            position: "relative"
           }}>
             <div style={{
-              width: 28, height: 28, borderRadius: 6,
-              background: "rgba(56, 189, 248, 0.15)", border: "1px solid #38BDF8",
+              width: 30, height: 30, borderRadius: 8,
+              background: "rgba(255, 255, 255, 0.15)",
+              border: "1px solid rgba(255, 255, 255, 0.8)",
+              boxShadow: "0 0 16px rgba(255, 255, 255, 0.6)",
               display: "flex", alignItems: "center", justifyContent: "center",
-              color: "#38BDF8", fontSize: 13, fontWeight: 900
+              color: "#FFFFFF", fontSize: 14, fontWeight: 900
             }}>
               🧠
             </div>
             <div style={{ textAlign: "left" }}>
-              <div style={{ fontSize: 12, fontWeight: 800, color: "#F0F6FC", fontFamily: "ui-monospace, monospace" }}>
+              <div style={{ fontSize: 12.5, fontWeight: 800, color: "#FFFFFF", fontFamily: "ui-monospace, monospace", letterSpacing: "-.01em" }}>
                 Neural Engine v4.2
               </div>
-              <div style={{ fontSize: 11, color: "#38BDF8" }}>
+              <div style={{ fontSize: 11, color: "#38BDF8", fontWeight: 600 }}>
                 Multi-Model LLM Orchestration
               </div>
             </div>
           </div>
 
-          {/* Floating Node 2: Live AI Code/Prompt Capsule */}
-          <div className="float-medium" style={{
-            background: "rgba(13, 17, 23, 0.95)",
-            border: "1px solid rgba(46, 160, 67, 0.5)",
-            borderRadius: 12,
-            padding: "12px 20px",
-            boxShadow: "0 10px 28px rgba(0,0,0,0.6), 0 0 20px rgba(46, 160, 67, 0.15)",
-            backdropFilter: "blur(12px)",
+          {/* Static Node 2: Live AI Prompt Capsule (Central Torch Light) */}
+          <div style={{
+            background: "rgba(10, 16, 28, 0.96)",
+            border: "1.5px solid rgba(255, 255, 255, 0.7)",
+            borderRadius: 14,
+            padding: "14px 24px",
+            boxShadow: "0 0 45px 5px rgba(255, 255, 255, 0.4), 0 0 90px 15px rgba(56, 189, 248, 0.4), 0 16px 40px rgba(0, 0, 0, 0.9)",
+            backdropFilter: "blur(16px)",
+            WebkitBackdropFilter: "blur(16px)",
             display: "flex",
             alignItems: "center",
-            gap: 12
+            gap: 14,
+            position: "relative"
           }}>
             <div style={{
-              width: 8, height: 8, borderRadius: "50%",
-              background: "#2EA043", boxShadow: "0 0 8px #2EA043"
+              width: 9, height: 9, borderRadius: "50%",
+              background: "#FFFFFF",
+              boxShadow: "0 0 14px 3px #FFFFFF, 0 0 25px 6px #2EA043"
             }} />
             <div style={{ textAlign: "left", fontFamily: "ui-monospace, monospace" }}>
-              <div style={{ fontSize: 12, fontWeight: 700, color: "#F0F6FC" }}>
-                <span style={{ color: "#388BFD" }}>agent</span>.<span style={{ color: "#39C5CF" }}>run</span>({`{ stack: ['Cursor', 'Claude', 'n8n'] }`})
+              <div style={{ fontSize: 12.5, fontWeight: 700, color: "#FFFFFF" }}>
+                <span style={{ color: "#79C0FF" }}>agent</span>.<span style={{ color: "#56D364" }}>run</span>({`{ stack: ['Cursor', 'Claude', 'n8n'] }`})
               </div>
-              <div style={{ fontSize: 11, color: "#2EA043", marginTop: 2 }}>
+              <div style={{ fontSize: 11, color: "#7EE787", marginTop: 3, fontWeight: 600 }}>
                 ✓ 26% faster feature delivery & test suites
               </div>
             </div>
           </div>
 
-          {/* Floating Node 3: Real-Time ROI Engine */}
-          <div className="float-fast" style={{
-            background: "rgba(13, 17, 23, 0.85)",
-            border: "1px solid rgba(137, 87, 229, 0.4)",
-            borderRadius: 12,
-            padding: "12px 18px",
-            boxShadow: "0 8px 24px rgba(0,0,0,0.5), 0 0 16px rgba(137, 87, 229, 0.15)",
-            backdropFilter: "blur(12px)",
+          {/* Static Node 3: Real-Time ROI Engine (Radiant Star Glow) */}
+          <div style={{
+            background: "rgba(10, 16, 28, 0.92)",
+            border: "1px solid rgba(255, 255, 255, 0.55)",
+            borderRadius: 14,
+            padding: "14px 20px",
+            boxShadow: "0 0 35px 3px rgba(255, 255, 255, 0.3), 0 0 70px 10px rgba(137, 87, 229, 0.35), 0 12px 32px rgba(0, 0, 0, 0.8)",
+            backdropFilter: "blur(16px)",
+            WebkitBackdropFilter: "blur(16px)",
             display: "flex",
             alignItems: "center",
-            gap: 10
+            gap: 12,
+            position: "relative"
           }}>
             <div style={{
-              width: 28, height: 28, borderRadius: 6,
-              background: "rgba(137, 87, 229, 0.15)", border: "1px solid #8957E5",
+              width: 30, height: 30, borderRadius: 8,
+              background: "rgba(255, 255, 255, 0.15)",
+              border: "1px solid rgba(255, 255, 255, 0.8)",
+              boxShadow: "0 0 16px rgba(255, 255, 255, 0.6)",
               display: "flex", alignItems: "center", justifyContent: "center",
-              color: "#8957E5", fontSize: 13, fontWeight: 900
+              color: "#FFFFFF", fontSize: 14, fontWeight: 900
             }}>
               ⚡
             </div>
             <div style={{ textAlign: "left" }}>
-              <div style={{ fontSize: 12, fontWeight: 800, color: "#F0F6FC", fontFamily: "ui-monospace, monospace" }}>
+              <div style={{ fontSize: 12.5, fontWeight: 800, color: "#FFFFFF", fontFamily: "ui-monospace, monospace", letterSpacing: "-.01em" }}>
                 Enterprise ROI Engine
               </div>
-              <div style={{ fontSize: 11, color: "#8957E5" }}>
+              <div style={{ fontSize: 11, color: "#D2A8FF", fontWeight: 600 }}>
                 Manager-Verified Adoption
               </div>
             </div>
