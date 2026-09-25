@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
+import HeroSectionExtended from './components/HeroSectionExtended';
 import TrustStrip from './components/TrustStrip';
 import BusinessCase from './components/BusinessCase';
 import RoleAcademies from './components/RoleAcademies';
@@ -51,6 +52,7 @@ export default function App() {
         onOpenDemo={handleOpenDemo}
         scrollToSection={scrollToSection}
       />
+      <HeroSectionExtended />
 
       {/* Hero Trust Strip & Microcopy CTA Box */}
       <TrustStrip
