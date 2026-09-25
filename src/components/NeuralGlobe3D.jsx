@@ -266,15 +266,15 @@ export default function NeuralGlobe3D() {
   return (
     <div style={{
       width: "100%",
-      height: "320px",
+      height: "360px",
       position: "relative",
       pointerEvents: "none",
       zIndex: 1,
-      marginTop: "-25px",
-      marginBottom: "6px"
+      marginTop: "10px",
+      marginBottom: "20px"
     }}>
       <Canvas
-        camera={{ position: [0, 0, 4.6], fov: 45 }}
+        camera={{ position: [0, 0, 5.2], fov: 42 }}
         gl={{ alpha: true, antialias: true, powerPreference: "high-performance" }}
       >
         <ambientLight intensity={0.55} />
@@ -286,5 +286,6 @@ export default function NeuralGlobe3D() {
     </div>
   );
 }
+
 
 

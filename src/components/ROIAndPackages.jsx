@@ -37,38 +37,38 @@ export default function ROIAndPackages({ onOpenDemo }) {
   ];
 
   return (
-    <section id="resources" style={{ padding: "100px 0", background: "#040D21", borderBottom: "1px solid #30363D" }}>
+    <section id="resources" style={{ padding: "110px 0", background: "#040D21", borderBottom: "1px solid #30363D" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
-        <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 12, fontFamily: "ui-monospace, monospace" }}>
+        <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 14, fontFamily: "ui-monospace, monospace" }}>
           IMPACT & PRICING PACKAGES
         </div>
-        <h2 style={{ fontSize: "clamp(32px, 4vw, 44px)", fontWeight: 900, color: "#F0F6FC", letterSpacing: "-.02em", marginBottom: 16 }}>
+        <h2 style={{ fontSize: "clamp(32px, 4vw, 44px)", fontWeight: 900, color: "#F0F6FC", letterSpacing: "-.02em", marginBottom: 18 }}>
           Training structured around real work, not buzzwords
         </h2>
-        <p style={{ fontSize: 17, color: "#8B949E", maxWidth: 840, lineHeight: 1.65, marginBottom: 56, fontWeight: 400 }}>
+        <p style={{ fontSize: 17, color: "#8B949E", maxWidth: 840, lineHeight: 1.65, marginBottom: 64, fontWeight: 400 }}>
           We tie learning outcomes directly to practical productivity metrics, active tool adoption rates, and functional team deliverables.
         </p>
 
         {/* Business Metrics Grid */}
-        <div style={{ marginBottom: 64 }}>
-          <h3 style={{ fontSize: 22, fontWeight: 800, color: "#F0F6FC", marginBottom: 24, letterSpacing: "-.01em" }}>
+        <div style={{ marginBottom: 80 }}>
+          <h3 style={{ fontSize: 24, fontWeight: 800, color: "#F0F6FC", marginBottom: 28, letterSpacing: "-.01em" }}>
             Measuring learning impact in business metrics
           </h3>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 20 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 24 }}>
             {metrics.map((m, i) => (
               <div
                 key={i}
                 style={{
                   background: "#0D1117", border: "1px solid #30363D",
-                  borderRadius: 14, padding: "28px 24px"
+                  borderRadius: 14, padding: "32px 26px"
                 }}
               >
-                <h4 style={{ fontSize: 17, fontWeight: 800, color: "#F0F6FC", marginBottom: 6 }}>
+                <h4 style={{ fontSize: 18, fontWeight: 800, color: "#F0F6FC", marginBottom: 8 }}>
                   {m.title}
                 </h4>
-                <p style={{ fontSize: 13.5, color: "#8B949E", lineHeight: 1.6, margin: 0 }}>
+                <p style={{ fontSize: 14, color: "#8B949E", lineHeight: 1.6, margin: 0 }}>
                   {m.desc}
                 </p>
               </div>
@@ -78,14 +78,14 @@ export default function ROIAndPackages({ onOpenDemo }) {
 
         {/* Enterprise Packages */}
         <div>
-          <h3 style={{ fontSize: 22, fontWeight: 800, color: "#F0F6FC", marginBottom: 8, letterSpacing: "-.01em" }}>
+          <h3 style={{ fontSize: 24, fontWeight: 800, color: "#F0F6FC", marginBottom: 10, letterSpacing: "-.01em" }}>
             Enterprise Program Packages
           </h3>
-          <p style={{ fontSize: 14, color: "#8B949E", marginBottom: 36 }}>
+          <p style={{ fontSize: 14.5, color: "#8B949E", marginBottom: 44 }}>
             Pricing is customized based on cohort size, delivery format, depth, instructor involvement, and enterprise customization.
           </p>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 20 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 24 }}>
             {packages.map((pkg, i) => (
               <div
                 key={i}
@@ -93,7 +93,7 @@ export default function ROIAndPackages({ onOpenDemo }) {
                   background: pkg.highlighted ? "rgba(56, 139, 253, 0.08)" : "#0D1117",
                   border: "1px solid",
                   borderColor: pkg.highlighted ? "#388BFD" : "#30363D",
-                  borderRadius: 16, padding: "32px 24px",
+                  borderRadius: 16, padding: "36px 28px",
                   display: "flex", flexDirection: "column", justifyContent: "space-between",
                   boxShadow: pkg.highlighted ? "0 0 20px rgba(56, 139, 253, 0.18)" : "none"
                 }}
@@ -102,23 +102,23 @@ export default function ROIAndPackages({ onOpenDemo }) {
                   <div style={{
                     fontSize: 11, fontWeight: 800,
                     color: pkg.highlighted ? "#388BFD" : "#8B949E",
-                    textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 10,
+                    textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 12,
                     fontFamily: "ui-monospace, monospace"
                   }}>
                     {pkg.bestFor}
                   </div>
-                  <h4 style={{ fontSize: 20, fontWeight: 800, color: "#F0F6FC", marginBottom: 12 }}>
+                  <h4 style={{ fontSize: 21, fontWeight: 800, color: "#F0F6FC", marginBottom: 14 }}>
                     {pkg.name}
                   </h4>
-                  <div style={{ marginBottom: 28 }}>
-                    <div style={{ fontSize: 13.5, color: "#8B949E", lineHeight: 1.6 }}>{pkg.includes}</div>
+                  <div style={{ marginBottom: 32 }}>
+                    <div style={{ fontSize: 14, color: "#8B949E", lineHeight: 1.65 }}>{pkg.includes}</div>
                   </div>
                 </div>
 
                 <button
                   onClick={() => onOpenDemo(`${pkg.name} Package`)}
                   style={{
-                    width: "100%", padding: "12px 18px", borderRadius: 8, border: "1px solid rgba(240, 246, 252, 0.1)",
+                    width: "100%", padding: "13px 20px", borderRadius: 8, border: "1px solid rgba(240, 246, 252, 0.1)",
                     fontWeight: 700, fontSize: 14, cursor: "pointer",
                     background: pkg.highlighted ? "#238636" : "#161B22",
                     color: "#FFFFFF", transition: "all 0.15s ease",
@@ -138,3 +138,4 @@ export default function ROIAndPackages({ onOpenDemo }) {
     </section>
   );
 }
+

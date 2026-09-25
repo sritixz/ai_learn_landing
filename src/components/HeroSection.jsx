@@ -15,12 +15,12 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      justifyContent: "space-between",
+      justifyContent: "flex-start",
       background: "radial-gradient(ellipse at 50% 25%, #0B1D40 0%, #040D21 65%)",
       borderBottom: "1px solid #30363D",
       position: "relative",
-      paddingTop: 100,
-      paddingBottom: 0,
+      paddingTop: 128,
+      paddingBottom: 96,
       boxSizing: "border-box",
       overflow: "hidden"
     }} className="dev-grid-bg">
@@ -28,14 +28,14 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
       {/* Upward Ambient Glow */}
       <div className="ambient-glow-up" />
 
-      {/* Main Hero Content (Vertically Centered) */}
+      {/* Main Hero Content */}
       <div style={{ maxWidth: 1040, margin: "0 auto", padding: "0 24px", width: "100%", position: "relative", zIndex: 2, textAlign: "center" }}>
 
         {/* Hero Title */}
         <h1 style={{
-          fontSize: "clamp(44px, 6vw, 72px)", fontWeight: 900,
-          color: "#F0F6FC", lineHeight: 1.06,
-          letterSpacing: "-.035em", maxWidth: 940, margin: "0 auto 22px"
+          fontSize: "clamp(44px, 5.8vw, 70px)", fontWeight: 900,
+          color: "#F0F6FC", lineHeight: 1.08,
+          letterSpacing: "-.035em", maxWidth: 940, margin: "0 auto 24px"
         }}>
           Build an AI-Ready Workforce.
         </h1>
@@ -43,7 +43,7 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
         {/* Subhead Line */}
         <p style={{
           fontSize: "clamp(20px, 2.3vw, 25px)", fontWeight: 700,
-          textAlign: "center", maxWidth: 780, margin: "0 auto 18px",
+          textAlign: "center", maxWidth: 780, margin: "0 auto 20px",
           color: "#388BFD", lineHeight: 1.35
         }}>
           Turn Generative AI into measurable productivity across all teams.
@@ -52,7 +52,7 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
         {/* Main Body Paragraph */}
         <p style={{
           fontSize: 17, color: "#8B949E", textAlign: "center",
-          maxWidth: 680, margin: "0 auto 36px", lineHeight: 1.6, fontWeight: 400
+          maxWidth: 680, margin: "0 auto 40px", lineHeight: 1.65, fontWeight: 400
         }}>
           Role-based upskilling in prompt engineering, AI agents, and automation.
           <br />
@@ -64,8 +64,8 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          gap: 12,
-          marginBottom: 20,
+          gap: 14,
+          marginBottom: 64,
           flexWrap: "wrap"
         }}>
           <form onSubmit={handleSubmit} style={{
@@ -74,9 +74,9 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
             background: "rgba(22, 27, 34, 0.95)",
             border: "1px solid #30363D",
             borderRadius: 12,
-            padding: "5px 6px 5px 16px",
+            padding: "6px 8px 6px 18px",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(56, 139, 253, 0.15)",
-            gap: 10,
+            gap: 12,
             maxWidth: "100%"
           }}>
             <input
@@ -85,12 +85,12 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your work email"
               style={{
-                width: 230,
+                width: 240,
                 background: "transparent",
                 border: "none",
                 outline: "none",
                 color: "#F0F6FC",
-                fontSize: 14.5,
+                fontSize: 15,
                 fontWeight: 500
               }}
             />
@@ -100,7 +100,7 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
                 background: "#238636",
                 color: "#FFFFFF",
                 border: "1px solid rgba(240, 246, 252, 0.1)",
-                padding: "11px 22px",
+                padding: "12px 24px",
                 borderRadius: 8,
                 fontWeight: 700,
                 fontSize: 14,
@@ -123,7 +123,7 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
               background: "rgba(22, 27, 34, 0.85)",
               color: "#F0F6FC",
               border: "1px solid #30363D",
-              padding: "13px 22px",
+              padding: "14px 24px",
               borderRadius: 12,
               fontWeight: 600,
               fontSize: 14,
@@ -146,15 +146,15 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
         width: "100%",
         position: "relative",
         zIndex: 2,
-        paddingBottom: 24,
-        marginTop: "auto"
+        marginTop: 16
       }}>
         {/* Interactive 3D Supercomputer Core Globe */}
         <NeuralGlobe3D />
+
         {/* Luminous Torchlight / Star Halo Radiant Flare */}
         <div style={{
           position: "absolute",
-          bottom: 0,
+          bottom: 40,
           left: "50%",
           transform: "translateX(-50%)",
           width: "90%",
@@ -171,7 +171,7 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
           width: "85%",
           maxWidth: 960,
           height: 1.5,
-          margin: "0 auto 24px auto",
+          margin: "36px auto 44px auto",
           background: "linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.4) 20%, rgba(255, 255, 255, 0.95) 50%, rgba(255, 255, 255, 0.4) 80%, transparent 100%)",
           boxShadow: "0 0 25px 4px rgba(255, 255, 255, 0.8), 0 0 50px 8px rgba(56, 189, 248, 0.5)",
           position: "relative",
@@ -183,7 +183,7 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          gap: 20,
+          gap: 24,
           maxWidth: 1140,
           margin: "0 auto",
           padding: "0 20px",
@@ -197,30 +197,30 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
             background: "rgba(10, 16, 28, 0.92)",
             border: "1px solid rgba(255, 255, 255, 0.55)",
             borderRadius: 14,
-            padding: "14px 20px",
+            padding: "16px 24px",
             boxShadow: "0 0 35px 3px rgba(255, 255, 255, 0.3), 0 0 70px 10px rgba(56, 189, 248, 0.35), 0 12px 32px rgba(0, 0, 0, 0.8)",
             backdropFilter: "blur(16px)",
             WebkitBackdropFilter: "blur(16px)",
             display: "flex",
             alignItems: "center",
-            gap: 12,
+            gap: 14,
             position: "relative"
           }}>
             <div style={{
-              width: 30, height: 30, borderRadius: 8,
+              width: 32, height: 32, borderRadius: 8,
               background: "rgba(255, 255, 255, 0.15)",
               border: "1px solid rgba(255, 255, 255, 0.8)",
               boxShadow: "0 0 16px rgba(255, 255, 255, 0.6)",
               display: "flex", alignItems: "center", justifyContent: "center",
-              color: "#FFFFFF", fontSize: 14, fontWeight: 900
+              color: "#FFFFFF", fontSize: 15, fontWeight: 900
             }}>
               🧠
             </div>
             <div style={{ textAlign: "left" }}>
-              <div style={{ fontSize: 12.5, fontWeight: 800, color: "#FFFFFF", fontFamily: "ui-monospace, monospace", letterSpacing: "-.01em" }}>
+              <div style={{ fontSize: 13, fontWeight: 800, color: "#FFFFFF", fontFamily: "ui-monospace, monospace", letterSpacing: "-.01em" }}>
                 Neural Engine v4.2
               </div>
-              <div style={{ fontSize: 11, color: "#38BDF8", fontWeight: 600 }}>
+              <div style={{ fontSize: 11.5, color: "#38BDF8", fontWeight: 600, marginTop: 2 }}>
                 Multi-Model LLM Orchestration
               </div>
             </div>
@@ -231,7 +231,7 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
             background: "rgba(10, 16, 28, 0.96)",
             border: "1.5px solid rgba(255, 255, 255, 0.7)",
             borderRadius: 14,
-            padding: "14px 24px",
+            padding: "16px 26px",
             boxShadow: "0 0 45px 5px rgba(255, 255, 255, 0.4), 0 0 90px 15px rgba(56, 189, 248, 0.4), 0 16px 40px rgba(0, 0, 0, 0.9)",
             backdropFilter: "blur(16px)",
             WebkitBackdropFilter: "blur(16px)",
@@ -241,15 +241,15 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
             position: "relative"
           }}>
             <div style={{
-              width: 9, height: 9, borderRadius: "50%",
+              width: 10, height: 10, borderRadius: "50%",
               background: "#FFFFFF",
               boxShadow: "0 0 14px 3px #FFFFFF, 0 0 25px 6px #2EA043"
             }} />
             <div style={{ textAlign: "left", fontFamily: "ui-monospace, monospace" }}>
-              <div style={{ fontSize: 12.5, fontWeight: 700, color: "#FFFFFF" }}>
+              <div style={{ fontSize: 13, fontWeight: 700, color: "#FFFFFF" }}>
                 <span style={{ color: "#79C0FF" }}>agent</span>.<span style={{ color: "#56D364" }}>run</span>({`{ stack: ['Cursor', 'Claude', 'n8n'] }`})
               </div>
-              <div style={{ fontSize: 11, color: "#7EE787", marginTop: 3, fontWeight: 600 }}>
+              <div style={{ fontSize: 11.5, color: "#7EE787", marginTop: 3, fontWeight: 600 }}>
                 ✓ 26% faster feature delivery & test suites
               </div>
             </div>
@@ -260,30 +260,30 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
             background: "rgba(10, 16, 28, 0.92)",
             border: "1px solid rgba(255, 255, 255, 0.55)",
             borderRadius: 14,
-            padding: "14px 20px",
+            padding: "16px 24px",
             boxShadow: "0 0 35px 3px rgba(255, 255, 255, 0.3), 0 0 70px 10px rgba(137, 87, 229, 0.35), 0 12px 32px rgba(0, 0, 0, 0.8)",
             backdropFilter: "blur(16px)",
             WebkitBackdropFilter: "blur(16px)",
             display: "flex",
             alignItems: "center",
-            gap: 12,
+            gap: 14,
             position: "relative"
           }}>
             <div style={{
-              width: 30, height: 30, borderRadius: 8,
+              width: 32, height: 32, borderRadius: 8,
               background: "rgba(255, 255, 255, 0.15)",
               border: "1px solid rgba(255, 255, 255, 0.8)",
               boxShadow: "0 0 16px rgba(255, 255, 255, 0.6)",
               display: "flex", alignItems: "center", justifyContent: "center",
-              color: "#FFFFFF", fontSize: 14, fontWeight: 900
+              color: "#FFFFFF", fontSize: 15, fontWeight: 900
             }}>
               ⚡
             </div>
             <div style={{ textAlign: "left" }}>
-              <div style={{ fontSize: 12.5, fontWeight: 800, color: "#FFFFFF", fontFamily: "ui-monospace, monospace", letterSpacing: "-.01em" }}>
+              <div style={{ fontSize: 13, fontWeight: 800, color: "#FFFFFF", fontFamily: "ui-monospace, monospace", letterSpacing: "-.01em" }}>
                 Enterprise ROI Engine
               </div>
-              <div style={{ fontSize: 11, color: "#D2A8FF", fontWeight: 600 }}>
+              <div style={{ fontSize: 11.5, color: "#D2A8FF", fontWeight: 600, marginTop: 2 }}>
                 Manager-Verified Adoption
               </div>
             </div>
@@ -295,3 +295,4 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
     </section>
   );
 }
+

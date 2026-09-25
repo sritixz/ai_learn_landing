@@ -57,22 +57,22 @@ export default function RoleAcademies({ onOpenDemo }) {
   ];
 
   return (
-    <section id="role-tracks" style={{ padding: "100px 0", background: "#040D21", borderBottom: "1px solid #30363D" }}>
+    <section id="role-tracks" style={{ padding: "110px 0", background: "#040D21", borderBottom: "1px solid #30363D" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
-        <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 12, fontFamily: "ui-monospace, monospace" }}>
+        <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 14, fontFamily: "ui-monospace, monospace" }}>
           10 ROLE ACADEMIES
         </div>
-        <h2 style={{ fontSize: "clamp(32px, 4vw, 44px)", fontWeight: 900, color: "#F0F6FC", letterSpacing: "-.02em", marginBottom: 16 }}>
+        <h2 style={{ fontSize: "clamp(32px, 4vw, 44px)", fontWeight: 900, color: "#F0F6FC", letterSpacing: "-.02em", marginBottom: 18 }}>
           One GenAI Academy. Tailored pathways for every department.
         </h2>
-        <p style={{ fontSize: 17, color: "#8B949E", maxWidth: 840, lineHeight: 1.65, marginBottom: 56, fontWeight: 400 }}>
+        <p style={{ fontSize: 17, color: "#8B949E", maxWidth: 840, lineHeight: 1.65, marginBottom: 64, fontWeight: 400 }}>
           Start with a unified enterprise foundation, then transition each team into specialized tool tracks and use cases aligned directly with their KPIs.
         </p>
 
         {/* Role Academy Explorer Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 20, marginBottom: 48 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 24, marginBottom: 56 }}>
           {roles.map((r, i) => {
             const isSelected = selectedRole === i;
             return (
@@ -83,31 +83,31 @@ export default function RoleAcademies({ onOpenDemo }) {
                   background: isSelected ? "rgba(56, 139, 253, 0.08)" : "#0D1117",
                   border: "1px solid",
                   borderColor: isSelected ? "#388BFD" : "#30363D",
-                  borderRadius: 14, padding: "28px 24px", cursor: "pointer",
+                  borderRadius: 14, padding: "32px 26px", cursor: "pointer",
                   boxShadow: isSelected ? "0 0 16px rgba(56, 139, 253, 0.15)" : "none",
                   transition: "all 0.15s ease"
                 }}
               >
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 14 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
                   <span style={{
-                    fontSize: 11, fontWeight: 700,
+                    fontSize: 11.5, fontWeight: 700,
                     background: isSelected ? "#388BFD" : "#161B22",
                     color: isSelected ? "#FFFFFF" : "#388BFD",
                     border: "1px solid", borderColor: isSelected ? "#388BFD" : "#30363D",
-                    padding: "3px 10px", borderRadius: 6,
+                    padding: "4px 11px", borderRadius: 6,
                     fontFamily: "ui-monospace, monospace"
                   }}>
                     {r.focus}
                   </span>
-                  <span style={{ fontSize: 11, fontWeight: 700, color: "#6E7681", fontFamily: "ui-monospace, monospace" }}>
+                  <span style={{ fontSize: 11.5, fontWeight: 700, color: "#6E7681", fontFamily: "ui-monospace, monospace" }}>
                     Track 0{i + 1}
                   </span>
                 </div>
 
-                <h3 style={{ fontSize: 18, fontWeight: 800, color: "#F0F6FC", marginBottom: 8 }}>
+                <h3 style={{ fontSize: 18.5, fontWeight: 800, color: "#F0F6FC", marginBottom: 10 }}>
                   {r.name}
                 </h3>
-                <p style={{ fontSize: 13.5, color: "#8B949E", lineHeight: 1.6, margin: 0 }}>
+                <p style={{ fontSize: 14, color: "#8B949E", lineHeight: 1.6, margin: 0 }}>
                   {r.useCases}
                 </p>
               </div>
@@ -118,14 +118,14 @@ export default function RoleAcademies({ onOpenDemo }) {
         {/* Selected Pathway Callout Banner */}
         <div style={{
           background: "#0D1117", border: "1px solid #30363D",
-          borderRadius: 16, padding: "32px 36px",
-          display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24, flexWrap: "wrap"
+          borderRadius: 16, padding: "38px 40px",
+          display: "flex", alignItems: "center", justifyContent: "space-between", gap: 28, flexWrap: "wrap"
         }}>
           <div>
-            <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
+            <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 8, fontFamily: "ui-monospace, monospace" }}>
               CUSTOM CURRICULUM SYLLABUS
             </div>
-            <h4 style={{ fontSize: 20, fontWeight: 800, margin: 0, color: "#F0F6FC", lineHeight: 1.3 }}>
+            <h4 style={{ fontSize: 21, fontWeight: 800, margin: 0, color: "#F0F6FC", lineHeight: 1.35 }}>
               Request customized enterprise syllabus for {roles[selectedRole].name}
             </h4>
           </div>
@@ -133,8 +133,8 @@ export default function RoleAcademies({ onOpenDemo }) {
             onClick={() => onOpenDemo(`${roles[selectedRole].name} Pathway`)}
             style={{
               background: "#238636", color: "#FFFFFF", border: "1px solid rgba(240, 246, 252, 0.1)",
-              padding: "12px 24px", borderRadius: 8, fontWeight: 700,
-              fontSize: 14, cursor: "pointer", transition: "all 0.15s ease",
+              padding: "13px 26px", borderRadius: 8, fontWeight: 700,
+              fontSize: 14.5, cursor: "pointer", transition: "all 0.15s ease",
               boxShadow: "0 2px 8px rgba(35, 134, 54, 0.3)",
               whiteSpace: "nowrap"
             }}
@@ -149,3 +149,4 @@ export default function RoleAcademies({ onOpenDemo }) {
     </section>
   );
 }
+

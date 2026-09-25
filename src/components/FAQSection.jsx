@@ -39,19 +39,19 @@ export default function FAQSection() {
   ];
 
   return (
-    <section style={{ padding: "100px 0", background: "#040D21", borderBottom: "1px solid #30363D" }}>
+    <section style={{ padding: "110px 0", background: "#040D21", borderBottom: "1px solid #30363D" }}>
       <div style={{ maxWidth: 880, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
-        <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 12, fontFamily: "ui-monospace, monospace" }}>
+        <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 14, fontFamily: "ui-monospace, monospace" }}>
           FREQUENTLY ASKED QUESTIONS
         </div>
-        <h2 style={{ fontSize: "clamp(32px, 4vw, 42px)", fontWeight: 900, color: "#F0F6FC", letterSpacing: "-.02em", marginBottom: 44 }}>
+        <h2 style={{ fontSize: "clamp(32px, 4vw, 42px)", fontWeight: 900, color: "#F0F6FC", letterSpacing: "-.02em", marginBottom: 52 }}>
           Questions enterprise buyers frequently ask
         </h2>
 
         {/* Accordion list */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
           {faqs.map((faq, i) => {
             const isOpen = openIndex === i;
             return (
@@ -67,12 +67,12 @@ export default function FAQSection() {
                 <div
                   onClick={() => setOpenIndex(isOpen ? null : i)}
                   style={{
-                    padding: "20px 28px", cursor: "pointer",
+                    padding: "22px 30px", cursor: "pointer",
                     display: "flex", alignItems: "center", justifyContent: "space-between",
                     background: isOpen ? "rgba(56, 139, 253, 0.08)" : "#0D1117"
                   }}
                 >
-                  <h3 style={{ fontSize: 16, fontWeight: 800, color: "#F0F6FC", paddingRight: 16, margin: 0 }}>
+                  <h3 style={{ fontSize: 16.5, fontWeight: 800, color: "#F0F6FC", paddingRight: 16, margin: 0 }}>
                     {faq.q}
                   </h3>
                   <span style={{ fontSize: 18, fontWeight: 700, color: "#388BFD", fontFamily: "ui-monospace, monospace" }}>
@@ -81,8 +81,8 @@ export default function FAQSection() {
                 </div>
 
                 {isOpen && (
-                  <div style={{ padding: "0 28px 22px 28px", borderTop: "1px solid #21262D" }}>
-                    <p style={{ fontSize: 14, color: "#8B949E", lineHeight: 1.65, paddingTop: 16, margin: 0 }}>
+                  <div style={{ padding: "0 30px 24px 30px", borderTop: "1px solid #21262D" }}>
+                    <p style={{ fontSize: 14.5, color: "#8B949E", lineHeight: 1.65, paddingTop: 18, margin: 0 }}>
                       {faq.a}
                     </p>
                   </div>
@@ -96,3 +96,4 @@ export default function FAQSection() {
     </section>
   );
 }
+

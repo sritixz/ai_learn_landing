@@ -57,22 +57,22 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
   ];
 
   return (
-    <section id="curriculum" style={{ padding: "100px 0", background: "#040D21", borderBottom: "1px solid #30363D" }}>
+    <section id="curriculum" style={{ padding: "110px 0", background: "#040D21", borderBottom: "1px solid #30363D" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
-        <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 12, fontFamily: "ui-monospace, monospace" }}>
+        <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 14, fontFamily: "ui-monospace, monospace" }}>
           CURRICULUM SYLLABUS
         </div>
-        <h2 style={{ fontSize: "clamp(32px, 4vw, 44px)", fontWeight: 900, color: "#F0F6FC", letterSpacing: "-.02em", marginBottom: 16 }}>
+        <h2 style={{ fontSize: "clamp(32px, 4vw, 44px)", fontWeight: 900, color: "#F0F6FC", letterSpacing: "-.02em", marginBottom: 18 }}>
           From AI literacy to agentic workflows
         </h2>
-        <p style={{ fontSize: 17, color: "#8B949E", maxWidth: 840, lineHeight: 1.65, marginBottom: 56, fontWeight: 400 }}>
+        <p style={{ fontSize: 17, color: "#8B949E", maxWidth: 840, lineHeight: 1.65, marginBottom: 64, fontWeight: 400 }}>
           A modular 10-phase curriculum that adapts seamlessly as a 1-day executive briefing, a 2-4 week intensive bootcamp, or a 6-12 week full enterprise academy.
         </p>
 
         {/* Accordion / Module List */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 48 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 56 }}>
           {modules.map((m, i) => {
             const isOpen = openModule === i;
             return (
@@ -88,21 +88,21 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
                 <div
                   onClick={() => setOpenModule(isOpen ? null : i)}
                   style={{
-                    padding: "20px 28px", cursor: "pointer",
+                    padding: "22px 30px", cursor: "pointer",
                     display: "flex", alignItems: "center", justifyContent: "space-between",
                     background: isOpen ? "rgba(56, 139, 253, 0.08)" : "#0D1117"
                   }}
                 >
-                  <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
                     <span style={{
-                      fontSize: 12, fontWeight: 800, color: "#388BFD",
+                      fontSize: 12.5, fontWeight: 800, color: "#388BFD",
                       background: "#161B22", border: "1px solid #30363D",
-                      padding: "4px 10px", borderRadius: 6,
+                      padding: "5px 12px", borderRadius: 6,
                       fontFamily: "ui-monospace, monospace"
                     }}>
                       Module {m.num}
                     </span>
-                    <h3 style={{ fontSize: 17, fontWeight: 800, color: "#F0F6FC", margin: 0 }}>
+                    <h3 style={{ fontSize: 18, fontWeight: 800, color: "#F0F6FC", margin: 0 }}>
                       {m.title}
                     </h3>
                   </div>
@@ -112,8 +112,8 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
                 </div>
 
                 {isOpen && (
-                  <div style={{ padding: "0 28px 24px 28px", borderTop: "1px solid #21262D" }}>
-                    <p style={{ fontSize: 14, color: "#8B949E", lineHeight: 1.65, paddingTop: 16, margin: 0 }}>
+                  <div style={{ padding: "0 30px 28px 30px", borderTop: "1px solid #21262D" }}>
+                    <p style={{ fontSize: 14.5, color: "#8B949E", lineHeight: 1.65, paddingTop: 18, margin: 0 }}>
                       {m.summary}
                     </p>
                   </div>
@@ -129,7 +129,7 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
             onClick={() => onOpenDemo("Complete 10-Module Curriculum PDF")}
             style={{
               background: "#238636", color: "#FFFFFF", border: "1px solid rgba(240, 246, 252, 0.1)",
-              padding: "14px 32px", borderRadius: 8, fontWeight: 700,
+              padding: "16px 36px", borderRadius: 8, fontWeight: 700,
               fontSize: 15, cursor: "pointer", boxShadow: "0 2px 8px rgba(35, 134, 54, 0.3)",
               transition: "all 0.15s ease"
             }}
@@ -144,3 +144,4 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
     </section>
   );
 }
+
