@@ -88,3 +88,15 @@
   letter-spacing: 0.02em;
 }
 
+/* Scroll Reveal Animation: Triggers smoothly once and then stays completely static (no floating) */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}

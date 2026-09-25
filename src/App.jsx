@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import HeroSectionExtended from './components/HeroSectionExtended';
@@ -35,6 +35,25 @@ export default function App() {
     }
   };
 
+  useEffect(() => {
+    const elements = document.querySelectorAll('.reveal-on-scroll');
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          obs.unobserve(entry.target); // Trigger only once, static afterwards
+        }
+      });
+    }, {
+      threshold: 0.08,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    elements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div style={{
       fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
@@ -54,53 +73,78 @@ export default function App() {
         onOpenDemo={handleOpenDemo}
         scrollToSection={scrollToSection}
       />
-      <HeroSectionExtended />
+
+      <div className="reveal-on-scroll">
+        <HeroSectionExtended />
+      </div>
 
       {/* Hero Trust Strip & Microcopy CTA Box */}
-      <TrustStrip
-        onOpenDemo={handleOpenDemo}
-      />
+      <div className="reveal-on-scroll">
+        <TrustStrip
+          onOpenDemo={handleOpenDemo}
+        />
+      </div>
 
       {/* Section 02 - Business Case & Employee Outcomes */}
-      <BusinessCase />
+      <div className="reveal-on-scroll">
+        <BusinessCase />
+      </div>
 
       {/* Section 03 - 10 Role-Based Academies */}
-      <RoleAcademies
-        onOpenDemo={handleOpenDemo}
-      />
+      <div className="reveal-on-scroll">
+        <RoleAcademies
+          onOpenDemo={handleOpenDemo}
+        />
+      </div>
 
       {/* Section 04 - 10 Curriculum Architecture Modules */}
-      <CurriculumArchitecture
-        onOpenDemo={handleOpenDemo}
-      />
+      <div className="reveal-on-scroll">
+        <CurriculumArchitecture
+          onOpenDemo={handleOpenDemo}
+        />
+      </div>
 
       {/* Section 05 - 50+ Tool Ecosystem (67 Tools across 9 categories) */}
-      <ToolEcosystem />
+      <div className="reveal-on-scroll">
+        <ToolEcosystem />
+      </div>
 
       {/* Section 06 - Advanced Capability (Agents & Automations) */}
-      <AdvancedCapability
-        onOpenDemo={handleOpenDemo}
-      />
+      <div className="reveal-on-scroll">
+        <AdvancedCapability
+          onOpenDemo={handleOpenDemo}
+        />
+      </div>
 
       {/* Section 07 - Enterprise Delivery & 5-Stage Journey */}
-      <EnterpriseDelivery />
+      <div className="reveal-on-scroll">
+        <EnterpriseDelivery />
+      </div>
 
       {/* Section 08 - Responsible Enterprise AI Governance */}
-      <ResponsibleAI />
+      <div className="reveal-on-scroll">
+        <ResponsibleAI />
+      </div>
 
       {/* Section 09 - Business ROI & Enterprise Packages */}
-      <ROIAndPackages
-        onOpenDemo={handleOpenDemo}
-      />
+      <div className="reveal-on-scroll">
+        <ROIAndPackages
+          onOpenDemo={handleOpenDemo}
+        />
+      </div>
 
       {/* Section 10 - Enterprise Buyer FAQ Accordion */}
-      <FAQSection />
+      <div className="reveal-on-scroll">
+        <FAQSection />
+      </div>
 
       {/* Final Conversion Section */}
-      <FinalCTA
-        onOpenDemo={handleOpenDemo}
-        scrollToSection={scrollToSection}
-      />
+      <div className="reveal-on-scroll">
+        <FinalCTA
+          onOpenDemo={handleOpenDemo}
+          scrollToSection={scrollToSection}
+        />
+      </div>
 
       {/* Enterprise Footer */}
       <Footer

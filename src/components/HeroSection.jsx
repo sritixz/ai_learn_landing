@@ -31,48 +31,41 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
       {/* Main Hero Content */}
       <div style={{ maxWidth: 980, margin: "0 auto", padding: "0 24px", width: "100%", position: "relative", zIndex: 2, textAlign: "center" }}>
 
-        {/* Technical Eyebrow Badge */}
-        <div style={{
-          display: "inline-flex",
-          alignItems: "center",
-          gap: 8,
-          background: "rgba(47, 129, 247, 0.08)",
-          border: "1px solid rgba(47, 129, 247, 0.25)",
-          padding: "4px 12px",
-          borderRadius: 6,
-          fontSize: 12,
-          fontWeight: 600,
-          color: "#2F81F7",
-          marginBottom: 24,
-          fontFamily: "ui-monospace, monospace"
-        }}>
-          <span>ENTERPRISE GENAI UPSKILLING</span>
-          <span style={{ color: "#334155" }}>•</span>
-          <span style={{ color: "#94A3B8" }}>FOR GLOBAL TEAMS</span>
-        </div>
-
         {/* Hero Title */}
         <h1 style={{
-          fontSize: "clamp(42px, 5.5vw, 68px)", fontWeight: 850,
-          color: "#F8FAFC", lineHeight: 1.08,
-          letterSpacing: "-.035em", maxWidth: 900, margin: "0 auto 20px"
+          fontSize: "clamp(42px, 5.5vw, 68px)",
+          fontWeight: 850,
+          color: "#F8FAFC",
+          lineHeight: 1.08,
+          letterSpacing: "-.035em",
+          maxWidth: 900,
+          margin: "0 auto 20px"
         }}>
           Build an AI-Ready Workforce.
         </h1>
 
         {/* Subhead Line */}
         <p style={{
-          fontSize: "clamp(19px, 2.2vw, 23px)", fontWeight: 600,
-          textAlign: "center", maxWidth: 740, margin: "0 auto 18px",
-          color: "#2F81F7", lineHeight: 1.35
+          fontSize: "clamp(19px, 2.2vw, 23px)",
+          fontWeight: 600,
+          textAlign: "center",
+          maxWidth: 740,
+          margin: "0 auto 18px",
+          color: "#2F81F7",
+          lineHeight: 1.35
         }}>
           Turn Generative AI into measurable productivity across all departments.
         </p>
 
         {/* Main Body Paragraph */}
         <p style={{
-          fontSize: 16.5, color: "#94A3B8", textAlign: "center",
-          maxWidth: 660, margin: "0 auto 36px", lineHeight: 1.6, fontWeight: 400
+          fontSize: 16.5,
+          color: "#94A3B8",
+          textAlign: "center",
+          maxWidth: 660,
+          margin: "0 auto 36px",
+          lineHeight: 1.6,
+          fontWeight: 400
         }}>
           Role-based upskilling in prompt engineering, AI agents, and workflow automation.
           Empower your teams to build production use cases with 50+ approved tools.
@@ -193,7 +186,7 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
           position: "relative",
           zIndex: 2
         }}>
-          
+
           {/* Pillar 1 */}
           <div style={{
             background: "#0B1220",
@@ -290,5 +283,3 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
     </section>
   );
 }
-
-
