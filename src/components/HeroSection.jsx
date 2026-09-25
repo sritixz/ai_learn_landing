@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import NeuralGlobe3D from './NeuralGlobe3D';
 
 export default function HeroSection({ onOpenDemo, scrollToSection }) {
   const [email, setEmail] = useState("");
@@ -18,7 +19,7 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
       background: "radial-gradient(ellipse at 50% 25%, #0B1D40 0%, #040D21 65%)",
       borderBottom: "1px solid #30363D",
       position: "relative",
-      paddingTop: 110,
+      paddingTop: 100,
       paddingBottom: 0,
       boxSizing: "border-box",
       overflow: "hidden"
@@ -64,7 +65,7 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
           alignItems: "center",
           justifyContent: "center",
           gap: 12,
-          marginBottom: 44,
+          marginBottom: 20,
           flexWrap: "wrap"
         }}>
           <form onSubmit={handleSubmit} style={{
@@ -140,14 +141,16 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
 
       </div>
 
-      {/* Radiant AI Neural Horizon with Star/Torch White Light Flare */}
+      {/* Radiant 3D AI Supercomputer Core Horizon */}
       <div style={{
         width: "100%",
         position: "relative",
         zIndex: 2,
-        paddingBottom: 28,
+        paddingBottom: 24,
         marginTop: "auto"
       }}>
+        {/* Interactive 3D Supercomputer Core Globe */}
+        <NeuralGlobe3D />
         {/* Luminous Torchlight / Star Halo Radiant Flare */}
         <div style={{
           position: "absolute",
