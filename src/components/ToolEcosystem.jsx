@@ -7,66 +7,70 @@ export default function ToolEcosystem() {
     {
       id: "assistants",
       name: "AI Assistants & Research",
-      tools: ["ChatGPT", "Claude", "Gemini", "Microsoft Copilot", "Perplexity", "NotebookLM", "Poe", "You.com"]
+      tools: ["ChatGPT Team/Enterprise", "Claude 3.5 Sonnet", "Google Gemini 1.5 Pro", "Microsoft Copilot", "Perplexity Enterprise", "NotebookLM", "You.com", "Poe"]
     },
     {
       id: "coding",
-      name: "Coding & App Building",
-      tools: ["GitHub Copilot", "Claude Code", "Cursor", "OpenAI Codex", "Windsurf", "Replit", "Cline", "Continue", "Bolt.new", "Lovable", "v0"]
+      name: "Coding & Engineering",
+      tools: ["GitHub Copilot", "Claude Code", "Cursor", "Windsurf", "Cline", "Continue.dev", "Bolt.new", "Lovable", "v0.dev"]
     },
     {
       id: "marketing",
-      name: "Marketing & Writing",
-      tools: ["Jasper", "Copy.ai", "Writer", "Grammarly", "Canva Magic Studio", "Adobe Express AI", "HubSpot AI"]
+      name: "Marketing & Strategy",
+      tools: ["Jasper Enterprise", "Writer.com", "Copy.ai", "Canva Magic Studio", "Adobe Express AI", "HubSpot Breeze"]
     },
     {
       id: "image",
-      name: "Image & Design",
-      tools: ["Adobe Firefly", "Midjourney", "Ideogram", "Leonardo AI", "Canva AI", "Figma AI"]
+      name: "Design & Multimodal",
+      tools: ["Midjourney v6", "Adobe Firefly Enterprise", "Ideogram 2.0", "Leonardo.ai", "Figma AI"]
     },
     {
       id: "video",
-      name: "Video, Voice & Media",
-      tools: ["Runway", "Descript", "ElevenLabs", "Synthesia", "HeyGen", "OpusClip", "VEED AI"]
+      name: "Video & Speech Synthesis",
+      tools: ["Runway Gen-3", "ElevenLabs Enterprise", "HeyGen", "Descript", "Synthesia", "OpusClip"]
     },
     {
       id: "data",
-      name: "Data, Analysis & BI",
-      tools: ["ChatGPT Data Analysis", "Julius AI", "Power BI Copilot", "Excel Copilot", "Elicit", "Consensus"]
+      name: "Data & BI Analytics",
+      tools: ["ChatGPT Advanced Data Analysis", "Julius.ai", "Power BI Copilot", "Excel Copilot", "Consensus", "Elicit"]
     },
     {
       id: "productivity",
-      name: "Productivity & Knowledge",
-      tools: ["Notion AI", "Slack AI", "Zoom AI Companion", "Otter.ai", "Fireflies.ai", "Granola", "Gamma", "Beautiful.ai"]
+      name: "Enterprise Workspace",
+      tools: ["Notion AI", "Slack AI", "Zoom AI Companion", "Granola", "Otter.ai", "Gamma App", "Beautiful.ai"]
     },
     {
       id: "automation",
-      name: "Automation & Integration",
-      tools: ["Zapier", "Make", "n8n", "Microsoft Power Automate", "Gumloop", "Lindy"]
+      name: "Automation & Orchestration",
+      tools: ["Make.com", "n8n Enterprise", "Zapier Central", "Microsoft Power Automate", "Gumloop", "Lindy.ai"]
     },
     {
       id: "agents",
-      name: "Agents & Orchestration",
-      tools: ["OpenAI Agents SDK", "LangChain", "LangGraph", "CrewAI", "Microsoft Copilot Studio", "Google Vertex AI Agent Builder", "Salesforce Agentforce", "Retool Agents"]
+      name: "Agent Frameworks & APIs",
+      tools: ["OpenAI Agents SDK", "LangChain & LangGraph", "CrewAI", "Microsoft Copilot Studio", "Google Vertex AI", "Salesforce Agentforce"]
     }
   ];
 
   const framework = [
     {
-      step: "Understand",
-      desc: "Identify what each tool excels at, where it fails, and strict data privacy parameters."
+      step: "Evaluate & Govern",
+      subtitle: "Benchmark & Risk Profiling",
+      desc: "Identify specific model strengths, context limits, latency profiles, hallucination risks, and data compliance standards before deployment."
     },
     {
-      step: "Practice",
-      desc: "Execute role-tailored exercises with a concrete before-and-after productivity workflow."
+      step: "Contextualize & Practice",
+      subtitle: "Workflow Integration",
+      desc: "Execute hands-on exercises comparing baseline manual outputs against AI-accelerated workflows using sanitized corporate assets."
     },
     {
-      step: "Compare",
-      desc: "Evaluate competing tools on real benchmark tasks to choose the optimal stack."
+      step: "Systematize & Standardize",
+      subtitle: "Reusable Assets",
+      desc: "Package validated prompt architectures, structured schema templates, and multi-step agent chains into version-controlled team libraries."
     },
     {
-      step: "Operationalize",
-      desc: "Package prompts, automations, and agent workflows into reusable enterprise assets."
+      step: "Automate & Measure",
+      subtitle: "Production Deployment",
+      desc: "Connect models to internal APIs, automate recurring business deliverables, and monitor adoption and accuracy through manager dashboards."
     }
   ];
 
@@ -75,46 +79,86 @@ export default function ToolEcosystem() {
     : categories.filter(c => c.id === activeCategory);
 
   return (
-    <section id="ai-tools" style={{ padding: "110px 0", background: "#040D21", borderBottom: "1px solid #30363D" }}>
+    <section id="ai-tools" style={{ padding: "110px 0", background: "#050B1A", borderBottom: "1px solid #1E293B" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
-        <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 14, fontFamily: "ui-monospace, monospace" }}>
-          67+ ENTERPRISE TOOLS
+        <div style={{ marginBottom: 48 }}>
+          <div style={{
+            fontSize: 12,
+            fontWeight: 700,
+            color: "#2F81F7",
+            textTransform: "uppercase",
+            letterSpacing: ".08em",
+            marginBottom: 12,
+            fontFamily: "ui-monospace, SFMono-Regular, monospace"
+          }}>
+            ENTERPRISE TOOL MATRIX
+          </div>
+          <h2 style={{
+            fontSize: "clamp(30px, 3.8vw, 42px)",
+            fontWeight: 800,
+            color: "#F8FAFC",
+            letterSpacing: "-.025em",
+            lineHeight: 1.18,
+            marginBottom: 16
+          }}>
+            67+ leading AI platforms evaluated and operationalized.
+          </h2>
+          <p style={{
+            fontSize: 16,
+            color: "#94A3B8",
+            maxWidth: 800,
+            lineHeight: 1.65,
+            margin: 0
+          }}>
+            We do not teach isolated tools in a vacuum. We cultivate tool judgment — empowering teams to evaluate accuracy, latency, security, and cost across frontier models and domain-specific applications.
+          </p>
         </div>
-        <h2 style={{ fontSize: "clamp(32px, 4vw, 44px)", fontWeight: 900, color: "#F0F6FC", letterSpacing: "-.02em", marginBottom: 18 }}>
-          Learn the AI stack your teams will actually use
-        </h2>
-        <p style={{ fontSize: 17, color: "#8B949E", maxWidth: 840, lineHeight: 1.65, marginBottom: 52, fontWeight: 400 }}>
-          Tool coverage updates dynamically as the technology landscape evolves. Our focus is tool judgment — teaching teams to select the right platform for the task, risk level, and workflow.
-        </p>
 
-        {/* Filter Bar */}
-        <div style={{ display: "flex", gap: 10, overflowX: "auto", paddingBottom: 16, marginBottom: 48 }}>
+        {/* Filter Bar (GitHub / Linear Segmented Control) */}
+        <div style={{
+          display: "flex",
+          gap: 8,
+          overflowX: "auto",
+          paddingBottom: 12,
+          marginBottom: 36,
+          borderBottom: "1px solid #1E293B"
+        }}>
           <button
             onClick={() => setActiveCategory("all")}
             style={{
-              padding: "9px 20px", borderRadius: 8, border: "1px solid",
-              borderColor: activeCategory === "all" ? "#388BFD" : "#30363D",
-              background: activeCategory === "all" ? "rgba(56, 139, 253, 0.15)" : "#0D1117",
-              color: activeCategory === "all" ? "#F0F6FC" : "#8B949E",
-              fontSize: 13.5, fontWeight: 600, cursor: "pointer", whiteSpace: "nowrap",
-              transition: "all 0.15s ease"
+              padding: "7px 14px",
+              borderRadius: 6,
+              border: "1px solid",
+              borderColor: activeCategory === "all" ? "#2F81F7" : "transparent",
+              background: activeCategory === "all" ? "rgba(47, 129, 247, 0.12)" : "transparent",
+              color: activeCategory === "all" ? "#F8FAFC" : "#64748B",
+              fontSize: 13,
+              fontWeight: 600,
+              cursor: "pointer",
+              whiteSpace: "nowrap",
+              transition: "all 0.12s ease"
             }}
           >
-            All 67 Tools & Platforms
+            All Categories ({categories.reduce((acc, c) => acc + c.tools.length, 0)}+ tools)
           </button>
           {categories.map(c => (
             <button
               key={c.id}
               onClick={() => setActiveCategory(c.id)}
               style={{
-                padding: "9px 20px", borderRadius: 8, border: "1px solid",
-                borderColor: activeCategory === c.id ? "#388BFD" : "#30363D",
-                background: activeCategory === c.id ? "rgba(56, 139, 253, 0.15)" : "#0D1117",
-                color: activeCategory === c.id ? "#F0F6FC" : "#8B949E",
-                fontSize: 13.5, fontWeight: 600, cursor: "pointer", whiteSpace: "nowrap",
-                transition: "all 0.15s ease"
+                padding: "7px 14px",
+                borderRadius: 6,
+                border: "1px solid",
+                borderColor: activeCategory === c.id ? "#2F81F7" : "transparent",
+                background: activeCategory === c.id ? "rgba(47, 129, 247, 0.12)" : "transparent",
+                color: activeCategory === c.id ? "#F8FAFC" : "#64748B",
+                fontSize: 13,
+                fontWeight: 600,
+                cursor: "pointer",
+                whiteSpace: "nowrap",
+                transition: "all 0.12s ease"
               }}
             >
               {c.name}
@@ -122,32 +166,45 @@ export default function ToolEcosystem() {
           ))}
         </div>
 
-        {/* Categories & Tools Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 24, marginBottom: 72 }}>
+        {/* Categories & Tools Technical Catalog */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
+          gap: 20,
+          marginBottom: 64
+        }}>
           {filteredCategories.map((cat, i) => (
             <div
               key={i}
               style={{
-                background: "#0D1117", border: "1px solid #30363D",
-                borderRadius: 14, padding: "30px 26px"
+                background: "#0B1220",
+                border: "1px solid #1E293B",
+                borderRadius: 8,
+                padding: "24px 26px"
               }}
             >
-              <h3 style={{ fontSize: 16.5, fontWeight: 800, color: "#F0F6FC", marginBottom: 16, fontFamily: "ui-monospace, monospace" }}>
-                {cat.name}
-              </h3>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
+                <h3 style={{ fontSize: 14.5, fontWeight: 700, color: "#F8FAFC", margin: 0 }}>
+                  {cat.name}
+                </h3>
+                <span style={{ fontSize: 11, fontFamily: "ui-monospace, monospace", color: "#64748B" }}>
+                  {cat.tools.length} TOOLS
+                </span>
+              </div>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                 {cat.tools.map((t, ti) => (
                   <span
                     key={ti}
                     style={{
-                      background: "#161B22", border: "1px solid #30363D",
-                      padding: "7px 14px", borderRadius: 6,
-                      fontSize: 13, fontWeight: 600, color: "#F0F6FC",
-                      fontFamily: "ui-monospace, monospace",
-                      transition: "border-color 0.15s ease"
+                      background: "#050B1A",
+                      border: "1px solid #1E293B",
+                      padding: "5px 11px",
+                      borderRadius: 5,
+                      fontSize: 12.5,
+                      fontWeight: 500,
+                      color: "#CBD5E1",
+                      fontFamily: "ui-monospace, monospace"
                     }}
-                    onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#388BFD"; }}
-                    onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#30363D"; }}
                   >
                     {t}
                   </span>
@@ -157,30 +214,50 @@ export default function ToolEcosystem() {
           ))}
         </div>
 
-        {/* Tool Learning Framework Header & Grid */}
-        <div style={{ background: "#0D1117", border: "1px solid #30363D", borderRadius: 18, padding: "44px 40px" }}>
-          <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 10, fontFamily: "ui-monospace, monospace" }}>
-            PEDAGOGICAL METHODOLOGY
+        {/* 4-Stage Pedagogical Framework - Horizontal Timeline Layout */}
+        <div style={{
+          background: "#0B1220",
+          border: "1px solid #1E293B",
+          borderRadius: 10,
+          padding: "36px 36px"
+        }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28, flexWrap: "wrap", gap: 12 }}>
+            <div>
+              <div style={{ fontSize: 11, fontWeight: 700, color: "#2F81F7", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
+                PEDAGOGICAL METHODOLOGY
+              </div>
+              <h3 style={{ fontSize: 20, fontWeight: 800, color: "#F8FAFC", margin: 0, letterSpacing: "-.01em" }}>
+                The 4-Stage Enterprise Tool Learning Lifecycle
+              </h3>
+            </div>
+            <span style={{ fontSize: 12, color: "#64748B", fontFamily: "ui-monospace, monospace" }}>
+              INSTITUTIONAL ENABLEMENT CYCLE
+            </span>
           </div>
-          <h3 style={{ fontSize: 24, fontWeight: 800, color: "#F0F6FC", marginBottom: 32, letterSpacing: "-.01em" }}>
-            The 4-Stage Tool Learning Framework
-          </h3>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 24 }}>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20 }}>
             {framework.map((f, i) => (
               <div
                 key={i}
                 style={{
-                  background: "#161B22", border: "1px solid #30363D",
-                  borderRadius: 12, padding: "28px"
+                  background: "#050B1A",
+                  border: "1px solid #1E293B",
+                  borderRadius: 8,
+                  padding: "22px 20px"
                 }}
               >
-                <div style={{ fontSize: 11, fontWeight: 800, color: "#388BFD", textTransform: "uppercase", marginBottom: 10, fontFamily: "ui-monospace, monospace" }}>
-                  Phase 0{i + 1}
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 10 }}>
+                  <span style={{ fontSize: 11, fontWeight: 700, color: "#2F81F7", fontFamily: "ui-monospace, monospace" }}>
+                    STAGE 0{i + 1}
+                  </span>
+                  <span style={{ fontSize: 10, color: "#64748B", fontFamily: "ui-monospace, monospace" }}>
+                    {f.subtitle}
+                  </span>
                 </div>
-                <h4 style={{ fontSize: 17.5, fontWeight: 800, color: "#F0F6FC", marginBottom: 8 }}>
+                <h4 style={{ fontSize: 16, fontWeight: 700, color: "#F8FAFC", marginBottom: 8 }}>
                   {f.step}
                 </h4>
-                <p style={{ fontSize: 13.5, color: "#8B949E", lineHeight: 1.6, margin: 0 }}>
+                <p style={{ fontSize: 13, color: "#94A3B8", lineHeight: 1.55, margin: 0 }}>
                   {f.desc}
                 </p>
               </div>
@@ -192,4 +269,3 @@ export default function ToolEcosystem() {
     </section>
   );
 }
-

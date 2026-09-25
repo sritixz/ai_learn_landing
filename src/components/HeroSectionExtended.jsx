@@ -6,129 +6,132 @@ const HeroSectionExtended = () => {
   const roleMap = {
     Engineering: {
       title: "Software & Engineering",
-      tool: "GitHub Copilot • Cursor • Claude Code",
-      output: "26% faster feature delivery, automated test suites & PR reviews",
+      tool: "GitHub Copilot • Cursor • Claude Code • Ollama",
+      output: "Automated unit tests, PR reviews, refactoring, and AI-assisted code generation.",
       badge: "Technical Track",
-      codeSnippet: "git commit -m 'feat: ai-assisted automated test suite generation'"
+      impact: "High Velocity"
     },
     Marketing: {
       title: "Marketing & Growth",
-      tool: "Claude • Midjourney • Jasper",
-      output: "Multi-channel campaign packs, SEO research & automated content repurposing",
+      tool: "Claude • Midjourney • Jasper • Perplexity",
+      output: "Multi-channel campaign packs, audience research, and automated content repurposing.",
       badge: "Growth Track",
-      codeSnippet: "campaign.generate({ audience: 'Enterprise CTOs', format: 'Omni-channel' })"
+      impact: "Brand Consistency"
     },
     Sales: {
       title: "Sales & RevOps",
-      tool: "ChatGPT • Gong AI • CRM Copilots",
-      output: "Automated account research briefs, personalized outreach & CRM hygiene",
+      tool: "ChatGPT • Gong AI • CRM Copilots • Clay",
+      output: "Automated account intelligence briefs, personalized outreach, and CRM updates.",
       badge: "Revenue Track",
-      codeSnippet: "crm.enrichAccountBriefs({ intentScore: '>85', tier: 'Enterprise' })"
+      impact: "Higher Win Rates"
     },
     Finance: {
       title: "Finance & Operations",
-      tool: "Excel Copilot • Julius AI • n8n",
-      output: "Automated variance narratives, scenario modeling & invoice workflows",
+      tool: "Excel Copilot • Julius AI • n8n • Power Automate",
+      output: "Variance analysis narratives, financial modeling, and automated ledger workflows.",
       badge: "Operations Track",
-      codeSnippet: "finance.reconcileLedgers({ month: 'Q3-Close', threshold: '0.001' })"
+      impact: "Process Accuracy"
     }
   };
 
   const pillars = [
     {
+      num: "01",
       title: "Role-Based Pathways",
-      desc: "Distinct learning tracks tailored specifically for leadership, engineering, marketing, sales, finance, HR, product, and operations."
+      desc: "Distinct learning tracks tailored specifically for software engineers, product managers, marketing teams, sales executives, finance professionals, and operations leaders."
     },
     {
-      title: "Hands-On Execution",
-      desc: "No passive lectures. Learners build real workflows, custom prompts, and automated assistants directly in live tool labs."
+      num: "02",
+      title: "Hands-On Tool Practice",
+      desc: "Zero passive lectures. Learners build real prompts, automations, and custom AI assistants directly in live sandbox environments."
     },
     {
-      title: "Multi-Tool Stack",
-      desc: "Master 50+ industry-standard AI tools. Employees learn tool judgment rather than becoming reliant on a single vendor."
+      num: "03",
+      title: "Multi-Tool Stack Judgment",
+      desc: "Master 50+ industry-standard AI tools. Employees learn tool evaluation and selection judgment rather than single-vendor dependence."
     },
     {
-      title: "Measurable ROI",
-      desc: "Focus on reusable team assets, automated manual processes, and manager-tracked adoption metrics tied directly to business KPIs."
+      num: "04",
+      title: "Measurable Business Impact",
+      desc: "Focus on reusable enterprise assets, automated manual processes, and manager-tracked adoption metrics tied directly to business KPIs."
     }
   ];
 
   return (
-    <section style={{ padding: "96px 0 110px", background: "#040D21", borderBottom: "1px solid #30363D" }}>
+    <section style={{ padding: "80px 0 96px", background: "#050B1A", borderBottom: "1px solid #1E293B" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
-        {/* 50+ Tools, 10 Academies & Executive ROI Badges (Revealed on Scroll) */}
+        {/* Concise Proof & Value Metrics Strip */}
         <div style={{
-          display: "flex",
-          justifyContent: "center",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
           gap: 20,
-          flexWrap: "wrap",
-          marginBottom: 56
+          marginBottom: 64,
+          padding: "20px 24px",
+          background: "#0B1220",
+          border: "1px solid #1E293B",
+          borderRadius: 10
         }}>
-          <div style={{
-            background: "rgba(22, 27, 34, 0.8)", border: "1px solid #30363D",
-            borderRadius: 10, padding: "12px 20px", display: "flex", alignItems: "center", gap: 10,
-            fontSize: 13.5, color: "#8B949E", boxShadow: "0 4px 16px rgba(0,0,0,0.3)"
-          }}>
-            <span style={{ color: "#388BFD", fontWeight: 700, fontFamily: "ui-monospace, monospace" }}>50+ Approved Tools</span>
-            <span style={{ color: "#30363D" }}>|</span>
-            <span>Copilot • Cursor • Claude • n8n</span>
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+            <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#2F81F7" }} />
+            <div>
+              <div style={{ fontSize: 13, fontWeight: 700, color: "#F8FAFC" }}>50+ Approved Tools</div>
+              <div style={{ fontSize: 12, color: "#94A3B8" }}>Copilot, Cursor, Claude, n8n, OpenAI</div>
+            </div>
           </div>
 
-          <div style={{
-            background: "rgba(22, 27, 34, 0.8)", border: "1px solid #30363D",
-            borderRadius: 10, padding: "12px 20px", display: "flex", alignItems: "center", gap: 10,
-            fontSize: 13.5, color: "#8B949E", boxShadow: "0 4px 16px rgba(0,0,0,0.3)"
-          }}>
-            <span style={{ color: "#39C5CF", fontWeight: 700, fontFamily: "ui-monospace, monospace" }}>10 Role Academies</span>
-            <span style={{ color: "#30363D" }}>|</span>
-            <span>Engineering • Sales • Marketing • Finance</span>
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+            <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#8B7CF6" }} />
+            <div>
+              <div style={{ fontSize: 13, fontWeight: 700, color: "#F8FAFC" }}>10 Specialized Academies</div>
+              <div style={{ fontSize: 12, color: "#94A3B8" }}>Role-tailored for Engineering, Sales, Ops, Finance</div>
+            </div>
           </div>
 
-          <div style={{
-            background: "rgba(22, 27, 34, 0.8)", border: "1px solid #30363D",
-            borderRadius: 10, padding: "12px 20px", display: "flex", alignItems: "center", gap: 10,
-            fontSize: 13.5, color: "#8B949E", boxShadow: "0 4px 16px rgba(0,0,0,0.3)"
-          }}>
-            <span style={{ color: "#2EA043", fontWeight: 700, fontFamily: "ui-monospace, monospace" }}>Executive ROI</span>
-            <span style={{ color: "#30363D" }}>|</span>
-            <span>Manager-verified adoption metrics</span>
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+            <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#2EA043" }} />
+            <div>
+              <div style={{ fontSize: 13, fontWeight: 700, color: "#F8FAFC" }}>Manager-Tracked ROI</div>
+              <div style={{ fontSize: 12, color: "#94A3B8" }}>Pre/post skill assessments & verified capstones</div>
+            </div>
           </div>
         </div>
 
-        {/* Interactive Capability Map Widget */}
+        {/* Interactive Capability Workstation Matrix */}
         <div style={{
-          background: "#0D1117", border: "1px solid #30363D",
-          borderRadius: 16, padding: "40px", boxShadow: "0 12px 36px rgba(0,0,0,0.4)",
-          marginBottom: 56
+          background: "#0B1220",
+          border: "1px solid #1E293B",
+          borderRadius: 12,
+          padding: "36px",
+          marginBottom: 80
         }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 32, borderBottom: "1px solid #21262D", paddingBottom: 24, flexWrap: "wrap", gap: 14 }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28, borderBottom: "1px solid #162032", paddingBottom: 20, flexWrap: "wrap", gap: 12 }}>
             <div>
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", fontFamily: "ui-monospace, monospace" }}>
+              <div style={{ fontSize: 11, fontWeight: 700, color: "#2F81F7", textTransform: "uppercase", letterSpacing: ".08em", fontFamily: "ui-monospace, monospace" }}>
                 INTERACTIVE CAPABILITY MATRIX
               </div>
-              <h3 style={{ fontSize: 24, fontWeight: 800, color: "#F0F6FC", marginTop: 6, letterSpacing: "-.02em" }}>
+              <h3 style={{ fontSize: 22, fontWeight: 800, color: "#F8FAFC", marginTop: 4, letterSpacing: "-.02em" }}>
                 Role-Based Pathways & Deliverables
               </h3>
             </div>
-            <span style={{ fontSize: 12.5, fontWeight: 600, color: "#8B949E", background: "#161B22", border: "1px solid #30363D", padding: "8px 16px", borderRadius: 999, fontFamily: "ui-monospace, monospace" }}>
-              Select a team track below
+            <span style={{ fontSize: 12, color: "#94A3B8", background: "#0F172A", border: "1px solid #1E293B", padding: "5px 12px", borderRadius: 6, fontFamily: "ui-monospace, monospace" }}>
+              Select department track
             </span>
           </div>
 
-          <div style={{ display: "flex", gap: 12, marginBottom: 28, flexWrap: "wrap" }}>
+          {/* Department Selection Tabs */}
+          <div style={{ display: "flex", gap: 8, marginBottom: 24, flexWrap: "wrap" }}>
             {Object.keys(roleMap).map((role) => (
               <button
                 key={role}
                 onClick={() => setActiveRole(role)}
                 style={{
-                  padding: "11px 24px", borderRadius: 8, border: "1px solid",
-                  borderColor: activeRole === role ? "#388BFD" : "#30363D",
-                  background: activeRole === role ? "rgba(56, 139, 253, 0.15)" : "#161B22",
-                  color: activeRole === role ? "#F0F6FC" : "#8B949E",
-                  fontSize: 14, fontWeight: 700, cursor: "pointer",
-                  transition: "all 0.15s ease",
-                  boxShadow: activeRole === role ? "0 0 12px rgba(56, 139, 253, 0.25)" : "none"
+                  padding: "8px 18px", borderRadius: 6, border: "1px solid",
+                  borderColor: activeRole === role ? "#2F81F7" : "#1E293B",
+                  background: activeRole === role ? "rgba(47, 129, 247, 0.12)" : "#0F172A",
+                  color: activeRole === role ? "#F8FAFC" : "#94A3B8",
+                  fontSize: 13.5, fontWeight: 600, cursor: "pointer",
+                  transition: "all 0.15s ease"
                 }}
               >
                 {role}
@@ -136,72 +139,83 @@ const HeroSectionExtended = () => {
             ))}
           </div>
 
+          {/* Selected Track Details Row */}
           <div style={{
-            background: "#161B22", border: "1px solid #30363D",
-            borderRadius: 12, padding: "28px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 28
+            background: "#0F172A",
+            border: "1px solid #1E293B",
+            borderRadius: 8,
+            padding: "24px",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+            gap: 24
           }}>
             <div>
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#8B949E", textTransform: "uppercase", letterSpacing: ".05em", fontFamily: "ui-monospace, monospace" }}>
-                Department Track
+              <div style={{ fontSize: 11, fontWeight: 700, color: "#64748B", textTransform: "uppercase", letterSpacing: ".05em", fontFamily: "ui-monospace, monospace" }}>
+                Department Focus
               </div>
-              <div style={{ fontSize: 19, fontWeight: 800, color: "#F0F6FC", marginTop: 8 }}>
+              <div style={{ fontSize: 17, fontWeight: 700, color: "#F8FAFC", marginTop: 6 }}>
                 {roleMap[activeRole].title}
               </div>
-              <div style={{ fontSize: 12.5, color: "#388BFD", marginTop: 4, fontFamily: "ui-monospace, monospace" }}>
+              <div style={{ fontSize: 12, color: "#2F81F7", marginTop: 4, fontFamily: "ui-monospace, monospace" }}>
                 {roleMap[activeRole].badge}
               </div>
             </div>
 
             <div>
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#8B949E", textTransform: "uppercase", letterSpacing: ".05em", fontFamily: "ui-monospace, monospace" }}>
-                Approved Tool Stack
+              <div style={{ fontSize: 11, fontWeight: 700, color: "#64748B", textTransform: "uppercase", letterSpacing: ".05em", fontFamily: "ui-monospace, monospace" }}>
+                Approved Toolchain
               </div>
-              <div style={{ fontSize: 14.5, fontWeight: 700, color: "#F0F6FC", marginTop: 8, fontFamily: "ui-monospace, monospace" }}>
+              <div style={{ fontSize: 13.5, fontWeight: 600, color: "#F8FAFC", marginTop: 6, fontFamily: "ui-monospace, monospace" }}>
                 {roleMap[activeRole].tool}
               </div>
             </div>
 
             <div>
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#8B949E", textTransform: "uppercase", letterSpacing: ".05em", fontFamily: "ui-monospace, monospace" }}>
-                Target Business Outcome
+              <div style={{ fontSize: 11, fontWeight: 700, color: "#64748B", textTransform: "uppercase", letterSpacing: ".05em", fontFamily: "ui-monospace, monospace" }}>
+                Target Business Deliverable
               </div>
-              <div style={{ fontSize: 14.5, fontWeight: 600, color: "#2EA043", marginTop: 8, lineHeight: 1.55 }}>
-                ✓ {roleMap[activeRole].output}
+              <div style={{ fontSize: 13.5, color: "#94A3B8", marginTop: 6, lineHeight: 1.5 }}>
+                {roleMap[activeRole].output}
               </div>
             </div>
           </div>
         </div>
 
-        {/* 4 Value Pillars Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 28 }}>
-          {pillars.map((p, i) => (
-            <div
-              key={i}
-              className="dark-glass-card"
-              style={{
-                background: "#0D1117", border: "1px solid #30363D",
-                borderRadius: 14, padding: "36px 30px",
-                transition: "all 0.2s ease"
-              }}
-              onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#388BFD"; e.currentTarget.style.transform = "translateY(-3px)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#30363D"; e.currentTarget.style.transform = "none"; }}
-            >
-              <div style={{
-                width: 38, height: 38, borderRadius: 8, background: "#161B22", border: "1px solid #30363D",
-                color: "#388BFD", fontWeight: 800, fontSize: 13.5,
-                display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 20,
-                fontFamily: "ui-monospace, monospace"
-              }}>
-                0{i + 1}
-              </div>
-              <h3 style={{ fontSize: 19, fontWeight: 800, color: "#F0F6FC", marginBottom: 12, letterSpacing: "-.01em" }}>
-                {p.title}
-              </h3>
-              <p style={{ fontSize: 14.5, color: "#8B949E", lineHeight: 1.65 }}>
-                {p.desc}
-              </p>
+        {/* 4 Core Pillars: Structured Editorial Layout with Dividers */}
+        <div>
+          <div style={{ marginBottom: 36 }}>
+            <div style={{ fontSize: 11, fontWeight: 700, color: "#2F81F7", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 8, fontFamily: "ui-monospace, monospace" }}>
+              INSTITUTIONAL METHODOLOGY
             </div>
-          ))}
+            <h3 style={{ fontSize: 26, fontWeight: 800, color: "#F8FAFC", letterSpacing: "-.02em" }}>
+              How AI Global Academy builds lasting workforce capability
+            </h3>
+          </div>
+
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: 32,
+            borderTop: "1px solid #1E293B",
+            paddingTop: 36
+          }}>
+            {pillars.map((p) => (
+              <div key={p.num} style={{ position: "relative" }}>
+                <div style={{
+                  fontSize: 12, fontWeight: 800, color: "#2F81F7",
+                  marginBottom: 12, fontFamily: "ui-monospace, monospace"
+                }}>
+                  [{p.num}]
+                </div>
+                <h4 style={{ fontSize: 17, fontWeight: 750, color: "#F8FAFC", marginBottom: 10, letterSpacing: "-.01em" }}>
+                  {p.title}
+                </h4>
+                <p style={{ fontSize: 14, color: "#94A3B8", lineHeight: 1.6, margin: 0 }}>
+                  {p.desc}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
       </div>

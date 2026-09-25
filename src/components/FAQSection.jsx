@@ -5,84 +5,137 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      q: "Is this suitable for non-technical employees?",
-      a: "Yes. The academy starts with practical AI literacy and splits into role-specific pathways. Coding and agent-building modules can be reserved for technical teams and advanced users."
+      q: "Is this suitable for non-technical employees and business teams?",
+      a: "Yes. The academy begins with foundational AI literacy and practical prompt frameworks, then splits into dedicated departmental tracks (Marketing, Sales, HR, Finance, Operations). Coding copilots and agent-building modules are reserved for engineering cohorts and technical power users."
     },
     {
-      q: "Can you train different departments differently?",
-      a: "Yes. Marketing, sales, HR, finance, operations, product, data, design, engineering and leadership can follow separate use-case labs while sharing common responsible-AI foundations."
+      q: "Can different departments follow distinct curriculum pathways simultaneously?",
+      a: "Yes. Engineering, marketing, sales, HR, finance, operations, product, and leadership cohorts run on parallel schedules with role-specific tool sandboxes, while sharing a unified enterprise governance and prompt engineering foundation."
     },
     {
-      q: "Do employees need paid subscriptions to every tool?",
-      a: "No. The curriculum can be designed around your approved stack. Some demonstrations can use instructor environments or free tiers; production use should follow the organization's licensing and security policy."
+      q: "Do employees need individual enterprise paid licenses to all tools?",
+      a: "No. The training tracks are calibrated directly around your organization's approved tool stack (e.g. Claude Enterprise, Microsoft Copilot, OpenAI Team, internal LLM gateways). Demonstration sandboxes are provided by AI Global Academy during hands-on lab sessions."
     },
     {
-      q: "Can you customize training to our industry?",
-      a: "Yes. Exercises, use cases, prompts and capstones can be adapted to your industry, processes, terminology, tools and governance requirements."
+      q: "Can curriculum exercises be tailored to our industry and proprietary datasets?",
+      a: "Yes. We configure hands-on labs with sanitized versions of your company's actual documents, SOPs, codebases, or analytical workflows to maximize immediate relevance and adoption."
     },
     {
-      q: "Do you cover AI agents and automation?",
-      a: "Yes. Advanced tracks cover workflow automation, APIs, tool calling, RAG, agent design, human approval flows, evaluation and deployment patterns."
+      q: "Do you teach autonomous AI agents and workflow orchestration?",
+      a: "Yes. Advanced technical tracks cover autonomous agent architecture, memory management, tool calling (MCP, REST APIs), RAG vector retrieval, human-in-the-loop validation, and automation pipelines (n8n, Make, Power Automate)."
     },
     {
-      q: "How do you measure success?",
-      a: "Use pre/post skill assessments, practical task performance, workflow time savings, adoption metrics, capstone completion and manager feedback."
+      q: "How is training ROI and skill adoption measured?",
+      a: "We conduct baseline diagnostic skill assessments, track verified capstone deliverables in production, evaluate task time savings, and provide leadership with executive adoption dashboards."
     },
     {
-      q: "Can this be delivered online and in person?",
-      a: "Yes. The program can be delivered virtually, in person or as a blended enterprise academy with workshops, labs, office hours and projects."
+      q: "What delivery formats are supported?",
+      a: "Programs are available as live virtual cohorts, hybrid multi-week bootcamps, intensive on-site executive briefings, or comprehensive self-paced enterprise academies with live weekly office hours."
     },
     {
-      q: "Can our internal AI policy be included?",
-      a: "Yes. Responsible-use content can be aligned with your approved tools, security controls, privacy policy and AI governance standards."
+      q: "Can our company's security and AI governance policies be incorporated?",
+      a: "Yes. We directly embed your internal data classification rules, zero-retention policies, and acceptable-use guidelines into every practical prompt exercise and lab."
     }
   ];
 
   return (
-    <section style={{ padding: "110px 0", background: "#040D21", borderBottom: "1px solid #30363D" }}>
-      <div style={{ maxWidth: 880, margin: "0 auto", padding: "0 24px" }}>
+    <section style={{ padding: "110px 0", background: "#050B1A", borderBottom: "1px solid #1E293B" }}>
+      <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
-        <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 14, fontFamily: "ui-monospace, monospace" }}>
-          FREQUENTLY ASKED QUESTIONS
+        <div style={{ marginBottom: 44 }}>
+          <div style={{
+            fontSize: 12,
+            fontWeight: 700,
+            color: "#2F81F7",
+            textTransform: "uppercase",
+            letterSpacing: ".08em",
+            marginBottom: 12,
+            fontFamily: "ui-monospace, SFMono-Regular, monospace"
+          }}>
+            FREQUENTLY ASKED QUESTIONS
+          </div>
+          <h2 style={{
+            fontSize: "clamp(30px, 3.8vw, 42px)",
+            fontWeight: 800,
+            color: "#F8FAFC",
+            letterSpacing: "-.025em",
+            lineHeight: 1.18,
+            margin: 0
+          }}>
+            Questions enterprise buyers frequently ask.
+          </h2>
         </div>
-        <h2 style={{ fontSize: "clamp(32px, 4vw, 42px)", fontWeight: 900, color: "#F0F6FC", letterSpacing: "-.02em", marginBottom: 52 }}>
-          Questions enterprise buyers frequently ask
-        </h2>
 
         {/* Accordion list */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+        <div style={{
+          border: "1px solid #1E293B",
+          borderRadius: 10,
+          background: "#0B1220",
+          overflow: "hidden"
+        }}>
           {faqs.map((faq, i) => {
             const isOpen = openIndex === i;
             return (
               <div
                 key={i}
                 style={{
-                  background: "#0D1117", border: "1px solid",
-                  borderColor: isOpen ? "#388BFD" : "#30363D",
-                  borderRadius: 12, overflow: "hidden",
-                  transition: "all 0.15s ease"
+                  borderBottom: i < faqs.length - 1 ? "1px solid #1E293B" : "none",
+                  transition: "background 0.15s ease"
                 }}
               >
                 <div
                   onClick={() => setOpenIndex(isOpen ? null : i)}
                   style={{
-                    padding: "22px 30px", cursor: "pointer",
-                    display: "flex", alignItems: "center", justifyContent: "space-between",
-                    background: isOpen ? "rgba(56, 139, 253, 0.08)" : "#0D1117"
+                    padding: "20px 24px",
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    background: isOpen ? "rgba(47, 129, 247, 0.04)" : "transparent"
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!isOpen) e.currentTarget.style.background = "rgba(47, 129, 247, 0.02)";
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isOpen) e.currentTarget.style.background = "transparent";
                   }}
                 >
-                  <h3 style={{ fontSize: 16.5, fontWeight: 800, color: "#F0F6FC", paddingRight: 16, margin: 0 }}>
+                  <h3 style={{
+                    fontSize: 15.5,
+                    fontWeight: 700,
+                    color: isOpen ? "#F8FAFC" : "#CBD5E1",
+                    paddingRight: 16,
+                    margin: 0,
+                    letterSpacing: "-.01em"
+                  }}>
                     {faq.q}
                   </h3>
-                  <span style={{ fontSize: 18, fontWeight: 700, color: "#388BFD", fontFamily: "ui-monospace, monospace" }}>
+                  <span style={{
+                    fontSize: 16,
+                    fontWeight: 500,
+                    color: isOpen ? "#2F81F7" : "#64748B",
+                    fontFamily: "ui-monospace, monospace",
+                    width: 16,
+                    textAlign: "center"
+                  }}>
                     {isOpen ? "−" : "+"}
                   </span>
                 </div>
 
                 {isOpen && (
-                  <div style={{ padding: "0 30px 24px 30px", borderTop: "1px solid #21262D" }}>
-                    <p style={{ fontSize: 14.5, color: "#8B949E", lineHeight: 1.65, paddingTop: 18, margin: 0 }}>
+                  <div style={{
+                    padding: "0 24px 22px 24px",
+                    background: "rgba(47, 129, 247, 0.02)",
+                    borderTop: "1px dashed #1E293B"
+                  }}>
+                    <p style={{
+                      fontSize: 14,
+                      color: "#94A3B8",
+                      lineHeight: 1.65,
+                      paddingTop: 16,
+                      margin: 0
+                    }}>
                       {faq.a}
                     </p>
                   </div>
@@ -96,4 +149,3 @@ export default function FAQSection() {
     </section>
   );
 }
-

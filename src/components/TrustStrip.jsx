@@ -5,57 +5,160 @@ export default function TrustStrip({ onOpenDemo }) {
 
   const handleQuickSubmit = (e) => {
     e.preventDefault();
-    onOpenDemo(userGoal || "Department cohort upskilling");
+    onOpenDemo(userGoal || "Enterprise Deployment Architecture Consultation");
   };
 
+  const stages = [
+    {
+      step: "01",
+      name: "Enterprise Scope",
+      sub: "Workforce segmentation & tool security boundaries"
+    },
+    {
+      step: "02",
+      name: "Role Cohorts",
+      sub: "Tailored syllabi for Engineering, Sales, Ops & Finance"
+    },
+    {
+      step: "03",
+      name: "Live Tool Labs",
+      sub: "Hands-on execution with 50+ enterprise AI platforms"
+    },
+    {
+      step: "04",
+      name: "Workflow Delivery",
+      sub: "Production prompt libraries, automations & capstones"
+    },
+    {
+      step: "05",
+      name: "Adoption & ROI",
+      sub: "Manager verification & ongoing productivity tracking"
+    }
+  ];
+
   return (
-    <section style={{ background: "#040D21", padding: "80px 0", borderBottom: "1px solid #30363D" }}>
+    <section style={{ background: "#050B1A", padding: "80px 0 88px", borderBottom: "1px solid #1E293B" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
-        <div style={{
-          background: "#0D1117", border: "1px solid #30363D",
-          borderRadius: 16, padding: "38px 42px",
-          display: "flex", flexDirection: "column", gap: 24,
-          boxShadow: "0 8px 24px rgba(0,0,0,0.35)"
-        }}>
+        {/* Section Header */}
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 36, flexWrap: "wrap", gap: 16 }}>
           <div>
-            <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 8, fontFamily: "ui-monospace, monospace" }}>
+            <div style={{ fontSize: 11, fontWeight: 700, color: "#2F81F7", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 8, fontFamily: "ui-monospace, monospace" }}>
               ENTERPRISE DEPLOYMENT ARCHITECTURE
             </div>
-            <p style={{ fontSize: 16.5, fontWeight: 600, color: "#F0F6FC", lineHeight: 1.55, margin: 0 }}>
-              Engineered for enterprises, GCCs, high-growth engineering teams, and global services. Deployable as department cohorts, executive briefing tracks, or company-wide academies.
-            </p>
+            <h2 style={{ fontSize: "clamp(24px, 3vw, 32px)", fontWeight: 800, color: "#F8FAFC", letterSpacing: "-.02em", margin: 0 }}>
+              End-to-End Workforce Transformation Framework
+            </h2>
+          </div>
+          <p style={{ fontSize: 14, color: "#94A3B8", maxWidth: 440, lineHeight: 1.5, margin: 0 }}>
+            Engineered for global enterprises, engineering organizations, GCCs, and high-growth teams scaling AI fluency.
+          </p>
+        </div>
+
+        {/* Structured 5-Stage Architecture Flow Diagram */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(190px, 1fr))",
+          gap: 16,
+          marginBottom: 40
+        }}>
+          {stages.map((st, i) => (
+            <div
+              key={st.step}
+              style={{
+                background: "#0B1220",
+                border: "1px solid #1E293B",
+                borderRadius: 8,
+                padding: "20px 18px",
+                position: "relative"
+              }}
+            >
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
+                <span style={{
+                  fontSize: 11, fontWeight: 800, color: "#2F81F7",
+                  fontFamily: "ui-monospace, monospace",
+                  background: "rgba(47, 129, 247, 0.1)",
+                  padding: "2px 7px", borderRadius: 4,
+                  border: "1px solid rgba(47, 129, 247, 0.2)"
+                }}>
+                  STAGE {st.step}
+                </span>
+                {i < stages.length - 1 && (
+                  <span style={{ color: "#334155", fontSize: 13, fontWeight: 700 }}>→</span>
+                )}
+              </div>
+              <div style={{ fontSize: 15, fontWeight: 700, color: "#F8FAFC", marginBottom: 6 }}>
+                {st.name}
+              </div>
+              <div style={{ fontSize: 12.5, color: "#94A3B8", lineHeight: 1.45 }}>
+                {st.sub}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Action Bar for Custom Architecture Mapping */}
+        <div style={{
+          background: "#0B1220",
+          border: "1px solid #1E293B",
+          borderRadius: 8,
+          padding: "20px 24px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: 20,
+          flexWrap: "wrap"
+        }}>
+          <div style={{ flex: "1 1 320px" }}>
+            <div style={{ fontSize: 14, fontWeight: 700, color: "#F8FAFC" }}>
+              Request a Customized Enterprise Deployment Plan
+            </div>
+            <div style={{ fontSize: 12.5, color: "#94A3B8", marginTop: 2 }}>
+              Receive an organizational roadmap based on your headcount, departments, and tool stack.
+            </div>
           </div>
 
           <form onSubmit={handleQuickSubmit} style={{
-            background: "#161B22", border: "1px solid #30363D",
-            borderRadius: 10, padding: "8px 8px 8px 20px",
-            display: "flex", alignItems: "center", gap: 14, flexWrap: "wrap"
+            display: "flex",
+            alignItems: "center",
+            gap: 10,
+            flex: "1 1 400px",
+            maxWidth: 520
           }}>
             <input
               type="text"
-              placeholder="Specify your team, current AI maturity, or primary goals..."
+              placeholder="Your organization / target departments..."
               value={userGoal}
               onChange={(e) => setUserGoal(e.target.value)}
               style={{
-                flex: 1, minWidth: 260, border: "none", outline: "none",
-                fontSize: 14.5, color: "#F0F6FC", background: "transparent",
-                fontFamily: "inherit"
+                flex: 1,
+                background: "#0F172A",
+                border: "1px solid #1E293B",
+                borderRadius: 6,
+                padding: "9px 14px",
+                fontSize: 13.5,
+                color: "#F8FAFC",
+                outline: "none"
               }}
             />
             <button
               type="submit"
               style={{
-                background: "#238636", color: "#FFFFFF", border: "1px solid rgba(240, 246, 252, 0.1)",
-                padding: "12px 24px", borderRadius: 8, fontWeight: 700,
-                fontSize: 14, cursor: "pointer", whiteSpace: "nowrap",
-                transition: "all 0.15s ease",
-                boxShadow: "0 2px 8px rgba(35, 134, 54, 0.3)"
+                background: "#238636",
+                color: "#FFFFFF",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+                padding: "9px 18px",
+                borderRadius: 6,
+                fontWeight: 600,
+                fontSize: 13,
+                cursor: "pointer",
+                whiteSpace: "nowrap",
+                transition: "all 0.15s ease"
               }}
               onMouseEnter={(e) => { e.currentTarget.style.background = "#2EA043"; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = "#238636"; }}
             >
-              Map Learning Plan →
+              Plan Deployment →
             </button>
           </form>
         </div>
@@ -64,4 +167,5 @@ export default function TrustStrip({ onOpenDemo }) {
     </section>
   );
 }
+
 

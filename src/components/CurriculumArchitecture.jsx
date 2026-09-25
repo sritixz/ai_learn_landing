@@ -3,119 +3,257 @@ import { useState } from 'react';
 export default function CurriculumArchitecture({ onOpenDemo }) {
   const [openModule, setOpenModule] = useState(0);
 
+  const stages = [
+    { name: "Phase 1: Foundations", range: "Modules 01–03", color: "#2F81F7" },
+    { name: "Phase 2: Departmental Labs", range: "Modules 04–07", color: "#8B7CF6" },
+    { name: "Phase 3: Agents & Capstones", range: "Modules 08–10", color: "#238636" }
+  ];
+
   const modules = [
     {
       num: "01",
+      phase: "Phase 1",
       title: "GenAI Foundations & Core Concepts",
-      summary: "How LLMs work, strengths and limitations, multimodal AI, model selection strategy, context windows, hallucination mitigation, data privacy, and responsible enterprise use."
+      summary: "How LLMs operate under the hood, tokenization, model capabilities & tradeoffs (OpenAI, Anthropic, Google, open-weights), context window dynamics, hallucination reduction strategies, data privacy, and enterprise compliance.",
+      labs: "Model benchmarking lab, context optimization exercise, enterprise security parameter configuration."
     },
     {
       num: "02",
-      title: "Enterprise Prompt Engineering",
-      summary: "Prompt structures, role/context/task patterns, few-shot prompting, constraints, chain-of-verification, reusable prompt templates, and shared team prompt libraries."
+      phase: "Phase 1",
+      title: "Enterprise Prompt Architecture",
+      summary: "System prompt engineering, role-context-constraint framing, few-shot conditioning, chain-of-thought verification, structured JSON outputs, team prompt repositories, and reusable corporate prompt templates.",
+      labs: "Authoring production prompt templates, output schema validation, prompt regression testing."
     },
     {
       num: "03",
-      title: "Everyday Workflow Productivity",
-      summary: "AI-assisted email triage, meeting intelligence, executive summaries, presentation generation, document research, planning, and knowledge retrieval."
+      phase: "Phase 1",
+      title: "Everyday Workflow & Knowledge Synthesis",
+      summary: "AI-assisted communication triage, meeting intelligence extraction, executive briefing generation, multimodal slide creation, and private enterprise document search using semantic retrieval.",
+      labs: "Automated executive briefing workflow, dense PDF research synthesis, meeting action extractor."
     },
     {
       num: "04",
-      title: "Function-Specific GenAI Labs",
-      summary: "Role-tailored deep-dives for marketing, sales, HR, finance, operations, product, design, customer support, and executive leadership."
+      phase: "Phase 2",
+      title: "Role-Specific Hands-On Workstations",
+      summary: "Deep-dive department tracks for engineering, marketing, sales, finance, legal, HR, operations, and product design. Mapped directly to real quarterly job deliverables.",
+      labs: "Departmental sandbox deliverables using real sanitized enterprise datasets."
     },
     {
       num: "05",
-      title: "AI for Coding & Technical Delivery",
-      summary: "AI pair programming, code generation, automated debugging, test suite generation, refactoring, API documentation, rapid prototyping, and secure coding practices."
+      phase: "Phase 2",
+      title: "AI for Software Engineering & Code Delivery",
+      summary: "AI pair programming with GitHub Copilot and Claude, automated unit/integration test authoring, vulnerability scanning, legacy refactoring, and AI-assisted documentation.",
+      labs: "Refactoring legacy endpoints, building comprehensive test suites with Claude Code, AI pull-request reviews."
     },
     {
       num: "06",
-      title: "Data Analysis & Research with AI",
-      summary: "Document reasoning, automated spreadsheet analysis, natural language SQL generation, Python assistance, structured data extraction, and source verification."
+      phase: "Phase 2",
+      title: "Data Reasoning & Analytical Extraction",
+      summary: "Natural language SQL query generation, Python data cleaning scripts, automated financial spreadsheet analysis, predictive commentary, and structured schema extraction.",
+      labs: "Building natural language SQL chatbots, automating financial variance commentary, dataset anomaly detection."
     },
     {
       num: "07",
-      title: "Generative Media & Content Systems",
-      summary: "Commercial image creation, brand visual consistency, storyboarding, video synthesis, voice generation, slides, and content repurposing pipelines."
+      phase: "Phase 2",
+      title: "Generative Media & Enterprise Content Systems",
+      summary: "Brand-aligned image asset production, video and audio synthesis, storyboarding, multilingual localization pipelines, and creative automation systems.",
+      labs: "Commercial brand visual generation, automated multilingual video voiceover localization."
     },
     {
       num: "08",
-      title: "Business Process Automation",
-      summary: "Triggers, actions, APIs, webhooks, structured outputs, approval logic, n8n/Make/Zapier/Power Automate integration, and multi-step process orchestration."
+      phase: "Phase 3",
+      title: "Business Process & Workflow Automation",
+      summary: "Connecting LLMs to enterprise APIs, webhooks, and automation orchestrators (Make, Zapier, n8n). Implementing approval gates, error handling, and structured data flow.",
+      labs: "Building an automated customer escalation pipeline, multi-app CRM sync with structured AI validation."
     },
     {
       num: "09",
-      title: "Autonomous AI Agent Design",
-      summary: "Agent architecture, goal definitions, memory management, tool usage, RAG retrieval, multi-step planning, guardrails, human-in-the-loop checkpoints, and evaluation."
+      phase: "Phase 3",
+      title: "Autonomous AI Agent Architecture",
+      summary: "Designing multi-step agents with goal loops, memory persistence, tool invocation (MCP, APIs), RAG vector retrieval, guardrail enforcement, and human-in-the-loop validation.",
+      labs: "Architecting a multi-tool research agent, deploying human-approval safety gates."
     },
     {
       num: "10",
-      title: "Enterprise Capstone Delivery",
-      summary: "Learners or department cohorts build and ship a production-ready workflow, custom agent, assistant, or automation tied directly to an active business goal."
+      phase: "Phase 3",
+      title: "Enterprise Production Capstone Delivery",
+      summary: "Cohorts or individual teams design, build, and deploy an end-to-end production AI workflow or internal assistant solving an approved organizational business challenge.",
+      labs: "Final cohort demo day, peer code review, executive presentation, and operational deployment handoff."
     }
   ];
 
   return (
-    <section id="curriculum" style={{ padding: "110px 0", background: "#040D21", borderBottom: "1px solid #30363D" }}>
+    <section id="curriculum" style={{ padding: "110px 0", background: "#050B1A", borderBottom: "1px solid #1E293B" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
-        <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 14, fontFamily: "ui-monospace, monospace" }}>
-          CURRICULUM SYLLABUS
+        <div style={{ marginBottom: 48 }}>
+          <div style={{
+            fontSize: 12,
+            fontWeight: 700,
+            color: "#2F81F7",
+            textTransform: "uppercase",
+            letterSpacing: ".08em",
+            marginBottom: 12,
+            fontFamily: "ui-monospace, SFMono-Regular, monospace"
+          }}>
+            CURRICULUM SYLLABUS
+          </div>
+          <h2 style={{
+            fontSize: "clamp(30px, 3.8vw, 42px)",
+            fontWeight: 800,
+            color: "#F8FAFC",
+            letterSpacing: "-.025em",
+            lineHeight: 1.18,
+            marginBottom: 16
+          }}>
+            From foundational literacy to agentic workflows.
+          </h2>
+          <p style={{
+            fontSize: 16,
+            color: "#94A3B8",
+            maxWidth: 800,
+            lineHeight: 1.65,
+            margin: 0
+          }}>
+            A modular 10-phase curriculum adaptable as an executive briefing (1 day), intensive cohort bootcamp (2–4 weeks), or comprehensive organizational academy (6–12 weeks).
+          </p>
         </div>
-        <h2 style={{ fontSize: "clamp(32px, 4vw, 44px)", fontWeight: 900, color: "#F0F6FC", letterSpacing: "-.02em", marginBottom: 18 }}>
-          From AI literacy to agentic workflows
-        </h2>
-        <p style={{ fontSize: 17, color: "#8B949E", maxWidth: 840, lineHeight: 1.65, marginBottom: 64, fontWeight: 400 }}>
-          A modular 10-phase curriculum that adapts seamlessly as a 1-day executive briefing, a 2-4 week intensive bootcamp, or a 6-12 week full enterprise academy.
-        </p>
 
-        {/* Accordion / Module List */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 56 }}>
+        {/* Phase Markers Bar */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+          gap: 12,
+          marginBottom: 32
+        }}>
+          {stages.map((st, i) => (
+            <div
+              key={i}
+              style={{
+                background: "#0B1220",
+                border: "1px solid #1E293B",
+                borderRadius: 8,
+                padding: "12px 18px",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center"
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                <span style={{ width: 8, height: 8, borderRadius: "50%", background: st.color }} />
+                <span style={{ fontSize: 13, fontWeight: 700, color: "#F8FAFC" }}>{st.name}</span>
+              </div>
+              <span style={{ fontSize: 11, fontFamily: "ui-monospace, monospace", color: "#64748B" }}>
+                {st.range}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Structured Syllabus Table / Accordion List */}
+        <div style={{
+          border: "1px solid #1E293B",
+          borderRadius: 10,
+          background: "#0B1220",
+          overflow: "hidden",
+          marginBottom: 48
+        }}>
           {modules.map((m, i) => {
             const isOpen = openModule === i;
             return (
               <div
                 key={i}
                 style={{
-                  background: "#0D1117", border: "1px solid",
-                  borderColor: isOpen ? "#388BFD" : "#30363D",
-                  borderRadius: 12, overflow: "hidden",
-                  transition: "all 0.15s ease"
+                  borderBottom: i < modules.length - 1 ? "1px solid #1E293B" : "none",
+                  transition: "background 0.15s ease"
                 }}
               >
                 <div
                   onClick={() => setOpenModule(isOpen ? null : i)}
                   style={{
-                    padding: "22px 30px", cursor: "pointer",
-                    display: "flex", alignItems: "center", justifyContent: "space-between",
-                    background: isOpen ? "rgba(56, 139, 253, 0.08)" : "#0D1117"
+                    padding: "20px 24px",
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    background: isOpen ? "rgba(47, 129, 247, 0.04)" : "transparent"
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!isOpen) e.currentTarget.style.background = "rgba(47, 129, 247, 0.02)";
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isOpen) e.currentTarget.style.background = "transparent";
                   }}
                 >
-                  <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
                     <span style={{
-                      fontSize: 12.5, fontWeight: 800, color: "#388BFD",
-                      background: "#161B22", border: "1px solid #30363D",
-                      padding: "5px 12px", borderRadius: 6,
+                      fontSize: 12,
+                      fontWeight: 700,
+                      color: isOpen ? "#2F81F7" : "#64748B",
+                      fontFamily: "ui-monospace, monospace",
+                      width: 28
+                    }}>
+                      {m.num}
+                    </span>
+                    <div>
+                      <h3 style={{
+                        fontSize: 16,
+                        fontWeight: 700,
+                        color: isOpen ? "#F8FAFC" : "#CBD5E1",
+                        margin: 0,
+                        letterSpacing: "-.01em"
+                      }}>
+                        {m.title}
+                      </h3>
+                    </div>
+                  </div>
+
+                  <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+                    <span style={{
+                      fontSize: 10.5,
+                      fontWeight: 600,
+                      color: "#64748B",
                       fontFamily: "ui-monospace, monospace"
                     }}>
-                      Module {m.num}
+                      {m.phase}
                     </span>
-                    <h3 style={{ fontSize: 18, fontWeight: 800, color: "#F0F6FC", margin: 0 }}>
-                      {m.title}
-                    </h3>
+                    <span style={{
+                      fontSize: 16,
+                      fontWeight: 500,
+                      color: isOpen ? "#2F81F7" : "#64748B",
+                      fontFamily: "ui-monospace, monospace",
+                      width: 16,
+                      textAlign: "center"
+                    }}>
+                      {isOpen ? "−" : "+"}
+                    </span>
                   </div>
-                  <span style={{ fontSize: 18, fontWeight: 700, color: "#8B949E", fontFamily: "ui-monospace, monospace" }}>
-                    {isOpen ? "−" : "+"}
-                  </span>
                 </div>
 
                 {isOpen && (
-                  <div style={{ padding: "0 30px 28px 30px", borderTop: "1px solid #21262D" }}>
-                    <p style={{ fontSize: 14.5, color: "#8B949E", lineHeight: 1.65, paddingTop: 18, margin: 0 }}>
-                      {m.summary}
-                    </p>
+                  <div style={{
+                    padding: "0 24px 24px 68px",
+                    background: "rgba(47, 129, 247, 0.02)",
+                    borderTop: "1px dashed #1E293B"
+                  }}>
+                    <div style={{ paddingTop: 18, marginBottom: 14 }}>
+                      <div style={{ fontSize: 11, fontWeight: 700, color: "#64748B", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
+                        SYLLABUS FOCUS
+                      </div>
+                      <p style={{ fontSize: 14, color: "#CBD5E1", lineHeight: 1.6, margin: 0 }}>
+                        {m.summary}
+                      </p>
+                    </div>
+
+                    <div>
+                      <div style={{ fontSize: 11, fontWeight: 700, color: "#64748B", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
+                        PRACTICAL LAB WORKSTATION
+                      </div>
+                      <p style={{ fontSize: 13.5, color: "#94A3B8", lineHeight: 1.5, margin: 0, fontFamily: "ui-monospace, monospace" }}>
+                        › {m.labs}
+                      </p>
+                    </div>
                   </div>
                 )}
               </div>
@@ -123,15 +261,39 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
           })}
         </div>
 
-        {/* Download Curriculum Button */}
-        <div style={{ textAlign: "center" }}>
+        {/* Action Row */}
+        <div style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          flexWrap: "wrap",
+          gap: 20,
+          background: "#0B1220",
+          border: "1px solid #1E293B",
+          borderRadius: 8,
+          padding: "24px 28px"
+        }}>
+          <div>
+            <div style={{ fontSize: 15, fontWeight: 700, color: "#F8FAFC", marginBottom: 4 }}>
+              Need a custom syllabus tailored to your team's internal tech stack?
+            </div>
+            <div style={{ fontSize: 13, color: "#64748B" }}>
+              We customize tools, governance constraints, and sample datasets for private enterprise cohorts.
+            </div>
+          </div>
           <button
             onClick={() => onOpenDemo("Complete 10-Module Curriculum PDF")}
             style={{
-              background: "#238636", color: "#FFFFFF", border: "1px solid rgba(240, 246, 252, 0.1)",
-              padding: "16px 36px", borderRadius: 8, fontWeight: 700,
-              fontSize: 15, cursor: "pointer", boxShadow: "0 2px 8px rgba(35, 134, 54, 0.3)",
-              transition: "all 0.15s ease"
+              background: "#238636",
+              color: "#FFFFFF",
+              border: "1px solid rgba(255, 255, 255, 0.15)",
+              padding: "11px 22px",
+              borderRadius: 7,
+              fontWeight: 600,
+              fontSize: 14,
+              cursor: "pointer",
+              transition: "background 0.15s ease",
+              whiteSpace: "nowrap"
             }}
             onMouseEnter={(e) => { e.currentTarget.style.background = "#2EA043"; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = "#238636"; }}
@@ -144,4 +306,3 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
     </section>
   );
 }
-

@@ -1,87 +1,105 @@
 export default function Footer({ onOpenDemo, scrollToSection }) {
   return (
-    <footer style={{ background: "#040D21", color: "#8B949E", padding: "64px 0 32px 0", borderTop: "1px solid #30363D" }}>
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px" }}>
+    <footer style={{ background: "#050B1A", color: "#94A3B8", padding: "64px 0 32px 0", borderTop: "1px solid #1E293B" }}>
+      <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 36, marginBottom: 48 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 36, marginBottom: 48 }}>
           
           {/* Brand Column */}
-          <div>
+          <div style={{ gridColumn: "span 1" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
               <div style={{
-                width: 32, height: 32, borderRadius: 8, background: "#161B22", border: "1px solid #30363D",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                fontSize: 15, color: "#388BFD", fontWeight: 900
+                width: 28,
+                height: 28,
+                borderRadius: 6,
+                background: "#0B1220",
+                border: "1px solid #1E293B",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: 13,
+                color: "#2F81F7",
+                fontWeight: 800,
+                fontFamily: "ui-monospace, monospace"
               }}>
                 AG
               </div>
-              <span style={{ fontSize: 15, fontWeight: 900, color: "#F0F6FC", letterSpacing: "-.02em" }}>
+              <span style={{ fontSize: 14.5, fontWeight: 800, color: "#F8FAFC", letterSpacing: "-.02em" }}>
                 AI GLOBAL ACADEMY
               </span>
             </div>
-            <p style={{ fontSize: 13, color: "#8B949E", lineHeight: 1.6, marginBottom: 12 }}>
-              Enterprise Generative AI Upskilling for modern engineering and business teams.
+            <p style={{ fontSize: 13, color: "#64748B", lineHeight: 1.6, marginBottom: 12 }}>
+              Enterprise Generative AI & Agentic Workforce Upskilling Platform.
             </p>
-            <p style={{ fontSize: 12, color: "#388BFD", fontWeight: 700, fontFamily: "ui-monospace, monospace" }}>
-              "Practical AI skills for the workforce of now."
-            </p>
+            <div style={{ fontSize: 11.5, color: "#2F81F7", fontWeight: 600, fontFamily: "ui-monospace, monospace" }}>
+              INSTITUTIONAL WORKFORCE ENABLEMENT
+            </div>
           </div>
 
           {/* Programs Column */}
           <div>
-            <h4 style={{ fontSize: 12, fontWeight: 800, color: "#F0F6FC", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 14, fontFamily: "ui-monospace, monospace" }}>
-              Programs
+            <h4 style={{ fontSize: 11, fontWeight: 700, color: "#F8FAFC", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 14, fontFamily: "ui-monospace, monospace" }}>
+              Pathways
             </h4>
-            <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 8, fontSize: 13, padding: 0 }}>
-              <li><a href="#programs" onClick={() => scrollToSection("programs")} style={{ color: "#8B949E", textDecoration: "none" }}>AI Essentials</a></li>
-              <li><a href="#role-tracks" onClick={() => scrollToSection("role-tracks")} style={{ color: "#8B949E", textDecoration: "none" }}>Functional Academies</a></li>
-              <li><a href="#agents-automation" onClick={() => scrollToSection("agents-automation")} style={{ color: "#8B949E", textDecoration: "none" }}>AI for Coding</a></li>
-              <li><a href="#agents-automation" onClick={() => scrollToSection("agents-automation")} style={{ color: "#8B949E", textDecoration: "none" }}>AI Agents</a></li>
-              <li><a href="#agents-automation" onClick={() => scrollToSection("agents-automation")} style={{ color: "#8B949E", textDecoration: "none" }}>AI Automation</a></li>
-              <li><a href="#enterprise-delivery" onClick={() => scrollToSection("enterprise-delivery")} style={{ color: "#8B949E", textDecoration: "none" }}>Responsible AI</a></li>
+            <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 8, fontSize: 13, padding: 0, margin: 0 }}>
+              <li><a href="#role-tracks" onClick={() => scrollToSection("role-tracks")} style={{ color: "#94A3B8", textDecoration: "none" }}>Engineering & IT Track</a></li>
+              <li><a href="#role-tracks" onClick={() => scrollToSection("role-tracks")} style={{ color: "#94A3B8", textDecoration: "none" }}>Marketing & Growth Track</a></li>
+              <li><a href="#role-tracks" onClick={() => scrollToSection("role-tracks")} style={{ color: "#94A3B8", textDecoration: "none" }}>Sales & Client Solutions</a></li>
+              <li><a href="#role-tracks" onClick={() => scrollToSection("role-tracks")} style={{ color: "#94A3B8", textDecoration: "none" }}>Operations & PMO</a></li>
+              <li><a href="#role-tracks" onClick={() => scrollToSection("role-tracks")} style={{ color: "#94A3B8", textDecoration: "none" }}>Finance & Legal Modeling</a></li>
             </ul>
           </div>
 
-          {/* Company Column */}
+          {/* Architecture Column */}
           <div>
-            <h4 style={{ fontSize: 12, fontWeight: 800, color: "#F0F6FC", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 14, fontFamily: "ui-monospace, monospace" }}>
-              Company
+            <h4 style={{ fontSize: 11, fontWeight: 700, color: "#F8FAFC", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 14, fontFamily: "ui-monospace, monospace" }}>
+              Platform
             </h4>
-            <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 8, fontSize: 13, padding: 0 }}>
-              <li><a href="#enterprise-delivery" onClick={() => scrollToSection("enterprise-delivery")} style={{ color: "#8B949E", textDecoration: "none" }}>About Us</a></li>
-              <li><a href="#enterprise-delivery" onClick={() => scrollToSection("enterprise-delivery")} style={{ color: "#8B949E", textDecoration: "none" }}>Enterprise Training</a></li>
-              <li><a href="#curriculum" onClick={() => scrollToSection("curriculum")} style={{ color: "#8B949E", textDecoration: "none" }}>Curriculum</a></li>
-              <li><a href="#resources" onClick={() => scrollToSection("resources")} style={{ color: "#8B949E", textDecoration: "none" }}>Resources</a></li>
-              <li><a href="#" onClick={(e) => { e.preventDefault(); onOpenDemo(); }} style={{ color: "#8B949E", textDecoration: "none" }}>Contact Sales</a></li>
+            <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 8, fontSize: 13, padding: 0, margin: 0 }}>
+              <li><a href="#curriculum" onClick={() => scrollToSection("curriculum")} style={{ color: "#94A3B8", textDecoration: "none" }}>10-Module Syllabus</a></li>
+              <li><a href="#ai-tools" onClick={() => scrollToSection("ai-tools")} style={{ color: "#94A3B8", textDecoration: "none" }}>67+ Evaluated Tools</a></li>
+              <li><a href="#agents-automation" onClick={() => scrollToSection("agents-automation")} style={{ color: "#94A3B8", textDecoration: "none" }}>Agent Architecture</a></li>
+              <li><a href="#enterprise" onClick={() => scrollToSection("enterprise")} style={{ color: "#94A3B8", textDecoration: "none" }}>Delivery Methodology</a></li>
+              <li><a href="#resources" onClick={() => scrollToSection("resources")} style={{ color: "#94A3B8", textDecoration: "none" }}>ROI & Enterprise Packages</a></li>
             </ul>
           </div>
 
-          {/* Legal Column */}
+          {/* Governance Column */}
           <div>
-            <h4 style={{ fontSize: 12, fontWeight: 800, color: "#F0F6FC", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 14, fontFamily: "ui-monospace, monospace" }}>
+            <h4 style={{ fontSize: 11, fontWeight: 700, color: "#F8FAFC", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 14, fontFamily: "ui-monospace, monospace" }}>
               Governance & Security
             </h4>
-            <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 8, fontSize: 13, padding: 0 }}>
-              <li><a href="#" onClick={(e) => e.preventDefault()} style={{ color: "#8B949E", textDecoration: "none" }}>Privacy Policy</a></li>
-              <li><a href="#" onClick={(e) => e.preventDefault()} style={{ color: "#8B949E", textDecoration: "none" }}>Terms of Service</a></li>
-              <li><a href="#" onClick={(e) => e.preventDefault()} style={{ color: "#8B949E", textDecoration: "none" }}>Enterprise AI Governance</a></li>
-              <li><a href="#" onClick={(e) => e.preventDefault()} style={{ color: "#8B949E", textDecoration: "none" }}>Security Whitepaper</a></li>
+            <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 8, fontSize: 13, padding: 0, margin: 0 }}>
+              <li><a href="#" onClick={(e) => { e.preventDefault(); onOpenDemo("Security & Privacy Inquiry"); }} style={{ color: "#94A3B8", textDecoration: "none" }}>Data Classification Standards</a></li>
+              <li><a href="#" onClick={(e) => { e.preventDefault(); onOpenDemo("SOC2 Inquiry"); }} style={{ color: "#94A3B8", textDecoration: "none" }}>SOC2 & Zero-Retention Boundaries</a></li>
+              <li><a href="#" onClick={(e) => { e.preventDefault(); onOpenDemo("Consultation"); }} style={{ color: "#94A3B8", textDecoration: "none" }}>Custom Enterprise Playbooks</a></li>
+              <li><a href="#" onClick={(e) => { e.preventDefault(); onOpenDemo("Consultation"); }} style={{ color: "#94A3B8", textDecoration: "none" }}>Schedule Enterprise Demo</a></li>
             </ul>
           </div>
 
         </div>
 
         {/* Bottom Bar */}
-        <div style={{ borderTop: "1px solid #21262D", paddingTop: 20, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12, fontSize: 12, color: "#6E7681" }}>
+        <div style={{
+          borderTop: "1px solid #1E293B",
+          paddingTop: 20,
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          flexWrap: "wrap",
+          gap: 12,
+          fontSize: 12,
+          color: "#64748B"
+        }}>
           <div>
-            © {new Date().getFullYear()} AI Global Academy. All rights reserved. Enterprise Generative AI Upskilling.
+            © {new Date().getFullYear()} AI Global Academy. Enterprise GenAI Workforce Enablement.
           </div>
           <div style={{ display: "flex", gap: 14 }}>
-            <span>Privacy</span>
+            <span>Privacy Standard</span>
             <span>·</span>
-            <span>Security</span>
+            <span>Zero-Retention Architecture</span>
             <span>·</span>
-            <span>Governance</span>
+            <span>Governance Compliant</span>
           </div>
         </div>
 

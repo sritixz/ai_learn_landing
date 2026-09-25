@@ -11,16 +11,16 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
 
   return (
     <section style={{
-      minHeight: "100vh",
+      minHeight: "92vh",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "flex-start",
-      background: "radial-gradient(ellipse at 50% 25%, #0B1D40 0%, #040D21 65%)",
-      borderBottom: "1px solid #30363D",
+      background: "radial-gradient(ellipse at 50% 20%, #0B162E 0%, #050B1A 70%)",
+      borderBottom: "1px solid #1E293B",
       position: "relative",
-      paddingTop: 128,
-      paddingBottom: 96,
+      paddingTop: 116,
+      paddingBottom: 72,
       boxSizing: "border-box",
       overflow: "hidden"
     }} className="dev-grid-bg">
@@ -29,54 +29,73 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
       <div className="ambient-glow-up" />
 
       {/* Main Hero Content */}
-      <div style={{ maxWidth: 1040, margin: "0 auto", padding: "0 24px", width: "100%", position: "relative", zIndex: 2, textAlign: "center" }}>
+      <div style={{ maxWidth: 980, margin: "0 auto", padding: "0 24px", width: "100%", position: "relative", zIndex: 2, textAlign: "center" }}>
+
+        {/* Technical Eyebrow Badge */}
+        <div style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: 8,
+          background: "rgba(47, 129, 247, 0.08)",
+          border: "1px solid rgba(47, 129, 247, 0.25)",
+          padding: "4px 12px",
+          borderRadius: 6,
+          fontSize: 12,
+          fontWeight: 600,
+          color: "#2F81F7",
+          marginBottom: 24,
+          fontFamily: "ui-monospace, monospace"
+        }}>
+          <span>ENTERPRISE GENAI UPSKILLING</span>
+          <span style={{ color: "#334155" }}>•</span>
+          <span style={{ color: "#94A3B8" }}>FOR GLOBAL TEAMS</span>
+        </div>
 
         {/* Hero Title */}
         <h1 style={{
-          fontSize: "clamp(44px, 5.8vw, 70px)", fontWeight: 900,
-          color: "#F0F6FC", lineHeight: 1.08,
-          letterSpacing: "-.035em", maxWidth: 940, margin: "0 auto 24px"
+          fontSize: "clamp(42px, 5.5vw, 68px)", fontWeight: 850,
+          color: "#F8FAFC", lineHeight: 1.08,
+          letterSpacing: "-.035em", maxWidth: 900, margin: "0 auto 20px"
         }}>
           Build an AI-Ready Workforce.
         </h1>
 
         {/* Subhead Line */}
         <p style={{
-          fontSize: "clamp(20px, 2.3vw, 25px)", fontWeight: 700,
-          textAlign: "center", maxWidth: 780, margin: "0 auto 20px",
-          color: "#388BFD", lineHeight: 1.35
+          fontSize: "clamp(19px, 2.2vw, 23px)", fontWeight: 600,
+          textAlign: "center", maxWidth: 740, margin: "0 auto 18px",
+          color: "#2F81F7", lineHeight: 1.35
         }}>
-          Turn Generative AI into measurable productivity across all teams.
+          Turn Generative AI into measurable productivity across all departments.
         </p>
 
         {/* Main Body Paragraph */}
         <p style={{
-          fontSize: 17, color: "#8B949E", textAlign: "center",
-          maxWidth: 680, margin: "0 auto 40px", lineHeight: 1.65, fontWeight: 400
+          fontSize: 16.5, color: "#94A3B8", textAlign: "center",
+          maxWidth: 660, margin: "0 auto 36px", lineHeight: 1.6, fontWeight: 400
         }}>
-          Role-based upskilling in prompt engineering, AI agents, and automation.
-          <br />
-          Empower your workforce by building real use cases with 50+ leading AI tools.
+          Role-based upskilling in prompt engineering, AI agents, and workflow automation.
+          Empower your teams to build production use cases with 50+ approved tools.
         </p>
 
-        {/* Integrated GitHub-Style CTA Bar in One Clean Row */}
+        {/* Integrated CTA Bar in One Clean Row */}
         <div style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          gap: 14,
-          marginBottom: 64,
+          gap: 12,
+          marginBottom: 48,
           flexWrap: "wrap"
         }}>
           <form onSubmit={handleSubmit} style={{
             display: "inline-flex",
             alignItems: "center",
-            background: "rgba(22, 27, 34, 0.95)",
-            border: "1px solid #30363D",
-            borderRadius: 12,
-            padding: "6px 8px 6px 18px",
-            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(56, 139, 253, 0.15)",
-            gap: 12,
+            background: "#0F172A",
+            border: "1px solid #1E293B",
+            borderRadius: 8,
+            padding: "5px 6px 5px 16px",
+            boxShadow: "0 8px 24px rgba(0, 0, 0, 0.4)",
+            gap: 10,
             maxWidth: "100%"
           }}>
             <input
@@ -85,12 +104,12 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your work email"
               style={{
-                width: 240,
+                width: 230,
                 background: "transparent",
                 border: "none",
                 outline: "none",
-                color: "#F0F6FC",
-                fontSize: 15,
+                color: "#F8FAFC",
+                fontSize: 14,
                 fontWeight: 500
               }}
             />
@@ -99,14 +118,14 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
               style={{
                 background: "#238636",
                 color: "#FFFFFF",
-                border: "1px solid rgba(240, 246, 252, 0.1)",
-                padding: "12px 24px",
-                borderRadius: 8,
-                fontWeight: 700,
-                fontSize: 14,
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+                padding: "10px 20px",
+                borderRadius: 6,
+                fontWeight: 600,
+                fontSize: 13.5,
                 cursor: "pointer",
                 transition: "all 0.15s ease",
-                boxShadow: "0 2px 8px rgba(35, 134, 54, 0.3)",
+                boxShadow: "0 1px 3px rgba(0, 0, 0, 0.3)",
                 whiteSpace: "nowrap"
               }}
               onMouseEnter={(e) => { e.currentTarget.style.background = "#2EA043"; }}
@@ -120,20 +139,19 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
             type="button"
             onClick={() => scrollToSection("curriculum")}
             style={{
-              background: "rgba(22, 27, 34, 0.85)",
-              color: "#F0F6FC",
-              border: "1px solid #30363D",
-              padding: "14px 24px",
-              borderRadius: 12,
-              fontWeight: 600,
-              fontSize: 14,
+              background: "rgba(15, 23, 42, 0.6)",
+              color: "#F8FAFC",
+              border: "1px solid #1E293B",
+              padding: "11px 20px",
+              borderRadius: 8,
+              fontWeight: 500,
+              fontSize: 13.5,
               cursor: "pointer",
               transition: "all 0.15s ease",
-              whiteSpace: "nowrap",
-              boxShadow: "0 4px 16px rgba(0,0,0,0.3)"
+              whiteSpace: "nowrap"
             }}
-            onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#8B949E"; e.currentTarget.style.background = "#30363D"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#30363D"; e.currentTarget.style.background = "rgba(22, 27, 34, 0.85)"; }}
+            onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#334155"; e.currentTarget.style.background = "#1E293B"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#1E293B"; e.currentTarget.style.background = "rgba(15, 23, 42, 0.6)"; }}
           >
             Explore Curriculum ↓
           </button>
@@ -141,50 +159,34 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
 
       </div>
 
-      {/* Radiant 3D AI Supercomputer Core Horizon */}
+      {/* Supporting 3D Visualization & Enterprise Pillars */}
       <div style={{
         width: "100%",
         position: "relative",
         zIndex: 2,
-        marginTop: 16
+        marginTop: 0
       }}>
-        {/* Interactive 3D Supercomputer Core Globe */}
+        {/* Restrained 3D Neural Globe */}
         <NeuralGlobe3D />
 
-        {/* Luminous Torchlight / Star Halo Radiant Flare */}
+        {/* Subtle Horizon Line */}
         <div style={{
-          position: "absolute",
-          bottom: 40,
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "90%",
-          maxWidth: 960,
-          height: 180,
-          background: "radial-gradient(ellipse at 50% 90%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.15) 25%, rgba(56, 189, 248, 0.25) 50%, transparent 75%)",
-          filter: "blur(24px)",
-          pointerEvents: "none",
-          zIndex: 0
-        }} />
-
-        {/* Luminous Core Horizon Line */}
-        <div style={{
-          width: "85%",
-          maxWidth: 960,
-          height: 1.5,
-          margin: "36px auto 44px auto",
-          background: "linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.4) 20%, rgba(255, 255, 255, 0.95) 50%, rgba(255, 255, 255, 0.4) 80%, transparent 100%)",
-          boxShadow: "0 0 25px 4px rgba(255, 255, 255, 0.8), 0 0 50px 8px rgba(56, 189, 248, 0.5)",
+          width: "80%",
+          maxWidth: 900,
+          height: 1,
+          margin: "24px auto 32px auto",
+          background: "linear-gradient(90deg, transparent 0%, #1E293B 20%, #2F81F7 50%, #1E293B 80%, transparent 100%)",
           position: "relative",
           zIndex: 1
         }} />
 
-        {/* Static Radiant AI Nodes */}
+        {/* Credible Enterprise Capability Horizon */}
         <div style={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          gap: 24,
-          maxWidth: 1140,
+          gap: 16,
+          maxWidth: 1080,
           margin: "0 auto",
           padding: "0 20px",
           flexWrap: "wrap",
@@ -192,99 +194,92 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
           zIndex: 2
         }}>
           
-          {/* Static Node 1: Neural Processor (Radiant Star Glow) */}
+          {/* Pillar 1 */}
           <div style={{
-            background: "rgba(10, 16, 28, 0.92)",
-            border: "1px solid rgba(255, 255, 255, 0.55)",
-            borderRadius: 14,
-            padding: "16px 24px",
-            boxShadow: "0 0 35px 3px rgba(255, 255, 255, 0.3), 0 0 70px 10px rgba(56, 189, 248, 0.35), 0 12px 32px rgba(0, 0, 0, 0.8)",
-            backdropFilter: "blur(16px)",
-            WebkitBackdropFilter: "blur(16px)",
+            background: "#0B1220",
+            border: "1px solid #1E293B",
+            borderRadius: 8,
+            padding: "12px 20px",
             display: "flex",
             alignItems: "center",
-            gap: 14,
-            position: "relative"
+            gap: 12
           }}>
             <div style={{
-              width: 32, height: 32, borderRadius: 8,
-              background: "rgba(255, 255, 255, 0.15)",
-              border: "1px solid rgba(255, 255, 255, 0.8)",
-              boxShadow: "0 0 16px rgba(255, 255, 255, 0.6)",
+              width: 28, height: 28, borderRadius: 6,
+              background: "rgba(47, 129, 247, 0.1)",
+              border: "1px solid rgba(47, 129, 247, 0.25)",
               display: "flex", alignItems: "center", justifyContent: "center",
-              color: "#FFFFFF", fontSize: 15, fontWeight: 900
+              color: "#2F81F7", fontSize: 13, fontWeight: 700,
+              fontFamily: "ui-monospace, monospace"
             }}>
-              🧠
+              01
             </div>
             <div style={{ textAlign: "left" }}>
-              <div style={{ fontSize: 13, fontWeight: 800, color: "#FFFFFF", fontFamily: "ui-monospace, monospace", letterSpacing: "-.01em" }}>
-                Neural Engine v4.2
+              <div style={{ fontSize: 13, fontWeight: 700, color: "#F8FAFC" }}>
+                10 Department Pathways
               </div>
-              <div style={{ fontSize: 11.5, color: "#38BDF8", fontWeight: 600, marginTop: 2 }}>
-                Multi-Model LLM Orchestration
+              <div style={{ fontSize: 11.5, color: "#94A3B8" }}>
+                Engineering • Sales • Ops • Marketing • Finance
               </div>
             </div>
           </div>
 
-          {/* Static Node 2: Live AI Prompt Capsule (Central Torch Light) */}
+          {/* Pillar 2 */}
           <div style={{
-            background: "rgba(10, 16, 28, 0.96)",
-            border: "1.5px solid rgba(255, 255, 255, 0.7)",
-            borderRadius: 14,
-            padding: "16px 26px",
-            boxShadow: "0 0 45px 5px rgba(255, 255, 255, 0.4), 0 0 90px 15px rgba(56, 189, 248, 0.4), 0 16px 40px rgba(0, 0, 0, 0.9)",
-            backdropFilter: "blur(16px)",
-            WebkitBackdropFilter: "blur(16px)",
+            background: "#0B1220",
+            border: "1px solid #1E293B",
+            borderRadius: 8,
+            padding: "12px 20px",
             display: "flex",
             alignItems: "center",
-            gap: 14,
-            position: "relative"
+            gap: 12
           }}>
             <div style={{
-              width: 10, height: 10, borderRadius: "50%",
-              background: "#FFFFFF",
-              boxShadow: "0 0 14px 3px #FFFFFF, 0 0 25px 6px #2EA043"
-            }} />
-            <div style={{ textAlign: "left", fontFamily: "ui-monospace, monospace" }}>
-              <div style={{ fontSize: 13, fontWeight: 700, color: "#FFFFFF" }}>
-                <span style={{ color: "#79C0FF" }}>agent</span>.<span style={{ color: "#56D364" }}>run</span>({`{ stack: ['Cursor', 'Claude', 'n8n'] }`})
+              width: 28, height: 28, borderRadius: 6,
+              background: "rgba(35, 134, 54, 0.1)",
+              border: "1px solid rgba(35, 134, 54, 0.25)",
+              display: "flex", alignItems: "center", justifyContent: "center",
+              color: "#2EA043", fontSize: 13, fontWeight: 700,
+              fontFamily: "ui-monospace, monospace"
+            }}>
+              02
+            </div>
+            <div style={{ textAlign: "left" }}>
+              <div style={{ fontSize: 13, fontWeight: 700, color: "#F8FAFC" }}>
+                Hands-On Tool Labs
               </div>
-              <div style={{ fontSize: 11.5, color: "#7EE787", marginTop: 3, fontWeight: 600 }}>
-                ✓ 26% faster feature delivery & test suites
+              <div style={{ fontSize: 11.5, color: "#94A3B8" }}>
+                Production workflows with 50+ approved tools
               </div>
             </div>
           </div>
 
-          {/* Static Node 3: Real-Time ROI Engine (Radiant Star Glow) */}
+          {/* Pillar 3 */}
           <div style={{
-            background: "rgba(10, 16, 28, 0.92)",
-            border: "1px solid rgba(255, 255, 255, 0.55)",
-            borderRadius: 14,
-            padding: "16px 24px",
-            boxShadow: "0 0 35px 3px rgba(255, 255, 255, 0.3), 0 0 70px 10px rgba(137, 87, 229, 0.35), 0 12px 32px rgba(0, 0, 0, 0.8)",
-            backdropFilter: "blur(16px)",
-            WebkitBackdropFilter: "blur(16px)",
+            background: "#0B1220",
+            border: "1px solid #1E293B",
+            borderRadius: 8,
+            padding: "12px 20px",
             display: "flex",
             alignItems: "center",
-            gap: 14,
-            position: "relative"
+            gap: 12
           }}>
             <div style={{
-              width: 32, height: 32, borderRadius: 8,
-              background: "rgba(255, 255, 255, 0.15)",
-              border: "1px solid rgba(255, 255, 255, 0.8)",
-              boxShadow: "0 0 16px rgba(255, 255, 255, 0.6)",
+              width: 28, height: 28, borderRadius: 6,
+              background: "rgba(139, 124, 246, 0.1)",
+              border: "1px solid rgba(139, 124, 246, 0.25)",
               display: "flex", alignItems: "center", justifyContent: "center",
-              color: "#FFFFFF", fontSize: 15, fontWeight: 900
+              color: "#8B7CF6", fontSize: 13, fontWeight: 700,
+              fontFamily: "ui-monospace, monospace"
             }}>
-              ⚡
+              03
             </div>
             <div style={{ textAlign: "left" }}>
-              <div style={{ fontSize: 13, fontWeight: 800, color: "#FFFFFF", fontFamily: "ui-monospace, monospace", letterSpacing: "-.01em" }}>
-                Enterprise ROI Engine
+              <div style={{ fontSize: 13, fontWeight: 700, color: "#F8FAFC" }}>
+                Manager-Tracked ROI
               </div>
-              <div style={{ fontSize: 11.5, color: "#D2A8FF", fontWeight: 600, marginTop: 2 }}>
-                Manager-Verified Adoption
+              <div style={{ fontSize: 11.5, color: "#94A3B8" }}>
+                Pre/post benchmarks & verified capstones
               </div>
             </div>
           </div>
@@ -295,4 +290,5 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
     </section>
   );
 }
+
 

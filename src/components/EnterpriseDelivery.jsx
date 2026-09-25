@@ -1,72 +1,114 @@
 export default function EnterpriseDelivery() {
   const journey = [
-    { num: "01", stage: "Assess", desc: "Baseline current AI fluency, tool stack access, team objectives, risk constraints, and priority workflows." },
-    { num: "02", stage: "Align", desc: "Map tailored learning paths to specific roles and select high-value use cases with functional business leaders." },
-    { num: "03", stage: "Learn", desc: "Execute live interactive workshops, micro-lessons, live demonstrations, and guided hands-on tool labs." },
-    { num: "04", stage: "Build", desc: "Learners build role-specific prompt systems, process automations, AI assistants, and production capstone projects." },
-    { num: "05", stage: "Scale", desc: "Certify employee skills, publish reusable workflow libraries, identify AI champions, and track adoption metrics over time." }
+    { num: "01", stage: "Assess", desc: "Baseline organizational AI fluency, tool access, risk boundaries, and target workflows." },
+    { num: "02", stage: "Align", desc: "Map tailored curriculum tracks to specific business roles and select high-leverage deliverables." },
+    { num: "03", stage: "Enable", desc: "Deliver live interactive cohorts, sandbox workstations, and instructor-guided tool labs." },
+    { num: "04", stage: "Build", desc: "Learners ship role-specific prompt architectures, process automations, and capstones." },
+    { num: "05", stage: "Scale", desc: "Certify employee proficiency, publish team prompt repositories, and track KPI adoption." }
   ];
 
   const formats = [
-    { title: "Executive Briefing (2 to 4 hours)", desc: "High-impact alignment on AI strategy, risk management, opportunity mapping, and leadership governance." },
-    { title: "Department Workshop (1 to 2 days)", desc: "Focused hands-on transformation and workflow building for a single business function." },
-    { title: "GenAI Bootcamp (2 to 4 weeks)", desc: "Structured intensive learning combining role-specific tool labs, exercises, and practical assignments." },
-    { title: "Enterprise AI Academy (6 to 12 weeks)", desc: "Multi-role academy pathways, custom projects, weekly office hours, skill certifications, and impact reporting." },
-    { title: "Train-the-Trainer Program", desc: "Empowers internal L&D teams and departmental AI champions to sustain long-term adoption and mentorship." },
-    { title: "Custom Enterprise Learning Hub", desc: "Company-branded learning hub with custom tool guides, security playbooks, and reusable workflow libraries." }
+    { duration: "2–4 Hours", title: "Executive Briefing", desc: "Strategic alignment on AI opportunity mapping, risk governance, and organizational operating-model redesign." },
+    { duration: "1–2 Days", title: "Department Intensive", desc: "Concentrated hands-on enablement and workflow construction for a single high-priority business unit." },
+    { duration: "2–4 Weeks", title: "GenAI Cohort Bootcamp", desc: "Structured intensive combining role-specific tool labs, weekly deliverables, and peer code reviews." },
+    { duration: "6–12 Weeks", title: "Enterprise AI Academy", desc: "Full multi-role academy across all departments with capstones, office hours, and manager dashboards." },
+    { duration: "Ongoing", title: "Train-the-Trainer Track", desc: "Empowers internal L&D leaders and departmental AI champions to sustain long-term mentorship." },
+    { duration: "Custom", title: "Private Enterprise Hub", desc: "Dedicated corporate portal with internal tool guides, proprietary playbooks, and prompt repositories." }
   ];
 
   const ldChecklist = [
-    "Role-based cohort planning and learner segmentation",
-    "Pre- and post-assessment skill benchmarks",
-    "Attendance, completion, and capstone project tracking",
-    "Departmental use-case and prompt asset portfolio",
-    "Manager feedback and ongoing adoption pulse checks",
-    "Internal AI champion identification and showcase events"
+    "Role-based cohort planning & custom learner segmentation",
+    "Pre- and post-program empirical skill benchmarks",
+    "Attendance, completion, and capstone deliverable auditing",
+    "Departmental use-case and prompt asset repository",
+    "Manager feedback loops and recurring adoption pulse checks",
+    "Internal AI champion identification & showcase demo days"
   ];
 
   return (
-    <section id="enterprise-delivery" style={{ padding: "100px 0", background: "#040D21", borderBottom: "1px solid #30363D" }}>
+    <section id="enterprise" style={{ padding: "110px 0", background: "#050B1A", borderBottom: "1px solid #1E293B" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
-        <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 12, fontFamily: "ui-monospace, monospace" }}>
-          ENTERPRISE DELIVERY FRAMEWORK
+        <div style={{ marginBottom: 48 }}>
+          <div style={{
+            fontSize: 12,
+            fontWeight: 700,
+            color: "#2F81F7",
+            textTransform: "uppercase",
+            letterSpacing: ".08em",
+            marginBottom: 12,
+            fontFamily: "ui-monospace, SFMono-Regular, monospace"
+          }}>
+            DELIVERY METHODOLOGY
+          </div>
+          <h2 style={{
+            fontSize: "clamp(30px, 3.8vw, 42px)",
+            fontWeight: 800,
+            color: "#F8FAFC",
+            letterSpacing: "-.025em",
+            lineHeight: 1.18,
+            marginBottom: 16
+          }}>
+            Engineered for enterprise-wide adoption, not one-off lectures.
+          </h2>
+          <p style={{
+            fontSize: 16,
+            color: "#94A3B8",
+            maxWidth: 800,
+            lineHeight: 1.65,
+            margin: 0
+          }}>
+            We combine synchronous instructor-led labs, private sandbox practice, customized prompt libraries, weekly office hours, and manager-tracked adoption analytics.
+          </p>
         </div>
-        <h2 style={{ fontSize: "clamp(32px, 4vw, 44px)", fontWeight: 900, color: "#F0F6FC", letterSpacing: "-.02em", marginBottom: 16 }}>
-          Designed for company-wide adoption, not one-off workshops
-        </h2>
-        <p style={{ fontSize: 17, color: "#8B949E", maxWidth: 840, lineHeight: 1.65, marginBottom: 56, fontWeight: 400 }}>
-          We combine instructor-led workshops, self-paced tool practice, live use-case labs, dedicated office hours, and continuous adoption tracking.
-        </p>
 
-        {/* 5-Stage Enterprise Learning Journey */}
-        <div style={{ marginBottom: 64 }}>
-          <h3 style={{ fontSize: 22, fontWeight: 800, color: "#F0F6FC", marginBottom: 24, letterSpacing: "-.01em" }}>
-            The 5-stage enterprise learning journey
-          </h3>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16 }}>
+        {/* 5-Stage Journey Progression */}
+        <div style={{
+          background: "#0B1220",
+          border: "1px solid #1E293B",
+          borderRadius: 10,
+          padding: "32px 28px",
+          marginBottom: 48
+        }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 24, flexWrap: "wrap", gap: 12 }}>
+            <span style={{ fontSize: 13, fontWeight: 700, color: "#F8FAFC" }}>
+              The 5-Stage Enterprise Learning Lifecycle
+            </span>
+            <span style={{ fontSize: 11, fontFamily: "ui-monospace, monospace", color: "#64748B" }}>
+              END-TO-END EXECUTION MODEL
+            </span>
+          </div>
+
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+            gap: 16
+          }}>
             {journey.map((j, i) => (
               <div
                 key={i}
                 style={{
-                  background: "#0D1117", border: "1px solid #30363D",
-                  borderRadius: 14, padding: "24px 20px"
+                  background: "#050B1A",
+                  border: "1px solid #1E293B",
+                  borderRadius: 8,
+                  padding: "20px 18px",
+                  position: "relative"
                 }}
               >
                 <div style={{
-                  fontSize: 12, fontWeight: 900, color: "#388BFD",
-                  background: "#161B22", border: "1px solid #30363D",
-                  width: 32, height: 32, borderRadius: "50%",
-                  display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 14,
-                  fontFamily: "ui-monospace, monospace"
+                  fontSize: 11,
+                  fontWeight: 700,
+                  color: "#2F81F7",
+                  fontFamily: "ui-monospace, monospace",
+                  marginBottom: 8
                 }}>
-                  {j.num}
+                  PHASE {j.num}
                 </div>
-                <h4 style={{ fontSize: 17, fontWeight: 800, color: "#F0F6FC", marginBottom: 8 }}>
+                <h4 style={{ fontSize: 16, fontWeight: 700, color: "#F8FAFC", marginBottom: 6 }}>
                   {j.stage}
                 </h4>
-                <p style={{ fontSize: 13, color: "#8B949E", lineHeight: 1.6, margin: 0 }}>
+                <p style={{ fontSize: 12.5, color: "#94A3B8", lineHeight: 1.5, margin: 0 }}>
                   {j.desc}
                 </p>
               </div>
@@ -74,24 +116,49 @@ export default function EnterpriseDelivery() {
           </div>
         </div>
 
-        {/* Flexible Formats Grid */}
-        <div style={{ marginBottom: 64 }}>
-          <h3 style={{ fontSize: 22, fontWeight: 800, color: "#F0F6FC", marginBottom: 24, letterSpacing: "-.01em" }}>
-            Flexible formats tailored to your organizational scale
-          </h3>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 20 }}>
+        {/* Flexible Formats Table / Grid */}
+        <div style={{ marginBottom: 48 }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 20, flexWrap: "wrap", gap: 12 }}>
+            <div>
+              <div style={{ fontSize: 11, fontWeight: 700, color: "#2F81F7", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 4, fontFamily: "ui-monospace, monospace" }}>
+                ENGAGEMENT STRUCTURES
+              </div>
+              <h3 style={{ fontSize: 22, fontWeight: 800, color: "#F8FAFC", margin: 0, letterSpacing: "-.01em" }}>
+                Flexible delivery formats tailored to organizational scale
+              </h3>
+            </div>
+            <span style={{ fontSize: 12, color: "#64748B" }}>
+              Virtual, hybrid, or on-site delivery globally
+            </span>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 16 }}>
             {formats.map((f, i) => (
               <div
                 key={i}
                 style={{
-                  background: "#0D1117", border: "1px solid #30363D",
-                  borderRadius: 14, padding: "26px 24px"
+                  background: "#0B1220",
+                  border: "1px solid #1E293B",
+                  borderRadius: 8,
+                  padding: "22px 24px"
                 }}
               >
-                <h4 style={{ fontSize: 17, fontWeight: 800, color: "#F0F6FC", marginBottom: 8 }}>
-                  {f.title}
-                </h4>
-                <p style={{ fontSize: 13.5, color: "#8B949E", lineHeight: 1.6, margin: 0 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
+                  <h4 style={{ fontSize: 16, fontWeight: 700, color: "#F8FAFC", margin: 0 }}>
+                    {f.title}
+                  </h4>
+                  <span style={{
+                    fontSize: 11,
+                    fontFamily: "ui-monospace, monospace",
+                    color: "#2F81F7",
+                    background: "rgba(47, 129, 247, 0.1)",
+                    padding: "2px 8px",
+                    borderRadius: 4
+                  }}>
+                    {f.duration}
+                  </span>
+                </div>
+                <p style={{ fontSize: 13.5, color: "#94A3B8", lineHeight: 1.55, margin: 0 }}>
                   {f.desc}
                 </p>
               </div>
@@ -99,22 +166,24 @@ export default function EnterpriseDelivery() {
           </div>
         </div>
 
-        {/* L&D & Business Leaders Checklist */}
+        {/* Manager Visibility Controls */}
         <div style={{
-          background: "#0D1117", border: "1px solid #30363D",
-          borderRadius: 18, padding: "40px 36px"
+          background: "#0B1220",
+          border: "1px solid #1E293B",
+          borderRadius: 10,
+          padding: "32px 32px"
         }}>
-          <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 8, fontFamily: "ui-monospace, monospace" }}>
+          <div style={{ fontSize: 11, fontWeight: 700, color: "#2F81F7", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 8, fontFamily: "ui-monospace, monospace" }}>
             FOR L&D & BUSINESS LEADERS
           </div>
-          <h3 style={{ fontSize: 22, fontWeight: 800, marginBottom: 24, color: "#F0F6FC", letterSpacing: "-.01em" }}>
-            Complete manager visibility & administrative controls
+          <h3 style={{ fontSize: 19, fontWeight: 800, color: "#F8FAFC", marginBottom: 20, letterSpacing: "-.01em" }}>
+            Comprehensive administrative oversight & adoption analytics
           </h3>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 16 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 14 }}>
             {ldChecklist.map((item, i) => (
-              <div key={i} style={{ display: "flex", gap: 12, alignItems: "center", fontSize: 14, color: "#8B949E" }}>
-                <span style={{ color: "#2EA043", fontWeight: 800, fontSize: 16 }}>✓</span>
-                <span>{item}</span>
+              <div key={i} style={{ display: "flex", gap: 10, alignItems: "center" }}>
+                <span style={{ color: "#238636", fontWeight: 800, fontSize: 13 }}>✓</span>
+                <span style={{ fontSize: 13.5, color: "#CBD5E1" }}>{item}</span>
               </div>
             ))}
           </div>

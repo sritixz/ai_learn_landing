@@ -5,148 +5,348 @@ export default function RoleAcademies({ onOpenDemo }) {
 
   const roles = [
     {
+      name: "Engineering & IT",
+      focus: "Coding Copilots & Dev Architecture",
+      badge: "DEV / IT",
+      duration: "16 Hours Hands-On Labs",
+      tools: ["GitHub Copilot", "Claude Sonnet", "Cursor", "LangChain", "vLLM"],
+      useCases: "AI-assisted coding, automated test generation, PR review automation, legacy refactoring, RAG architectures, and local model orchestration.",
+      deliverables: ["Production PR copilot workflow", "Automated regression test suite", "Internal RAG retrieval pipeline"]
+    },
+    {
       name: "Leadership & Managers",
-      focus: "Strategy & Governance",
-      useCases: "AI strategy, opportunity mapping, governance, evaluation, adoption leadership, ROI and operating-model redesign."
+      focus: "AI Strategy & Enterprise Governance",
+      badge: "EXECUTIVE",
+      duration: "8 Hours Executive Briefing",
+      tools: ["Enterprise Claude", "Microsoft Copilot Studio", "Custom GPTs"],
+      useCases: "AI opportunity mapping, organizational risk governance, adoption metrics, ROI calculation, and operating-model transformation.",
+      deliverables: ["Departmental AI adoption scorecard", "Vendor risk assessment matrix", "Quarterly ROI evaluation model"]
     },
     {
       name: "Marketing & Growth",
-      focus: "Campaigns & Content Scaling",
-      useCases: "Campaign research, positioning, copy, SEO, social content, creatives, video, personalization, reporting and growth automation."
+      focus: "Campaign Scaling & Content Pipelines",
+      badge: "MARKETING",
+      duration: "12 Hours Live Workshops",
+      tools: ["Claude", "ChatGPT Team", "Midjourney v6", "Perplexity Pro"],
+      useCases: "Audience segmentation, multi-channel copy production, SEO cluster generation, creative assets, and campaign performance analytics.",
+      deliverables: ["Standardized brand-safe prompt library", "Automated campaign reporting pipeline", "Multi-platform content engine"]
     },
     {
       name: "Sales & Customer Success",
-      focus: "Outreach & Account Intelligence",
-      useCases: "Account research, outreach, call preparation, proposal creation, CRM workflows, meeting intelligence, follow-ups and support copilots."
-    },
-    {
-      name: "HR & L&D",
-      focus: "Talent & Policy Knowledge",
-      useCases: "JD creation, interview support, learning content, policy Q&A, employee communications, survey synthesis and knowledge assistants."
-    },
-    {
-      name: "Finance & Business Teams",
-      focus: "Financial Modeling & Reporting",
-      useCases: "Spreadsheet analysis, variance narratives, management reporting, document extraction, scenario analysis and recurring-report automation."
+      focus: "Account Intelligence & Proposal Velocity",
+      badge: "SALES",
+      duration: "10 Hours Interactive Labs",
+      tools: ["Gong AI", "Perplexity Enterprise", "Clay", "Copilot"],
+      useCases: "Account research automation, personalized outbound generation, RFP response synthesis, meeting recap extraction, and objection handling.",
+      deliverables: ["Automated RFP response workflow", "Account intelligence research dossier", "CRM follow-up copilot pipeline"]
     },
     {
       name: "Operations & PMO",
-      focus: "SOPs & Process Automation",
-      useCases: "SOP generation, process mapping, project updates, knowledge capture, workflow automation, vendor analysis and executive summaries."
+      focus: "SOPs & Workflow Automation",
+      badge: "OPERATIONS",
+      duration: "14 Hours Studio Labs",
+      tools: ["Make.com", "Zapier Central", "n8n", "OpenAI Assistant API"],
+      useCases: "Standard operating procedure generation, cross-tool workflow automation, meeting synthesis, project status reports, and vendor analysis.",
+      deliverables: ["Automated multi-step operations agent", "Standardized team SOP generator", "Live project status synthesizer"]
+    },
+    {
+      name: "Finance & Accounting",
+      focus: "Financial Modeling & Extraction",
+      badge: "FINANCE",
+      duration: "10 Hours Guided Labs",
+      tools: ["Claude Artifacts", "Code Interpreter", "Excel Copilot"],
+      useCases: "Natural language financial dataset querying, variance commentary generation, invoice document extraction, and scenario stress testing.",
+      deliverables: ["Automated variance narrative generator", "Invoice document parsing script", "Scenario sensitivity analyzer"]
     },
     {
       name: "Product & Design",
-      focus: "PRDs & Rapid Prototyping",
-      useCases: "Research synthesis, PRDs, user stories, prototypes, UX copy, concept exploration, rapid testing and AI-enabled product workflows."
-    },
-    {
-      name: "Engineering & IT",
-      focus: "Coding Copilots & Dev Architecture",
-      useCases: "AI-assisted coding, debugging, test generation, code review, documentation, RAG, tool calling, agents, evaluation and secure deployment."
+      focus: "PRDs & Rapid Interactive Prototyping",
+      badge: "PRODUCT",
+      duration: "12 Hours Design Sprints",
+      tools: ["v0.dev", "Claude Artifacts", "Figma AI", "Whimsical AI"],
+      useCases: "User research clustering, rapid PRD drafting, interactive prototype generation, UX copy variant testing, and user feedback synthesis.",
+      deliverables: ["Clickable interactive UI prototype", "AI-assisted PRD & acceptance criteria", "User interview insight matrix"]
     },
     {
       name: "Data & Analytics",
-      focus: "SQL & Data Extraction",
-      useCases: "Natural-language analysis, SQL generation, Python assistance, dashboard narratives, data-cleaning workflows and analytical agents."
+      focus: "SQL Generation & Diagnostic Narratives",
+      badge: "ANALYTICS",
+      duration: "14 Hours Deep Dive",
+      tools: ["DataCamp AI", "Claude Code", "Jupyter AI", "Hex AI"],
+      useCases: "Complex SQL query generation, Python data cleaning scripts, automated executive dashboard commentary, and predictive trend modeling.",
+      deliverables: ["Natural language to SQL pipeline", "Automated KPI narrative report", "Data quality auditing script"]
     },
     {
-      name: "Creative & Content Teams",
-      focus: "Generative Media & Systems",
-      useCases: "Image generation, storyboarding, video, voice, presentation design, brand systems, content repurposing and creative automation."
+      name: "HR & People Operations",
+      focus: "Talent Acquisition & Policy Intelligence",
+      badge: "HR & L&D",
+      duration: "8 Hours Practical Labs",
+      tools: ["NotebookLM Enterprise", "Custom GPTs", "Claude"],
+      useCases: "Job description benchmarking, competency interview rubrics, internal policy search assistants, and employee survey sentiment analysis.",
+      deliverables: ["Internal HR policy search agent", "Standardized interview guide generator", "Pulse survey thematic cluster analysis"]
+    },
+    {
+      name: "Creative & Media Teams",
+      focus: "Generative Media & Design Systems",
+      badge: "CREATIVE",
+      duration: "12 Hours Creative Studio",
+      tools: ["Midjourney", "Magnific", "Runway Gen-3", "ElevenLabs"],
+      useCases: "Brand-aligned visual asset generation, storyboard production, voiceover synthesis, presentation styling, and video asset localization.",
+      deliverables: ["Enterprise brand image generation system", "Multi-language voiceover asset library", "Concept moodboard generator"]
     }
   ];
 
+  const current = roles[selectedRole];
+
   return (
-    <section id="role-tracks" style={{ padding: "110px 0", background: "#040D21", borderBottom: "1px solid #30363D" }}>
+    <section id="role-tracks" style={{ padding: "110px 0", background: "#050B1A", borderBottom: "1px solid #1E293B" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
-        <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 14, fontFamily: "ui-monospace, monospace" }}>
-          10 ROLE ACADEMIES
-        </div>
-        <h2 style={{ fontSize: "clamp(32px, 4vw, 44px)", fontWeight: 900, color: "#F0F6FC", letterSpacing: "-.02em", marginBottom: 18 }}>
-          One GenAI Academy. Tailored pathways for every department.
-        </h2>
-        <p style={{ fontSize: 17, color: "#8B949E", maxWidth: 840, lineHeight: 1.65, marginBottom: 64, fontWeight: 400 }}>
-          Start with a unified enterprise foundation, then transition each team into specialized tool tracks and use cases aligned directly with their KPIs.
-        </p>
-
-        {/* Role Academy Explorer Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 24, marginBottom: 56 }}>
-          {roles.map((r, i) => {
-            const isSelected = selectedRole === i;
-            return (
-              <div
-                key={i}
-                onClick={() => setSelectedRole(i)}
-                style={{
-                  background: isSelected ? "rgba(56, 139, 253, 0.08)" : "#0D1117",
-                  border: "1px solid",
-                  borderColor: isSelected ? "#388BFD" : "#30363D",
-                  borderRadius: 14, padding: "32px 26px", cursor: "pointer",
-                  boxShadow: isSelected ? "0 0 16px rgba(56, 139, 253, 0.15)" : "none",
-                  transition: "all 0.15s ease"
-                }}
-              >
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
-                  <span style={{
-                    fontSize: 11.5, fontWeight: 700,
-                    background: isSelected ? "#388BFD" : "#161B22",
-                    color: isSelected ? "#FFFFFF" : "#388BFD",
-                    border: "1px solid", borderColor: isSelected ? "#388BFD" : "#30363D",
-                    padding: "4px 11px", borderRadius: 6,
-                    fontFamily: "ui-monospace, monospace"
-                  }}>
-                    {r.focus}
-                  </span>
-                  <span style={{ fontSize: 11.5, fontWeight: 700, color: "#6E7681", fontFamily: "ui-monospace, monospace" }}>
-                    Track 0{i + 1}
-                  </span>
-                </div>
-
-                <h3 style={{ fontSize: 18.5, fontWeight: 800, color: "#F0F6FC", marginBottom: 10 }}>
-                  {r.name}
-                </h3>
-                <p style={{ fontSize: 14, color: "#8B949E", lineHeight: 1.6, margin: 0 }}>
-                  {r.useCases}
-                </p>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Selected Pathway Callout Banner */}
-        <div style={{
-          background: "#0D1117", border: "1px solid #30363D",
-          borderRadius: 16, padding: "38px 40px",
-          display: "flex", alignItems: "center", justifyContent: "space-between", gap: 28, flexWrap: "wrap"
-        }}>
-          <div>
-            <div style={{ fontSize: 11, fontWeight: 700, color: "#388BFD", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 8, fontFamily: "ui-monospace, monospace" }}>
-              CUSTOM CURRICULUM SYLLABUS
-            </div>
-            <h4 style={{ fontSize: 21, fontWeight: 800, margin: 0, color: "#F0F6FC", lineHeight: 1.35 }}>
-              Request customized enterprise syllabus for {roles[selectedRole].name}
-            </h4>
+        <div style={{ marginBottom: 56 }}>
+          <div style={{
+            fontSize: 12,
+            fontWeight: 700,
+            color: "#2F81F7",
+            textTransform: "uppercase",
+            letterSpacing: ".08em",
+            marginBottom: 12,
+            fontFamily: "ui-monospace, SFMono-Regular, monospace"
+          }}>
+            DEPARTMENTAL UPGRADE PATHWAYS
           </div>
-          <button
-            onClick={() => onOpenDemo(`${roles[selectedRole].name} Pathway`)}
-            style={{
-              background: "#238636", color: "#FFFFFF", border: "1px solid rgba(240, 246, 252, 0.1)",
-              padding: "13px 26px", borderRadius: 8, fontWeight: 700,
-              fontSize: 14.5, cursor: "pointer", transition: "all 0.15s ease",
-              boxShadow: "0 2px 8px rgba(35, 134, 54, 0.3)",
-              whiteSpace: "nowrap"
-            }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = "#2EA043"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = "#238636"; }}
-          >
-            Get {roles[selectedRole].name} Syllabus →
-          </button>
+          <h2 style={{
+            fontSize: "clamp(30px, 3.8vw, 42px)",
+            fontWeight: 800,
+            color: "#F8FAFC",
+            letterSpacing: "-.025em",
+            lineHeight: 1.18,
+            marginBottom: 16
+          }}>
+            10 Role Academies. Tailored for daily organizational output.
+          </h2>
+          <p style={{
+            fontSize: 16,
+            color: "#94A3B8",
+            maxWidth: 800,
+            lineHeight: 1.65,
+            margin: 0
+          }}>
+            Every department starts with shared enterprise governance fundamentals, then splits into specialized tool tracks, sandbox labs, and deliverable-focused capstones.
+          </p>
+        </div>
+
+        {/* Interactive Master Workstation (Split View) */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(360px, 1fr))",
+          gap: 24,
+          alignItems: "stretch",
+          marginBottom: 48
+        }}>
+          
+          {/* Left Column: Role Selector List */}
+          <div style={{
+            background: "#0B1220",
+            border: "1px solid #1E293B",
+            borderRadius: 10,
+            overflow: "hidden",
+            display: "flex",
+            flexDirection: "column"
+          }}>
+            <div style={{
+              padding: "16px 20px",
+              background: "rgba(15, 23, 42, 0.7)",
+              borderBottom: "1px solid #1E293B",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center"
+            }}>
+              <span style={{ fontSize: 12, fontWeight: 700, color: "#F8FAFC", textTransform: "uppercase", letterSpacing: ".04em" }}>
+                Select Department Track
+              </span>
+              <span style={{ fontSize: 11, fontFamily: "ui-monospace, monospace", color: "#64748B" }}>
+                10 TRACKS AVAILABLE
+              </span>
+            </div>
+
+            <div style={{ maxHeight: 520, overflowY: "auto" }}>
+              {roles.map((r, i) => {
+                const isSelected = selectedRole === i;
+                return (
+                  <div
+                    key={i}
+                    onClick={() => setSelectedRole(i)}
+                    style={{
+                      padding: "16px 20px",
+                      borderBottom: i < roles.length - 1 ? "1px solid #1E293B" : "none",
+                      background: isSelected ? "rgba(47, 129, 247, 0.08)" : "transparent",
+                      borderLeft: isSelected ? "3px solid #2F81F7" : "3px solid transparent",
+                      cursor: "pointer",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      transition: "all 0.12s ease"
+                    }}
+                    onMouseEnter={(e) => {
+                      if (!isSelected) e.currentTarget.style.background = "rgba(47, 129, 247, 0.03)";
+                    }}
+                    onMouseLeave={(e) => {
+                      if (!isSelected) e.currentTarget.style.background = "transparent";
+                    }}
+                  >
+                    <div>
+                      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 3 }}>
+                        <span style={{
+                          fontSize: 14.5,
+                          fontWeight: isSelected ? 700 : 600,
+                          color: isSelected ? "#F8FAFC" : "#CBD5E1"
+                        }}>
+                          {r.name}
+                        </span>
+                      </div>
+                      <div style={{ fontSize: 12.5, color: "#64748B" }}>
+                        {r.focus}
+                      </div>
+                    </div>
+
+                    <span style={{
+                      fontSize: 10,
+                      fontWeight: 700,
+                      fontFamily: "ui-monospace, monospace",
+                      color: isSelected ? "#2F81F7" : "#475569",
+                      background: isSelected ? "rgba(47, 129, 247, 0.12)" : "rgba(30, 41, 59, 0.5)",
+                      padding: "3px 7px",
+                      borderRadius: 4
+                    }}>
+                      {r.badge}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Right Column: Selected Track Deep Dive Inspector */}
+          <div style={{
+            background: "#0B1220",
+            border: "1px solid #1E293B",
+            borderRadius: 10,
+            padding: "32px 32px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between"
+          }}>
+            <div>
+              {/* Header of Inspector */}
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 16 }}>
+                <div>
+                  <div style={{ fontSize: 11, fontFamily: "ui-monospace, monospace", color: "#2F81F7", fontWeight: 700, marginBottom: 4 }}>
+                    PATHWAY SPECIFICATION
+                  </div>
+                  <h3 style={{ fontSize: 24, fontWeight: 800, color: "#F8FAFC", margin: 0, letterSpacing: "-.015em" }}>
+                    {current.name}
+                  </h3>
+                </div>
+                <span style={{
+                  fontSize: 11,
+                  fontFamily: "ui-monospace, monospace",
+                  color: "#94A3B8",
+                  background: "#050B1A",
+                  border: "1px solid #1E293B",
+                  padding: "5px 10px",
+                  borderRadius: 6
+                }}>
+                  {current.duration}
+                </span>
+              </div>
+
+              <div style={{ fontSize: 14.5, color: "#CBD5E1", lineHeight: 1.6, marginBottom: 24 }}>
+                {current.useCases}
+              </div>
+
+              {/* Tool Stack */}
+              <div style={{ marginBottom: 24 }}>
+                <div style={{ fontSize: 11, fontWeight: 700, color: "#64748B", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 10, fontFamily: "ui-monospace, monospace" }}>
+                  CORE TOOL STACK COVERED
+                </div>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                  {current.tools.map((t, idx) => (
+                    <span
+                      key={idx}
+                      style={{
+                        fontSize: 12,
+                        fontWeight: 600,
+                        color: "#F8FAFC",
+                        background: "#050B1A",
+                        border: "1px solid #1E293B",
+                        padding: "5px 12px",
+                        borderRadius: 6,
+                        fontFamily: "ui-monospace, monospace"
+                      }}
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Verified Capstone Deliverables */}
+              <div style={{ marginBottom: 28, borderTop: "1px solid #1E293B", paddingTop: 20 }}>
+                <div style={{ fontSize: 11, fontWeight: 700, color: "#64748B", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 12, fontFamily: "ui-monospace, monospace" }}>
+                  VERIFIED CAPSTONE DELIVERABLES
+                </div>
+                <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                  {current.deliverables.map((d, idx) => (
+                    <div key={idx} style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                      <span style={{ color: "#238636", fontWeight: 800, fontSize: 13 }}>✓</span>
+                      <span style={{ fontSize: 13.5, color: "#94A3B8" }}>{d}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* CTA action */}
+            <div style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              borderTop: "1px solid #1E293B",
+              paddingTop: 20,
+              flexWrap: "wrap",
+              gap: 16
+            }}>
+              <span style={{ fontSize: 12, color: "#64748B" }}>
+                Includes enterprise lab sandboxes & custom prompt repository
+              </span>
+              <button
+                onClick={() => onOpenDemo(`${current.name} Pathway`)}
+                style={{
+                  background: "#2F81F7",
+                  color: "#FFFFFF",
+                  border: "1px solid rgba(255, 255, 255, 0.15)",
+                  padding: "10px 20px",
+                  borderRadius: 7,
+                  fontWeight: 600,
+                  fontSize: 13.5,
+                  cursor: "pointer",
+                  transition: "background 0.15s ease",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 8
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.background = "#388BFD"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.background = "#2F81F7"; }}
+              >
+                Request {current.name} Syllabus →
+              </button>
+            </div>
+          </div>
+
         </div>
 
       </div>
     </section>
   );
 }
-

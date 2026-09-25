@@ -38,8 +38,8 @@ export default function App() {
   return (
     <div style={{
       fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-      color: "#F0F6FC",
-      background: "#040D21",
+      color: "#F8FAFC",
+      background: "#050B1A",
       minHeight: "100vh",
       WebkitFontSmoothing: "antialiased"
     }}>
