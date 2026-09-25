@@ -54,9 +54,48 @@ const HeroSectionExtended = () => {
   ];
 
   return (
-    <section style={{ padding: "80px 0 96px", background: "#040D21", borderBottom: "1px solid #30363D" }}>
+    <section style={{ padding: "64px 0 96px", background: "#040D21", borderBottom: "1px solid #30363D" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
+        {/* 50+ Tools, 10 Academies & Executive ROI Badges (Revealed on Scroll) */}
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: 16,
+          flexWrap: "wrap",
+          marginBottom: 48
+        }}>
+          <div style={{
+            background: "rgba(22, 27, 34, 0.8)", border: "1px solid #30363D",
+            borderRadius: 10, padding: "10px 18px", display: "flex", alignItems: "center", gap: 10,
+            fontSize: 13, color: "#8B949E", boxShadow: "0 4px 16px rgba(0,0,0,0.3)"
+          }}>
+            <span style={{ color: "#388BFD", fontWeight: 700, fontFamily: "ui-monospace, monospace" }}>50+ Approved Tools</span>
+            <span style={{ color: "#30363D" }}>|</span>
+            <span>Copilot • Cursor • Claude • n8n</span>
+          </div>
+
+          <div style={{
+            background: "rgba(22, 27, 34, 0.8)", border: "1px solid #30363D",
+            borderRadius: 10, padding: "10px 18px", display: "flex", alignItems: "center", gap: 10,
+            fontSize: 13, color: "#8B949E", boxShadow: "0 4px 16px rgba(0,0,0,0.3)"
+          }}>
+            <span style={{ color: "#39C5CF", fontWeight: 700, fontFamily: "ui-monospace, monospace" }}>10 Role Academies</span>
+            <span style={{ color: "#30363D" }}>|</span>
+            <span>Engineering • Sales • Marketing • Finance</span>
+          </div>
+
+          <div style={{
+            background: "rgba(22, 27, 34, 0.8)", border: "1px solid #30363D",
+            borderRadius: 10, padding: "10px 18px", display: "flex", alignItems: "center", gap: 10,
+            fontSize: 13, color: "#8B949E", boxShadow: "0 4px 16px rgba(0,0,0,0.3)"
+          }}>
+            <span style={{ color: "#2EA043", fontWeight: 700, fontFamily: "ui-monospace, monospace" }}>Executive ROI</span>
+            <span style={{ color: "#30363D" }}>|</span>
+            <span>Manager-verified adoption metrics</span>
+          </div>
+        </div>
+
         {/* Interactive Capability Map Widget */}
         <div style={{
           background: "#0D1117", border: "1px solid #30363D",

@@ -14,12 +14,12 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      justifyContent: "center",
-      background: "radial-gradient(ellipse at 50% 30%, #0A1936 0%, #040D21 70%)",
+      justifyContent: "space-between",
+      background: "radial-gradient(ellipse at 50% 25%, #0B1D40 0%, #040D21 65%)",
       borderBottom: "1px solid #30363D",
       position: "relative",
-      paddingTop: 88,
-      paddingBottom: 48,
+      paddingTop: 110,
+      paddingBottom: 0,
       boxSizing: "border-box",
       overflow: "hidden"
     }} className="dev-grid-bg">
@@ -27,35 +27,22 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
       {/* Upward Ambient Glow */}
       <div className="ambient-glow-up" />
 
-      <div style={{ maxWidth: 1040, margin: "0 auto", padding: "0 24px", width: "100%", position: "relative", zIndex: 1, textAlign: "center" }}>
-
-        {/* Subtle Eyebrow Badge */}
-        <div style={{ marginBottom: 24, display: "flex", justifyContent: "center" }}>
-          <div style={{
-            background: "rgba(22, 27, 34, 0.8)", border: "1px solid #30363D",
-            color: "#F0F6FC", fontSize: 13, fontWeight: 600,
-            padding: "6px 16px", borderRadius: 999,
-            display: "inline-flex", alignItems: "center", gap: 10,
-            boxShadow: "0 4px 12px rgba(0,0,0,0.3)"
-          }}>
-            <span className="pulse-dot" />
-            <span>Enterprise Generative AI Upskilling</span>
-          </div>
-        </div>
+      {/* Main Hero Content (Vertically Centered) */}
+      <div style={{ maxWidth: 1040, margin: "0 auto", padding: "0 24px", width: "100%", position: "relative", zIndex: 2, textAlign: "center" }}>
 
         {/* Hero Title */}
         <h1 style={{
-          fontSize: "clamp(42px, 5.8vw, 68px)", fontWeight: 900,
-          color: "#F0F6FC", lineHeight: 1.08,
-          letterSpacing: "-.03em", maxWidth: 900, margin: "0 auto 20px"
+          fontSize: "clamp(44px, 6vw, 72px)", fontWeight: 900,
+          color: "#F0F6FC", lineHeight: 1.06,
+          letterSpacing: "-.035em", maxWidth: 940, margin: "0 auto 22px"
         }}>
           Build an AI-Ready Workforce.
         </h1>
 
         {/* Subhead Line */}
         <p style={{
-          fontSize: "clamp(20px, 2.2vw, 24px)", fontWeight: 700,
-          textAlign: "center", maxWidth: 760, margin: "0 auto 18px",
+          fontSize: "clamp(20px, 2.3vw, 25px)", fontWeight: 700,
+          textAlign: "center", maxWidth: 780, margin: "0 auto 18px",
           color: "#388BFD", lineHeight: 1.35
         }}>
           Turn Generative AI into measurable productivity across all teams.
@@ -71,118 +58,207 @@ export default function HeroSection({ onOpenDemo, scrollToSection }) {
           Empower your workforce by building real use cases with 50+ leading AI tools.
         </p>
 
-        {/* Integrated GitHub-Style CTA Bar */}
-        <form onSubmit={handleSubmit} style={{
-          display: "inline-flex",
+        {/* Integrated GitHub-Style CTA Bar in One Clean Row */}
+        <div style={{
+          display: "flex",
           alignItems: "center",
-          background: "rgba(22, 27, 34, 0.9)",
-          border: "1px solid #30363D",
-          borderRadius: 14,
-          padding: "6px 8px 6px 18px",
-          boxShadow: "0 12px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(56, 139, 253, 0.15)",
-          maxWidth: 640,
-          width: "100%",
-          gap: 10,
-          flexWrap: "wrap",
-          marginBottom: 44
+          justifyContent: "center",
+          gap: 12,
+          marginBottom: 44,
+          flexWrap: "wrap"
         }}>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your work email"
-            style={{
-              flex: "1 1 200px",
-              background: "transparent",
-              border: "none",
-              outline: "none",
-              color: "#F0F6FC",
-              fontSize: 15,
-              fontWeight: 500
-            }}
-          />
-          <button
-            type="submit"
-            style={{
-              background: "#238636",
-              color: "#FFFFFF",
-              border: "1px solid rgba(240, 246, 252, 0.1)",
-              padding: "12px 24px",
-              borderRadius: 10,
-              fontWeight: 700,
-              fontSize: 14,
-              cursor: "pointer",
-              transition: "all 0.15s ease",
-              boxShadow: "0 2px 8px rgba(35, 134, 54, 0.3)",
-              whiteSpace: "nowrap"
-            }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = "#2EA043"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = "#238636"; }}
-          >
-            Request Enterprise Demo
-          </button>
+          <form onSubmit={handleSubmit} style={{
+            display: "inline-flex",
+            alignItems: "center",
+            background: "rgba(22, 27, 34, 0.95)",
+            border: "1px solid #30363D",
+            borderRadius: 12,
+            padding: "5px 6px 5px 16px",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(56, 139, 253, 0.15)",
+            gap: 10,
+            maxWidth: "100%"
+          }}>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your work email"
+              style={{
+                width: 230,
+                background: "transparent",
+                border: "none",
+                outline: "none",
+                color: "#F0F6FC",
+                fontSize: 14.5,
+                fontWeight: 500
+              }}
+            />
+            <button
+              type="submit"
+              style={{
+                background: "#238636",
+                color: "#FFFFFF",
+                border: "1px solid rgba(240, 246, 252, 0.1)",
+                padding: "11px 22px",
+                borderRadius: 8,
+                fontWeight: 700,
+                fontSize: 14,
+                cursor: "pointer",
+                transition: "all 0.15s ease",
+                boxShadow: "0 2px 8px rgba(35, 134, 54, 0.3)",
+                whiteSpace: "nowrap"
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "#2EA043"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = "#238636"; }}
+            >
+              Request Enterprise Demo
+            </button>
+          </form>
+
           <button
             type="button"
             onClick={() => scrollToSection("curriculum")}
             style={{
-              background: "rgba(33, 38, 45, 0.8)",
+              background: "rgba(22, 27, 34, 0.85)",
               color: "#F0F6FC",
               border: "1px solid #30363D",
-              padding: "12px 20px",
-              borderRadius: 10,
+              padding: "13px 22px",
+              borderRadius: 12,
               fontWeight: 600,
               fontSize: 14,
               cursor: "pointer",
               transition: "all 0.15s ease",
-              whiteSpace: "nowrap"
+              whiteSpace: "nowrap",
+              boxShadow: "0 4px 16px rgba(0,0,0,0.3)"
             }}
             onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#8B949E"; e.currentTarget.style.background = "#30363D"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#30363D"; e.currentTarget.style.background = "rgba(33, 38, 45, 0.8)"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#30363D"; e.currentTarget.style.background = "rgba(22, 27, 34, 0.85)"; }}
           >
             Explore Curriculum ↓
           </button>
-        </form>
-
-        {/* Real Technical Indicator Badges (Replacing abstract space debris) */}
-        <div style={{
-          display: "flex",
-          justifyContent: "center",
-          gap: 16,
-          flexWrap: "wrap",
-          opacity: 0.9
-        }}>
-          <div style={{
-            background: "rgba(22, 27, 34, 0.7)", border: "1px solid #21262D",
-            borderRadius: 8, padding: "8px 16px", display: "flex", alignItems: "center", gap: 8,
-            fontSize: 12, color: "#8B949E"
-          }}>
-            <span style={{ color: "#388BFD", fontWeight: 700 }}>50+ Approved Tools</span>
-            <span style={{ color: "#30363D" }}>|</span>
-            <span>Copilot • Cursor • Claude • n8n</span>
-          </div>
-
-          <div style={{
-            background: "rgba(22, 27, 34, 0.7)", border: "1px solid #21262D",
-            borderRadius: 8, padding: "8px 16px", display: "flex", alignItems: "center", gap: 8,
-            fontSize: 12, color: "#8B949E"
-          }}>
-            <span style={{ color: "#39C5CF", fontWeight: 700 }}>10 Role Academies</span>
-            <span style={{ color: "#30363D" }}>|</span>
-            <span>Engineering • Sales • Marketing • Finance</span>
-          </div>
-
-          <div style={{
-            background: "rgba(22, 27, 34, 0.7)", border: "1px solid #21262D",
-            borderRadius: 8, padding: "8px 16px", display: "flex", alignItems: "center", gap: 8,
-            fontSize: 12, color: "#8B949E"
-          }}>
-            <span style={{ color: "#2EA043", fontWeight: 700 }}>Executive ROI</span>
-            <span style={{ color: "#30363D" }}>|</span>
-            <span>Manager-verified adoption metrics</span>
-          </div>
         </div>
 
       </div>
+
+      {/* Floating AI Neural Horizon (Partially visible in main viewport, leads into scroll) */}
+      <div style={{
+        width: "100%",
+        position: "relative",
+        zIndex: 2,
+        paddingBottom: 24,
+        marginTop: "auto"
+      }}>
+        {/* Luminous Core Light Bar */}
+        <div style={{
+          width: "80%",
+          maxWidth: 900,
+          height: 1,
+          margin: "0 auto 20px auto",
+          background: "linear-gradient(90deg, transparent 0%, rgba(56, 139, 253, 0.8) 50%, transparent 100%)",
+          boxShadow: "0 0 20px rgba(56, 139, 253, 0.6)"
+        }} />
+
+        {/* Floating AI Nodes Container */}
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: 16,
+          maxWidth: 1140,
+          margin: "0 auto",
+          padding: "0 20px",
+          flexWrap: "wrap"
+        }}>
+          
+          {/* Floating Node 1: Neural Processor */}
+          <div className="float-slow" style={{
+            background: "rgba(13, 17, 23, 0.85)",
+            border: "1px solid rgba(56, 189, 248, 0.4)",
+            borderRadius: 12,
+            padding: "12px 18px",
+            boxShadow: "0 8px 24px rgba(0,0,0,0.5), 0 0 16px rgba(56, 189, 248, 0.15)",
+            backdropFilter: "blur(12px)",
+            display: "flex",
+            alignItems: "center",
+            gap: 10
+          }}>
+            <div style={{
+              width: 28, height: 28, borderRadius: 6,
+              background: "rgba(56, 189, 248, 0.15)", border: "1px solid #38BDF8",
+              display: "flex", alignItems: "center", justifyContent: "center",
+              color: "#38BDF8", fontSize: 13, fontWeight: 900
+            }}>
+              🧠
+            </div>
+            <div style={{ textAlign: "left" }}>
+              <div style={{ fontSize: 12, fontWeight: 800, color: "#F0F6FC", fontFamily: "ui-monospace, monospace" }}>
+                Neural Engine v4.2
+              </div>
+              <div style={{ fontSize: 11, color: "#38BDF8" }}>
+                Multi-Model LLM Orchestration
+              </div>
+            </div>
+          </div>
+
+          {/* Floating Node 2: Live AI Code/Prompt Capsule */}
+          <div className="float-medium" style={{
+            background: "rgba(13, 17, 23, 0.95)",
+            border: "1px solid rgba(46, 160, 67, 0.5)",
+            borderRadius: 12,
+            padding: "12px 20px",
+            boxShadow: "0 10px 28px rgba(0,0,0,0.6), 0 0 20px rgba(46, 160, 67, 0.15)",
+            backdropFilter: "blur(12px)",
+            display: "flex",
+            alignItems: "center",
+            gap: 12
+          }}>
+            <div style={{
+              width: 8, height: 8, borderRadius: "50%",
+              background: "#2EA043", boxShadow: "0 0 8px #2EA043"
+            }} />
+            <div style={{ textAlign: "left", fontFamily: "ui-monospace, monospace" }}>
+              <div style={{ fontSize: 12, fontWeight: 700, color: "#F0F6FC" }}>
+                <span style={{ color: "#388BFD" }}>agent</span>.<span style={{ color: "#39C5CF" }}>run</span>({`{ stack: ['Cursor', 'Claude', 'n8n'] }`})
+              </div>
+              <div style={{ fontSize: 11, color: "#2EA043", marginTop: 2 }}>
+                ✓ 26% faster feature delivery & test suites
+              </div>
+            </div>
+          </div>
+
+          {/* Floating Node 3: Real-Time ROI Engine */}
+          <div className="float-fast" style={{
+            background: "rgba(13, 17, 23, 0.85)",
+            border: "1px solid rgba(137, 87, 229, 0.4)",
+            borderRadius: 12,
+            padding: "12px 18px",
+            boxShadow: "0 8px 24px rgba(0,0,0,0.5), 0 0 16px rgba(137, 87, 229, 0.15)",
+            backdropFilter: "blur(12px)",
+            display: "flex",
+            alignItems: "center",
+            gap: 10
+          }}>
+            <div style={{
+              width: 28, height: 28, borderRadius: 6,
+              background: "rgba(137, 87, 229, 0.15)", border: "1px solid #8957E5",
+              display: "flex", alignItems: "center", justifyContent: "center",
+              color: "#8957E5", fontSize: 13, fontWeight: 900
+            }}>
+              ⚡
+            </div>
+            <div style={{ textAlign: "left" }}>
+              <div style={{ fontSize: 12, fontWeight: 800, color: "#F0F6FC", fontFamily: "ui-monospace, monospace" }}>
+                Enterprise ROI Engine
+              </div>
+              <div style={{ fontSize: 11, color: "#8957E5" }}>
+                Manager-Verified Adoption
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </section>
   );
 }
