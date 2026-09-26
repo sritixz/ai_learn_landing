@@ -79,7 +79,7 @@ export default function ToolEcosystem() {
     : categories.filter(c => c.id === activeCategory);
 
   return (
-    <section id="ai-tools" style={{ padding: "110px 0", background: "#050B1A", borderBottom: "1px solid #1E293B" }}>
+    <section id="ai-tools" style={{ padding: "110px 0", background: "#FFFFFF", borderBottom: "1px solid #E2E8F0" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
@@ -87,7 +87,7 @@ export default function ToolEcosystem() {
           <div style={{
             fontSize: 12,
             fontWeight: 700,
-            color: "#2F81F7",
+            color: "#FF8A00",
             textTransform: "uppercase",
             letterSpacing: ".08em",
             marginBottom: 12,
@@ -97,8 +97,8 @@ export default function ToolEcosystem() {
           </div>
           <h2 style={{
             fontSize: "clamp(30px, 3.8vw, 42px)",
-            fontWeight: 800,
-            color: "#F8FAFC",
+            fontWeight: 850,
+            color: "#0F172A",
             letterSpacing: "-.025em",
             lineHeight: 1.18,
             marginBottom: 16
@@ -107,7 +107,7 @@ export default function ToolEcosystem() {
           </h2>
           <p style={{
             fontSize: 16,
-            color: "#94A3B8",
+            color: "#475569",
             maxWidth: 800,
             lineHeight: 1.65,
             margin: 0
@@ -116,26 +116,26 @@ export default function ToolEcosystem() {
           </p>
         </div>
 
-        {/* Filter Bar (GitHub / Linear Segmented Control) */}
+        {/* Filter Bar */}
         <div style={{
           display: "flex",
           gap: 8,
           overflowX: "auto",
           paddingBottom: 12,
           marginBottom: 36,
-          borderBottom: "1px solid #1E293B"
+          borderBottom: "1px solid #E2E8F0"
         }}>
           <button
             onClick={() => setActiveCategory("all")}
             style={{
-              padding: "7px 14px",
-              borderRadius: 6,
+              padding: "7px 16px",
+              borderRadius: 9999,
               border: "1px solid",
-              borderColor: activeCategory === "all" ? "#2F81F7" : "transparent",
-              background: activeCategory === "all" ? "rgba(47, 129, 247, 0.12)" : "transparent",
-              color: activeCategory === "all" ? "#F8FAFC" : "#64748B",
+              borderColor: activeCategory === "all" ? "#FF8A00" : "#CBD5E1",
+              background: activeCategory === "all" ? "rgba(255, 138, 0, 0.1)" : "#F8FAFC",
+              color: activeCategory === "all" ? "#FF8A00" : "#475569",
               fontSize: 13,
-              fontWeight: 600,
+              fontWeight: 700,
               cursor: "pointer",
               whiteSpace: "nowrap",
               transition: "all 0.12s ease"
@@ -148,12 +148,12 @@ export default function ToolEcosystem() {
               key={c.id}
               onClick={() => setActiveCategory(c.id)}
               style={{
-                padding: "7px 14px",
-                borderRadius: 6,
+                padding: "7px 16px",
+                borderRadius: 9999,
                 border: "1px solid",
-                borderColor: activeCategory === c.id ? "#2F81F7" : "transparent",
-                background: activeCategory === c.id ? "rgba(47, 129, 247, 0.12)" : "transparent",
-                color: activeCategory === c.id ? "#F8FAFC" : "#64748B",
+                borderColor: activeCategory === c.id ? "#FF8A00" : "#E2E8F0",
+                background: activeCategory === c.id ? "rgba(255, 138, 0, 0.1)" : "#FFFFFF",
+                color: activeCategory === c.id ? "#FF8A00" : "#64748B",
                 fontSize: 13,
                 fontWeight: 600,
                 cursor: "pointer",
@@ -177,17 +177,18 @@ export default function ToolEcosystem() {
             <div
               key={i}
               style={{
-                background: "#0B1220",
-                border: "1px solid #1E293B",
-                borderRadius: 8,
-                padding: "24px 26px"
+                background: "#FFFFFF",
+                border: "1px solid #E2E8F0",
+                borderRadius: 12,
+                padding: "24px 26px",
+                boxShadow: "0 4px 16px rgba(15, 23, 42, 0.05)"
               }}
             >
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
-                <h3 style={{ fontSize: 14.5, fontWeight: 700, color: "#F8FAFC", margin: 0 }}>
+                <h3 style={{ fontSize: 15, fontWeight: 750, color: "#0F172A", margin: 0 }}>
                   {cat.name}
                 </h3>
-                <span style={{ fontSize: 11, fontFamily: "ui-monospace, monospace", color: "#64748B" }}>
+                <span style={{ fontSize: 11, fontFamily: "ui-monospace, monospace", color: "#64748B", fontWeight: 600 }}>
                   {cat.tools.length} TOOLS
                 </span>
               </div>
@@ -196,13 +197,13 @@ export default function ToolEcosystem() {
                   <span
                     key={ti}
                     style={{
-                      background: "#050B1A",
-                      border: "1px solid #1E293B",
+                      background: "#F8FAFC",
+                      border: "1px solid #E2E8F0",
                       padding: "5px 11px",
-                      borderRadius: 5,
+                      borderRadius: 6,
                       fontSize: 12.5,
-                      fontWeight: 500,
-                      color: "#CBD5E1",
+                      fontWeight: 600,
+                      color: "#334155",
                       fontFamily: "ui-monospace, monospace"
                     }}
                   >
@@ -214,19 +215,20 @@ export default function ToolEcosystem() {
           ))}
         </div>
 
-        {/* 4-Stage Pedagogical Framework - Horizontal Timeline Layout */}
+        {/* 4-Stage Pedagogical Framework */}
         <div style={{
-          background: "#0B1220",
-          border: "1px solid #1E293B",
-          borderRadius: 10,
-          padding: "36px 36px"
+          background: "#F8FAFC",
+          border: "1px solid #E2E8F0",
+          borderRadius: 12,
+          padding: "36px 36px",
+          boxShadow: "0 4px 20px rgba(15, 23, 42, 0.05)"
         }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28, flexWrap: "wrap", gap: 12 }}>
             <div>
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#2F81F7", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
+              <div style={{ fontSize: 11, fontWeight: 700, color: "#FF8A00", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
                 PEDAGOGICAL METHODOLOGY
               </div>
-              <h3 style={{ fontSize: 20, fontWeight: 800, color: "#F8FAFC", margin: 0, letterSpacing: "-.01em" }}>
+              <h3 style={{ fontSize: 20, fontWeight: 800, color: "#0F172A", margin: 0, letterSpacing: "-.01em" }}>
                 The 4-Stage Enterprise Tool Learning Lifecycle
               </h3>
             </div>
@@ -240,24 +242,25 @@ export default function ToolEcosystem() {
               <div
                 key={i}
                 style={{
-                  background: "#050B1A",
-                  border: "1px solid #1E293B",
-                  borderRadius: 8,
-                  padding: "22px 20px"
+                  background: "#FFFFFF",
+                  border: "1px solid #E2E8F0",
+                  borderRadius: 10,
+                  padding: "22px 20px",
+                  boxShadow: "0 2px 10px rgba(15, 23, 42, 0.04)"
                 }}
               >
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 10 }}>
-                  <span style={{ fontSize: 11, fontWeight: 700, color: "#2F81F7", fontFamily: "ui-monospace, monospace" }}>
+                  <span style={{ fontSize: 11, fontWeight: 800, color: "#FF8A00", fontFamily: "ui-monospace, monospace" }}>
                     STAGE 0{i + 1}
                   </span>
-                  <span style={{ fontSize: 10, color: "#64748B", fontFamily: "ui-monospace, monospace" }}>
+                  <span style={{ fontSize: 10.5, color: "#64748B", fontFamily: "ui-monospace, monospace", fontWeight: 600 }}>
                     {f.subtitle}
                   </span>
                 </div>
-                <h4 style={{ fontSize: 16, fontWeight: 700, color: "#F8FAFC", marginBottom: 8 }}>
+                <h4 style={{ fontSize: 16, fontWeight: 750, color: "#0F172A", marginBottom: 8 }}>
                   {f.step}
                 </h4>
-                <p style={{ fontSize: 13, color: "#94A3B8", lineHeight: 1.55, margin: 0 }}>
+                <p style={{ fontSize: 13, color: "#475569", lineHeight: 1.55, margin: 0 }}>
                   {f.desc}
                 </p>
               </div>

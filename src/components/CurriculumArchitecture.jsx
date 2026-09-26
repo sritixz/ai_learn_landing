@@ -83,7 +83,7 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
   ];
 
   return (
-    <section id="curriculum" style={{ padding: "110px 0", background: "#050B1A", borderBottom: "1px solid #1E293B" }}>
+    <section id="curriculum" style={{ padding: "110px 0", background: "#FFFFFF", borderBottom: "1px solid #E2E8F0" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
@@ -91,7 +91,7 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
           <div style={{
             fontSize: 12,
             fontWeight: 700,
-            color: "#2F81F7",
+            color: "#FF8A00",
             textTransform: "uppercase",
             letterSpacing: ".08em",
             marginBottom: 12,
@@ -101,8 +101,8 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
           </div>
           <h2 style={{
             fontSize: "clamp(30px, 3.8vw, 42px)",
-            fontWeight: 800,
-            color: "#F8FAFC",
+            fontWeight: 850,
+            color: "#0F172A",
             letterSpacing: "-.025em",
             lineHeight: 1.18,
             marginBottom: 16
@@ -111,7 +111,7 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
           </h2>
           <p style={{
             fontSize: 16,
-            color: "#94A3B8",
+            color: "#475569",
             maxWidth: 800,
             lineHeight: 1.65,
             margin: 0
@@ -131,20 +131,21 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
             <div
               key={i}
               style={{
-                background: "#0B1220",
-                border: "1px solid #1E293B",
-                borderRadius: 8,
-                padding: "12px 18px",
+                background: "#FFFFFF",
+                border: "1px solid #E2E8F0",
+                borderRadius: 10,
+                padding: "14px 18px",
                 display: "flex",
                 justifyContent: "space-between",
-                alignItems: "center"
+                alignItems: "center",
+                boxShadow: "0 2px 10px rgba(15, 23, 42, 0.04)"
               }}
             >
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                <span style={{ width: 8, height: 8, borderRadius: "50%", background: st.color }} />
-                <span style={{ fontSize: 13, fontWeight: 700, color: "#F8FAFC" }}>{st.name}</span>
+                <span style={{ width: 10, height: 10, borderRadius: "50%", background: st.color }} />
+                <span style={{ fontSize: 13.5, fontWeight: 750, color: "#0F172A" }}>{st.name}</span>
               </div>
-              <span style={{ fontSize: 11, fontFamily: "ui-monospace, monospace", color: "#64748B" }}>
+              <span style={{ fontSize: 11.5, fontFamily: "ui-monospace, monospace", color: "#64748B", fontWeight: 600 }}>
                 {st.range}
               </span>
             </div>
@@ -153,11 +154,12 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
 
         {/* Structured Syllabus Table / Accordion List */}
         <div style={{
-          border: "1px solid #1E293B",
-          borderRadius: 10,
-          background: "#0B1220",
+          border: "1px solid #E2E8F0",
+          borderRadius: 12,
+          background: "#FFFFFF",
           overflow: "hidden",
-          marginBottom: 48
+          marginBottom: 48,
+          boxShadow: "0 4px 20px rgba(15, 23, 42, 0.06)"
         }}>
           {modules.map((m, i) => {
             const isOpen = openModule === i;
@@ -165,7 +167,7 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
               <div
                 key={i}
                 style={{
-                  borderBottom: i < modules.length - 1 ? "1px solid #1E293B" : "none",
+                  borderBottom: i < modules.length - 1 ? "1px solid #E2E8F0" : "none",
                   transition: "background 0.15s ease"
                 }}
               >
@@ -177,10 +179,10 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "space-between",
-                    background: isOpen ? "rgba(47, 129, 247, 0.04)" : "transparent"
+                    background: isOpen ? "rgba(255, 138, 0, 0.06)" : "transparent"
                   }}
                   onMouseEnter={(e) => {
-                    if (!isOpen) e.currentTarget.style.background = "rgba(47, 129, 247, 0.02)";
+                    if (!isOpen) e.currentTarget.style.background = "#F8FAFC";
                   }}
                   onMouseLeave={(e) => {
                     if (!isOpen) e.currentTarget.style.background = "transparent";
@@ -188,9 +190,9 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
                 >
                   <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
                     <span style={{
-                      fontSize: 12,
-                      fontWeight: 700,
-                      color: isOpen ? "#2F81F7" : "#64748B",
+                      fontSize: 12.5,
+                      fontWeight: 750,
+                      color: isOpen ? "#FF8A00" : "#64748B",
                       fontFamily: "ui-monospace, monospace",
                       width: 28
                     }}>
@@ -199,8 +201,8 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
                     <div>
                       <h3 style={{
                         fontSize: 16,
-                        fontWeight: 700,
-                        color: isOpen ? "#F8FAFC" : "#CBD5E1",
+                        fontWeight: 750,
+                        color: isOpen ? "#0F172A" : "#334155",
                         margin: 0,
                         letterSpacing: "-.01em"
                       }}>
@@ -211,17 +213,17 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
 
                   <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
                     <span style={{
-                      fontSize: 10.5,
-                      fontWeight: 600,
+                      fontSize: 11,
+                      fontWeight: 650,
                       color: "#64748B",
                       fontFamily: "ui-monospace, monospace"
                     }}>
                       {m.phase}
                     </span>
                     <span style={{
-                      fontSize: 16,
-                      fontWeight: 500,
-                      color: isOpen ? "#2F81F7" : "#64748B",
+                      fontSize: 18,
+                      fontWeight: 700,
+                      color: isOpen ? "#FF8A00" : "#94A3B8",
                       fontFamily: "ui-monospace, monospace",
                       width: 16,
                       textAlign: "center"
@@ -234,14 +236,14 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
                 {isOpen && (
                   <div style={{
                     padding: "0 24px 24px 24px",
-                    background: "rgba(47, 129, 247, 0.02)",
-                    borderTop: "1px dashed #1E293B"
+                    background: "rgba(255, 138, 0, 0.03)",
+                    borderTop: "1px dashed #E2E8F0"
                   }}>
                     <div style={{ paddingTop: 18, marginBottom: 14 }}>
-                      <div style={{ fontSize: 11, fontWeight: 700, color: "#64748B", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
+                      <div style={{ fontSize: 11, fontWeight: 700, color: "#FF8A00", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
                         SYLLABUS FOCUS
                       </div>
-                      <p style={{ fontSize: 14, color: "#CBD5E1", lineHeight: 1.6, margin: 0 }}>
+                      <p style={{ fontSize: 14, color: "#334155", lineHeight: 1.6, margin: 0 }}>
                         {m.summary}
                       </p>
                     </div>
@@ -250,7 +252,7 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
                       <div style={{ fontSize: 11, fontWeight: 700, color: "#64748B", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
                         PRACTICAL LAB WORKSTATION
                       </div>
-                      <p style={{ fontSize: 13.5, color: "#94A3B8", lineHeight: 1.5, margin: 0, fontFamily: "ui-monospace, monospace" }}>
+                      <p style={{ fontSize: 13.5, color: "#475569", lineHeight: 1.5, margin: 0, fontFamily: "ui-monospace, monospace" }}>
                         › {m.labs}
                       </p>
                     </div>
@@ -268,13 +270,14 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
           alignItems: "center",
           flexWrap: "wrap",
           gap: 20,
-          background: "#0B1220",
-          border: "1px solid #1E293B",
-          borderRadius: 8,
-          padding: "24px 28px"
+          background: "#FFFFFF",
+          border: "1px solid #E2E8F0",
+          borderRadius: 12,
+          padding: "24px 28px",
+          boxShadow: "0 4px 20px rgba(15, 23, 42, 0.06)"
         }}>
           <div>
-            <div style={{ fontSize: 15, fontWeight: 700, color: "#F8FAFC", marginBottom: 4 }}>
+            <div style={{ fontSize: 15.5, fontWeight: 750, color: "#0F172A", marginBottom: 4 }}>
               Need a custom syllabus tailored to your team's internal tech stack?
             </div>
             <div style={{ fontSize: 13, color: "#64748B" }}>
@@ -283,20 +286,7 @@ export default function CurriculumArchitecture({ onOpenDemo }) {
           </div>
           <button
             onClick={() => onOpenDemo("Complete 10-Module Curriculum PDF")}
-            style={{
-              background: "#238636",
-              color: "#FFFFFF",
-              border: "1px solid rgba(255, 255, 255, 0.15)",
-              padding: "11px 22px",
-              borderRadius: 7,
-              fontWeight: 600,
-              fontSize: 14,
-              cursor: "pointer",
-              transition: "background 0.15s ease",
-              whiteSpace: "nowrap"
-            }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = "#2EA043"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = "#238636"; }}
+            className="btn-orange-pill"
           >
             Download Full Curriculum PDF ↓
           </button>

@@ -99,7 +99,7 @@ export default function RoleAcademies({ onOpenDemo }) {
   const current = roles[selectedRole];
 
   return (
-    <section id="role-tracks" style={{ padding: "110px 0", background: "#050B1A", borderBottom: "1px solid #1E293B" }}>
+    <section id="role-tracks" style={{ padding: "110px 0", background: "#F8FAFC", borderBottom: "1px solid #E2E8F0" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
@@ -107,7 +107,7 @@ export default function RoleAcademies({ onOpenDemo }) {
           <div style={{
             fontSize: 12,
             fontWeight: 700,
-            color: "#2F81F7",
+            color: "#FF8A00",
             textTransform: "uppercase",
             letterSpacing: ".08em",
             marginBottom: 12,
@@ -117,8 +117,8 @@ export default function RoleAcademies({ onOpenDemo }) {
           </div>
           <h2 style={{
             fontSize: "clamp(30px, 3.8vw, 42px)",
-            fontWeight: 800,
-            color: "#F8FAFC",
+            fontWeight: 850,
+            color: "#0F172A",
             letterSpacing: "-.025em",
             lineHeight: 1.18,
             marginBottom: 16
@@ -127,7 +127,7 @@ export default function RoleAcademies({ onOpenDemo }) {
           </h2>
           <p style={{
             fontSize: 16,
-            color: "#94A3B8",
+            color: "#475569",
             maxWidth: 800,
             lineHeight: 1.65,
             margin: 0
@@ -147,25 +147,26 @@ export default function RoleAcademies({ onOpenDemo }) {
           
           {/* Left Column: Role Selector List */}
           <div style={{
-            background: "#0B1220",
-            border: "1px solid #1E293B",
-            borderRadius: 10,
+            background: "#FFFFFF",
+            border: "1px solid #E2E8F0",
+            borderRadius: 12,
             overflow: "hidden",
             display: "flex",
-            flexDirection: "column"
+            flexDirection: "column",
+            boxShadow: "0 4px 16px rgba(15, 23, 42, 0.05)"
           }}>
             <div style={{
               padding: "16px 20px",
-              background: "rgba(15, 23, 42, 0.7)",
-              borderBottom: "1px solid #1E293B",
+              background: "#F8FAFC",
+              borderBottom: "1px solid #E2E8F0",
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center"
             }}>
-              <span style={{ fontSize: 12, fontWeight: 700, color: "#F8FAFC", textTransform: "uppercase", letterSpacing: ".04em" }}>
+              <span style={{ fontSize: 12.5, fontWeight: 750, color: "#0F172A", textTransform: "uppercase", letterSpacing: ".04em" }}>
                 Select Department Track
               </span>
-              <span style={{ fontSize: 11, fontFamily: "ui-monospace, monospace", color: "#64748B" }}>
+              <span style={{ fontSize: 11, fontFamily: "ui-monospace, monospace", color: "#64748B", fontWeight: 600 }}>
                 10 TRACKS AVAILABLE
               </span>
             </div>
@@ -179,9 +180,9 @@ export default function RoleAcademies({ onOpenDemo }) {
                     onClick={() => setSelectedRole(i)}
                     style={{
                       padding: "16px 20px",
-                      borderBottom: i < roles.length - 1 ? "1px solid #1E293B" : "none",
-                      background: isSelected ? "rgba(47, 129, 247, 0.08)" : "transparent",
-                      borderLeft: isSelected ? "3px solid #2F81F7" : "3px solid transparent",
+                      borderBottom: i < roles.length - 1 ? "1px solid #E2E8F0" : "none",
+                      background: isSelected ? "rgba(255, 138, 0, 0.08)" : "transparent",
+                      borderLeft: isSelected ? "3px solid #FF8A00" : "3px solid transparent",
                       cursor: "pointer",
                       display: "flex",
                       justifyContent: "space-between",
@@ -189,7 +190,7 @@ export default function RoleAcademies({ onOpenDemo }) {
                       transition: "all 0.12s ease"
                     }}
                     onMouseEnter={(e) => {
-                      if (!isSelected) e.currentTarget.style.background = "rgba(47, 129, 247, 0.03)";
+                      if (!isSelected) e.currentTarget.style.background = "#F8FAFC";
                     }}
                     onMouseLeave={(e) => {
                       if (!isSelected) e.currentTarget.style.background = "transparent";
@@ -199,8 +200,8 @@ export default function RoleAcademies({ onOpenDemo }) {
                       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 3 }}>
                         <span style={{
                           fontSize: 14.5,
-                          fontWeight: isSelected ? 700 : 600,
-                          color: isSelected ? "#F8FAFC" : "#CBD5E1"
+                          fontWeight: isSelected ? 750 : 600,
+                          color: isSelected ? "#0F172A" : "#334155"
                         }}>
                           {r.name}
                         </span>
@@ -214,10 +215,10 @@ export default function RoleAcademies({ onOpenDemo }) {
                       fontSize: 10,
                       fontWeight: 700,
                       fontFamily: "ui-monospace, monospace",
-                      color: isSelected ? "#2F81F7" : "#475569",
-                      background: isSelected ? "rgba(47, 129, 247, 0.12)" : "rgba(30, 41, 59, 0.5)",
+                      color: isSelected ? "#FF8A00" : "#64748B",
+                      background: isSelected ? "rgba(255, 138, 0, 0.12)" : "#F1F5F9",
                       padding: "3px 7px",
-                      borderRadius: 4
+                      borderRadius: 9999
                     }}>
                       {r.badge}
                     </span>
@@ -229,39 +230,41 @@ export default function RoleAcademies({ onOpenDemo }) {
 
           {/* Right Column: Selected Track Deep Dive Inspector */}
           <div style={{
-            background: "#0B1220",
-            border: "1px solid #1E293B",
-            borderRadius: 10,
+            background: "#FFFFFF",
+            border: "1px solid #E2E8F0",
+            borderRadius: 12,
             padding: "32px 32px",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "space-between"
+            justifyContent: "space-between",
+            boxShadow: "0 4px 20px rgba(15, 23, 42, 0.06)"
           }}>
             <div>
               {/* Header of Inspector */}
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 16 }}>
                 <div>
-                  <div style={{ fontSize: 11, fontFamily: "ui-monospace, monospace", color: "#2F81F7", fontWeight: 700, marginBottom: 4 }}>
+                  <div style={{ fontSize: 11, fontFamily: "ui-monospace, monospace", color: "#FF8A00", fontWeight: 700, marginBottom: 4 }}>
                     PATHWAY SPECIFICATION
                   </div>
-                  <h3 style={{ fontSize: 24, fontWeight: 800, color: "#F8FAFC", margin: 0, letterSpacing: "-.015em" }}>
+                  <h3 style={{ fontSize: 24, fontWeight: 800, color: "#0F172A", margin: 0, letterSpacing: "-.015em" }}>
                     {current.name}
                   </h3>
                 </div>
                 <span style={{
-                  fontSize: 11,
+                  fontSize: 11.5,
                   fontFamily: "ui-monospace, monospace",
-                  color: "#94A3B8",
-                  background: "#050B1A",
-                  border: "1px solid #1E293B",
-                  padding: "5px 10px",
-                  borderRadius: 6
+                  color: "#475569",
+                  background: "#F8FAFC",
+                  border: "1px solid #CBD5E1",
+                  padding: "5px 12px",
+                  borderRadius: 9999,
+                  fontWeight: 600
                 }}>
                   {current.duration}
                 </span>
               </div>
 
-              <div style={{ fontSize: 14.5, color: "#CBD5E1", lineHeight: 1.6, marginBottom: 24 }}>
+              <div style={{ fontSize: 14.5, color: "#334155", lineHeight: 1.6, marginBottom: 24 }}>
                 {current.useCases}
               </div>
 
@@ -276,10 +279,10 @@ export default function RoleAcademies({ onOpenDemo }) {
                       key={idx}
                       style={{
                         fontSize: 12,
-                        fontWeight: 600,
-                        color: "#F8FAFC",
-                        background: "#050B1A",
-                        border: "1px solid #1E293B",
+                        fontWeight: 650,
+                        color: "#0F172A",
+                        background: "#F8FAFC",
+                        border: "1px solid #E2E8F0",
                         padding: "5px 12px",
                         borderRadius: 6,
                         fontFamily: "ui-monospace, monospace"
@@ -292,15 +295,15 @@ export default function RoleAcademies({ onOpenDemo }) {
               </div>
 
               {/* Verified Capstone Deliverables */}
-              <div style={{ marginBottom: 28, borderTop: "1px solid #1E293B", paddingTop: 20 }}>
+              <div style={{ marginBottom: 28, borderTop: "1px solid #E2E8F0", paddingTop: 20 }}>
                 <div style={{ fontSize: 11, fontWeight: 700, color: "#64748B", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 12, fontFamily: "ui-monospace, monospace" }}>
                   VERIFIED CAPSTONE DELIVERABLES
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                   {current.deliverables.map((d, idx) => (
                     <div key={idx} style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                      <span style={{ color: "#238636", fontWeight: 800, fontSize: 13 }}>✓</span>
-                      <span style={{ fontSize: 13.5, color: "#94A3B8" }}>{d}</span>
+                      <span style={{ color: "#166534", fontWeight: 800, fontSize: 14 }}>✓</span>
+                      <span style={{ fontSize: 13.5, color: "#475569" }}>{d}</span>
                     </div>
                   ))}
                 </div>
@@ -312,32 +315,17 @@ export default function RoleAcademies({ onOpenDemo }) {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              borderTop: "1px solid #1E293B",
+              borderTop: "1px solid #E2E8F0",
               paddingTop: 20,
               flexWrap: "wrap",
               gap: 16
             }}>
-              <span style={{ fontSize: 12, color: "#64748B" }}>
+              <span style={{ fontSize: 12.5, color: "#64748B" }}>
                 Includes enterprise lab sandboxes & custom prompt repository
               </span>
               <button
                 onClick={() => onOpenDemo(`${current.name} Pathway`)}
-                style={{
-                  background: "#2F81F7",
-                  color: "#FFFFFF",
-                  border: "1px solid rgba(255, 255, 255, 0.15)",
-                  padding: "10px 20px",
-                  borderRadius: 7,
-                  fontWeight: 600,
-                  fontSize: 13.5,
-                  cursor: "pointer",
-                  transition: "background 0.15s ease",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 8
-                }}
-                onMouseEnter={(e) => { e.currentTarget.style.background = "#388BFD"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.background = "#2F81F7"; }}
+                className="btn-orange-pill"
               >
                 Request {current.name} Syllabus →
               </button>
