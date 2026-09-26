@@ -22,7 +22,7 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
       position: "fixed",
       inset: 0,
       zIndex: 1000,
-      background: "rgba(5, 11, 26, 0.85)",
+      background: "rgba(15, 23, 42, 0.75)",
       backdropFilter: "blur(8px)",
       WebkitBackdropFilter: "blur(8px)",
       display: "flex",
@@ -31,15 +31,15 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
       padding: 20
     }}>
       <div style={{
-        background: "#0B1220",
-        borderRadius: 12,
+        background: "#FFFFFF",
+        borderRadius: 14,
         maxWidth: 520,
         width: "100%",
         padding: "32px 30px",
-        boxShadow: "0 20px 48px rgba(0, 0, 0, 0.6)",
+        boxShadow: "0 20px 48px rgba(15, 23, 42, 0.2)",
         position: "relative",
-        border: "1px solid #1E293B",
-        color: "#F8FAFC"
+        border: "1px solid #E2E8F0",
+        color: "#0F172A"
       }}>
         <button
           onClick={onClose}
@@ -47,14 +47,14 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
             position: "absolute",
             top: 18,
             right: 18,
-            background: "#050B1A",
-            border: "1px solid #1E293B",
-            borderRadius: 6,
-            width: 28,
-            height: 28,
+            background: "#F8FAFC",
+            border: "1px solid #E2E8F0",
+            borderRadius: 9999,
+            width: 30,
+            height: 30,
             cursor: "pointer",
             fontSize: 13,
-            color: "#94A3B8",
+            color: "#64748B",
             display: "flex",
             alignItems: "center",
             justifyContent: "center"
@@ -67,11 +67,11 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
           <>
             <div style={{
               display: "inline-block",
-              background: "rgba(47, 129, 247, 0.1)",
-              border: "1px solid rgba(47, 129, 247, 0.25)",
-              color: "#2F81F7",
-              padding: "3px 10px",
-              borderRadius: 4,
+              background: "rgba(255, 138, 0, 0.12)",
+              border: "1px solid rgba(255, 138, 0, 0.3)",
+              color: "#FF8A00",
+              padding: "4px 12px",
+              borderRadius: 9999,
               fontSize: 11,
               fontWeight: 700,
               marginBottom: 10,
@@ -79,16 +79,16 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
             }}>
               ENTERPRISE CONSULTATION
             </div>
-            <h3 style={{ fontSize: 20, fontWeight: 800, color: "#F8FAFC", marginBottom: 6, letterSpacing: "-.015em" }}>
+            <h3 style={{ fontSize: 20, fontWeight: 850, color: "#0F172A", marginBottom: 6, letterSpacing: "-.015em" }}>
               Request Enterprise Briefing & Syllabus
             </h3>
-            <p style={{ fontSize: 13.5, color: "#94A3B8", marginBottom: 20, lineHeight: 1.5 }}>
+            <p style={{ fontSize: 13.5, color: "#475569", marginBottom: 20, lineHeight: 1.5 }}>
               Provide your organization details. Our solution architects will map a customized role-based training blueprint.
             </p>
 
             <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 14 }}>
               <div>
-                <label style={{ display: "block", fontSize: 11.5, fontWeight: 600, color: "#94A3B8", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
+                <label style={{ display: "block", fontSize: 11.5, fontWeight: 700, color: "#64748B", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
                   WORK EMAIL
                 </label>
                 <input
@@ -99,12 +99,12 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
                   onChange={(e) => setFormData({ ...formData, workEmail: e.target.value })}
                   style={{
                     width: "100%",
-                    padding: "9px 12px",
-                    borderRadius: 6,
-                    background: "#050B1A",
-                    border: "1px solid #1E293B",
+                    padding: "10px 14px",
+                    borderRadius: 8,
+                    background: "#F8FAFC",
+                    border: "1px solid #CBD5E1",
                     fontSize: 13.5,
-                    color: "#F8FAFC",
+                    color: "#0F172A",
                     outline: "none"
                   }}
                 />
@@ -112,7 +112,7 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
 
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 12 }}>
                 <div>
-                  <label style={{ display: "block", fontSize: 11.5, fontWeight: 600, color: "#94A3B8", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
+                  <label style={{ display: "block", fontSize: 11.5, fontWeight: 700, color: "#64748B", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
                     COMPANY NAME
                   </label>
                   <input
@@ -123,18 +123,18 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     style={{
                       width: "100%",
-                      padding: "9px 12px",
-                      borderRadius: 6,
-                      background: "#050B1A",
-                      border: "1px solid #1E293B",
+                      padding: "10px 14px",
+                      borderRadius: 8,
+                      background: "#F8FAFC",
+                      border: "1px solid #CBD5E1",
                       fontSize: 13.5,
-                      color: "#F8FAFC",
+                      color: "#0F172A",
                       outline: "none"
                     }}
                   />
                 </div>
                 <div>
-                  <label style={{ display: "block", fontSize: 11.5, fontWeight: 600, color: "#94A3B8", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
+                  <label style={{ display: "block", fontSize: 11.5, fontWeight: 700, color: "#64748B", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
                     EMPLOYEE COUNT
                   </label>
                   <select
@@ -142,12 +142,12 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
                     onChange={(e) => setFormData({ ...formData, employeeCount: e.target.value })}
                     style={{
                       width: "100%",
-                      padding: "9px 12px",
-                      borderRadius: 6,
-                      background: "#050B1A",
-                      border: "1px solid #1E293B",
+                      padding: "10px 14px",
+                      borderRadius: 8,
+                      background: "#F8FAFC",
+                      border: "1px solid #CBD5E1",
                       fontSize: 13.5,
-                      color: "#F8FAFC",
+                      color: "#0F172A",
                       outline: "none"
                     }}
                   >
@@ -160,7 +160,7 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
               </div>
 
               <div>
-                <label style={{ display: "block", fontSize: 11.5, fontWeight: 600, color: "#94A3B8", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
+                <label style={{ display: "block", fontSize: 11.5, fontWeight: 700, color: "#64748B", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
                   KEY DEPARTMENTS
                 </label>
                 <input
@@ -170,19 +170,19 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
                   onChange={(e) => setFormData({ ...formData, departments: e.target.value })}
                   style={{
                     width: "100%",
-                    padding: "9px 12px",
-                    borderRadius: 6,
-                    background: "#050B1A",
-                    border: "1px solid #1E293B",
+                    padding: "10px 14px",
+                    borderRadius: 8,
+                    background: "#F8FAFC",
+                    border: "1px solid #CBD5E1",
                     fontSize: 13.5,
-                    color: "#F8FAFC",
+                    color: "#0F172A",
                     outline: "none"
                   }}
                 />
               </div>
 
               <div>
-                <label style={{ display: "block", fontSize: 11.5, fontWeight: 600, color: "#94A3B8", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
+                <label style={{ display: "block", fontSize: 11.5, fontWeight: 700, color: "#64748B", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
                   PRIMARY OBJECTIVES
                 </label>
                 <textarea
@@ -191,12 +191,12 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
                   onChange={(e) => setFormData({ ...formData, goal: e.target.value })}
                   style={{
                     width: "100%",
-                    padding: "9px 12px",
-                    borderRadius: 6,
-                    background: "#050B1A",
-                    border: "1px solid #1E293B",
+                    padding: "10px 14px",
+                    borderRadius: 8,
+                    background: "#F8FAFC",
+                    border: "1px solid #CBD5E1",
                     fontSize: 13.5,
-                    color: "#F8FAFC",
+                    color: "#0F172A",
                     outline: "none",
                     fontFamily: "inherit"
                   }}
@@ -205,20 +205,8 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
 
               <button
                 type="submit"
-                style={{
-                  background: "#238636",
-                  color: "#FFFFFF",
-                  padding: "11px 20px",
-                  borderRadius: 7,
-                  border: "1px solid rgba(255, 255, 255, 0.15)",
-                  fontWeight: 600,
-                  fontSize: 14,
-                  cursor: "pointer",
-                  marginTop: 6,
-                  transition: "background 0.15s ease"
-                }}
-                onMouseEnter={(e) => { e.currentTarget.style.background = "#2EA043"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.background = "#238636"; }}
+                className="btn-orange-pill"
+                style={{ width: "100%", justifyContent: "center", padding: "12px", marginTop: 6 }}
               >
                 Schedule Briefing & Request Blueprint →
               </button>
@@ -227,38 +215,30 @@ export default function DemoModal({ isOpen, onClose, initialGoal = "" }) {
         ) : (
           <div style={{ textAlign: "center", padding: "16px 0" }}>
             <div style={{
-              width: 40,
-              height: 40,
+              width: 44,
+              height: 44,
               borderRadius: "50%",
-              background: "rgba(35, 134, 54, 0.15)",
-              border: "1px solid #238636",
-              color: "#238636",
-              fontSize: 18,
+              background: "rgba(21, 128, 61, 0.12)",
+              border: "1px solid #15803D",
+              color: "#15803D",
+              fontSize: 20,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              margin: "0 auto 14px auto"
+              margin: "0 auto 14px auto",
+              fontWeight: 800
             }}>
               ✓
             </div>
-            <h3 style={{ fontSize: 19, fontWeight: 800, color: "#F8FAFC", marginBottom: 8 }}>
+            <h3 style={{ fontSize: 19, fontWeight: 800, color: "#0F172A", marginBottom: 8 }}>
               Consultation Request Received
             </h3>
-            <p style={{ fontSize: 13.5, color: "#94A3B8", marginBottom: 20, lineHeight: 1.6 }}>
-              An enterprise solution architect will contact you at <strong style={{ color: "#F8FAFC" }}>{formData.workEmail}</strong> within 24 business hours to present a customized curriculum blueprint.
+            <p style={{ fontSize: 13.5, color: "#475569", marginBottom: 20, lineHeight: 1.6 }}>
+              An enterprise solution architect will contact you at <strong style={{ color: "#0F172A" }}>{formData.workEmail}</strong> within 24 business hours to present a customized curriculum blueprint.
             </p>
             <button
               onClick={() => { setSubmitted(false); onClose(); }}
-              style={{
-                background: "#050B1A",
-                color: "#F8FAFC",
-                border: "1px solid #1E293B",
-                padding: "9px 20px",
-                borderRadius: 6,
-                fontWeight: 600,
-                fontSize: 13.5,
-                cursor: "pointer"
-              }}
+              className="btn-navy-pill"
             >
               Close Window
             </button>

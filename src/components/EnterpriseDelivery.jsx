@@ -26,7 +26,7 @@ export default function EnterpriseDelivery() {
   ];
 
   return (
-    <section id="enterprise" style={{ padding: "110px 0", background: "#050B1A", borderBottom: "1px solid #1E293B" }}>
+    <section id="enterprise" style={{ padding: "110px 0", background: "#0F172A", color: "#FFFFFF", borderBottom: "1px solid #1E293B" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
@@ -34,7 +34,7 @@ export default function EnterpriseDelivery() {
           <div style={{
             fontSize: 12,
             fontWeight: 700,
-            color: "#2F81F7",
+            color: "#FF8A00",
             textTransform: "uppercase",
             letterSpacing: ".08em",
             marginBottom: 12,
@@ -44,8 +44,8 @@ export default function EnterpriseDelivery() {
           </div>
           <h2 style={{
             fontSize: "clamp(30px, 3.8vw, 42px)",
-            fontWeight: 800,
-            color: "#F8FAFC",
+            fontWeight: 850,
+            color: "#FFFFFF",
             letterSpacing: "-.025em",
             lineHeight: 1.18,
             marginBottom: 16
@@ -65,17 +65,18 @@ export default function EnterpriseDelivery() {
 
         {/* 5-Stage Journey Progression */}
         <div style={{
-          background: "#0B1220",
-          border: "1px solid #1E293B",
-          borderRadius: 10,
+          background: "#1E293B",
+          border: "1px solid #334155",
+          borderRadius: 12,
           padding: "32px 28px",
-          marginBottom: 48
+          marginBottom: 48,
+          boxShadow: "0 8px 30px rgba(0, 0, 0, 0.3)"
         }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 24, flexWrap: "wrap", gap: 12 }}>
-            <span style={{ fontSize: 13, fontWeight: 700, color: "#F8FAFC" }}>
+            <span style={{ fontSize: 14, fontWeight: 750, color: "#FFFFFF" }}>
               The 5-Stage Enterprise Learning Lifecycle
             </span>
-            <span style={{ fontSize: 11, fontFamily: "ui-monospace, monospace", color: "#64748B" }}>
+            <span style={{ fontSize: 11, fontFamily: "ui-monospace, monospace", color: "#FF8A00", fontWeight: 700 }}>
               END-TO-END EXECUTION MODEL
             </span>
           </div>
@@ -89,23 +90,23 @@ export default function EnterpriseDelivery() {
               <div
                 key={i}
                 style={{
-                  background: "#050B1A",
-                  border: "1px solid #1E293B",
-                  borderRadius: 8,
+                  background: "#0F172A",
+                  border: "1px solid #334155",
+                  borderRadius: 10,
                   padding: "20px 18px",
                   position: "relative"
                 }}
               >
                 <div style={{
                   fontSize: 11,
-                  fontWeight: 700,
-                  color: "#2F81F7",
+                  fontWeight: 800,
+                  color: "#FF8A00",
                   fontFamily: "ui-monospace, monospace",
                   marginBottom: 8
                 }}>
                   PHASE {j.num}
                 </div>
-                <h4 style={{ fontSize: 16, fontWeight: 700, color: "#F8FAFC", marginBottom: 6 }}>
+                <h4 style={{ fontSize: 16, fontWeight: 750, color: "#FFFFFF", marginBottom: 6 }}>
                   {j.stage}
                 </h4>
                 <p style={{ fontSize: 12.5, color: "#94A3B8", lineHeight: 1.5, margin: 0 }}>
@@ -116,18 +117,18 @@ export default function EnterpriseDelivery() {
           </div>
         </div>
 
-        {/* Flexible Formats Table / Grid */}
+        {/* Flexible Formats Grid */}
         <div style={{ marginBottom: 48 }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 20, flexWrap: "wrap", gap: 12 }}>
             <div>
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#2F81F7", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 4, fontFamily: "ui-monospace, monospace" }}>
+              <div style={{ fontSize: 11, fontWeight: 700, color: "#FF8A00", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 4, fontFamily: "ui-monospace, monospace" }}>
                 ENGAGEMENT STRUCTURES
               </div>
-              <h3 style={{ fontSize: 22, fontWeight: 800, color: "#F8FAFC", margin: 0, letterSpacing: "-.01em" }}>
+              <h3 style={{ fontSize: 22, fontWeight: 800, color: "#FFFFFF", margin: 0, letterSpacing: "-.01em" }}>
                 Flexible delivery formats tailored to organizational scale
               </h3>
             </div>
-            <span style={{ fontSize: 12, color: "#64748B" }}>
+            <span style={{ fontSize: 12.5, color: "#94A3B8" }}>
               Virtual, hybrid, or on-site delivery globally
             </span>
           </div>
@@ -137,28 +138,31 @@ export default function EnterpriseDelivery() {
               <div
                 key={i}
                 style={{
-                  background: "#0B1220",
-                  border: "1px solid #1E293B",
-                  borderRadius: 8,
-                  padding: "22px 24px"
+                  background: "#FFFFFF",
+                  border: "1px solid #E2E8F0",
+                  borderRadius: 10,
+                  padding: "22px 24px",
+                  color: "#0F172A",
+                  boxShadow: "0 4px 16px rgba(0, 0, 0, 0.15)"
                 }}
               >
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
-                  <h4 style={{ fontSize: 16, fontWeight: 700, color: "#F8FAFC", margin: 0 }}>
+                  <h4 style={{ fontSize: 16, fontWeight: 750, color: "#0F172A", margin: 0 }}>
                     {f.title}
                   </h4>
                   <span style={{
                     fontSize: 11,
                     fontFamily: "ui-monospace, monospace",
-                    color: "#2F81F7",
-                    background: "rgba(47, 129, 247, 0.1)",
-                    padding: "2px 8px",
-                    borderRadius: 4
+                    color: "#FF8A00",
+                    background: "rgba(255, 138, 0, 0.12)",
+                    padding: "3px 8px",
+                    borderRadius: 9999,
+                    fontWeight: 700
                   }}>
                     {f.duration}
                   </span>
                 </div>
-                <p style={{ fontSize: 13.5, color: "#94A3B8", lineHeight: 1.55, margin: 0 }}>
+                <p style={{ fontSize: 13.5, color: "#475569", lineHeight: 1.55, margin: 0 }}>
                   {f.desc}
                 </p>
               </div>
@@ -168,22 +172,22 @@ export default function EnterpriseDelivery() {
 
         {/* Manager Visibility Controls */}
         <div style={{
-          background: "#0B1220",
-          border: "1px solid #1E293B",
-          borderRadius: 10,
+          background: "#1E293B",
+          border: "1px solid #334155",
+          borderRadius: 12,
           padding: "32px 32px"
         }}>
-          <div style={{ fontSize: 11, fontWeight: 700, color: "#2F81F7", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 8, fontFamily: "ui-monospace, monospace" }}>
+          <div style={{ fontSize: 11, fontWeight: 700, color: "#FF8A00", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 8, fontFamily: "ui-monospace, monospace" }}>
             FOR L&D & BUSINESS LEADERS
           </div>
-          <h3 style={{ fontSize: 19, fontWeight: 800, color: "#F8FAFC", marginBottom: 20, letterSpacing: "-.01em" }}>
+          <h3 style={{ fontSize: 19, fontWeight: 800, color: "#FFFFFF", marginBottom: 20, letterSpacing: "-.01em" }}>
             Comprehensive administrative oversight & adoption analytics
           </h3>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 14 }}>
             {ldChecklist.map((item, i) => (
               <div key={i} style={{ display: "flex", gap: 10, alignItems: "center" }}>
-                <span style={{ color: "#238636", fontWeight: 800, fontSize: 13 }}>✓</span>
-                <span style={{ fontSize: 13.5, color: "#CBD5E1" }}>{item}</span>
+                <span style={{ color: "#22C55E", fontWeight: 800, fontSize: 14 }}>✓</span>
+                <span style={{ fontSize: 13.5, color: "#E2E8F0" }}>{item}</span>
               </div>
             ))}
           </div>

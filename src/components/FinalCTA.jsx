@@ -1,8 +1,8 @@
 export default function FinalCTA({ onOpenDemo, scrollToSection }) {
   return (
     <section style={{
-      background: "#050B1A",
-      color: "#F8FAFC",
+      background: "#0F172A",
+      color: "#FFFFFF",
       padding: "110px 0 120px",
       borderBottom: "1px solid #1E293B",
       position: "relative"
@@ -11,12 +11,12 @@ export default function FinalCTA({ onOpenDemo, scrollToSection }) {
         
         <div style={{
           display: "inline-block",
-          background: "rgba(47, 129, 247, 0.1)",
-          border: "1px solid rgba(47, 129, 247, 0.25)",
-          color: "#2F81F7",
-          padding: "4px 12px",
-          borderRadius: 6,
-          fontSize: 11,
+          background: "rgba(255, 138, 0, 0.12)",
+          border: "1px solid rgba(255, 138, 0, 0.3)",
+          color: "#FF8A00",
+          padding: "5px 14px",
+          borderRadius: 9999,
+          fontSize: 11.5,
           fontWeight: 700,
           textTransform: "uppercase",
           letterSpacing: ".08em",
@@ -28,13 +28,13 @@ export default function FinalCTA({ onOpenDemo, scrollToSection }) {
 
         <h2 style={{
           fontSize: "clamp(32px, 4vw, 46px)",
-          fontWeight: 800,
+          fontWeight: 850,
           lineHeight: 1.2,
           letterSpacing: "-.025em",
           marginBottom: 20,
-          color: "#F8FAFC"
+          color: "#FFFFFF"
         }}>
-          Your teams are already using AI. Make it systematic, secure, and impactful.
+          Stop searching, start learning. Upgrade your career & workforce today.
         </h2>
 
         <p style={{
@@ -43,7 +43,7 @@ export default function FinalCTA({ onOpenDemo, scrollToSection }) {
           maxWidth: 680,
           margin: "0 auto 40px",
           lineHeight: 1.65,
-          fontWeight: 400
+          fontWeight: 450
         }}>
           Build verified organizational capability with 10 role-tailored academies, 67+ evaluated tools, private sandbox labs, autonomous agent architecture, and manager-tracked adoption.
         </p>
@@ -52,43 +52,29 @@ export default function FinalCTA({ onOpenDemo, scrollToSection }) {
         <div style={{ display: "flex", justifyContent: "center", gap: 14, marginBottom: 28, flexWrap: "wrap" }}>
           <button
             onClick={() => onOpenDemo("Final CTA Booking")}
-            style={{
-              background: "#238636",
-              color: "#FFFFFF",
-              border: "1px solid rgba(255, 255, 255, 0.15)",
-              padding: "13px 28px",
-              borderRadius: 7,
-              fontWeight: 600,
-              fontSize: 14.5,
-              cursor: "pointer",
-              boxShadow: "0 2px 8px rgba(35, 134, 54, 0.25)",
-              transition: "background 0.15s ease"
-            }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = "#2EA043"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = "#238636"; }}
+            className="btn-orange-pill"
+            style={{ padding: "13px 32px", fontSize: 15 }}
           >
-            Book Enterprise Consultation
+            GET STARTED NOW →
           </button>
           <button
             onClick={() => scrollToSection("curriculum")}
             style={{
-              background: "#0B1220",
-              color: "#CBD5E1",
-              border: "1px solid #1E293B",
+              background: "rgba(255, 255, 255, 0.08)",
+              color: "#FFFFFF",
+              border: "1px solid rgba(255, 255, 255, 0.2)",
               padding: "13px 26px",
-              borderRadius: 7,
+              borderRadius: 9999,
               fontWeight: 600,
               fontSize: 14.5,
               cursor: "pointer",
               transition: "all 0.15s ease"
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "#2F81F7";
-              e.currentTarget.style.color = "#F8FAFC";
+              e.currentTarget.style.background = "rgba(255, 255, 255, 0.15)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "#1E293B";
-              e.currentTarget.style.color = "#CBD5E1";
+              e.currentTarget.style.background = "rgba(255, 255, 255, 0.08)";
             }}
           >
             Explore 10-Module Syllabus ↓

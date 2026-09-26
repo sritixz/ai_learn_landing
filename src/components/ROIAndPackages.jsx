@@ -61,7 +61,7 @@ export default function ROIAndPackages({ onOpenDemo }) {
   ];
 
   return (
-    <section id="resources" style={{ padding: "110px 0", background: "#050B1A", borderBottom: "1px solid #1E293B" }}>
+    <section id="resources" style={{ padding: "110px 0", background: "#FFFFFF", borderBottom: "1px solid #E2E8F0" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
@@ -69,7 +69,7 @@ export default function ROIAndPackages({ onOpenDemo }) {
           <div style={{
             fontSize: 12,
             fontWeight: 700,
-            color: "#2F81F7",
+            color: "#FF8A00",
             textTransform: "uppercase",
             letterSpacing: ".08em",
             marginBottom: 12,
@@ -79,8 +79,8 @@ export default function ROIAndPackages({ onOpenDemo }) {
           </div>
           <h2 style={{
             fontSize: "clamp(30px, 3.8vw, 42px)",
-            fontWeight: 800,
-            color: "#F8FAFC",
+            fontWeight: 850,
+            color: "#0F172A",
             letterSpacing: "-.025em",
             lineHeight: 1.18,
             marginBottom: 16
@@ -89,7 +89,7 @@ export default function ROIAndPackages({ onOpenDemo }) {
           </h2>
           <p style={{
             fontSize: 16,
-            color: "#94A3B8",
+            color: "#475569",
             maxWidth: 800,
             lineHeight: 1.65,
             margin: 0
@@ -100,17 +100,18 @@ export default function ROIAndPackages({ onOpenDemo }) {
 
         {/* Business Metrics Scorecard */}
         <div style={{
-          background: "#0B1220",
-          border: "1px solid #1E293B",
-          borderRadius: 10,
+          background: "#F8FAFC",
+          border: "1px solid #E2E8F0",
+          borderRadius: 12,
           padding: "32px 32px",
-          marginBottom: 64
+          marginBottom: 64,
+          boxShadow: "0 4px 20px rgba(15, 23, 42, 0.05)"
         }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 24, flexWrap: "wrap", gap: 12 }}>
-            <span style={{ fontSize: 13, fontWeight: 700, color: "#F8FAFC" }}>
+            <span style={{ fontSize: 14, fontWeight: 750, color: "#0F172A" }}>
               Enterprise Impact Measurement Dimensions
             </span>
-            <span style={{ fontSize: 11, fontFamily: "ui-monospace, monospace", color: "#64748B" }}>
+            <span style={{ fontSize: 11, fontFamily: "ui-monospace, monospace", color: "#64748B", fontWeight: 600 }}>
               VALIDATED ADOPTION SCORECARD
             </span>
           </div>
@@ -124,19 +125,20 @@ export default function ROIAndPackages({ onOpenDemo }) {
               <div
                 key={i}
                 style={{
-                  background: "#050B1A",
-                  border: "1px solid #1E293B",
-                  borderRadius: 8,
-                  padding: "20px 22px"
+                  background: "#FFFFFF",
+                  border: "1px solid #E2E8F0",
+                  borderRadius: 10,
+                  padding: "20px 22px",
+                  boxShadow: "0 2px 10px rgba(15, 23, 42, 0.04)"
                 }}
               >
-                <div style={{ fontSize: 11, fontWeight: 700, color: "#2F81F7", fontFamily: "ui-monospace, monospace", marginBottom: 6 }}>
+                <div style={{ fontSize: 11, fontWeight: 700, color: "#FF8A00", fontFamily: "ui-monospace, monospace", marginBottom: 6 }}>
                   METRIC 0{i + 1}
                 </div>
-                <h4 style={{ fontSize: 15.5, fontWeight: 700, color: "#F8FAFC", marginBottom: 6 }}>
+                <h4 style={{ fontSize: 15.5, fontWeight: 750, color: "#0F172A", marginBottom: 6 }}>
                   {m.title}
                 </h4>
-                <p style={{ fontSize: 13, color: "#94A3B8", lineHeight: 1.55, margin: 0 }}>
+                <p style={{ fontSize: 13, color: "#475569", lineHeight: 1.55, margin: 0 }}>
                   {m.desc}
                 </p>
               </div>
@@ -148,10 +150,10 @@ export default function ROIAndPackages({ onOpenDemo }) {
         <div>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 28, flexWrap: "wrap", gap: 12 }}>
             <div>
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#2F81F7", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 4, fontFamily: "ui-monospace, monospace" }}>
+              <div style={{ fontSize: 11, fontWeight: 700, color: "#FF8A00", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 4, fontFamily: "ui-monospace, monospace" }}>
                 ENGAGEMENT STRUCTURES
               </div>
-              <h3 style={{ fontSize: 24, fontWeight: 800, color: "#F8FAFC", margin: 0, letterSpacing: "-.015em" }}>
+              <h3 style={{ fontSize: 24, fontWeight: 800, color: "#0F172A", margin: 0, letterSpacing: "-.015em" }}>
                 Enterprise Program Packages
               </h3>
             </div>
@@ -169,37 +171,39 @@ export default function ROIAndPackages({ onOpenDemo }) {
               <div
                 key={i}
                 style={{
-                  background: "#0B1220",
-                  border: "1px solid",
-                  borderColor: pkg.highlighted ? "#2F81F7" : "#1E293B",
-                  borderRadius: 10,
+                  background: "#FFFFFF",
+                  border: "1.5px solid",
+                  borderColor: pkg.highlighted ? "#FF8A00" : "#E2E8F0",
+                  borderRadius: 12,
                   padding: "28px 24px",
                   display: "flex",
                   flexDirection: "column",
-                  justifyContent: "space-between"
+                  justifyContent: "space-between",
+                  boxShadow: pkg.highlighted ? "0 8px 30px rgba(255, 138, 0, 0.15)" : "0 4px 16px rgba(15, 23, 42, 0.05)",
+                  transform: pkg.highlighted ? "translateY(-4px)" : "none"
                 }}
               >
                 <div>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
                     <span style={{
                       fontSize: 10,
-                      fontWeight: 700,
-                      color: pkg.highlighted ? "#2F81F7" : "#64748B",
-                      background: pkg.highlighted ? "rgba(47, 129, 247, 0.12)" : "rgba(30, 41, 59, 0.5)",
+                      fontWeight: 750,
+                      color: pkg.highlighted ? "#FF8A00" : "#64748B",
+                      background: pkg.highlighted ? "rgba(255, 138, 0, 0.12)" : "#F1F5F9",
                       border: "1px solid",
-                      borderColor: pkg.highlighted ? "rgba(47, 129, 247, 0.3)" : "rgba(100, 116, 139, 0.2)",
+                      borderColor: pkg.highlighted ? "rgba(255, 138, 0, 0.3)" : "#CBD5E1",
                       padding: "3px 8px",
-                      borderRadius: 4,
+                      borderRadius: 9999,
                       fontFamily: "ui-monospace, monospace"
                     }}>
                       {pkg.badge}
                     </span>
-                    <span style={{ fontSize: 11, color: "#64748B" }}>
+                    <span style={{ fontSize: 11.5, color: "#64748B", fontWeight: 600 }}>
                       {pkg.bestFor}
                     </span>
                   </div>
 
-                  <h4 style={{ fontSize: 18, fontWeight: 800, color: "#F8FAFC", marginBottom: 16 }}>
+                  <h4 style={{ fontSize: 18, fontWeight: 800, color: "#0F172A", marginBottom: 16 }}>
                     {pkg.name}
                   </h4>
 
@@ -207,14 +211,14 @@ export default function ROIAndPackages({ onOpenDemo }) {
                     display: "flex",
                     flexDirection: "column",
                     gap: 8,
-                    borderTop: "1px solid #1E293B",
+                    borderTop: "1px solid #E2E8F0",
                     paddingTop: 16,
                     marginBottom: 28
                   }}>
                     {pkg.features.map((f, fi) => (
                       <div key={fi} style={{ display: "flex", alignItems: "flex-start", gap: 8 }}>
-                        <span style={{ color: pkg.highlighted ? "#2F81F7" : "#64748B", fontSize: 12, lineHeight: "18px" }}>›</span>
-                        <span style={{ fontSize: 12.5, color: "#94A3B8", lineHeight: 1.5 }}>{f}</span>
+                        <span style={{ color: pkg.highlighted ? "#FF8A00" : "#64748B", fontSize: 12, lineHeight: "18px" }}>›</span>
+                        <span style={{ fontSize: 12.5, color: "#334155", lineHeight: 1.5 }}>{f}</span>
                       </div>
                     ))}
                   </div>
@@ -222,26 +226,8 @@ export default function ROIAndPackages({ onOpenDemo }) {
 
                 <button
                   onClick={() => onOpenDemo(`${pkg.name} Package`)}
-                  style={{
-                    width: "100%",
-                    padding: "10px 16px",
-                    borderRadius: 7,
-                    border: "1px solid",
-                    borderColor: pkg.highlighted ? "rgba(255, 255, 255, 0.15)" : "#1E293B",
-                    fontWeight: 600,
-                    fontSize: 13,
-                    cursor: "pointer",
-                    background: pkg.highlighted ? "#238636" : "#050B1A",
-                    color: "#FFFFFF",
-                    transition: "all 0.15s ease",
-                    whiteSpace: "nowrap"
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = pkg.highlighted ? "#2EA043" : "#1E293B";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = pkg.highlighted ? "#238636" : "#050B1A";
-                  }}
+                  className={pkg.highlighted ? "btn-orange-pill" : "btn-navy-pill"}
+                  style={{ width: "100%", justifyContent: "center", padding: "11px" }}
                 >
                   {pkg.cta} →
                 </button>

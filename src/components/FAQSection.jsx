@@ -39,7 +39,7 @@ export default function FAQSection() {
   ];
 
   return (
-    <section style={{ padding: "110px 0", background: "#050B1A", borderBottom: "1px solid #1E293B" }}>
+    <section style={{ padding: "110px 0", background: "#FFFFFF", borderBottom: "1px solid #E2E8F0" }}>
       <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
@@ -47,7 +47,7 @@ export default function FAQSection() {
           <div style={{
             fontSize: 12,
             fontWeight: 700,
-            color: "#2F81F7",
+            color: "#FF8A00",
             textTransform: "uppercase",
             letterSpacing: ".08em",
             marginBottom: 12,
@@ -57,8 +57,8 @@ export default function FAQSection() {
           </div>
           <h2 style={{
             fontSize: "clamp(30px, 3.8vw, 42px)",
-            fontWeight: 800,
-            color: "#F8FAFC",
+            fontWeight: 850,
+            color: "#0F172A",
             letterSpacing: "-.025em",
             lineHeight: 1.18,
             margin: 0
@@ -69,10 +69,11 @@ export default function FAQSection() {
 
         {/* Accordion list */}
         <div style={{
-          border: "1px solid #1E293B",
-          borderRadius: 10,
-          background: "#0B1220",
-          overflow: "hidden"
+          border: "1px solid #E2E8F0",
+          borderRadius: 12,
+          background: "#FFFFFF",
+          overflow: "hidden",
+          boxShadow: "0 4px 20px rgba(15, 23, 42, 0.06)"
         }}>
           {faqs.map((faq, i) => {
             const isOpen = openIndex === i;
@@ -80,7 +81,7 @@ export default function FAQSection() {
               <div
                 key={i}
                 style={{
-                  borderBottom: i < faqs.length - 1 ? "1px solid #1E293B" : "none",
+                  borderBottom: i < faqs.length - 1 ? "1px solid #E2E8F0" : "none",
                   transition: "background 0.15s ease"
                 }}
               >
@@ -92,10 +93,10 @@ export default function FAQSection() {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "space-between",
-                    background: isOpen ? "rgba(47, 129, 247, 0.04)" : "transparent"
+                    background: isOpen ? "rgba(255, 138, 0, 0.06)" : "transparent"
                   }}
                   onMouseEnter={(e) => {
-                    if (!isOpen) e.currentTarget.style.background = "rgba(47, 129, 247, 0.02)";
+                    if (!isOpen) e.currentTarget.style.background = "#F8FAFC";
                   }}
                   onMouseLeave={(e) => {
                     if (!isOpen) e.currentTarget.style.background = "transparent";
@@ -103,8 +104,8 @@ export default function FAQSection() {
                 >
                   <h3 style={{
                     fontSize: 15.5,
-                    fontWeight: 700,
-                    color: isOpen ? "#F8FAFC" : "#CBD5E1",
+                    fontWeight: 750,
+                    color: isOpen ? "#0F172A" : "#334155",
                     paddingRight: 16,
                     margin: 0,
                     letterSpacing: "-.01em"
@@ -112,9 +113,9 @@ export default function FAQSection() {
                     {faq.q}
                   </h3>
                   <span style={{
-                    fontSize: 16,
-                    fontWeight: 500,
-                    color: isOpen ? "#2F81F7" : "#64748B",
+                    fontSize: 18,
+                    fontWeight: 700,
+                    color: isOpen ? "#FF8A00" : "#94A3B8",
                     fontFamily: "ui-monospace, monospace",
                     width: 16,
                     textAlign: "center"
@@ -126,12 +127,12 @@ export default function FAQSection() {
                 {isOpen && (
                   <div style={{
                     padding: "0 24px 22px 24px",
-                    background: "rgba(47, 129, 247, 0.02)",
-                    borderTop: "1px dashed #1E293B"
+                    background: "rgba(255, 138, 0, 0.03)",
+                    borderTop: "1px dashed #E2E8F0"
                   }}>
                     <p style={{
                       fontSize: 14,
-                      color: "#94A3B8",
+                      color: "#475569",
                       lineHeight: 1.65,
                       paddingTop: 16,
                       margin: 0

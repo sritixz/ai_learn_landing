@@ -33,7 +33,7 @@ export default function ResponsibleAI() {
   ];
 
   return (
-    <section style={{ padding: "110px 0", background: "#050B1A", borderBottom: "1px solid #1E293B" }}>
+    <section style={{ padding: "110px 0", background: "#FFFFFF", borderBottom: "1px solid #E2E8F0" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
@@ -41,7 +41,7 @@ export default function ResponsibleAI() {
           <div style={{
             fontSize: 12,
             fontWeight: 700,
-            color: "#2F81F7",
+            color: "#FF8A00",
             textTransform: "uppercase",
             letterSpacing: ".08em",
             marginBottom: 12,
@@ -51,8 +51,8 @@ export default function ResponsibleAI() {
           </div>
           <h2 style={{
             fontSize: "clamp(30px, 3.8vw, 42px)",
-            fontWeight: 800,
-            color: "#F8FAFC",
+            fontWeight: 850,
+            color: "#0F172A",
             letterSpacing: "-.025em",
             lineHeight: 1.18,
             marginBottom: 16
@@ -61,7 +61,7 @@ export default function ResponsibleAI() {
           </h2>
           <p style={{
             fontSize: 16,
-            color: "#94A3B8",
+            color: "#475569",
             maxWidth: 800,
             lineHeight: 1.65,
             margin: 0
@@ -81,32 +81,33 @@ export default function ResponsibleAI() {
             <div
               key={i}
               style={{
-                background: "#0B1220",
-                border: "1px solid #1E293B",
-                borderRadius: 8,
+                background: "#FFFFFF",
+                border: "1px solid #E2E8F0",
+                borderRadius: 12,
                 padding: "24px 24px",
-                transition: "border-color 0.15s ease"
+                transition: "all 0.15s ease",
+                boxShadow: "0 4px 16px rgba(15, 23, 42, 0.05)"
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#2F81F7"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#1E293B"; }}
+              onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#CBD5E1"; e.currentTarget.style.boxShadow = "0 8px 24px rgba(15, 23, 42, 0.1)"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#E2E8F0"; e.currentTarget.style.boxShadow = "0 4px 16px rgba(15, 23, 42, 0.05)"; }}
             >
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
                 <span style={{
                   fontSize: 11,
                   fontFamily: "ui-monospace, monospace",
                   fontWeight: 700,
-                  color: "#2F81F7"
+                  color: "#FF8A00"
                 }}>
                   PILLAR {p.num}
                 </span>
-                <span style={{ fontSize: 11, color: "#64748B", fontFamily: "ui-monospace, monospace" }}>
+                <span style={{ fontSize: 11, color: "#64748B", fontFamily: "ui-monospace, monospace", fontWeight: 600 }}>
                   COMPLIANCE STANDARD
                 </span>
               </div>
-              <h3 style={{ fontSize: 16, fontWeight: 700, color: "#F8FAFC", marginBottom: 8, letterSpacing: "-.01em" }}>
+              <h3 style={{ fontSize: 16, fontWeight: 750, color: "#0F172A", marginBottom: 8, letterSpacing: "-.01em" }}>
                 {p.title}
               </h3>
-              <p style={{ fontSize: 13.5, color: "#94A3B8", lineHeight: 1.6, margin: 0 }}>
+              <p style={{ fontSize: 13.5, color: "#475569", lineHeight: 1.6, margin: 0 }}>
                 {p.desc}
               </p>
             </div>
@@ -115,32 +116,34 @@ export default function ResponsibleAI() {
 
         {/* Enterprise Governance Tailoring Assurance Box */}
         <div style={{
-          background: "#0B1220",
-          border: "1px solid #1E293B",
-          borderRadius: 8,
+          background: "#F8FAFC",
+          border: "1px solid #E2E8F0",
+          borderRadius: 12,
           padding: "24px 28px",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
           flexWrap: "wrap",
-          gap: 16
+          gap: 16,
+          boxShadow: "0 4px 16px rgba(15, 23, 42, 0.04)"
         }}>
           <div style={{ maxWidth: 780 }}>
-            <h4 style={{ fontSize: 15, fontWeight: 700, color: "#F8FAFC", marginBottom: 4 }}>
+            <h4 style={{ fontSize: 15, fontWeight: 750, color: "#0F172A", marginBottom: 4 }}>
               Customized Corporate AI Policies & Security Playbooks
             </h4>
-            <p style={{ fontSize: 13.5, color: "#94A3B8", lineHeight: 1.5, margin: 0 }}>
+            <p style={{ fontSize: 13.5, color: "#475569", lineHeight: 1.5, margin: 0 }}>
               We tailor all prompts, tools, and exercises to align with your organization's approved vendor list, SOC2/ISO requirements, and internal data security classifications.
             </p>
           </div>
           <span style={{
-            fontSize: 11,
+            fontSize: 11.5,
             fontFamily: "ui-monospace, monospace",
-            color: "#238636",
-            background: "rgba(35, 134, 54, 0.1)",
-            border: "1px solid rgba(35, 134, 54, 0.3)",
+            color: "#15803D",
+            background: "rgba(21, 128, 61, 0.1)",
+            border: "1px solid rgba(21, 128, 61, 0.3)",
             padding: "5px 12px",
-            borderRadius: 6
+            borderRadius: 9999,
+            fontWeight: 700
           }}>
             SOC2 & GDPR ALIGNED
           </span>
