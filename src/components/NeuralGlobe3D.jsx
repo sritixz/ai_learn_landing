@@ -138,46 +138,46 @@ function RotatingCore() {
       <mesh ref={outerMeshRef}>
         <icosahedronGeometry args={[1.3, 2]} />
         <meshStandardMaterial
-          color="#2F81F7"
+          color="#1D4ED8"
           wireframe
-          emissive="#2F81F7"
-          emissiveIntensity={0.65}
-          roughness={0.2}
-          metalness={0.8}
+          emissive="#1D4ED8"
+          emissiveIntensity={0.8}
+          roughness={0.1}
+          metalness={0.9}
         />
       </mesh>
 
-      {/* Inner Subtle Glowing Core */}
+      {/* Inner Glowing Core */}
       <mesh ref={innerMeshRef}>
         <octahedronGeometry args={[0.55, 0]} />
         <meshStandardMaterial
-          color="#FFFFFF"
-          emissive="#FFFFFF"
-          emissiveIntensity={1.0}
-          roughness={0.2}
-          metalness={0.8}
+          color="#FF8A00"
+          emissive="#FF8A00"
+          emissiveIntensity={1.2}
+          roughness={0.1}
+          metalness={0.9}
         />
       </mesh>
 
-      {/* Primary Quantum Orbital Ring */}
+      {/* Primary Orbital Ring */}
       <mesh ref={ring1Ref} rotation={[0.4, 0, 0]}>
-        <torusGeometry args={[1.85, 0.012, 16, 90]} />
+        <torusGeometry args={[1.85, 0.015, 16, 90]} />
         <meshStandardMaterial
-          color="#2F81F7"
-          emissive="#2F81F7"
-          emissiveIntensity={0.8}
-          roughness={0.2}
+          color="#1D4ED8"
+          emissive="#1D4ED8"
+          emissiveIntensity={0.9}
+          roughness={0.1}
         />
       </mesh>
 
       {/* Secondary Orbital Ring */}
       <mesh ref={ring2Ref} rotation={[-0.4, 0.25, 0]}>
-        <torusGeometry args={[1.7, 0.01, 16, 90]} />
+        <torusGeometry args={[1.7, 0.012, 16, 90]} />
         <meshStandardMaterial
-          color="#8B7CF6"
-          emissive="#8B7CF6"
-          emissiveIntensity={0.7}
-          roughness={0.2}
+          color="#7C3AED"
+          emissive="#7C3AED"
+          emissiveIntensity={0.8}
+          roughness={0.1}
         />
       </mesh>
 
@@ -192,11 +192,11 @@ function RotatingCore() {
           />
         </bufferGeometry>
         <pointsMaterial
-          size={0.038}
-          color="#94A3B8"
+          size={0.045}
+          color="#3B82F6"
           transparent
-          opacity={0.7}
-          blending={THREE.AdditiveBlending}
+          opacity={0.85}
+          blending={THREE.NormalBlending}
         />
       </points>
 
@@ -223,9 +223,9 @@ export default function NeuralGlobe3D() {
         camera={{ position: [0, 0, 5.0], fov: 42 }}
         gl={{ alpha: true, antialias: true, powerPreference: "high-performance" }}
       >
-        <ambientLight intensity={0.5} />
-        <pointLight position={[6, 6, 6]} color="#FFFFFF" intensity={1.8} />
-        <pointLight position={[-6, -6, -6]} color="#2F81F7" intensity={1.4} />
+        <ambientLight intensity={1.0} />
+        <pointLight position={[6, 6, 6]} color="#FFFFFF" intensity={2.2} />
+        <pointLight position={[-6, -6, -6]} color="#1D4ED8" intensity={1.8} />
         <RotatingCore />
       </Canvas>
     </div>

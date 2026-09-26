@@ -20,10 +20,11 @@ export default function Navbar({ onOpenDemo, scrollToSection }) {
   return (
     <nav style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
-      background: "rgba(5, 11, 26, 0.9)",
+      background: "rgba(255, 255, 255, 0.94)",
       backdropFilter: "blur(16px)",
       WebkitBackdropFilter: "blur(16px)",
-      borderBottom: "1px solid #1E293B"
+      borderBottom: "1px solid #E2E8F0",
+      boxShadow: "0 2px 12px rgba(15, 23, 42, 0.04)"
     }}>
       <div style={{
         maxWidth: 1240, margin: "0 auto", padding: "0 24px",
@@ -35,20 +36,20 @@ export default function Navbar({ onOpenDemo, scrollToSection }) {
           style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer" }}
         >
           <div style={{
-            width: 32, height: 32, borderRadius: 8,
+            width: 34, height: 34, borderRadius: 8,
             background: "#0F172A",
-            border: "1px solid #1E293B",
             display: "flex", alignItems: "center", justifyContent: "center",
-            fontSize: 14, color: "#2F81F7", fontWeight: 800,
-            fontFamily: "ui-monospace, monospace"
+            fontSize: 14, color: "#FF8A00", fontWeight: 800,
+            fontFamily: "ui-monospace, monospace",
+            boxShadow: "0 2px 8px rgba(15, 23, 42, 0.2)"
           }}>
             AG
           </div>
           <div>
-            <div style={{ fontWeight: 800, fontSize: 14.5, color: "#F8FAFC", letterSpacing: "-.02em", lineHeight: 1.1 }}>
+            <div style={{ fontWeight: 850, fontSize: 15, color: "#0F172A", letterSpacing: "-.02em", lineHeight: 1.1 }}>
               AI GLOBAL ACADEMY
             </div>
-            <div style={{ fontSize: 9.5, fontWeight: 700, color: "#2F81F7", letterSpacing: ".05em", textTransform: "uppercase" }}>
+            <div style={{ fontSize: 9.5, fontWeight: 700, color: "#FF8A00", letterSpacing: ".06em", textTransform: "uppercase" }}>
               Enterprise GenAI Education
             </div>
           </div>
@@ -62,13 +63,13 @@ export default function Navbar({ onOpenDemo, scrollToSection }) {
               onClick={() => handleNavClick(item.target)}
               style={{
                 background: "none", border: "none", cursor: "pointer",
-                fontSize: 13, fontWeight: 500, color: "#94A3B8",
-                padding: "8px 12px", borderRadius: 6,
+                fontSize: 13.5, fontWeight: 600, color: "#475569",
+                padding: "8px 14px", borderRadius: 9999,
                 transition: "all 0.15s ease",
                 letterSpacing: "-.01em"
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(30, 41, 59, 0.5)"; e.currentTarget.style.color = "#F8FAFC"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = "none"; e.currentTarget.style.color = "#94A3B8"; }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "#F1F5F9"; e.currentTarget.style.color = "#0F172A"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = "none"; e.currentTarget.style.color = "#475569"; }}
             >
               {item.label}
             </button>
@@ -79,30 +80,15 @@ export default function Navbar({ onOpenDemo, scrollToSection }) {
         <div className="desktop-nav-actions">
           <button
             onClick={() => scrollToSection("curriculum")}
-            style={{
-              background: "rgba(15, 23, 42, 0.6)", border: "1px solid #1E293B", cursor: "pointer",
-              fontSize: 13, fontWeight: 600, color: "#F8FAFC",
-              padding: "7px 14px", borderRadius: 7,
-              transition: "all 0.15s ease"
-            }}
-            onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#334155"; e.currentTarget.style.background = "#1E293B"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.borderColor = "#1E293B"; e.currentTarget.style.background = "rgba(15, 23, 42, 0.6)"; }}
+            className="btn-outline-pill"
           >
             Syllabus ↓
           </button>
           <button
             onClick={() => onOpenDemo()}
-            style={{
-              background: "#238636", color: "#FFFFFF", border: "1px solid rgba(255, 255, 255, 0.1)",
-              cursor: "pointer", fontSize: 13, fontWeight: 600,
-              padding: "7px 16px", borderRadius: 7,
-              boxShadow: "0 1px 3px rgba(0, 0, 0, 0.3)",
-              transition: "all 0.15s ease"
-            }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = "#2EA043"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = "#238636"; }}
+            className="btn-orange-pill"
           >
-            Book Enterprise Demo
+            TRENDING COURSES
           </button>
         </div>
 
@@ -119,12 +105,13 @@ export default function Navbar({ onOpenDemo, scrollToSection }) {
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
         <div style={{
-          background: "#0B1220",
-          borderBottom: "1px solid #1E293B",
+          background: "#FFFFFF",
+          borderBottom: "1px solid #E2E8F0",
           padding: "16px 24px 24px 24px",
           display: "flex",
           flexDirection: "column",
-          gap: 10
+          gap: 10,
+          boxShadow: "0 10px 25px rgba(15, 23, 42, 0.08)"
         }}>
           {navItems.map((item) => (
             <button
@@ -138,7 +125,7 @@ export default function Navbar({ onOpenDemo, scrollToSection }) {
                 borderRadius: 6,
                 fontSize: 14.5,
                 fontWeight: 600,
-                color: "#F8FAFC",
+                color: "#0F172A",
                 cursor: "pointer"
               }}
             >
@@ -146,38 +133,20 @@ export default function Navbar({ onOpenDemo, scrollToSection }) {
             </button>
           ))}
 
-          <div style={{ borderTop: "1px solid #1E293B", paddingTop: 14, display: "flex", flexDirection: "column", gap: 10 }}>
+          <div style={{ borderTop: "1px solid #E2E8F0", paddingTop: 14, display: "flex", flexDirection: "column", gap: 10 }}>
             <button
               onClick={() => { setMobileMenuOpen(false); scrollToSection("curriculum"); }}
-              style={{
-                width: "100%",
-                background: "#050B1A",
-                border: "1px solid #1E293B",
-                color: "#F8FAFC",
-                padding: "10px",
-                borderRadius: 7,
-                fontSize: 14,
-                fontWeight: 600,
-                cursor: "pointer"
-              }}
+              className="btn-outline-pill"
+              style={{ width: "100%", justifyContent: "center", padding: "11px" }}
             >
               Explore 10-Module Syllabus ↓
             </button>
             <button
               onClick={() => { setMobileMenuOpen(false); onOpenDemo(); }}
-              style={{
-                width: "100%",
-                background: "#238636",
-                border: "1px solid rgba(255, 255, 255, 0.15)",
-                color: "#FFFFFF",
-                padding: "11px",
-                borderRadius: 7,
-                fontSize: 14,
-                fontWeight: 600,
-                cursor: "pointer"
-              }}
+              className="btn-orange-pill"
+              style={{ width: "100%", justifyContent: "center", padding: "12px" }}
             >
-              Book Enterprise Demo
+              TRENDING COURSES
             </button>
           </div>
         </div>
