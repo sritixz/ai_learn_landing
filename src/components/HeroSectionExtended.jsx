@@ -58,7 +58,7 @@ const HeroSectionExtended = () => {
   ];
 
   return (
-    <section style={{ padding: "80px 0 96px", background: "#050B1A", borderBottom: "1px solid #1E293B" }}>
+    <section style={{ padding: "80px 0 96px", background: "#F8FAFC", borderBottom: "1px solid #E2E8F0" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Concise Proof & Value Metrics Strip */}
@@ -68,53 +68,55 @@ const HeroSectionExtended = () => {
           gap: 20,
           marginBottom: 64,
           padding: "20px 24px",
-          background: "#0B1220",
-          border: "1px solid #1E293B",
-          borderRadius: 10
+          background: "#FFFFFF",
+          border: "1px solid #E2E8F0",
+          borderRadius: 12,
+          boxShadow: "0 4px 16px rgba(15, 23, 42, 0.05)"
         }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#2F81F7" }} />
+            <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#FF8A00" }} />
             <div>
-              <div style={{ fontSize: 13, fontWeight: 700, color: "#F8FAFC" }}>50+ Approved Tools</div>
-              <div style={{ fontSize: 12, color: "#94A3B8" }}>Copilot, Cursor, Claude, n8n, OpenAI</div>
+              <div style={{ fontSize: 13.5, fontWeight: 750, color: "#0F172A" }}>50+ Approved Tools</div>
+              <div style={{ fontSize: 12, color: "#64748B" }}>Copilot, Cursor, Claude, n8n, OpenAI</div>
             </div>
           </div>
 
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#8B7CF6" }} />
+            <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#1D4ED8" }} />
             <div>
-              <div style={{ fontSize: 13, fontWeight: 700, color: "#F8FAFC" }}>10 Specialized Academies</div>
-              <div style={{ fontSize: 12, color: "#94A3B8" }}>Role-tailored for Engineering, Sales, Ops, Finance</div>
+              <div style={{ fontSize: 13.5, fontWeight: 750, color: "#0F172A" }}>10 Specialized Academies</div>
+              <div style={{ fontSize: 12, color: "#64748B" }}>Role-tailored for Engineering, Sales, Ops, Finance</div>
             </div>
           </div>
 
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#2EA043" }} />
+            <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#15803D" }} />
             <div>
-              <div style={{ fontSize: 13, fontWeight: 700, color: "#F8FAFC" }}>Manager-Tracked ROI</div>
-              <div style={{ fontSize: 12, color: "#94A3B8" }}>Pre/post skill assessments & verified capstones</div>
+              <div style={{ fontSize: 13.5, fontWeight: 750, color: "#0F172A" }}>Manager-Tracked ROI</div>
+              <div style={{ fontSize: 12, color: "#64748B" }}>Pre/post skill assessments & verified capstones</div>
             </div>
           </div>
         </div>
 
         {/* Interactive Capability Workstation Matrix */}
         <div style={{
-          background: "#0B1220",
-          border: "1px solid #1E293B",
+          background: "#FFFFFF",
+          border: "1px solid #E2E8F0",
           borderRadius: 12,
           padding: "36px",
-          marginBottom: 80
+          marginBottom: 80,
+          boxShadow: "0 4px 20px rgba(15, 23, 42, 0.06)"
         }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28, borderBottom: "1px solid #162032", paddingBottom: 20, flexWrap: "wrap", gap: 12 }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28, borderBottom: "1px solid #E2E8F0", paddingBottom: 20, flexWrap: "wrap", gap: 12 }}>
             <div>
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#2F81F7", textTransform: "uppercase", letterSpacing: ".08em", fontFamily: "ui-monospace, monospace" }}>
+              <div style={{ fontSize: 11, fontWeight: 700, color: "#FF8A00", textTransform: "uppercase", letterSpacing: ".08em", fontFamily: "ui-monospace, monospace" }}>
                 INTERACTIVE CAPABILITY MATRIX
               </div>
-              <h3 style={{ fontSize: 22, fontWeight: 800, color: "#F8FAFC", marginTop: 4, letterSpacing: "-.02em" }}>
+              <h3 style={{ fontSize: 22, fontWeight: 800, color: "#0F172A", marginTop: 4, letterSpacing: "-.02em" }}>
                 Role-Based Pathways & Deliverables
               </h3>
             </div>
-            <span style={{ fontSize: 12, color: "#94A3B8", background: "#0F172A", border: "1px solid #1E293B", padding: "5px 12px", borderRadius: 6, fontFamily: "ui-monospace, monospace" }}>
+            <span style={{ fontSize: 12, color: "#64748B", background: "#F8FAFC", border: "1px solid #CBD5E1", padding: "5px 12px", borderRadius: 9999, fontFamily: "ui-monospace, monospace", fontWeight: 600 }}>
               Select department track
             </span>
           </div>
@@ -126,11 +128,11 @@ const HeroSectionExtended = () => {
                 key={role}
                 onClick={() => setActiveRole(role)}
                 style={{
-                  padding: "8px 18px", borderRadius: 6, border: "1px solid",
-                  borderColor: activeRole === role ? "#2F81F7" : "#1E293B",
-                  background: activeRole === role ? "rgba(47, 129, 247, 0.12)" : "#0F172A",
-                  color: activeRole === role ? "#F8FAFC" : "#94A3B8",
-                  fontSize: 13.5, fontWeight: 600, cursor: "pointer",
+                  padding: "8px 20px", borderRadius: 9999, border: "1px solid",
+                  borderColor: activeRole === role ? "#FF8A00" : "#E2E8F0",
+                  background: activeRole === role ? "rgba(255, 138, 0, 0.12)" : "#F8FAFC",
+                  color: activeRole === role ? "#FF8A00" : "#475569",
+                  fontSize: 13.5, fontWeight: 700, cursor: "pointer",
                   transition: "all 0.15s ease"
                 }}
               >
@@ -141,9 +143,9 @@ const HeroSectionExtended = () => {
 
           {/* Selected Track Details Row */}
           <div style={{
-            background: "#0F172A",
-            border: "1px solid #1E293B",
-            borderRadius: 8,
+            background: "#F8FAFC",
+            border: "1px solid #E2E8F0",
+            borderRadius: 10,
             padding: "24px",
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
@@ -153,10 +155,10 @@ const HeroSectionExtended = () => {
               <div style={{ fontSize: 11, fontWeight: 700, color: "#64748B", textTransform: "uppercase", letterSpacing: ".05em", fontFamily: "ui-monospace, monospace" }}>
                 Department Focus
               </div>
-              <div style={{ fontSize: 17, fontWeight: 700, color: "#F8FAFC", marginTop: 6 }}>
+              <div style={{ fontSize: 17, fontWeight: 750, color: "#0F172A", marginTop: 6 }}>
                 {roleMap[activeRole].title}
               </div>
-              <div style={{ fontSize: 12, color: "#2F81F7", marginTop: 4, fontFamily: "ui-monospace, monospace" }}>
+              <div style={{ fontSize: 12, color: "#FF8A00", marginTop: 4, fontFamily: "ui-monospace, monospace", fontWeight: 700 }}>
                 {roleMap[activeRole].badge}
               </div>
             </div>
@@ -165,7 +167,7 @@ const HeroSectionExtended = () => {
               <div style={{ fontSize: 11, fontWeight: 700, color: "#64748B", textTransform: "uppercase", letterSpacing: ".05em", fontFamily: "ui-monospace, monospace" }}>
                 Approved Toolchain
               </div>
-              <div style={{ fontSize: 13.5, fontWeight: 600, color: "#F8FAFC", marginTop: 6, fontFamily: "ui-monospace, monospace" }}>
+              <div style={{ fontSize: 13.5, fontWeight: 650, color: "#0F172A", marginTop: 6, fontFamily: "ui-monospace, monospace" }}>
                 {roleMap[activeRole].tool}
               </div>
             </div>
@@ -174,7 +176,7 @@ const HeroSectionExtended = () => {
               <div style={{ fontSize: 11, fontWeight: 700, color: "#64748B", textTransform: "uppercase", letterSpacing: ".05em", fontFamily: "ui-monospace, monospace" }}>
                 Target Business Deliverable
               </div>
-              <div style={{ fontSize: 13.5, color: "#94A3B8", marginTop: 6, lineHeight: 1.5 }}>
+              <div style={{ fontSize: 13.5, color: "#475569", marginTop: 6, lineHeight: 1.5 }}>
                 {roleMap[activeRole].output}
               </div>
             </div>
@@ -184,10 +186,10 @@ const HeroSectionExtended = () => {
         {/* 4 Core Pillars: Structured Editorial Layout with Dividers */}
         <div>
           <div style={{ marginBottom: 36 }}>
-            <div style={{ fontSize: 11, fontWeight: 700, color: "#2F81F7", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 8, fontFamily: "ui-monospace, monospace" }}>
+            <div style={{ fontSize: 11, fontWeight: 700, color: "#FF8A00", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 8, fontFamily: "ui-monospace, monospace" }}>
               INSTITUTIONAL METHODOLOGY
             </div>
-            <h3 style={{ fontSize: 26, fontWeight: 800, color: "#F8FAFC", letterSpacing: "-.02em" }}>
+            <h3 style={{ fontSize: 26, fontWeight: 800, color: "#0F172A", letterSpacing: "-.02em" }}>
               How AI Global Academy builds lasting workforce capability
             </h3>
           </div>
@@ -196,21 +198,21 @@ const HeroSectionExtended = () => {
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
             gap: 32,
-            borderTop: "1px solid #1E293B",
+            borderTop: "1px solid #E2E8F0",
             paddingTop: 36
           }}>
             {pillars.map((p) => (
               <div key={p.num} style={{ position: "relative" }}>
                 <div style={{
-                  fontSize: 12, fontWeight: 800, color: "#2F81F7",
+                  fontSize: 12, fontWeight: 800, color: "#FF8A00",
                   marginBottom: 12, fontFamily: "ui-monospace, monospace"
                 }}>
                   [{p.num}]
                 </div>
-                <h4 style={{ fontSize: 17, fontWeight: 750, color: "#F8FAFC", marginBottom: 10, letterSpacing: "-.01em" }}>
+                <h4 style={{ fontSize: 17, fontWeight: 750, color: "#0F172A", marginBottom: 10, letterSpacing: "-.01em" }}>
                   {p.title}
                 </h4>
-                <p style={{ fontSize: 14, color: "#94A3B8", lineHeight: 1.6, margin: 0 }}>
+                <p style={{ fontSize: 14, color: "#475569", lineHeight: 1.6, margin: 0 }}>
                   {p.desc}
                 </p>
               </div>

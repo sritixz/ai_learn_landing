@@ -50,7 +50,7 @@ export default function AdvancedCapability({ onOpenDemo }) {
   ];
 
   return (
-    <section id="agents-automation" style={{ padding: "110px 0", background: "#050B1A", borderBottom: "1px solid #1E293B" }}>
+    <section id="agents-automation" style={{ padding: "110px 0", background: "#FFFFFF", borderBottom: "1px solid #E2E8F0" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
         
         {/* Section Header */}
@@ -58,7 +58,7 @@ export default function AdvancedCapability({ onOpenDemo }) {
           <div style={{
             fontSize: 12,
             fontWeight: 700,
-            color: "#2F81F7",
+            color: "#FF8A00",
             textTransform: "uppercase",
             letterSpacing: ".08em",
             marginBottom: 12,
@@ -69,7 +69,7 @@ export default function AdvancedCapability({ onOpenDemo }) {
           <h2 style={{
             fontSize: "clamp(30px, 3.8vw, 42px)",
             fontWeight: 800,
-            color: "#F8FAFC",
+            color: "#0F172A",
             letterSpacing: "-.025em",
             lineHeight: 1.18,
             marginBottom: 16
@@ -78,7 +78,7 @@ export default function AdvancedCapability({ onOpenDemo }) {
           </h2>
           <p style={{
             fontSize: 16,
-            color: "#94A3B8",
+            color: "#475569",
             maxWidth: 800,
             lineHeight: 1.65,
             margin: 0
@@ -96,35 +96,37 @@ export default function AdvancedCapability({ onOpenDemo }) {
         }}>
           {/* Agent Architecture Track */}
           <div style={{
-            background: "#0B1220",
-            border: "1px solid #1E293B",
+            background: "#F8FAFC",
+            border: "1px solid #E2E8F0",
             borderRadius: 10,
-            padding: "32px 28px"
+            padding: "32px 28px",
+            boxShadow: "0 4px 20px rgba(0, 0, 0, 0.03)"
           }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
-              <span style={{ fontSize: 11, fontWeight: 700, color: "#2F81F7", fontFamily: "ui-monospace, monospace" }}>
+              <span style={{ fontSize: 11, fontWeight: 700, color: "#2563EB", fontFamily: "ui-monospace, monospace" }}>
                 ADVANCED TRACK 01
               </span>
               <span style={{
                 fontSize: 10.5,
-                color: "#2F81F7",
-                background: "rgba(47, 129, 247, 0.1)",
-                border: "1px solid rgba(47, 129, 247, 0.25)",
+                color: "#1D4ED8",
+                background: "rgba(37, 99, 235, 0.08)",
+                border: "1px solid rgba(37, 99, 235, 0.2)",
                 padding: "3px 8px",
                 borderRadius: 4,
-                fontFamily: "ui-monospace, monospace"
+                fontFamily: "ui-monospace, monospace",
+                fontWeight: 700
               }}>
                 AGENT ENGINEERING
               </span>
             </div>
-            <h3 style={{ fontSize: 19, fontWeight: 800, color: "#F8FAFC", marginBottom: 16 }}>
+            <h3 style={{ fontSize: 19, fontWeight: 800, color: "#0F172A", marginBottom: 16 }}>
               Autonomous AI Agent Architecture
             </h3>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {agentPoints.map((pt, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
-                  <span style={{ color: "#2F81F7", fontSize: 13, lineHeight: "20px", fontWeight: 700 }}>›</span>
-                  <span style={{ fontSize: 13.5, color: "#94A3B8", lineHeight: 1.55 }}>{pt}</span>
+                  <span style={{ color: "#2563EB", fontSize: 13, lineHeight: "20px", fontWeight: 700 }}>›</span>
+                  <span style={{ fontSize: 13.5, color: "#475569", lineHeight: 1.55 }}>{pt}</span>
                 </div>
               ))}
             </div>
@@ -132,35 +134,37 @@ export default function AdvancedCapability({ onOpenDemo }) {
 
           {/* Automation Track */}
           <div style={{
-            background: "#0B1220",
-            border: "1px solid #1E293B",
+            background: "#F8FAFC",
+            border: "1px solid #E2E8F0",
             borderRadius: 10,
-            padding: "32px 28px"
+            padding: "32px 28px",
+            boxShadow: "0 4px 20px rgba(0, 0, 0, 0.03)"
           }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
-              <span style={{ fontSize: 11, fontWeight: 700, color: "#8B7CF6", fontFamily: "ui-monospace, monospace" }}>
+              <span style={{ fontSize: 11, fontWeight: 700, color: "#7C3AED", fontFamily: "ui-monospace, monospace" }}>
                 ADVANCED TRACK 02
               </span>
               <span style={{
                 fontSize: 10.5,
-                color: "#8B7CF6",
-                background: "rgba(139, 124, 246, 0.1)",
-                border: "1px solid rgba(139, 124, 246, 0.25)",
+                color: "#6D28D9",
+                background: "rgba(124, 58, 237, 0.08)",
+                border: "1px solid rgba(124, 58, 237, 0.2)",
                 padding: "3px 8px",
                 borderRadius: 4,
-                fontFamily: "ui-monospace, monospace"
+                fontFamily: "ui-monospace, monospace",
+                fontWeight: 700
               }}>
                 PIPELINE ORCHESTRATION
               </span>
             </div>
-            <h3 style={{ fontSize: 19, fontWeight: 800, color: "#F8FAFC", marginBottom: 16 }}>
+            <h3 style={{ fontSize: 19, fontWeight: 800, color: "#0F172A", marginBottom: 16 }}>
               Business Process & API Automation
             </h3>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {automationPoints.map((pt, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
-                  <span style={{ color: "#8B7CF6", fontSize: 13, lineHeight: "20px", fontWeight: 700 }}>›</span>
-                  <span style={{ fontSize: 13.5, color: "#94A3B8", lineHeight: 1.55 }}>{pt}</span>
+                  <span style={{ color: "#7C3AED", fontSize: 13, lineHeight: "20px", fontWeight: 700 }}>›</span>
+                  <span style={{ fontSize: 13.5, color: "#475569", lineHeight: 1.55 }}>{pt}</span>
                 </div>
               ))}
             </div>
@@ -169,21 +173,22 @@ export default function AdvancedCapability({ onOpenDemo }) {
 
         {/* Capstone Deliverables Matrix */}
         <div style={{
-          background: "#0B1220",
-          border: "1px solid #1E293B",
+          background: "#F8FAFC",
+          border: "1px solid #E2E8F0",
           borderRadius: 10,
-          padding: "32px 32px"
+          padding: "32px 32px",
+          boxShadow: "0 4px 20px rgba(0, 0, 0, 0.03)"
         }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 24, flexWrap: "wrap", gap: 12 }}>
             <div>
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#2F81F7", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
+              <div style={{ fontSize: 11, fontWeight: 700, color: "#FF8A00", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 6, fontFamily: "ui-monospace, monospace" }}>
                 PRODUCTION CAPSTONES
               </div>
-              <h3 style={{ fontSize: 20, fontWeight: 800, color: "#F8FAFC", margin: 0, letterSpacing: "-.01em" }}>
+              <h3 style={{ fontSize: 20, fontWeight: 800, color: "#0F172A", margin: 0, letterSpacing: "-.01em" }}>
                 Verified Deliverables Deployed During Cohort Training
               </h3>
             </div>
-            <span style={{ fontSize: 12, color: "#64748B", fontFamily: "ui-monospace, monospace" }}>
+            <span style={{ fontSize: 12, color: "#64748B", fontFamily: "ui-monospace, monospace", fontWeight: 600 }}>
               SHIPPED TO PRODUCTION REPOSITORIES
             </span>
           </div>
@@ -198,35 +203,38 @@ export default function AdvancedCapability({ onOpenDemo }) {
                 key={i}
                 onClick={() => onOpenDemo(`${c.title} Capstone Architecture`)}
                 style={{
-                  background: "#050B1A",
-                  border: "1px solid #1E293B",
+                  background: "#FFFFFF",
+                  border: "1px solid #E2E8F0",
                   borderRadius: 8,
                   padding: "20px 22px",
                   cursor: "pointer",
-                  transition: "all 0.15s ease"
+                  transition: "all 0.15s ease",
+                  boxShadow: "0 2px 8px rgba(0, 0, 0, 0.02)"
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = "#2F81F7";
+                  e.currentTarget.style.borderColor = "#FF8A00";
+                  e.currentTarget.style.transform = "translateY(-2px)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = "#1E293B";
+                  e.currentTarget.style.borderColor = "#E2E8F0";
+                  e.currentTarget.style.transform = "translateY(0)";
                 }}
               >
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
                   <span style={{
                     fontSize: 10.5,
                     fontWeight: 700,
-                    color: "#2F81F7",
+                    color: "#2563EB",
                     fontFamily: "ui-monospace, monospace"
                   }}>
                     {c.category}
                   </span>
-                  <span style={{ fontSize: 12, color: "#64748B" }}>↗</span>
+                  <span style={{ fontSize: 12, color: "#94A3B8" }}>↗</span>
                 </div>
-                <h4 style={{ fontSize: 15, fontWeight: 700, color: "#F8FAFC", marginBottom: 6 }}>
+                <h4 style={{ fontSize: 15, fontWeight: 700, color: "#0F172A", marginBottom: 6 }}>
                   {c.title}
                 </h4>
-                <p style={{ fontSize: 13, color: "#94A3B8", lineHeight: 1.5, margin: 0 }}>
+                <p style={{ fontSize: 13, color: "#475569", lineHeight: 1.5, margin: 0 }}>
                   {c.desc}
                 </p>
               </div>

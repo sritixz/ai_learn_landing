@@ -1,10 +1,10 @@
 export default function FinalCTA({ onOpenDemo, scrollToSection }) {
   return (
     <section style={{
-      background: "#0F172A",
-      color: "#FFFFFF",
+      background: "#FFFFFF",
+      color: "#0F172A",
       padding: "110px 0 120px",
-      borderBottom: "1px solid #1E293B",
+      borderBottom: "1px solid #E2E8F0",
       position: "relative"
     }}>
       <div style={{ maxWidth: 840, margin: "0 auto", padding: "0 24px", textAlign: "center" }}>
@@ -32,14 +32,14 @@ export default function FinalCTA({ onOpenDemo, scrollToSection }) {
           lineHeight: 1.2,
           letterSpacing: "-.025em",
           marginBottom: 20,
-          color: "#FFFFFF"
+          color: "#0F172A"
         }}>
           Stop searching, start learning. Upgrade your career & workforce today.
         </h2>
 
         <p style={{
           fontSize: 16.5,
-          color: "#94A3B8",
+          color: "#475569",
           maxWidth: 680,
           margin: "0 auto 40px",
           lineHeight: 1.65,
@@ -60,9 +60,9 @@ export default function FinalCTA({ onOpenDemo, scrollToSection }) {
           <button
             onClick={() => scrollToSection("curriculum")}
             style={{
-              background: "rgba(255, 255, 255, 0.08)",
-              color: "#FFFFFF",
-              border: "1px solid rgba(255, 255, 255, 0.2)",
+              background: "#F1F5F9",
+              color: "#0F172A",
+              border: "1px solid #CBD5E1",
               padding: "13px 26px",
               borderRadius: 9999,
               fontWeight: 600,
@@ -71,10 +71,10 @@ export default function FinalCTA({ onOpenDemo, scrollToSection }) {
               transition: "all 0.15s ease"
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = "rgba(255, 255, 255, 0.15)";
+              e.currentTarget.style.background = "#E2E8F0";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = "rgba(255, 255, 255, 0.08)";
+              e.currentTarget.style.background = "#F1F5F9";
             }}
           >
             Explore 10-Module Syllabus ↓
