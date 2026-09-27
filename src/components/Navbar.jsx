@@ -1,26 +1,33 @@
 import { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function Navbar({ onOpenDemo, scrollToSection }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navItems = [
-    { label: "Programs", target: "solutions" },
-    { label: "Solutions", target: "role-tracks" },
-    { label: "Curriculum", target: "curriculum" },
-    { label: "AI Tools", target: "ai-tools" },
-    { label: "Enterprise", target: "enterprise" },
-    { label: "Resources", target: "resources" }
+    { label: "Home", path: "/" },
+    { label: "Syllabus", path: "/curriculum" },
+    { label: "AI Tools", path: "/tools" },
+    { label: "Enterprise & Security", path: "/enterprise" },
+    { label: "FAQ", path: "/faq" }
   ];
 
-  const handleNavClick = (target) => {
+  const handleNavClick = (item) => {
     setMobileMenuOpen(false);
-    scrollToSection(target);
+    if (location.pathname !== item.path) {
+      navigate(item.path);
+      window.scrollTo(0, 0);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (
     <nav style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
-      background: "rgba(255, 255, 255, 0.94)",
+      background: "rgba(255, 255, 255, 0.95)",
       backdropFilter: "blur(16px)",
       WebkitBackdropFilter: "blur(16px)",
       borderBottom: "1px solid #E2E8F0",
@@ -32,7 +39,7 @@ export default function Navbar({ onOpenDemo, scrollToSection }) {
       }}>
         {/* Brand Logo */}
         <div 
-          onClick={() => { setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+          onClick={() => { setMobileMenuOpen(false); navigate('/'); window.scrollTo(0, 0); }}
           style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer" }}
         >
           <div style={{
@@ -57,29 +64,47 @@ export default function Navbar({ onOpenDemo, scrollToSection }) {
 
         {/* Desktop Center Nav Links */}
         <div className="desktop-nav-links">
-          {navItems.map((item) => (
-            <button
-              key={item.target}
-              onClick={() => handleNavClick(item.target)}
-              style={{
-                background: "none", border: "none", cursor: "pointer",
-                fontSize: 13.5, fontWeight: 600, color: "#475569",
-                padding: "8px 14px", borderRadius: 9999,
-                transition: "all 0.15s ease",
-                letterSpacing: "-.01em"
-              }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = "#F1F5F9"; e.currentTarget.style.color = "#0F172A"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = "none"; e.currentTarget.style.color = "#475569"; }}
-            >
-              {item.label}
-            </button>
-          ))}
+          {navItems.map((item) => {
+            const isActive = location.pathname === item.path;
+            return (
+              <button
+                key={item.path}
+                onClick={() => handleNavClick(item)}
+                style={{
+                  background: isActive ? "rgba(255, 138, 0, 0.1)" : "none",
+                  border: "none",
+                  cursor: "pointer",
+                  fontSize: 13.5,
+                  fontWeight: isActive ? 750 : 600,
+                  color: isActive ? "#FF8A00" : "#475569",
+                  padding: "8px 14px",
+                  borderRadius: 9999,
+                  transition: "all 0.15s ease",
+                  letterSpacing: "-.01em"
+                }}
+                onMouseEnter={(e) => {
+                  if (!isActive) {
+                    e.currentTarget.style.background = "#F1F5F9";
+                    e.currentTarget.style.color = "#0F172A";
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (!isActive) {
+                    e.currentTarget.style.background = "none";
+                    e.currentTarget.style.color = "#475569";
+                  }
+                }}
+              >
+                {item.label}
+              </button>
+            );
+          })}
         </div>
 
         {/* Desktop Action CTAs */}
         <div className="desktop-nav-actions">
           <button
-            onClick={() => scrollToSection("curriculum")}
+            onClick={() => { navigate('/curriculum'); window.scrollTo(0, 0); }}
             className="btn-outline-pill"
           >
             Syllabus ↓
@@ -115,17 +140,17 @@ export default function Navbar({ onOpenDemo, scrollToSection }) {
         }}>
           {navItems.map((item) => (
             <button
-              key={item.target}
-              onClick={() => handleNavClick(item.target)}
+              key={item.path}
+              onClick={() => handleNavClick(item)}
               style={{
-                background: "transparent",
+                background: location.pathname === item.path ? "rgba(255, 138, 0, 0.08)" : "transparent",
                 border: "none",
                 textAlign: "left",
                 padding: "10px 12px",
                 borderRadius: 6,
                 fontSize: 14.5,
-                fontWeight: 600,
-                color: "#0F172A",
+                fontWeight: 650,
+                color: location.pathname === item.path ? "#FF8A00" : "#0F172A",
                 cursor: "pointer"
               }}
             >
@@ -135,7 +160,7 @@ export default function Navbar({ onOpenDemo, scrollToSection }) {
 
           <div style={{ borderTop: "1px solid #E2E8F0", paddingTop: 14, display: "flex", flexDirection: "column", gap: 10 }}>
             <button
-              onClick={() => { setMobileMenuOpen(false); scrollToSection("curriculum"); }}
+              onClick={() => { setMobileMenuOpen(false); navigate('/curriculum'); window.scrollTo(0, 0); }}
               className="btn-outline-pill"
               style={{ width: "100%", justifyContent: "center", padding: "11px" }}
             >

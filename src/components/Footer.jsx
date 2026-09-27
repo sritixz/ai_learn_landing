@@ -1,4 +1,13 @@
-export default function Footer({ onOpenDemo, scrollToSection }) {
+import { useNavigate } from 'react-router-dom';
+
+export default function Footer({ onOpenDemo }) {
+  const navigate = useNavigate();
+
+  const handleLinkClick = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer style={{ background: "#F8FAFC", color: "#64748B", padding: "64px 0 32px 0", borderTop: "1px solid #E2E8F0" }}>
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
@@ -38,28 +47,28 @@ export default function Footer({ onOpenDemo, scrollToSection }) {
           {/* Programs Column */}
           <div>
             <h4 style={{ fontSize: 11.5, fontWeight: 750, color: "#0F172A", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 14, fontFamily: "ui-monospace, monospace" }}>
-              Pathways
+              Pages & Navigation
             </h4>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 8, fontSize: 13, padding: 0, margin: 0 }}>
-              <li><a href="#role-tracks" onClick={() => scrollToSection("role-tracks")} style={{ color: "#475569", textDecoration: "none" }}>Engineering & IT Track</a></li>
-              <li><a href="#role-tracks" onClick={() => scrollToSection("role-tracks")} style={{ color: "#475569", textDecoration: "none" }}>Marketing & Growth Track</a></li>
-              <li><a href="#role-tracks" onClick={() => scrollToSection("role-tracks")} style={{ color: "#475569", textDecoration: "none" }}>Sales & Client Solutions</a></li>
-              <li><a href="#role-tracks" onClick={() => scrollToSection("role-tracks")} style={{ color: "#475569", textDecoration: "none" }}>Operations & PMO</a></li>
-              <li><a href="#role-tracks" onClick={() => scrollToSection("role-tracks")} style={{ color: "#475569", textDecoration: "none" }}>Finance & Legal Modeling</a></li>
+              <li><button onClick={() => handleLinkClick("/")} style={{ background: "none", border: "none", color: "#475569", cursor: "pointer", padding: 0, fontSize: 13 }}>Home Page</button></li>
+              <li><button onClick={() => handleLinkClick("/curriculum")} style={{ background: "none", border: "none", color: "#475569", cursor: "pointer", padding: 0, fontSize: 13 }}>Full 10-Module Syllabus</button></li>
+              <li><button onClick={() => handleLinkClick("/tools")} style={{ background: "none", border: "none", color: "#475569", cursor: "pointer", padding: 0, fontSize: 13 }}>Evaluated Tools & Agentic Stack</button></li>
+              <li><button onClick={() => handleLinkClick("/enterprise")} style={{ background: "none", border: "none", color: "#475569", cursor: "pointer", padding: 0, fontSize: 13 }}>Enterprise Delivery & Governance</button></li>
+              <li><button onClick={() => handleLinkClick("/faq")} style={{ background: "none", border: "none", color: "#475569", cursor: "pointer", padding: 0, fontSize: 13 }}>FAQ & Knowledge Base</button></li>
             </ul>
           </div>
 
-          {/* Architecture Column */}
+          {/* Platform Column */}
           <div>
             <h4 style={{ fontSize: 11.5, fontWeight: 750, color: "#0F172A", textTransform: "uppercase", letterSpacing: ".08em", marginBottom: 14, fontFamily: "ui-monospace, monospace" }}>
-              Platform
+              Dedicated Pages
             </h4>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 8, fontSize: 13, padding: 0, margin: 0 }}>
-              <li><a href="#curriculum" onClick={() => scrollToSection("curriculum")} style={{ color: "#475569", textDecoration: "none" }}>10-Module Syllabus</a></li>
-              <li><a href="#ai-tools" onClick={() => scrollToSection("ai-tools")} style={{ color: "#475569", textDecoration: "none" }}>67+ Evaluated Tools</a></li>
-              <li><a href="#agents-automation" onClick={() => scrollToSection("agents-automation")} style={{ color: "#475569", textDecoration: "none" }}>Agent Architecture</a></li>
-              <li><a href="#enterprise" onClick={() => scrollToSection("enterprise")} style={{ color: "#475569", textDecoration: "none" }}>Delivery Methodology</a></li>
-              <li><a href="#resources" onClick={() => scrollToSection("resources")} style={{ color: "#475569", textDecoration: "none" }}>ROI & Enterprise Packages</a></li>
+              <li><button onClick={() => handleLinkClick("/curriculum")} style={{ background: "none", border: "none", color: "#475569", cursor: "pointer", padding: 0, fontSize: 13 }}>10-Module Syllabus</button></li>
+              <li><button onClick={() => handleLinkClick("/tools")} style={{ background: "none", border: "none", color: "#475569", cursor: "pointer", padding: 0, fontSize: 13 }}>67+ Evaluated Tools</button></li>
+              <li><button onClick={() => handleLinkClick("/tools")} style={{ background: "none", border: "none", color: "#475569", cursor: "pointer", padding: 0, fontSize: 13 }}>Agent Architecture</button></li>
+              <li><button onClick={() => handleLinkClick("/enterprise")} style={{ background: "none", border: "none", color: "#475569", cursor: "pointer", padding: 0, fontSize: 13 }}>Delivery Methodology</button></li>
+              <li><button onClick={() => handleLinkClick("/")} style={{ background: "none", border: "none", color: "#475569", cursor: "pointer", padding: 0, fontSize: 13 }}>ROI & Enterprise Packages</button></li>
             </ul>
           </div>
 

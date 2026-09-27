@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-export default function QuickNavFloatingDock({ scrollToSection, onOpenDemo }) {
+export default function QuickNavFloatingDock({ onOpenDemo }) {
   const [visible, setVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 400) {
+      if (window.scrollY > 300) {
         setVisible(true);
       } else {
         setVisible(false);
@@ -25,10 +27,10 @@ export default function QuickNavFloatingDock({ scrollToSection, onOpenDemo }) {
       zIndex: 999,
       display: "flex",
       alignItems: "center",
-      gap: 8,
-      background: "rgba(255, 255, 255, 0.94)",
-      backdropFilter: "blur(12px)",
-      WebkitBackdropFilter: "blur(12px)",
+      gap: 6,
+      background: "rgba(255, 255, 255, 0.95)",
+      backdropFilter: "blur(14px)",
+      WebkitBackdropFilter: "blur(14px)",
       border: "1px solid #CBD5E1",
       borderRadius: 9999,
       padding: "6px 10px",
@@ -36,17 +38,16 @@ export default function QuickNavFloatingDock({ scrollToSection, onOpenDemo }) {
       transition: "all 0.25s ease"
     }}>
       <button
-        onClick={() => scrollToSection("curriculum")}
+        onClick={() => { navigate("/curriculum"); window.scrollTo(0, 0); }}
         style={{
           background: "none",
           border: "none",
           fontSize: 12,
           fontWeight: 700,
           color: "#475569",
-          padding: "6px 12px",
+          padding: "6px 10px",
           borderRadius: 9999,
-          cursor: "pointer",
-          transition: "all 0.15s ease"
+          cursor: "pointer"
         }}
         onMouseEnter={(e) => { e.currentTarget.style.background = "#F1F5F9"; e.currentTarget.style.color = "#0F172A"; }}
         onMouseLeave={(e) => { e.currentTarget.style.background = "none"; e.currentTarget.style.color = "#475569"; }}
@@ -55,17 +56,34 @@ export default function QuickNavFloatingDock({ scrollToSection, onOpenDemo }) {
       </button>
 
       <button
-        onClick={() => scrollToSection("enterprise")}
+        onClick={() => { navigate("/tools"); window.scrollTo(0, 0); }}
         style={{
           background: "none",
           border: "none",
           fontSize: 12,
           fontWeight: 700,
           color: "#475569",
-          padding: "6px 12px",
+          padding: "6px 10px",
           borderRadius: 9999,
-          cursor: "pointer",
-          transition: "all 0.15s ease"
+          cursor: "pointer"
+        }}
+        onMouseEnter={(e) => { e.currentTarget.style.background = "#F1F5F9"; e.currentTarget.style.color = "#0F172A"; }}
+        onMouseLeave={(e) => { e.currentTarget.style.background = "none"; e.currentTarget.style.color = "#475569"; }}
+      >
+        🛠️ Tools
+      </button>
+
+      <button
+        onClick={() => { navigate("/enterprise"); window.scrollTo(0, 0); }}
+        style={{
+          background: "none",
+          border: "none",
+          fontSize: 12,
+          fontWeight: 700,
+          color: "#475569",
+          padding: "6px 10px",
+          borderRadius: 9999,
+          cursor: "pointer"
         }}
         onMouseEnter={(e) => { e.currentTarget.style.background = "#F1F5F9"; e.currentTarget.style.color = "#0F172A"; }}
         onMouseLeave={(e) => { e.currentTarget.style.background = "none"; e.currentTarget.style.color = "#475569"; }}
@@ -81,10 +99,9 @@ export default function QuickNavFloatingDock({ scrollToSection, onOpenDemo }) {
           fontSize: 12,
           fontWeight: 700,
           color: "#FF8A00",
-          padding: "6px 12px",
+          padding: "6px 10px",
           borderRadius: 9999,
-          cursor: "pointer",
-          transition: "all 0.15s ease"
+          cursor: "pointer"
         }}
         onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(255, 138, 0, 0.1)"; }}
         onMouseLeave={(e) => { e.currentTarget.style.background = "none"; }}
@@ -101,17 +118,15 @@ export default function QuickNavFloatingDock({ scrollToSection, onOpenDemo }) {
           background: "#0F172A",
           color: "#FFFFFF",
           border: "none",
-          width: 32,
-          height: 32,
+          width: 30,
+          height: 30,
           borderRadius: "50%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           fontSize: 14,
           fontWeight: 800,
-          cursor: "pointer",
-          transition: "all 0.15s ease",
-          boxShadow: "0 2px 8px rgba(15, 23, 42, 0.2)"
+          cursor: "pointer"
         }}
         onMouseEnter={(e) => { e.currentTarget.style.transform = "scale(1.1)"; }}
         onMouseLeave={(e) => { e.currentTarget.style.transform = "scale(1)"; }}
