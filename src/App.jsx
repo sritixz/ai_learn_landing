@@ -7,6 +7,7 @@ import BusinessCase from './components/BusinessCase';
 import RoleAcademies from './components/RoleAcademies';
 import CurriculumArchitecture from './components/CurriculumArchitecture';
 import ToolEcosystem from './components/ToolEcosystem';
+import ToolTicker from './components/ToolTicker';
 import AdvancedCapability from './components/AdvancedCapability';
 import EnterpriseDelivery from './components/EnterpriseDelivery';
 import ResponsibleAI from './components/ResponsibleAI';
@@ -81,6 +82,13 @@ export default function App() {
       {/* Hero Trust Strip & Microcopy CTA Box */}
       <div className="reveal-on-scroll">
         <TrustStrip
+          onOpenDemo={handleOpenDemo}
+        />
+      </div>
+
+      {/* Infinite AI Tool & Framework Logo Ticker */}
+      <div className="reveal-on-scroll">
+        <ToolTicker
           onOpenDemo={handleOpenDemo}
         />
       </div>
