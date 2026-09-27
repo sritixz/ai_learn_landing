@@ -1,21 +1,19 @@
 import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
-import HeroSectionExtended from './components/HeroSectionExtended';
 import TrustStrip from './components/TrustStrip';
+import ToolTicker from './components/ToolTicker';
 import BusinessCase from './components/BusinessCase';
 import RoleAcademies from './components/RoleAcademies';
 import CurriculumArchitecture from './components/CurriculumArchitecture';
 import ToolEcosystem from './components/ToolEcosystem';
-import ToolTicker from './components/ToolTicker';
-import AdvancedCapability from './components/AdvancedCapability';
 import EnterpriseDelivery from './components/EnterpriseDelivery';
-import ResponsibleAI from './components/ResponsibleAI';
 import ROIAndPackages from './components/ROIAndPackages';
 import FAQSection from './components/FAQSection';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 import DemoModal from './components/DemoModal';
+import QuickNavFloatingDock from './components/QuickNavFloatingDock';
 import './App.css';
 
 export default function App() {
@@ -42,7 +40,7 @@ export default function App() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('revealed');
-          obs.unobserve(entry.target); // Trigger only once, static afterwards
+          obs.unobserve(entry.target);
         }
       });
     }, {
@@ -69,17 +67,13 @@ export default function App() {
         scrollToSection={scrollToSection}
       />
 
-      {/* Hero Section & Value Pillars */}
+      {/* Hero Section */}
       <HeroSection
         onOpenDemo={handleOpenDemo}
         scrollToSection={scrollToSection}
       />
 
-      <div className="reveal-on-scroll">
-        <HeroSectionExtended />
-      </div>
-
-      {/* Hero Trust Strip & Microcopy CTA Box */}
+      {/* Hero Trust Strip */}
       <div className="reveal-on-scroll">
         <TrustStrip
           onOpenDemo={handleOpenDemo}
@@ -93,60 +87,50 @@ export default function App() {
         />
       </div>
 
-      {/* Section 02 - Business Case & Employee Outcomes */}
+      {/* Business Case & Organizational ROI */}
       <div className="reveal-on-scroll">
         <BusinessCase />
       </div>
 
-      {/* Section 03 - 10 Role-Based Academies */}
+      {/* 10 Role-Based Academies */}
       <div className="reveal-on-scroll">
         <RoleAcademies
           onOpenDemo={handleOpenDemo}
         />
       </div>
 
-      {/* Section 04 - 10 Curriculum Architecture Modules */}
+      {/* 10-Module Curriculum Architecture */}
       <div className="reveal-on-scroll">
         <CurriculumArchitecture
           onOpenDemo={handleOpenDemo}
         />
       </div>
 
-      {/* Section 05 - 50+ Tool Ecosystem (67 Tools across 9 categories) */}
+      {/* Evaluated Tools Matrix & Agentic Systems Hub (Tabbed) */}
       <div className="reveal-on-scroll">
-        <ToolEcosystem />
-      </div>
-
-      {/* Section 06 - Advanced Capability (Agents & Automations) */}
-      <div className="reveal-on-scroll">
-        <AdvancedCapability
+        <ToolEcosystem
           onOpenDemo={handleOpenDemo}
         />
       </div>
 
-      {/* Section 07 - Enterprise Delivery & 5-Stage Journey */}
+      {/* Enterprise Delivery & Security Governance Hub (Tabbed) */}
       <div className="reveal-on-scroll">
         <EnterpriseDelivery />
       </div>
 
-      {/* Section 08 - Responsible Enterprise AI Governance */}
-      <div className="reveal-on-scroll">
-        <ResponsibleAI />
-      </div>
-
-      {/* Section 09 - Business ROI & Enterprise Packages */}
+      {/* Enterprise ROI & Packages */}
       <div className="reveal-on-scroll">
         <ROIAndPackages
           onOpenDemo={handleOpenDemo}
         />
       </div>
 
-      {/* Section 10 - Enterprise Buyer FAQ Accordion */}
+      {/* FAQ Accordion */}
       <div className="reveal-on-scroll">
         <FAQSection />
       </div>
 
-      {/* Final Conversion Section */}
+      {/* Final Conversion CTA */}
       <div className="reveal-on-scroll">
         <FinalCTA
           onOpenDemo={handleOpenDemo}
@@ -160,7 +144,13 @@ export default function App() {
         scrollToSection={scrollToSection}
       />
 
-      {/* Enterprise Lead Consultation Demo Modal */}
+      {/* Floating Quick Navigation & Back-To-Top Dock */}
+      <QuickNavFloatingDock
+        scrollToSection={scrollToSection}
+        onOpenDemo={handleOpenDemo}
+      />
+
+      {/* Consultation Demo Modal */}
       <DemoModal
         isOpen={isDemoOpen}
         onClose={() => setIsDemoOpen(false)}
